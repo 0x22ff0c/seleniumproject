@@ -9,21 +9,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class WebdriverManager {
 	
 	private WebDriver driver = null;
 	private static final String FILE_SEPARATOR = System.getProperty("file.separator");
 	private static final String PARENT_FILE_PATH = System.getProperty("user.dir") + FILE_SEPARATOR + "driver" + FILE_SEPARATOR;
-	
-	
-	public WebdriverManager(String browserToUse){
-		
-		driverManager(browserToUse);
-		
-		manageWindow();
-		
-	}
-	
+
 	public void navigateToWebsite(String url){
 		
 		driver.navigate().to(url);
@@ -56,6 +49,8 @@ public class WebdriverManager {
 	
 	private void getChromeDriver(){
 		
+		WebDriverManager.chromedriver().setup();
+		
 		System.setProperty("webdriver.chrome.driver", setDriverPath("chromedriver"));
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
@@ -69,13 +64,13 @@ public class WebdriverManager {
 	
 	private void getFirefoxDriver(){
 		
-		System.setProperty("webdriver.gecko.driver", setDriverPath("geckodriver"));
+		WebDriverManager.firefoxdriver().setup();
 		
 		driver = new FirefoxDriver();
 		
 	}
 	
-	private void manageWindow(){
+	public void manageWindow(){
 		
 		driver.manage().window().maximize();
 		
@@ -83,7 +78,7 @@ public class WebdriverManager {
 		
 	}
 	
-	private void driverManager(String browserToUse){
+	public void driverManager(String browserToUse){
 		
 		switch (browserToUse) {
 		

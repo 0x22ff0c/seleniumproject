@@ -11,9 +11,11 @@ public class Listener implements ITestListener {
 	static WebDriver driver = null;
 	
 	public static WebDriver getDriver(){
+		
 		return driver;
-	}
 	
+	}
+
 	@Override
 	public void onFinish(ITestContext contextFinish) {
 		
@@ -24,7 +26,11 @@ public class Listener implements ITestListener {
 	@Override
 	public void onStart(ITestContext contextStart) {
 		
-		driverManager = new WebdriverManager("Chrome");
+		driverManager = new WebdriverManager();
+		
+		driverManager.driverManager("Firefox");
+		
+		driverManager.manageWindow();
 		
 		driverManager.navigateToWebsite("https://www.w3schools.com/");
 
@@ -44,11 +50,13 @@ public class Listener implements ITestListener {
 	
 	}
 	
+
+	
 	@Override
 	public void onTestStart(ITestResult result) {
 		
 		System.out.println("Starting test: " + result.getName());
-		
+
 	}
 
 	@Override

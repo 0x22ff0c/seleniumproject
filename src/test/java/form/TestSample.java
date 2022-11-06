@@ -6,28 +6,23 @@ import org.testng.asserts.SoftAssert;
 
 import pages.HomePage;
 import utilities.Listener;
+import utilities.SoftAssertion;
 
 public class TestSample {
 
+	SoftAssert assert1 = new SoftAssertion();
+	
 	@Test(testName = "Sample test name")
 	private void sampleTestMethod(){
 		
 		HomePage homePage = new HomePage(Listener.getDriver());
 		
-		SoftAssert assert1 = new SoftAssert();
-		
-		assert1.assertTrue(exceptionHandler(homePage.getHomeLogo()));
-		
-		System.out.println("Passed 1");
-		
-		assert1.assertTrue(exceptionHandler(homePage.getHomeLogo2()));
-		
-		System.out.println("Failed 2");
-		
-		assert1.assertTrue(exceptionHandler(homePage.getHomeLogo()));
-		
-		System.out.println("Passed 3");
-		
+		assert1.assertTrue(exceptionHandler(homePage.getHomeLogo()), "Home logo is displayed");
+
+		assert1.assertTrue(exceptionHandler(homePage.getHomeLogo2()), "Home logo is displayed");
+
+		assert1.assertTrue(exceptionHandler(homePage.getHomeLogo()), "Home logo is displayed");
+
 		assert1.assertAll();
 		
 	}
@@ -47,6 +42,6 @@ public class TestSample {
 		return defaultValue;
 		
 	}
-	
+
 }
 
