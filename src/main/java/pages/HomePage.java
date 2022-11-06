@@ -13,4 +13,8 @@ public class HomePage extends BasePage{
 		return getElementByXpath("//*[@title='Home']");
 	}
 	
+	public WebElement getHomeLogo2(){
+		return getElementByXpath("//*[@title='Home1']");
+	}
+	
 }
