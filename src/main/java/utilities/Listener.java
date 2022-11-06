@@ -30,35 +30,31 @@ public class Listener implements ITestListener {
 
 		driver = driverManager.getDriver();
 	}
-	
+
 	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-	System.out.println("Method failed with certain success percentage"+ result.getName());
+	public void onTestSuccess(ITestResult result) {
+		System.out.println("Test passed: "+ result.getName());
 	
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
-	System.out.println("Method failed"+ result.getName());
-	
-	}
-	
-	@Override
-	public void onTestSkipped(ITestResult result) {
-	System.out.println("Method skipped"+ result.getName());
+		
+		System.out.println("Method failed: "+ result.getName());
 	
 	}
 	
 	@Override
 	public void onTestStart(ITestResult result) {
 		
-		System.out.println("Starting test: " + result.getTestName());
+		System.out.println("Starting test: " + result.getName());
 		
 	}
-	
+
 	@Override
-	public void onTestSuccess(ITestResult result) {
-	System.out.println("Method passed"+ result.getName());
+	public void onTestSkipped(ITestResult result) {
+		
+		System.out.println("Method skipped"+ result.getName());
 	
 	}
 
