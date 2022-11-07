@@ -9,11 +9,16 @@ public class Listener implements ITestListener {
 	
 	WebdriverManager driverManager = null;
 	static WebDriver driver = null;
+	static SoftAssertion softAssertion = null;
 	
 	public static WebDriver getDriver(){
 		
 		return driver;
 	
+	}
+	
+	public static SoftAssertion getAssertion(){
+		return softAssertion;
 	}
 
 	@Override
@@ -28,13 +33,15 @@ public class Listener implements ITestListener {
 		
 		driverManager = new WebdriverManager();
 		
-		driverManager.driverManager("Firefox");
+		driverManager.driverManager("Chrome");
 		
 		driverManager.manageWindow();
 		
 		driverManager.navigateToWebsite("https://www.w3schools.com/");
 
 		driver = driverManager.getDriver();
+		
+		softAssertion = new SoftAssertion();
 	}
 
 	@Override
