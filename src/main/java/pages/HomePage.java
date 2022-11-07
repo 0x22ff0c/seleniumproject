@@ -9,12 +9,20 @@ public class HomePage extends BasePage{
 		super(driver);
 	}
 
+	public WebElement getHeader(){
+		return getElementByXpath("//*[@title='Home']/parent::*");
+	}
+
 	public WebElement getHomeLogo(){
 		return getElementByXpath("//*[@title='Home']");
 	}
 	
-	public WebElement getHomeLogo2(){
-		return getElementByXpath("//*[@title='Home1']");
+	public WebElement getMainContent(){
+		return getElementById("main");
+	}
+	
+	public WebElement getFooter(){
+		return getElementByTagName("footer");
 	}
 	
 }
