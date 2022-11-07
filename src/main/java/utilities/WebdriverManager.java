@@ -40,18 +40,11 @@ public class WebdriverManager {
 		System.out.println("End of testing session.");
 		
 	}
-	
-	private static String setDriverPath(String driverToUse){
-		
-		return PARENT_FILE_PATH + FILE_SEPARATOR + driverToUse;
-		
-	}
-	
+
 	private void getChromeDriver(){
 		
 		WebDriverManager.chromedriver().setup();
 		
-		System.setProperty("webdriver.chrome.driver", setDriverPath("chromedriver"));
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
 		
