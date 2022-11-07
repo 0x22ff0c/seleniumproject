@@ -14,19 +14,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class WebdriverManager {
 	
 	private WebDriver driver = null;
-	private static final String FILE_SEPARATOR = System.getProperty("file.separator");
-	private static final String PARENT_FILE_PATH = System.getProperty("user.dir") + FILE_SEPARATOR + "driver" + FILE_SEPARATOR;
 
 	public void navigateToWebsite(String url){
 		
-		driver.navigate().to(url);
-		
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
+		driver.get(url);
+	
 	}
 
 	public WebDriver getDriver(){
