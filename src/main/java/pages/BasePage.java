@@ -33,6 +33,10 @@ public class BasePage {
 
 	}
 	
+	public WebElement getElementByTagName(String tagName){
+		return getElement(By.tagName(tagName));
+	}
+	
 	private WebElement getElement(By byElement){
 		
 		element = null;
