@@ -1,8 +1,16 @@
 package utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Control{
+	
+	WebDriver driver = null;
+	
+	public Control(WebDriver driver){
+		this.driver = driver;
+	}
 	
 	public void clickButton(WebElement element){
 	
@@ -22,6 +30,10 @@ public class Control{
 		
 		System.out.println(String.format("Filled-in field with value: %s", valueToFillInTheField));
 		
+	}
+	
+	public void scrollToElement(WebElement element){
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false)", element);
 	}
 	
 }
