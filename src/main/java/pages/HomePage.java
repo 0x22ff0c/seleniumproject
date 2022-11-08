@@ -35,6 +35,10 @@ public class HomePage extends BasePage{
 		return getElementById("search2");
 	}
 	
+	public String getSearchbarfieldPlaceholder(){
+		return getPlaceholderTextOfField(getSearchbarField());
+	}
+	
 	public WebElement getSearchbarButton(){
 		return getElementById("learntocode_searchbtn");
 	}
