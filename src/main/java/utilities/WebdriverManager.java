@@ -26,11 +26,13 @@ public class WebdriverManager {
 	}
 	
 	public void quitSession(){
+
+		System.out.println("\nQuitting driver instance...");
 		
 		driver.quit();
 		
-		System.out.println("End of testing session.");
-		
+		System.out.println("deleted driver instance.");
+
 	}
 
 	private void getChromeDriver(){
