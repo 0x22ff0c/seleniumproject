@@ -37,6 +37,10 @@ public class BasePage {
 		return getElement(By.tagName(tagName));
 	}
 	
+	public WebElement getElementByLinkText(String linkText){
+		return getElement(By.linkText(linkText));
+	}
+	
 	private WebElement getElement(By byElement){
 		
 		element = null;
@@ -53,6 +57,10 @@ public class BasePage {
 	
 		return element;
 		
+	}
+	
+	public String getTextOfElement(WebElement element){
+		return element.getText();
 	}
 	
 }
