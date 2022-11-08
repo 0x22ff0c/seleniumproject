@@ -60,7 +60,30 @@ public class BasePage {
 	}
 	
 	public String getTextOfElement(WebElement element){
-		return element.getText();
+		
+		String textOfElement = "";
+		
+		if(element != null){
+			textOfElement = element.getText();
+		}else {
+			System.out.println("WARNING, unable to locate the element. Text is empty.");
+		}
+		
+		return textOfElement;
+	}
+	
+	public String getPlaceholderTextOfField(WebElement element){
+		
+		String placeholderText = "";
+		
+		if(element != null){
+			placeholderText = element.getAttribute("placeholder");
+		}else {
+			System.out.println("WARNING, unable to locate the element. Inner text is empty.");
+		}
+		
+		return placeholderText;
+		
 	}
 	
 }
