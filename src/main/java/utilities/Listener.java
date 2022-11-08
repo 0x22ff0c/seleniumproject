@@ -26,6 +26,8 @@ public class Listener implements ITestListener {
 		
 		driverManager.quitSession();
 		
+		System.out.println("End of testing session.");
+		
 	}
 	
 	@Override
@@ -46,13 +48,14 @@ public class Listener implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
+		
 		System.out.println("Test passed: "+ result.getName());
 	
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
-		
+
 		System.out.println("Method failed: "+ result.getName());
 	
 	}
@@ -62,8 +65,9 @@ public class Listener implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		
+		System.out.println("\n====================================");
 		System.out.println("Starting test: " + result.getName());
-
+		
 	}
 
 	@Override
