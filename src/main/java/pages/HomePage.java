@@ -16,9 +16,31 @@ public class HomePage extends BasePage{
 	public WebElement getHomeLogo(){
 		return getElementByXpath("//*[@title='Home']");
 	}
+
+	//Main Content
 	
 	public WebElement getMainContent(){
 		return getElementById("main");
+	}
+	
+	public String getHeaderTextInMainContent(){
+		return getTextOfElement(getElementByXpath("//*[text()='Learn to Code']"));
+	}
+	
+	public String getSubheaderTextInMainContent(){
+		return getTextOfElement(getElementByXpath("//*[text()=\"With the world's largest web developer site.\"]"));
+	}
+	
+	public WebElement getSearchbarField(){
+		return getElementById("search2");
+	}
+	
+	public WebElement getSearchbarButton(){
+		return getElementById("learntocode_searchbtn");
+	}
+	
+	public WebElement getWhereToBeginLink(){
+		return getElementByLinkText("Not Sure Where To Begin?");
 	}
 	
 	public WebElement getFooter(){
