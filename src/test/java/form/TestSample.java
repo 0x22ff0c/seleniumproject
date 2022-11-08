@@ -10,12 +10,16 @@ import utilities.SoftAssertion;
 
 public class TestSample extends BaseTest{
 
+	HomePage homePage;
+	
+	SoftAssertion assert1;
+
 	@Test(testName = "Verify Home Page elements")
 	private void sampleTestMethod(){
 		
-		HomePage homePage = new HomePage(Listener.getDriver());
-
-		SoftAssertion assert1 = Listener.getAssertion();
+		homePage = new HomePage(Listener.getDriver());
+		
+		assert1 =  Listener.getAssertion();
 		
 		assert1.assertTrue(exceptionHandler(homePage.getHeader()), "Header is displayed");
 
@@ -33,6 +37,25 @@ public class TestSample extends BaseTest{
 		
 		assert1.assertAll();
 		
+	}
+	
+	@Test(testName = "Verify Home Page header contents")
+	private void testHeaderContents(){
+		
+		//Testing of Main content
+		assert1.assertEquals(homePage.getHeaderTextInMainContent(), "Learn to Code", "Header is displayed");
+		
+		assert1.assertEquals(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.", "Subheaer is displayed");
+		
+		assert1.assertTrue(exceptionHandler(homePage.getSearchbarField()), "Search field is displayed");
+		
+		assert1.assertEquals(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML", "Search field placeholder is displayed");
+		
+		assert1.assertTrue(exceptionHandler(homePage.getSearchbarButton()), "Search field button is displayed");
+		
+		assert1.assertTrue(exceptionHandler(homePage.getWhereToBeginLink()), "\"Not Sure Where To Begin?\" link is displayed");
+		
+		assert1.assertAll();
 	}
 
 }
