@@ -2,9 +2,29 @@ package tests;
 
 import org.openqa.selenium.WebElement;
 
+import utilities.SoftAssertion;
+
 public class BaseTest {
 
-	protected boolean exceptionHandler(WebElement element){
+	SoftAssertion softAssertion;
+	
+	public void setSoftAssertion(SoftAssertion softAssertion){
+		this.softAssertion = softAssertion;
+	}
+	
+	public void assertAll(){
+		softAssertion.assertAll();
+	}
+	
+	public void verifyElementIsDisplayed(WebElement element, String expectedResult){
+		softAssertion.assertTrue(exceptionHandler(element), expectedResult);
+	}
+	
+	public void verifyTextIsTheSame(String actualTextInElement, String expectedTextInElement, String expectedResult){
+		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, expectedResult);
+	}
+
+	private boolean exceptionHandler(WebElement element){
 		
 		boolean defaultValue = false;
 		
