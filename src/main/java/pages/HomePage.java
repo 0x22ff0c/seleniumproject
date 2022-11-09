@@ -9,10 +9,50 @@ public class HomePage extends BasePage{
 		super(driver);
 	}
 
+	//Header
+	
 	public WebElement getHeader(){
 		return getElementByXpath("//*[@title='Home']/parent::*");
 	}
 
+	//Header - menu items
+	
+	private WebElement getHeaderButtons(String title){
+		return getElementByXpath(String.format("//*[@title='%s']", title));
+	}
+	
+	private WebElement getHeaderCaretDownButtons(String title){
+		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title));
+	}
+	
+	public WebElement getTutorialsButton(){
+		return getHeaderButtons("Tutorials");
+	}
+	
+	public WebElement getTutorialsCaretDownButton(){
+		return getHeaderCaretDownButtons("Tutorials");
+	}
+	
+	public WebElement getReferencesButtons(){
+		return getHeaderButtons("References");
+	}
+	
+	public WebElement getReferencesCaretDownButton(){
+		return getHeaderCaretDownButtons("References");
+	}
+	
+	public WebElement getExcercisesButtons(){
+		return getHeaderButtons("Exercises");
+	}
+	
+	public WebElement getExcercisesDownButton(){
+		return getHeaderCaretDownButtons("Exercises");
+	}
+	
+	public WebElement getVideosButton(){
+		return getHeaderButtons("Video Tutorials");
+	}
+	
 	public WebElement getHomeLogo(){
 		return getElementByXpath("//*[@title='Home']");
 	}
