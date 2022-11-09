@@ -43,30 +43,31 @@ public class Listener implements ITestListener {
 
 		driver = driverManager.getDriver();
 		
-		softAssertion = new SoftAssertion();
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
+		 
+		System.out.println("Test method passed: "+ result.getName());
 		
-		System.out.println("Test passed: "+ result.getName());
-	
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
 
-		System.out.println("Method failed: "+ result.getName());
-	
+		System.out.println("Test method failed: "+ result.getName());
+		
 	}
 	
 
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		
+
 		System.out.println("\n====================================");
 		System.out.println("Starting test: " + result.getName());
+		
+		softAssertion = new SoftAssertion();
 		
 	}
 
