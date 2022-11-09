@@ -17,40 +17,40 @@ public class HomePage extends BasePage{
 
 	//Header - menu items
 	
-	private WebElement getHeaderButtons(String title){
+	private WebElement getHeaderButton(String title){
 		return getElementByXpath(String.format("//*[@title='%s']", title));
 	}
 	
-	private WebElement getHeaderCaretDownButtons(String title){
+	private WebElement getHeaderCaretDownButton(String title){
 		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title));
 	}
 	
 	public WebElement getTutorialsButton(){
-		return getHeaderButtons("Tutorials");
+		return getHeaderButton("Tutorials");
 	}
 	
 	public WebElement getTutorialsCaretDownButton(){
-		return getHeaderCaretDownButtons("Tutorials");
+		return getHeaderCaretDownButton("Tutorials");
 	}
 	
-	public WebElement getReferencesButtons(){
-		return getHeaderButtons("References");
+	public WebElement getReferencesButton(){
+		return getHeaderButton("References");
 	}
 	
 	public WebElement getReferencesCaretDownButton(){
-		return getHeaderCaretDownButtons("References");
+		return getHeaderCaretDownButton("References");
 	}
 	
-	public WebElement getExcercisesButtons(){
-		return getHeaderButtons("Exercises");
+	public WebElement getExcercisesButton(){
+		return getHeaderButton("Exercises");
 	}
 	
 	public WebElement getExcercisesDownButton(){
-		return getHeaderCaretDownButtons("Exercises");
+		return getHeaderCaretDownButton("Exercises");
 	}
 	
 	public WebElement getVideosButton(){
-		return getHeaderButtons("Video Tutorials");
+		return getHeaderButton("Video Tutorials");
 	}
 	
 	public WebElement getHomeLogo(){

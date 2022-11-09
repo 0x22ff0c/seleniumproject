@@ -2,6 +2,7 @@ package utilities;
 
 import java.util.Map;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.testng.asserts.IAssert;
 import org.testng.asserts.SoftAssert;
 import org.testng.collections.Maps;
@@ -24,6 +25,7 @@ public class SoftAssertion extends SoftAssert{
 	      System.out.println("=========================================");
 	    } catch (AssertionError ex) {
 	      onAssertFailure(a, ex);
+	      System.out.println(ExceptionUtils.getStackTrace(ex));
 	      System.out.println("Result: Failed");
 	      System.out.println("=========================================");
 	      m_errors.put(ex, a);

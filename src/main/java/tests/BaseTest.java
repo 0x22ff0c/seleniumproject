@@ -17,7 +17,9 @@ public class BaseTest {
 	}
 	
 	public void verifyElementIsDisplayed(WebElement element, String expectedResult){
+
 		softAssertion.assertTrue(exceptionHandler(element), expectedResult);
+		
 	}
 	
 	public void verifyTextIsTheSame(String actualTextInElement, String expectedTextInElement, String expectedResult){
