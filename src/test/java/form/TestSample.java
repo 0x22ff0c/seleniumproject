@@ -38,8 +38,8 @@ public class TestSample extends BaseTest{
 		
 	}
 	
-	@Test(testName = "Verify Home Page header contents")
-	private void testHeaderContents(){
+	@Test(testName = "Verify Main page contents")
+	private void testMainPageContents(){
 	
 		verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code", "Header is displayed");
 	
