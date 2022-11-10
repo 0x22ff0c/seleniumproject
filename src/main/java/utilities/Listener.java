@@ -1,9 +1,12 @@
 package utilities;
 
+import java.lang.reflect.Method;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.Test;
 
 public class Listener implements ITestListener {
 	
@@ -64,8 +67,12 @@ public class Listener implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 
+		Method method = result.getMethod().getConstructorOrMethod().getMethod();
+		Test test = method.getAnnotation(Test.class);
+		String testName = test.testName();
+		
 		System.out.println("\n====================================");
-		System.out.println("Starting test: " + result.getName());
+		System.out.println("Starting test: " + testName);
 		
 		softAssertion = new SoftAssertion();
 		
