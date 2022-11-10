@@ -12,49 +12,6 @@ public class TestSample extends BaseTest{
 	HomePage homePage;
 
 	Control control;
-
-	@Test(testName = "Verify Home page header elements", priority =  1)
-	private void testHomePageHeaderElements(){
-
-		homePage = new HomePage(Listener.getDriver());
-
-		setSoftAssertion(Listener.getAssertion());
-
-		verifyElementIsDisplayed(homePage.getHeader(), "Header is displayed");
-		
-		verifyElementIsDisplayed(homePage.getHomeLogo(), "Home logo is displayed");
-
-		verifyButtonIsDisplayed(homePage.getTutorialsButton(), "Tutorials");
-	
-		verifyButtonIsDisplayed(homePage.getTutorialsCaretDownButton(), "Tutorials caret");
-
-		verifyButtonIsDisplayed(homePage.getReferencesButton(), "References");
-
-		verifyButtonIsDisplayed(homePage.getReferencesCaretDownButton(), "References caret");
-	
-		verifyButtonIsDisplayed(homePage.getExercisesButton(), "Exercises");
-		
-		verifyButtonIsDisplayed(homePage.getExercisesDownButton(), "Excercises caret");
-		
-		verifyButtonIsDisplayed(homePage.getVideosButton(), "Videos");
-		
-		verifyButtonIsDisplayed(homePage.getThemeToggle(), "Theme toggle");
-		
-		verifyButtonIsDisplayed(homePage.getTranslateButton(), "Language translate");
-		
-		verifyButtonIsDisplayed(homePage.getSearchButton(), "Search");
-
-		verifyButtonIsDisplayed(homePage.getUpgradeButton(), "Upgrade");
-
-		verifyButtonIsDisplayed(homePage.getCertifiedButton(), "Certified");
-		
-		verifyButtonIsDisplayed(homePage.getFreeWebsiteButton(), "Free website");
-		
-		verifyButtonIsDisplayed(homePage.getLoginButton(), "Login");
-		
-		assertAll();
-		
-	}
 	
 	@Test(testName = "Verify Main page contents", priority = 2)
 	private void testMainPageContents(){
