@@ -57,7 +57,7 @@ public class HomePage extends BasePage{
 		return getElementByXpath("//*[@xxtitle='Toggle Dark Code']");
 	}
 	
-	public WebElement getTranslatButton(){
+	public WebElement getTranslateButton(){
 		return getElementById("nav_translate_btn");
 	}
 	

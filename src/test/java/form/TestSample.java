@@ -38,6 +38,20 @@ public class TestSample extends BaseTest{
 		
 		verifyElementIsDisplayed(homePage.getVideosButton(), "Videos button is displayed");
 		
+		verifyElementIsDisplayed(homePage.getThemeToggle(), "Theme toggle button is displayed");
+		
+		verifyElementIsDisplayed(homePage.getTranslateButton(), "Language translate button is displayed");
+		
+		verifyElementIsDisplayed(homePage.getSearchButton(), "Search button is displayed");
+		
+		verifyElementIsDisplayed(homePage.getUpgradeButton(), "Upgrade button is displayed");
+		
+		verifyElementIsDisplayed(homePage.getCertifiedButton(), "Get certified button is displayed");
+		
+		verifyElementIsDisplayed(homePage.getFreeWebsiteButton(), "Free website button is displayed");
+		
+		verifyElementIsDisplayed(homePage.getLoginButton(), "Login button is displayed");
+		
 		assertAll();
 		
 	}
