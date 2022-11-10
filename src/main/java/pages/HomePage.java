@@ -41,11 +41,11 @@ public class HomePage extends BasePage{
 		return getHeaderCaretDownButton("References");
 	}
 	
-	public WebElement getExcercisesButton(){
+	public WebElement getExercisesButton(){
 		return getHeaderButton("Exercises");
 	}
 	
-	public WebElement getExcercisesDownButton(){
+	public WebElement getExercisesDownButton(){
 		return getHeaderCaretDownButton("Exercises");
 	}
 	
