@@ -53,6 +53,34 @@ public class HomePage extends BasePage{
 		return getHeaderButton("Video Tutorials");
 	}
 	
+	public WebElement getThemeToggle(){
+		return getElementByXpath("//*[@xxtitle='Toggle Dark Code']");
+	}
+	
+	public WebElement getTranslatButton(){
+		return getElementById("nav_translate_btn");
+	}
+	
+	public WebElement getSearchButton(){
+		return getElementById("nav_search_btn");
+	}
+	
+	public WebElement getUpgradeButton(){
+		return getElementByXpath("//*[@title='Courses']/following-sibling::*[contains(@title,'Upgrade')]");
+	}
+	
+	public WebElement getCertifiedButton(){
+		return getElementById("cert_navbtn");
+	}
+	
+	public WebElement getFreeWebsiteButton(){
+		return getElementByXpath("//*[@title='Courses']/preceding-sibling::*[contains(@title, 'Get Your Own Website')]");
+	}
+	
+	public WebElement getLoginButton(){
+		return getElementById("w3loginbtn");
+	}
+	
 	public WebElement getHomeLogo(){
 		return getElementByXpath("//*[@title='Home']");
 	}
