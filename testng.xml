@@ -6,7 +6,8 @@
 	</listeners>
 	<test name="Test">
 		<classes>
-			<class name="form.TestSample"></class>
+			<class name="homepage.TestHomePageHeader"></class>
+			<class name="homepage.TestSample"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
