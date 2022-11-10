@@ -23,7 +23,7 @@ public class BaseTest {
 	}
 	
 	public void verifyButtonIsDisplayed(WebElement element, String nameOfThebutton){
-		verifyElementIsDisplayed(element, String.format("%s is displayed", nameOfThebutton));
+		verifyElementIsDisplayed(element, String.format("%s button is displayed", nameOfThebutton));
 	}
 	
 	public void verifyTextIsTheSame(String actualTextInElement, String expectedTextInElement, String expectedResult){
