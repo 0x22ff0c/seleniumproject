@@ -16,6 +16,8 @@ public class TestSample extends BaseTest{
 	@Test(testName = "Verify Main page contents", priority = 2)
 	private void testMainPageContents(){
 	
+		homePage = new HomePage(Listener.getDriver());
+		
 		setSoftAssertion(Listener.getAssertion());
 		
 		verifyElementIsDisplayed(homePage.getMainContent(), "Main content is displayed");
