@@ -1,4 +1,4 @@
-package form;
+package homepage;
 
 import org.testng.annotations.Test;
 
@@ -32,9 +32,9 @@ public class TestSample extends BaseTest{
 
 		verifyButtonIsDisplayed(homePage.getReferencesCaretDownButton(), "References caret");
 	
-		verifyButtonIsDisplayed(homePage.getExcercisesButton(), "Exercises");
+		verifyButtonIsDisplayed(homePage.getExercisesButton(), "Exercises");
 		
-		verifyButtonIsDisplayed(homePage.getExcercisesDownButton(), "Excercises caret");
+		verifyButtonIsDisplayed(homePage.getExercisesDownButton(), "Excercises caret");
 		
 		verifyButtonIsDisplayed(homePage.getVideosButton(), "Videos");
 		
@@ -78,7 +78,7 @@ public class TestSample extends BaseTest{
 		assertAll();
 	}
 	
-	@Test(testName = "Verify Home Page elements", priority = 3)
+	@Test(testName = "Verify Home Page sections", priority = 3)
 	private void sampleTestMethod(){
 
 		setSoftAssertion(Listener.getAssertion());
