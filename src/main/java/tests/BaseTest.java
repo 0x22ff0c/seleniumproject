@@ -16,9 +16,9 @@ public class BaseTest {
 		softAssertion.assertAll();
 	}
 	
-	public void verifyElementIsDisplayed(WebElement element, String expectedResult){
+	public void verifyElementIsDisplayed(WebElement element, String nameOfElement){
 
-		softAssertion.assertTrue(exceptionHandler(element), expectedResult);
+		softAssertion.assertTrue(exceptionHandler(element), String.format("%s is displayed", nameOfElement));
 		
 	}
 	
