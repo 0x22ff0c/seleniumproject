@@ -42,9 +42,9 @@ public class TestHomePageHeader extends BaseTest{
 
 		setSoftAssertion(Listener.getAssertion());
 
-		verifyElementIsDisplayed(homePage.getHeader(), "Header is displayed");
+		verifyElementIsDisplayed(homePage.getHeader(), "Header");
 		
-		verifyElementIsDisplayed(homePage.getHomeLogo(), "Home logo is displayed");
+		verifyElementIsDisplayed(homePage.getHomeLogo(), "Home logo");
 
 		verifyButtonIsDisplayed(homePage.getTutorialsButton(), "Tutorials");
 	
