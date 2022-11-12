@@ -30,8 +30,6 @@ public class WebdriverManager {
 		System.out.println("\nQuitting driver instance...");
 		
 		driver.quit();
-		
-		System.out.println("deleted driver instance.");
 
 	}
 
