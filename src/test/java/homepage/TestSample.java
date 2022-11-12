@@ -1,5 +1,7 @@
 package homepage;
 
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
@@ -7,50 +9,62 @@ import tests.BaseTest;
 import utilities.Control;
 import utilities.Listener;
 
-public class TestSample extends BaseTest{
+public class TestSample {
 
 	HomePage homePage;
 
 	Control control;
 	
+	BaseTest baseTest;
+	
+	WebDriver driver;
+	
+	@BeforeClass
+	private void setup(){
+		
+		driver = Listener.getDriver();
+		
+		baseTest = new BaseTest();
+		
+		homePage = new HomePage(driver, baseTest);
+		
+		control = new Control(driver);
+		
+	}
+
 	@Test(testName = "Verify Main page contents", priority = 2)
 	private void testMainPageContents(){
 
-		homePage = new HomePage(Listener.getDriver());
+		baseTest.setSoftAssertion(Listener.getAssertion());
 		
-		setSoftAssertion(Listener.getAssertion());
+		baseTest.verifyElementIsDisplayed(homePage.getMainContent());
 		
-		verifyElementIsDisplayed(homePage.getMainContent());
-		
-		verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code", "Header");
+		baseTest.verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code", "Header");
 	
-		verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.", "Subheader");
+		baseTest.verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.", "Subheader");
 	
-		verifyElementIsDisplayed(homePage.getSearchbarField());
+		baseTest.verifyElementIsDisplayed(homePage.getSearchbarField());
 	
-		verifyTextIsTheSame(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML", "Search field placeholder");
+		baseTest.verifyTextIsTheSame(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML", "Search field placeholder");
 	
-		verifyElementIsDisplayed(homePage.getSearchbarButton());
+		baseTest.verifyElementIsDisplayed(homePage.getSearchbarButton());
 
-		verifyElementIsDisplayed(homePage.getWhereToBeginLink());
+		baseTest.verifyElementIsDisplayed(homePage.getWhereToBeginLink());
 		
-		assertAll();
+		baseTest.assertAll();
+		
 	}
 	
 	@Test(testName = "Verify Home Page sections", priority = 3)
 	private void sampleTestMethod(){
 
-		setSoftAssertion(Listener.getAssertion());
-		
-		control = new Control(Listener.getDriver());
-		
 		control.scrollToElement(homePage.getFooter());
 
-		verifyElementIsDisplayed(homePage.getFooter());
+		baseTest.verifyElementIsDisplayed(homePage.getFooter());
 		
 		control.scrollToElement(homePage.getHeader());
 		
-		assertAll();
+		baseTest.assertAll();
 		
 	}
 

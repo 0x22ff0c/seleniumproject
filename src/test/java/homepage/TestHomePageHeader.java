@@ -1,5 +1,6 @@
 package homepage;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
@@ -7,11 +8,22 @@ import tests.BaseTest;
 import utilities.Control;
 import utilities.Listener;
 
-public class TestHomePageHeader extends BaseTest{
+public class TestHomePageHeader {
 
 	HomePage homePage;
 
 	Control control;
+	
+	BaseTest baseTest;
+
+	@BeforeClass
+	private void setup(){
+
+		baseTest = new BaseTest();
+		
+		homePage = new HomePage(Listener.getDriver(), baseTest);
+		
+	}
 	
 	/**
 	 * Verifies the elements in the header.
@@ -38,43 +50,41 @@ public class TestHomePageHeader extends BaseTest{
 	@Test(testName = "Verify Home page header elements", priority =  1)
 	private void testHomePageHeaderElements(){
 
-		homePage = new HomePage(Listener.getDriver());
-
-		setSoftAssertion(Listener.getAssertion());
-
-		verifyElementIsDisplayed(homePage.getHeader());
-
-		verifyElementIsDisplayed(homePage.getHomeLogo());
-
-		verifyElementIsDisplayed(homePage.getTutorialsButton());
-
-		verifyElementIsDisplayed(homePage.getTutorialsCaretDownButton());
-	
-		verifyElementIsDisplayed(homePage.getReferencesButton());
-
-		verifyElementIsDisplayed(homePage.getReferencesCaretDownButton());
-
-		verifyElementIsDisplayed(homePage.getExercisesButton());
-
-		verifyElementIsDisplayed(homePage.getExercisesDownButton());
-	
-		verifyElementIsDisplayed(homePage.getVideosButton());
-
-		verifyElementIsDisplayed(homePage.getThemeToggle());
-	
-		verifyElementIsDisplayed(homePage.getTranslateButton());
-	
-		verifyElementIsDisplayed(homePage.getSearchButton());
-	
-		verifyElementIsDisplayed(homePage.getUpgradeButton());
+		baseTest.setSoftAssertion(Listener.getAssertion());
 		
-		verifyElementIsDisplayed(homePage.getCertifiedButton());
+		baseTest.verifyElementIsDisplayed(homePage.getHeader());
+
+		baseTest.verifyElementIsDisplayed(homePage.getHomeLogo());
+
+		baseTest.verifyElementIsDisplayed(homePage.getTutorialsButton());
+
+		baseTest.verifyElementIsDisplayed(homePage.getTutorialsCaretDownButton());
+	
+		baseTest.verifyElementIsDisplayed(homePage.getReferencesButton());
+
+		baseTest.verifyElementIsDisplayed(homePage.getReferencesCaretDownButton());
+
+		baseTest.verifyElementIsDisplayed(homePage.getExercisesButton());
+
+		baseTest.verifyElementIsDisplayed(homePage.getExercisesDownButton());
+	
+		baseTest.verifyElementIsDisplayed(homePage.getVideosButton());
+
+		baseTest.verifyElementIsDisplayed(homePage.getThemeToggle());
+	
+		baseTest.verifyElementIsDisplayed(homePage.getTranslateButton());
+	
+		baseTest.verifyElementIsDisplayed(homePage.getSearchButton());
+	
+		baseTest.verifyElementIsDisplayed(homePage.getUpgradeButton());
 		
-		verifyElementIsDisplayed(homePage.getFreeWebsiteButton());
+		baseTest.verifyElementIsDisplayed(homePage.getCertifiedButton());
 		
-		verifyElementIsDisplayed(homePage.getLoginButton());
+		baseTest.verifyElementIsDisplayed(homePage.getFreeWebsiteButton());
 		
-		assertAll();
+		baseTest.verifyElementIsDisplayed(homePage.getLoginButton());
+		
+		baseTest.assertAll();
 		
 	}
 	
