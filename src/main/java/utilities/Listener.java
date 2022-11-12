@@ -71,9 +71,7 @@ public class Listener implements ITestListener {
 		Test test = method.getAnnotation(Test.class);
 		String testName = test.testName();
 		
-		System.out.println("\n====================================");
-		System.out.println("Starting test: " + testName);
-		
+		System.out.println(String.format("\n==================== [Starting test: %s] ====================\n", testName));
 		softAssertion = new SoftAssertion();
 		
 	}
