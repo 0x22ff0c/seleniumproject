@@ -21,13 +21,13 @@ public class SoftAssertion extends SoftAssert{
 	    try {
 	      a.doAssert();
 	      onAssertSuccess(a);
-	      System.out.println("Result: Passed");
-	      System.out.println("=========================================");
+	      System.out.println("Result: Passed\n");
+	      System.out.println("===========================================================================================");
 	    } catch (AssertionError ex) {
 	      onAssertFailure(a, ex);
 	      System.out.println(ExceptionUtils.getStackTrace(ex));
-	      System.out.println("Result: Failed");
-	      System.out.println("=========================================");
+	      System.out.println("Result: Failedn\n");
+	      System.out.println("===========================================================================================");
 	      m_errors.put(ex, a);
 	    } finally {
 	      onAfterAssert(a);
