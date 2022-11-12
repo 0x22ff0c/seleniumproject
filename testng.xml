@@ -9,5 +9,5 @@
 			<class name="homepage.TestHomePageHeader"></class>
 			<class name="homepage.TestSample"></class>
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test>
+</suite>
