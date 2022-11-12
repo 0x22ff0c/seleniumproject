@@ -42,7 +42,7 @@ public class BasePage {
 	}
 	
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
-		return getElement(By.linkText(linkText), nameOfElement);
+		return getElement(By.linkText(linkText), nameOfElement + "link");
 	}
 	
 	private WebElement getElement(By byElement, String nameOfElement){
@@ -76,6 +76,12 @@ public class BasePage {
 		}
 		
 		return textOfElement;
+	}
+	
+	protected String getTextOfElement(By byLocator){
+		
+		return driver.findElement(byLocator).getText();
+		
 	}
 	
 	protected String getPlaceholderTextOfField(WebElement element){
