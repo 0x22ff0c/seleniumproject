@@ -20,19 +20,19 @@ public class TestSample extends BaseTest{
 		
 		setSoftAssertion(Listener.getAssertion());
 		
-		verifyElementIsDisplayed(homePage.getMainContent(), "Main content is displayed");
+		verifyElementIsDisplayed(homePage.getMainContent(), "Main content");
 		
-		verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code", "Header is displayed");
+		verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code", "Header");
 	
-		verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.", "Subheader is displayed");
+		verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.", "Subheader");
 	
-		verifyElementIsDisplayed(homePage.getSearchbarField(), "Search field is displayed");
+		verifyElementIsDisplayed(homePage.getSearchbarField(), "Search field");
 	
-		verifyTextIsTheSame(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML", "Search field placeholder is displayed");
+		verifyTextIsTheSame(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML", "Search field placeholder");
 	
-		verifyElementIsDisplayed(homePage.getSearchbarButton(), "Search field button is displayed");
+		verifyButtonIsDisplayed(homePage.getSearchbarButton(), "Search field");
 		
-		verifyElementIsDisplayed(homePage.getWhereToBeginLink(), "\"Not Sure Where To Begin?\" link is displayed");
+		verifyElementIsDisplayed(homePage.getWhereToBeginLink(), "\"Not Sure Where To Begin?\" link displayed");
 		
 		assertAll();
 	}
@@ -46,7 +46,7 @@ public class TestSample extends BaseTest{
 		
 		control.scrollToElement(homePage.getFooter());
 
-		verifyElementIsDisplayed(homePage.getFooter(), "Footer is displayed");
+		verifyElementIsDisplayed(homePage.getFooter(), "Footer");
 		
 		control.scrollToElement(homePage.getHeader());
 		
