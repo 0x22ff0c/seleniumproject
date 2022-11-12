@@ -6,4 +6,5 @@ allure-results/
 .project
 driver/*
 !driver/donotdelete.txt
+.idea/
 
