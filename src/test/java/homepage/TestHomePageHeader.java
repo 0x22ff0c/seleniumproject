@@ -3,14 +3,14 @@ package homepage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pages.HomePage;
+import pages.homepage.HomePageHeader;
 import tests.BaseTest;
 import utilities.Control;
 import utilities.Listener;
 
 public class TestHomePageHeader {
 
-	HomePage homePage;
+	HomePageHeader homePage;
 
 	Control control;
 	
@@ -21,7 +21,7 @@ public class TestHomePageHeader {
 
 		baseTest = new BaseTest();
 		
-		homePage = new HomePage(Listener.getDriver(), baseTest);
+		homePage = new HomePageHeader(Listener.getDriver(), baseTest);
 		
 	}
 	
