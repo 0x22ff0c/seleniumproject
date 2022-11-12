@@ -3,10 +3,12 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HomePage extends BasePage{
+import tests.BaseTest;
 
-	public HomePage(WebDriver driver) {
-		super(driver);
+public class HomePage extends BasePage{
+	
+	public HomePage(WebDriver driver, BaseTest baseTest) {
+		super(driver, baseTest);
 	}
 
 	//Header
@@ -58,11 +60,11 @@ public class HomePage extends BasePage{
 	}
 	
 	public WebElement getTranslateButton(){
-		return getElementById("nav_translate_btn", "Translate");
+		return getElementById("nav_translate_btn", "Translate button");
 	}
 	
 	public WebElement getSearchButton(){
-		return getElementById("nav_search_btn", "Translate button");
+		return getElementById("nav_search_btn", "Search button");
 	}
 	
 	public WebElement getUpgradeButton(){
