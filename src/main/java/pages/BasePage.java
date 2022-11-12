@@ -18,29 +18,29 @@ public class BasePage {
 		this.driver = driver;
 	}
 	
-	public WebElement getElementById(String id, String nameOfElement){
+	protected WebElement getElementById(String id, String nameOfElement){
 		
 		return getElement(By.id(id), nameOfElement);
 		
 	}
 	
-	public WebElement getElementByClass(String className, String nameOfElement){
+	protected WebElement getElementByClass(String className, String nameOfElement){
 		
 		return getElement(By.className(className), nameOfElement);
 		
 	}
 	
-	public WebElement getElementByXpath(String xpath, String nameOfElement){
+	protected WebElement getElementByXpath(String xpath, String nameOfElement){
 		
 		return getElement(By.xpath(xpath), nameOfElement);
 
 	}
 	
-	public WebElement getElementByTagName(String tagName, String nameOfElement){
+	protected WebElement getElementByTagName(String tagName, String nameOfElement){
 		return getElement(By.tagName(tagName), nameOfElement);
 	}
 	
-	public WebElement getElementByLinkText(String linkText, String nameOfElement){
+	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
 		return getElement(By.linkText(linkText), nameOfElement);
 	}
 	
@@ -64,7 +64,7 @@ public class BasePage {
 		
 	}
 	
-	public String getTextOfElement(WebElement element){
+	protected String getTextOfElement(WebElement element){
 		
 		String textOfElement = "";
 		
@@ -77,7 +77,7 @@ public class BasePage {
 		return textOfElement;
 	}
 	
-	public String getPlaceholderTextOfField(WebElement element){
+	protected String getPlaceholderTextOfField(WebElement element){
 		
 		String placeholderText = "";
 		
