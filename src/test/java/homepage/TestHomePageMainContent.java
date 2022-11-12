@@ -4,17 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pages.HomePage;
+import pages.homepage.HomePageMainContent;
 import tests.BaseTest;
-import utilities.Control;
 import utilities.Listener;
 
-public class TestSample {
+public class TestHomePageMainContent {
 
-	HomePage homePage;
+	HomePageMainContent homePage;
 
-	Control control;
-	
 	BaseTest baseTest;
 	
 	WebDriver driver;
@@ -26,10 +23,8 @@ public class TestSample {
 		
 		baseTest = new BaseTest();
 		
-		homePage = new HomePage(driver, baseTest);
-		
-		control = new Control(driver);
-		
+		homePage = new HomePageMainContent(driver, baseTest);
+
 	}
 
 	@Test(testName = "Verify Main page contents", priority = 2)
@@ -55,18 +50,5 @@ public class TestSample {
 		
 	}
 	
-	@Test(testName = "Verify Home Page sections", priority = 3)
-	private void sampleTestMethod(){
-
-		control.scrollToElement(homePage.getFooter());
-
-		baseTest.verifyElementIsDisplayed(homePage.getFooter());
-		
-		control.scrollToElement(homePage.getHeader());
-		
-		baseTest.assertAll();
-		
-	}
-
 }
 
