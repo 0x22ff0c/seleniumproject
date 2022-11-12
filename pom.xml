@@ -3,11 +3,21 @@
   <groupId>seleniumproject</groupId>
   <artifactId>seleniumproject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>seleniumproject</name>
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+    <name>seleniumproject</name>
   <description>seleniumproject</description>
   
   <dependencies>
-  
+
+	  <dependency>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-compiler-plugin</artifactId>
+		  <version>3.8.1</version>
+	  </dependency>
+
 	  <dependency>
 	    <groupId>io.github.bonigarcia</groupId>
 	    <artifactId>webdrivermanager</artifactId>
