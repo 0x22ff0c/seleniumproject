@@ -12,12 +12,13 @@ public class BasePage {
 
 	WebDriver driver = null;
 	WebElement element = null;
-	String nameOfElement;
-
-	public BasePage(WebDriver driver){
+	BaseTest baseTest;
+	
+	public BasePage(WebDriver driver, BaseTest baseTest){
+		this.baseTest = baseTest;
 		this.driver = driver;
 	}
-	
+
 	protected WebElement getElementById(String id, String nameOfElement){
 		
 		return getElement(By.id(id), nameOfElement);
@@ -45,8 +46,8 @@ public class BasePage {
 	}
 	
 	private WebElement getElement(By byElement, String nameOfElement){
-		
-		BaseTest.setElementName(nameOfElement);
+
+		baseTest.setNameOfElement(nameOfElement);
 		
 		element = null;
 		
