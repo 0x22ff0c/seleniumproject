@@ -15,24 +15,24 @@ public class TestSample extends BaseTest{
 	
 	@Test(testName = "Verify Main page contents", priority = 2)
 	private void testMainPageContents(){
-	
+
 		homePage = new HomePage(Listener.getDriver());
 		
 		setSoftAssertion(Listener.getAssertion());
 		
-		verifyElementIsDisplayed(homePage.getMainContent(), "Main content");
+		verifyElementIsDisplayed(homePage.getMainContent());
 		
 		verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code", "Header");
 	
 		verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.", "Subheader");
 	
-		verifyElementIsDisplayed(homePage.getSearchbarField(), "Search field");
+		verifyElementIsDisplayed(homePage.getSearchbarField());
 	
 		verifyTextIsTheSame(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML", "Search field placeholder");
 	
-		verifyButtonIsDisplayed(homePage.getSearchbarButton(), "Search field");
-		
-		verifyElementIsDisplayed(homePage.getWhereToBeginLink(), "\"Not Sure Where To Begin?\" link displayed");
+		verifyElementIsDisplayed(homePage.getSearchbarButton());
+
+		verifyElementIsDisplayed(homePage.getWhereToBeginLink());
 		
 		assertAll();
 	}
@@ -46,7 +46,7 @@ public class TestSample extends BaseTest{
 		
 		control.scrollToElement(homePage.getFooter());
 
-		verifyElementIsDisplayed(homePage.getFooter(), "Footer");
+		verifyElementIsDisplayed(homePage.getFooter());
 		
 		control.scrollToElement(homePage.getHeader());
 		
