@@ -6,42 +6,47 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import tests.BaseTest;
+
 public class BasePage {
 
 	WebDriver driver = null;
 	WebElement element = null;
-	
+	String nameOfElement;
+
 	public BasePage(WebDriver driver){
 		this.driver = driver;
 	}
 	
-	public WebElement getElementById(String id){
+	public WebElement getElementById(String id, String nameOfElement){
 		
-		return getElement(By.id(id));
-		
-	}
-	
-	public WebElement getElementByClass(String className){
-		
-		return getElement(By.className(className));
+		return getElement(By.id(id), nameOfElement);
 		
 	}
 	
-	public WebElement getElementByXpath(String xpath){
+	public WebElement getElementByClass(String className, String nameOfElement){
 		
-		return getElement(By.xpath(xpath));
+		return getElement(By.className(className), nameOfElement);
+		
+	}
+	
+	public WebElement getElementByXpath(String xpath, String nameOfElement){
+		
+		return getElement(By.xpath(xpath), nameOfElement);
 
 	}
 	
-	public WebElement getElementByTagName(String tagName){
-		return getElement(By.tagName(tagName));
+	public WebElement getElementByTagName(String tagName, String nameOfElement){
+		return getElement(By.tagName(tagName), nameOfElement);
 	}
 	
-	public WebElement getElementByLinkText(String linkText){
-		return getElement(By.linkText(linkText));
+	public WebElement getElementByLinkText(String linkText, String nameOfElement){
+		return getElement(By.linkText(linkText), nameOfElement);
 	}
 	
-	private WebElement getElement(By byElement){
+	private WebElement getElement(By byElement, String nameOfElement){
+		
+		BaseTest.setElementName(nameOfElement);
 		
 		element = null;
 		
