@@ -19,7 +19,15 @@ public class HomePageMenuItems extends HomePageHeader{
 	private WebElement getHeaderMenuCloseButton(String idValue, String elementName){
 		return getElementByXpath(String.format("//*[@id='%s']/descendant::*[text()='×']", idValue), String.format("%s close button", elementName));
 	}
+	
+	private WebElement getMenuContainer(String idValue, String elementName){
+		return getElementByXpath(String.format("//*[@id='%s' and contains(@style, 'display: block')]", idValue), String.format("%s menu container", elementName));
+	}
 
+	private static final String TUTORIAL_NAV_ID = "nav_tutorials";
+	private static final String REFERENCES_NAV_ID = "nav_references";
+	private static final String EXERCISES_NAV_ID = "nav_exercises";
+	
 	@Override
 	public WebElement getTutorialsCaretButton(){
 		return getHeaderCaretButton(TUTORIALS_LABEL);
@@ -36,7 +44,11 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getTutorialsCloseButton(){
-		return getHeaderMenuCloseButton("nav_tutorials", TUTORIALS_LABEL);
+		return getHeaderMenuCloseButton(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
+	}
+	
+	public WebElement getTutorialsMenuContainer(){
+		return getMenuContainer(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
 	}
 	
 	public void clickTutorialsCloseButton(){
@@ -44,7 +56,11 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getReferencesCloseButton(){
-		return getHeaderMenuCloseButton("nav_references", REFERENCES_LABEL);
+		return getHeaderMenuCloseButton(REFERENCES_NAV_ID, REFERENCES_LABEL);
+	}
+	
+	public WebElement getReferencesMenuContainer(){
+		return getMenuContainer(REFERENCES_NAV_ID, REFERENCES_LABEL);
 	}
 	
 	public void clickReferencesCloseButton(){
@@ -52,7 +68,11 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getExercisesCloseButton(){
-		return getHeaderMenuCloseButton("nav_exercises", EXCERCISES_LABEL);
+		return getHeaderMenuCloseButton(EXERCISES_NAV_ID, EXCERCISES_LABEL);
+	}
+	
+	public WebElement getExercisesMenuButton(){
+		return getMenuContainer(EXERCISES_NAV_ID, EXCERCISES_LABEL);
 	}
 	
 	public void clickExercisesCloseButton(){
