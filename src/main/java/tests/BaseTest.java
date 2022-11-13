@@ -8,8 +8,8 @@ public class BaseTest {
 
 	SoftAssertion softAssertion;
 	String nameOfElement;
-	
-	public void setSoftAssertion(SoftAssertion softAssertion){
+
+	public BaseTest(SoftAssertion softAssertion){
 		this.softAssertion = softAssertion;
 	}
 	
