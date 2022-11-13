@@ -10,9 +10,9 @@ import tests.BaseTest;
 
 public class BasePage {
 
-	WebDriver driver = null;
+	protected WebDriver driver = null;
 	WebElement element = null;
-	BaseTest baseTest;
+	protected BaseTest baseTest;
 	
 	public BasePage(WebDriver driver, BaseTest baseTest){
 		this.baseTest = baseTest;
