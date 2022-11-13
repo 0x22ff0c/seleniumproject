@@ -26,7 +26,7 @@ public class TestHomePageFooter {
 		
 		homePageFooter = new HomePageFooter(driver, baseTest);
 		
-		control = new Control(driver);
+		control = new Control(driver, baseTest);
 		
 		control.scrollToElement(homePageFooter.getFooter());
 		
