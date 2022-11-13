@@ -93,13 +93,39 @@ public class TestHomePageHeader {
 		
 	}
 	
+	private void verifyCategoryItems(String categoryName, String[] categoryItems){
+		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuCategoryName(categoryName));
+
+		for(String categoryItem : categoryItems){
+			
+			baseTest.verifyElementIsDisplayed(homePageMenuItems.getCategoryItem(categoryName, categoryItem));
+			
+		}
+		
+	}
+	
 	@Test(testName = "Verify Tutorial menu items", priority = 2)
 	private void testTutorialMenuIems(){
 		
 		homePageMenuItems.clickTutorialsButton();
 
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuContainer());
+
+		String categoryName = "HTML and CSS";
+
+		String[] categoryItems = new String[]{"Learn HTML", "Learn CSS", "Learn RWD", "Learn Bootstrap", "Learn W3.CSS", "Learn Colors", 
+				"Learn Icons", "Learn Graphics", "Learn SVG", "Learn Canvas", "Learn How To", "Learn Sass"};
 		
+		verifyCategoryItems(categoryName, categoryItems);
+		
+		categoryName = "JavaScript";
+
+		categoryItems = new String[]{"Learn JavaScript", "Learn jQuery", "Learn React", "Learn AngularJS", "Learn JSON",
+				"Learn AJAX", "Learn AppML", "Learn W3.JS"};
+		
+		verifyCategoryItems(categoryName, categoryItems);
+				
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
