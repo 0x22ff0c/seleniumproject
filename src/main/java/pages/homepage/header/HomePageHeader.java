@@ -1,19 +1,24 @@
-package pages.homepage;
+package pages.homepage.header;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import pages.BasePage;
 import tests.BaseTest;
+import utilities.Control;
 
 public class HomePageHeader extends BasePage{
 
 	//Header
-	
-	public HomePageHeader(WebDriver driver, BaseTest baseTest) {
+	public HomePageHeader(WebDriver driver, BaseTest baseTest){
 		super(driver, baseTest);
+		this.driver = driver;
+		this.baseTest = baseTest;
+		 
 	}
 
+	protected Control control = new Control(driver, baseTest);
+	
 	public WebElement getHeader(){
 		return getElementByXpath("//*[@title='Home']/parent::*", "Header");		
 	}
@@ -24,32 +29,48 @@ public class HomePageHeader extends BasePage{
 		return getElementByXpath(String.format("//*[@title='%s']", title), String.format("%s button", title));
 	}
 	
-	private WebElement getHeaderCaretDownButton(String title){
+	protected WebElement getHeaderCaretButton(String title){
 		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down button", title));
 	}
 	
+	protected static final String TUTORIALS_LABEL = "Tutorials";
+	protected static final String REFERENCES_LABEL = "References";
+	protected static final String EXCERCISES_LABEL = "Exercises";
+	
 	public WebElement getTutorialsButton(){
-		return getHeaderButton("Tutorials");
+		return getHeaderButton(TUTORIALS_LABEL);
 	}
 	
-	public WebElement getTutorialsCaretDownButton(){
-		return getHeaderCaretDownButton("Tutorials");
+	public void clickTutorialsButton(){
+		control.clickButton(getTutorialsButton());
+	}
+	
+	public WebElement getTutorialsCaretButton(){
+		return getHeaderCaretButton(TUTORIALS_LABEL);
 	}
 	
 	public WebElement getReferencesButton(){
-		return getHeaderButton("References");
+		return getHeaderButton(REFERENCES_LABEL);
 	}
 	
-	public WebElement getReferencesCaretDownButton(){
-		return getHeaderCaretDownButton("References");
+	public void clickReferencesButton(){
+		control.clickButton(getReferencesButton());
 	}
 	
+	public WebElement getReferencesCaretButton(){
+		return getHeaderCaretButton(REFERENCES_LABEL);
+	}
+
 	public WebElement getExercisesButton(){
-		return getHeaderButton("Exercises");
+		return getHeaderButton(EXCERCISES_LABEL);
 	}
 	
-	public WebElement getExercisesDownButton(){
-		return getHeaderCaretDownButton("Exercises");
+	public void clickExercisesButton(){
+		control.clickButton(getExercisesButton());
+	}
+	
+	public WebElement getExercisesCaretButton(){
+		return getHeaderCaretButton(EXCERCISES_LABEL);
 	}
 	
 	public WebElement getVideosButton(){
