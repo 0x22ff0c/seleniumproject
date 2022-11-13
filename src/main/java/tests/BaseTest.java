@@ -17,6 +17,10 @@ public class BaseTest {
 		this.nameOfElement = nameOfElement;
 	}
 	
+	public String getNameOfElement(){
+		return nameOfElement;
+	}
+	
 	public void assertAll(){
 		softAssertion.assertAll();
 	}
