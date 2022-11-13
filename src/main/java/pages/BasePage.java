@@ -42,7 +42,7 @@ public class BasePage {
 	}
 	
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
-		return getElement(By.linkText(linkText), nameOfElement + "link");
+		return getElement(By.linkText(linkText), nameOfElement + " link");
 	}
 	
 	private WebElement getElement(By byElement, String nameOfElement){

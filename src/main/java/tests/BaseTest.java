@@ -27,8 +27,8 @@ public class BaseTest {
 		
 	}
 	
-	public void verifyTextIsTheSame(String actualTextInElement, String expectedTextInElement, String expectedResult){
-		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, expectedResult);
+	public void verifyTextIsTheSame(String actualTextInElement, String expectedTextInElement){
+		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, String.format("\"%s\" is displayed", expectedTextInElement));
 	}
 
 	private boolean exceptionHandler(WebElement element){
