@@ -87,7 +87,7 @@ public class TestHomePageFooter {
 	private void verifyFooterTexts(){
 		
 		baseTest.verifyTextIsTheSame(homePageFooter.getFooterText(),"W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy.\n"
-				+ "Copyright 1999-2022 by Refsnes Data. All Rights Reserved.", "Footer text are the same");
+				+ "Copyright 1999-2022 by Refsnes Data. All Rights Reserved.");
 	
 		baseTest.verifyElementIsDisplayed(homePageFooter.getTermsOfUseLink());
 		

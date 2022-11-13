@@ -34,13 +34,13 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyElementIsDisplayed(homePage.getMainContent());
 		
-		baseTest.verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code", "Header");
+		baseTest.verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code");
 	
-		baseTest.verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.", "Subheader");
+		baseTest.verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.");
 	
 		baseTest.verifyElementIsDisplayed(homePage.getSearchbarField());
 	
-		baseTest.verifyTextIsTheSame(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML", "Search field placeholder");
+		baseTest.verifyTextIsTheSame(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML");
 	
 		baseTest.verifyElementIsDisplayed(homePage.getSearchbarButton());
 
