@@ -2,12 +2,14 @@ package homepage;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.homepage.header.HomePageHeader;
 import pages.homepage.header.HomePageMenuItems;
 import tests.BaseTest;
 import utilities.Listener;
+import utilities.SoftAssertion;
 
 public class TestHomePageHeader {
 
@@ -16,20 +18,27 @@ public class TestHomePageHeader {
 	HomePageMenuItems homePageMenuItems;
 	
 	BaseTest baseTest;
+	
+	WebDriver driver;
+	
+	SoftAssertion softAssertion;
 
 	@BeforeClass
 	private void setup(){
 
-		baseTest = new BaseTest();
-		
-		WebDriver driver = Listener.getDriver();
-		
-		homePageHeader = new HomePageHeader(driver, baseTest);
-		
-		homePageMenuItems = new HomePageMenuItems(driver, baseTest);
+		driver = Listener.getDriver();
 		
 	}
-	
+
+	@BeforeMethod()
+	private void setupBeforeTest(){
+		
+		softAssertion = new SoftAssertion();
+		
+		baseTest = new BaseTest(softAssertion);
+		
+	}
+
 	/**
 	 * Verifies the elements in the header.
 	 * 
@@ -55,7 +64,7 @@ public class TestHomePageHeader {
 	@Test(testName = "Verify Home page header elements", priority =  1)
 	private void testHomePageHeaderElements(){
 
-		baseTest.setSoftAssertion(Listener.getAssertion());
+		homePageHeader = new HomePageHeader(driver, baseTest);
 		
 		baseTest.verifyElementIsDisplayed(homePageHeader.getHeader());
 
@@ -107,6 +116,8 @@ public class TestHomePageHeader {
 	
 	@Test(testName = "Verify Tutorial menu items", priority = 2)
 	private void testTutorialMenuIems(){
+
+		homePageMenuItems = new HomePageMenuItems(driver, baseTest);
 		
 		homePageMenuItems.clickTutorialsButton();
 
@@ -126,6 +137,27 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(categoryName, categoryItems);
 				
+		categoryName = "Programming";
+		
+		categoryItems = new String[]{"Learn Python", "Learn Java", "Learn C", "Learn C++", "Learn C#", "Learn R", 
+				"Learn Kotlin", "Learn Go", "Learn Django", "Learn TypeScript"};
+		
+		verifyCategoryItems(categoryName, categoryItems);
+		
+		categoryName = "Server Side";
+		
+		categoryItems = new String[]{"Server Side", "Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
+				"Learn Raspberry Pi", "Learn Git", "Learn MongoDB", "Learn AWS Cloud"};
+		
+		verifyCategoryItems(categoryName, categoryItems);
+		
+		categoryName = "Web Building";
+		
+		categoryItems = new String[] {"Create a Website ", "Where To Start", "Web Templates", "Web Statistics", "Web Certificates",
+				"Web Development", "Code Editor", "Test Your Typing Speed", "Play a Code Game", "Cyber Security", "Accessibility", "Join our Newsletter"};
+		
+		verifyCategoryItems(categoryName, categoryItems);
+		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
@@ -139,6 +171,8 @@ public class TestHomePageHeader {
 	@Test(testName = "Verify header menu items", priority =  3)
 	private void testHeaderMenuItems(){
 
+		homePageMenuItems = new HomePageMenuItems(driver, baseTest);
+		
 		homePageMenuItems.clickReferencesButton();
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCaretButton());
