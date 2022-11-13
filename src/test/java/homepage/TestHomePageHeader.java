@@ -1,18 +1,19 @@
 package homepage;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pages.homepage.HomePageHeader;
+import pages.homepage.header.HomePageHeader;
+import pages.homepage.header.HomePageMenuItems;
 import tests.BaseTest;
-import utilities.Control;
 import utilities.Listener;
 
 public class TestHomePageHeader {
 
-	HomePageHeader homePage;
-
-	Control control;
+	HomePageHeader homePageHeader;
+	
+	HomePageMenuItems homePageMenuItems;
 	
 	BaseTest baseTest;
 
@@ -21,7 +22,11 @@ public class TestHomePageHeader {
 
 		baseTest = new BaseTest();
 		
-		homePage = new HomePageHeader(Listener.getDriver(), baseTest);
+		WebDriver driver = Listener.getDriver();
+		
+		homePageHeader = new HomePageHeader(driver, baseTest);
+		
+		homePageMenuItems = new HomePageMenuItems(driver, baseTest);
 		
 	}
 	
@@ -52,37 +57,68 @@ public class TestHomePageHeader {
 
 		baseTest.setSoftAssertion(Listener.getAssertion());
 		
-		baseTest.verifyElementIsDisplayed(homePage.getHeader());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getHeader());
 
-		baseTest.verifyElementIsDisplayed(homePage.getHomeLogo());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getHomeLogo());
 
-		baseTest.verifyElementIsDisplayed(homePage.getTutorialsButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getTutorialsButton());
 
-		baseTest.verifyElementIsDisplayed(homePage.getTutorialsCaretDownButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getTutorialsCaretButton());
 	
-		baseTest.verifyElementIsDisplayed(homePage.getReferencesButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getReferencesButton());
 
-		baseTest.verifyElementIsDisplayed(homePage.getReferencesCaretDownButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getReferencesCaretButton());
 
-		baseTest.verifyElementIsDisplayed(homePage.getExercisesButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getExercisesButton());
 
-		baseTest.verifyElementIsDisplayed(homePage.getExercisesDownButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getExercisesCaretButton());
 	
-		baseTest.verifyElementIsDisplayed(homePage.getVideosButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getVideosButton());
 
-		baseTest.verifyElementIsDisplayed(homePage.getThemeToggle());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getThemeToggle());
 	
-		baseTest.verifyElementIsDisplayed(homePage.getTranslateButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getTranslateButton());
 	
-		baseTest.verifyElementIsDisplayed(homePage.getSearchButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getSearchButton());
 	
-		baseTest.verifyElementIsDisplayed(homePage.getUpgradeButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getUpgradeButton());
 		
-		baseTest.verifyElementIsDisplayed(homePage.getCertifiedButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getCertifiedButton());
 		
-		baseTest.verifyElementIsDisplayed(homePage.getFreeWebsiteButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getFreeWebsiteButton());
 		
-		baseTest.verifyElementIsDisplayed(homePage.getLoginButton());
+		baseTest.verifyElementIsDisplayed(homePageHeader.getLoginButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify header menu items", priority =  2)
+	private void testHeaderMenuItems(){
+		
+		homePageMenuItems.clickTutorialsButton();
+		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
+
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
+		
+		homePageMenuItems.clickTutorialsCloseButton();
+		
+		homePageMenuItems.clickReferencesButton();
+		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCaretButton());
+		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCloseButton());
+		
+		homePageMenuItems.clickReferencesCloseButton();
+		
+		homePageMenuItems.clickExercisesButton();
+		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCaretButton());
+		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCloseButton());
+		
+		homePageMenuItems.clickExercisesCloseButton();
 		
 		baseTest.assertAll();
 		
