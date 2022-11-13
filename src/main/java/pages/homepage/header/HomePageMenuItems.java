@@ -24,6 +24,20 @@ public class HomePageMenuItems extends HomePageHeader{
 		return getElementByXpath(String.format("//*[@id='%s' and contains(@style, 'display: block')]", idValue), String.format("%s menu container", elementName));
 	}
 
+	private String menuItemInContainer = "//*[@id='%s' and contains(@style, 'display: block')]/descendant::*[text()='%s']";
+	
+	private WebElement getHeaderInMenuContainer(String idValue, String elementName){
+		return getElementByXpath(String.format(menuItemInContainer, idValue, elementName), String.format("%s header in menu container", elementName));
+	}
+	
+	private WebElement getCategoryName(String idValue, String elementName, String categoryName){
+		return getElementByXpath(String.format(menuItemInContainer, idValue, elementName), String.format("Category in menu: %s", categoryName));
+	}
+	
+	public WebElement getCategoryItem(String categoryName, String categoryItem){
+		return getElementByXpath(String.format("//*[text()='%s']/following-sibling::*[text()='%s']", categoryName, categoryItem), String.format("Category: %s | Category name: %s", categoryName, categoryItem));
+	}
+	
 	private static final String TUTORIAL_NAV_ID = "nav_tutorials";
 	private static final String REFERENCES_NAV_ID = "nav_references";
 	private static final String EXERCISES_NAV_ID = "nav_exercises";
@@ -38,6 +52,14 @@ public class HomePageMenuItems extends HomePageHeader{
 	
 	public WebElement getTutorialsMenuContainer(){
 		return getMenuContainer(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
+	}
+	
+	public WebElement getTutorialsMenuCategoryName(String categoryName){
+		return getCategoryName(TUTORIAL_NAV_ID, TUTORIALS_LABEL, categoryName);
+	}
+	
+	public WebElement getTutorialsMenuHeader(){
+		return getHeaderInMenuContainer(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
 	}
 	
 	public WebElement getTutorialsCloseButton(){
