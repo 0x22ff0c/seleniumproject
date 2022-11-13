@@ -28,57 +28,62 @@ public class HomePageMenuItems extends HomePageHeader{
 	private static final String REFERENCES_NAV_ID = "nav_references";
 	private static final String EXERCISES_NAV_ID = "nav_exercises";
 	
+	
+	//Tutorials menu
+	
 	@Override
 	public WebElement getTutorialsCaretButton(){
 		return getHeaderCaretButton(TUTORIALS_LABEL);
-	}
-	
-	@Override
-	public WebElement getReferencesCaretButton(){
-		return getHeaderCaretButton(REFERENCES_LABEL);
-	}
-	
-	@Override
-	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(EXCERCISES_LABEL);
-	}
-	
-	public WebElement getTutorialsCloseButton(){
-		return getHeaderMenuCloseButton(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
 	}
 	
 	public WebElement getTutorialsMenuContainer(){
 		return getMenuContainer(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
 	}
 	
+	public WebElement getTutorialsCloseButton(){
+		return getHeaderMenuCloseButton(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
+	}
+	
 	public void clickTutorialsCloseButton(){
 		control.clickButton(getTutorialsCloseButton());
 	}
 	
-	public WebElement getReferencesCloseButton(){
-		return getHeaderMenuCloseButton(REFERENCES_NAV_ID, REFERENCES_LABEL);
+	//References menu
+	
+	@Override
+	public WebElement getReferencesCaretButton(){
+		return getHeaderCaretButton(REFERENCES_LABEL);
 	}
 	
 	public WebElement getReferencesMenuContainer(){
 		return getMenuContainer(REFERENCES_NAV_ID, REFERENCES_LABEL);
 	}
 	
+	public WebElement getReferencesCloseButton(){
+		return getHeaderMenuCloseButton(REFERENCES_NAV_ID, REFERENCES_LABEL);
+	}
+	
 	public void clickReferencesCloseButton(){
 		control.clickButton(getReferencesCloseButton());
 	}
 	
-	public WebElement getExercisesCloseButton(){
-		return getHeaderMenuCloseButton(EXERCISES_NAV_ID, EXCERCISES_LABEL);
+	//Exercises menu
+	
+	@Override
+	public WebElement getExercisesCaretButton(){
+		return getHeaderCaretButton(EXCERCISES_LABEL);
 	}
 	
 	public WebElement getExercisesMenuButton(){
 		return getMenuContainer(EXERCISES_NAV_ID, EXCERCISES_LABEL);
 	}
 	
+	public WebElement getExercisesCloseButton(){
+		return getHeaderMenuCloseButton(EXERCISES_NAV_ID, EXCERCISES_LABEL);
+	}
+	
 	public void clickExercisesCloseButton(){
 		control.clickButton(getExercisesCloseButton());
-	} 
-
-	
+	}
 	
 }
