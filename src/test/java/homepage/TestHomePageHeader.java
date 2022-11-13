@@ -93,10 +93,12 @@ public class TestHomePageHeader {
 		
 	}
 	
-	@Test(testName = "Verify header menu items", priority =  2)
-	private void testHeaderMenuItems(){
+	@Test(testName = "Verify Tutorial menu items", priority = 2)
+	private void testTutorialMenuIems(){
 		
 		homePageMenuItems.clickTutorialsButton();
+
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuContainer());
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
@@ -104,6 +106,13 @@ public class TestHomePageHeader {
 		
 		homePageMenuItems.clickTutorialsCloseButton();
 		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify header menu items", priority =  3)
+	private void testHeaderMenuItems(){
+
 		homePageMenuItems.clickReferencesButton();
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCaretButton());
