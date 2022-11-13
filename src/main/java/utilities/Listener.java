@@ -12,17 +12,12 @@ public class Listener implements ITestListener {
 	
 	WebdriverManager driverManager = null;
 	static WebDriver driver = null;
-	static SoftAssertion softAssertion = null;
 	String testName = "";
 	
 	public static WebDriver getDriver(){
 		
 		return driver;
 	
-	}
-	
-	public static SoftAssertion getAssertion(){
-		return softAssertion;
 	}
 
 	@Override
@@ -51,7 +46,7 @@ public class Listener implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		 
+
 		System.out.println("Test method passed: "+ testName);
 		
 	}
@@ -71,7 +66,6 @@ public class Listener implements ITestListener {
 		testName = test.testName();
 		
 		System.out.println(String.format("\n==================== [Starting test: %s] ====================\n", testName));
-		softAssertion = new SoftAssertion();
 		
 	}
 
