@@ -3,12 +3,10 @@ package pages.homepage.header;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import tests.BaseTest;
-
 public class HomePageMenuItems extends HomePageHeader{
 
-	public HomePageMenuItems(WebDriver driver, BaseTest baseTest) {
-		super(driver, baseTest);
+	public HomePageMenuItems(WebDriver driver) {
+		super(driver);
 	}
 	
 	@Override
