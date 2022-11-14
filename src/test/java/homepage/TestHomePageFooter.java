@@ -16,26 +16,22 @@ public class TestHomePageFooter {
 	Control control;
 	
 	BaseTest baseTest;
-	
+
 	@BeforeClass
 	private void setup(){
-		
-		baseTest = new BaseTest();
-	
+
 		WebDriver driver = Listener.getDriver();
 		
-		homePageFooter = new HomePageFooter(driver, baseTest);
+		homePageFooter = new HomePageFooter(driver);
 		
-		control = new Control(driver, baseTest);
-		
-		control.scrollToElement(homePageFooter.getFooter());
+		homePageFooter.scrollToFooterSection();
 		
 	}
 	
-	@Test(testName = "Verify Home page footer buttons", priority = 3)
+	@Test(testName = "Verify Home page footer buttons", priority = 5)
 	private void verifyFooterButtons(){
 		
-		baseTest.setSoftAssertion(Listener.getAssertion());
+		baseTest = new BaseTest(homePageFooter);
 		
 		baseTest.verifyElementIsDisplayed(homePageFooter.getQuizzesButton());
 		
@@ -57,8 +53,10 @@ public class TestHomePageFooter {
 		
 	}
 	
-	@Test(testName = "Verify Home page footer links", priority = 4)
+	@Test(testName = "Verify Home page footer links", priority = 6)
 	private void verifyFooterLinks(){
+		
+		baseTest = new BaseTest(homePageFooter);
 		
 		baseTest.verifyElementIsDisplayed(homePageFooter.getForumLink());
 		
@@ -68,8 +66,10 @@ public class TestHomePageFooter {
 	
 	}
 	
-	@Test(testName = "Verify Home page footer icon links", priority = 5)
+	@Test(testName = "Verify Home page footer icon links", priority = 7)
 	private void verifyFooterIconLinks(){
+		
+		baseTest = new BaseTest(homePageFooter);
 		
 		baseTest.verifyElementIsDisplayed(homePageFooter.getFacebookIconLink());
 		
@@ -83,8 +83,10 @@ public class TestHomePageFooter {
 		
 	}
 	
-	@Test(testName = "Verify footer texts", priority = 6)
+	@Test(testName = "Verify footer texts", priority = 8)
 	private void verifyFooterTexts(){
+		
+		baseTest = new BaseTest(homePageFooter);
 		
 		baseTest.verifyTextIsTheSame(homePageFooter.getFooterText(),"W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy.\n"
 				+ "Copyright 1999-2022 by Refsnes Data. All Rights Reserved.");
