@@ -2,31 +2,27 @@ package tests;
 
 import org.openqa.selenium.WebElement;
 
+import pages.BasePage;
 import utilities.SoftAssertion;
 
 public class BaseTest {
 
 	SoftAssertion softAssertion;
-	String nameOfElement;
+	BasePage basePage;
+	
+	public BaseTest(BasePage basePage){
+		softAssertion = new SoftAssertion();
+		this.basePage = basePage;
+	}
 
-	public BaseTest(SoftAssertion softAssertion){
-		this.softAssertion = softAssertion;
-	}
-	
-	public void setNameOfElement(String nameOfElement){
-		this.nameOfElement = nameOfElement;
-	}
-	
-	public String getNameOfElement(){
-		return nameOfElement;
-	}
-	
 	public void assertAll(){
 		softAssertion.assertAll();
 	}
 	
 	public void verifyElementIsDisplayed(WebElement element){
 
+		String nameOfElement = basePage.getElementName();
+		
 		softAssertion.assertTrue(exceptionHandler(element), String.format("%s is displayed", nameOfElement));
 		
 	}
