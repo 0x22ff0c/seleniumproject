@@ -4,12 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import pages.BasePage;
-import tests.BaseTest;
 
 public class HomePageMainContent extends BasePage{
 	
-	public HomePageMainContent(WebDriver driver, BaseTest baseTest) {
-		super(driver, baseTest);
+	public HomePageMainContent(WebDriver driver) {
+		super(driver);
 	}
 
 	//Main Content
