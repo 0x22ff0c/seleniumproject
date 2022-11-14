@@ -2,40 +2,25 @@ package homepage;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.homepage.header.HomePageHeader;
 import pages.homepage.header.HomePageMenuItems;
 import tests.BaseTest;
 import utilities.Listener;
-import utilities.SoftAssertion;
 
 public class TestHomePageHeader {
 
-	HomePageHeader homePageHeader;
-	
 	HomePageMenuItems homePageMenuItems;
 	
 	BaseTest baseTest;
 	
 	WebDriver driver;
-	
-	SoftAssertion softAssertion;
 
 	@BeforeClass
 	private void setup(){
 
 		driver = Listener.getDriver();
-		
-	}
-
-	@BeforeMethod()
-	private void setupBeforeTest(){
-		
-		softAssertion = new SoftAssertion();
-		
-		baseTest = new BaseTest(softAssertion);
 		
 	}
 
@@ -64,7 +49,9 @@ public class TestHomePageHeader {
 	@Test(testName = "Verify Home page header elements", priority =  1)
 	private void testHomePageHeaderElements(){
 
-		homePageHeader = new HomePageHeader(driver, baseTest);
+		HomePageHeader homePageHeader = new HomePageHeader(driver);
+		
+		baseTest = new BaseTest(homePageHeader);
 		
 		baseTest.verifyElementIsDisplayed(homePageHeader.getHeader());
 
@@ -113,11 +100,13 @@ public class TestHomePageHeader {
 		}
 		
 	}
-	
+
 	@Test(testName = "Verify Tutorial menu items", priority = 2)
 	private void testTutorialMenuIems(){
 
-		homePageMenuItems = new HomePageMenuItems(driver, baseTest);
+		homePageMenuItems = new HomePageMenuItems(driver);
+		
+		baseTest = new BaseTest(homePageMenuItems);
 		
 		homePageMenuItems.clickTutorialsButton();
 
@@ -146,7 +135,7 @@ public class TestHomePageHeader {
 		
 		categoryName = "Server Side";
 		
-		categoryItems = new String[]{"Server Side", "Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
+		categoryItems = new String[]{"Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
 				"Learn Raspberry Pi", "Learn Git", "Learn MongoDB", "Learn AWS Cloud"};
 		
 		verifyCategoryItems(categoryName, categoryItems);
@@ -171,7 +160,9 @@ public class TestHomePageHeader {
 	@Test(testName = "Verify header menu items", priority =  3)
 	private void testHeaderMenuItems(){
 
-		homePageMenuItems = new HomePageMenuItems(driver, baseTest);
+		homePageMenuItems = new HomePageMenuItems(driver);
+		
+		baseTest = new BaseTest(homePageMenuItems);
 		
 		homePageMenuItems.clickReferencesButton();
 		
