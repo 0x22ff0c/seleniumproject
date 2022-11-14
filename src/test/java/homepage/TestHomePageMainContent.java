@@ -21,16 +21,14 @@ public class TestHomePageMainContent {
 		
 		driver = Listener.getDriver();
 		
-		baseTest = new BaseTest();
-		
-		homePage = new HomePageMainContent(driver, baseTest);
-
 	}
 
-	@Test(testName = "Verify Main page contents", priority = 2)
+	@Test(testName = "Verify Main page contents", priority = 4)
 	private void testMainPageContents(){
 
-		baseTest.setSoftAssertion(Listener.getAssertion());
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
 		
 		baseTest.verifyElementIsDisplayed(homePage.getMainContent());
 		
