@@ -6,19 +6,25 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import tests.BaseTest;
+import utilities.Control;
 
 public class BasePage {
 
 	protected WebDriver driver = null;
 	WebElement element = null;
-	protected BaseTest baseTest;
+	private String nameOfElement = "";
+	protected Control control;
 	
-	public BasePage(WebDriver driver, BaseTest baseTest){
-		this.baseTest = baseTest;
+	public BasePage(WebDriver driver){
 		this.driver = driver;
+		control = new Control(driver, this);
 	}
 
+	public String getElementName(){
+		return nameOfElement;
+	}
+	
+	
 	protected WebElement getElementById(String id, String nameOfElement){
 		
 		return getElement(By.id(id), nameOfElement);
@@ -38,7 +44,9 @@ public class BasePage {
 	}
 	
 	protected WebElement getElementByTagName(String tagName, String nameOfElement){
+		
 		return getElement(By.tagName(tagName), nameOfElement);
+	
 	}
 	
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
@@ -47,8 +55,8 @@ public class BasePage {
 	
 	private WebElement getElement(By byElement, String nameOfElement){
 
-		baseTest.setNameOfElement(nameOfElement);
-		
+		this.nameOfElement = nameOfElement;
+
 		element = null;
 		
 		try {
