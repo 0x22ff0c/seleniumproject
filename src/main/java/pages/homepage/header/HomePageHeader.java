@@ -4,21 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import pages.BasePage;
-import tests.BaseTest;
-import utilities.Control;
 
 public class HomePageHeader extends BasePage{
 
 	//Header
-	public HomePageHeader(WebDriver driver, BaseTest baseTest){
-		super(driver, baseTest);
-		this.driver = driver;
-		this.baseTest = baseTest;
-		 
+	public HomePageHeader(WebDriver driver){
+		super(driver);
 	}
 
-	protected Control control = new Control(driver, baseTest);
-	
 	public WebElement getHeader(){
 		return getElementByXpath("//*[@title='Home']/parent::*", "Header");		
 	}
