@@ -11,7 +11,7 @@ import org.testng.collections.Maps;
 public class SoftAssertion extends SoftAssert{
 	
 	  // LinkedHashMap to preserve the order
-	  private final Map<AssertionError, IAssert<?>> m_errors = Maps.newLinkedHashMap();
+	  private final Map<AssertionError, IAssert<?>> mErrors = Maps.newLinkedHashMap();
 	  private static final String DEFAULT_SOFT_ASSERT_MESSAGE = "Meh";
 
 	  private void printExpectedAndActual(IAssert<?> a){
@@ -57,25 +57,27 @@ public class SoftAssertion extends SoftAssert{
 	      
 		    	onAssertFailure(a, ex);
 			    System.out.println(ExceptionUtils.getStackTrace(ex));
-			    System.out.println("Result: Failedn\n");
+			    System.out.println("Result: Failed\n");
 			    printExpectedAndActual(a);
 			    System.out.println("===========================================================================================");
-			    m_errors.put(ex, a);
+			    mErrors.put(ex, a);
 	    
 	    } finally {
 	      onAfterAssert(a);
 	    }
 	  }
 
+	  @Override
 	  public void assertAll() {
 	    assertAll(null);
 	  }
 
+	  @Override
 	  public void assertAll(String message) {
-	    if (!m_errors.isEmpty()) {
+	    if (!mErrors.isEmpty()) {
 	      StringBuilder sb = new StringBuilder(null == message ? DEFAULT_SOFT_ASSERT_MESSAGE : message);
 	      boolean first = true;
-	      for (AssertionError error : m_errors.keySet()) {
+	      for (AssertionError error : mErrors.keySet()) {
 	        if (first) {
 	          first = false;
 	        } else {
