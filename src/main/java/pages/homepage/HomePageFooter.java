@@ -5,18 +5,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import pages.BasePage;
-import tests.BaseTest;
 
 public class HomePageFooter extends BasePage{
 
-	public HomePageFooter(WebDriver driver, BaseTest baseTest) {
-		super(driver, baseTest);
+	public HomePageFooter(WebDriver driver){
+		super(driver);
 	}
+	
 	
 	public WebElement getFooter(){
 		return getElementByTagName("footer", "Main page footer");
 	}
-		
+	
+	public void scrollToFooterSection(){
+		control.scrollToElement(getElementByXpath("//footer", "footer"));
+	}
+	
 	private WebElement getButton(String buttonName){
 		return getElementByXpath(String.format("//*[@title='%s']", buttonName), buttonName + " button");
 	}
