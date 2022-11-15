@@ -147,6 +147,20 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(categoryName, categoryItems);
 		
+		categoryName = "Data Analytics";
+		
+		categoryItems = new String[] {"Learn AI", "Learn Machine Learning", "Learn Data Science", "Learn NumPy", "Learn Pandas",
+				"Learn SciPy", "Learn Matplotlib", "Learn Statistics", "Learn Excel", "Learn Google Sheets"};
+		
+		verifyCategoryItems(categoryName, categoryItems);
+		
+		categoryName = "XML Tutorials";
+		
+		categoryItems = new String[] {"Learn XML", "Learn XML AJAX", "Learn XML DOM", "Learn XML DTD", "Learn XML Schema",
+				"Learn XSLT", "Learn XPath", "Learn XQuery"};
+		
+		verifyCategoryItems(categoryName, categoryItems);
+		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
