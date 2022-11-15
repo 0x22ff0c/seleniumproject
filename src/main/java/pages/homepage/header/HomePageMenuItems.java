@@ -25,15 +25,34 @@ public class HomePageMenuItems extends HomePageHeader{
 	private String menuItemInContainer = "//*[@id='%s' and contains(@style, 'display: block')]/descendant::*[text()='%s']";
 	
 	private WebElement getHeaderInMenuContainer(String idValue, String elementName){
+		
 		return getElementByXpath(String.format(menuItemInContainer, idValue, elementName), String.format("%s header in menu container", elementName));
 	}
 	
 	private WebElement getCategoryName(String idValue, String elementName, String categoryName){
-		return getElementByXpath(String.format(menuItemInContainer, idValue, elementName), String.format("Category in menu: %s", categoryName));
+		
+		String xpathExpression = menuItemInContainer;
+		
+		if(categoryName.equals("Data Analytics") || categoryName.equals("XML Tutorials")){
+			
+			xpathExpression = (String.format("(%s)[2]", menuItemInContainer));
+			
+		}
+		
+		return getElementByXpath(String.format(xpathExpression, idValue, categoryName), String.format("Category in menu: %s", categoryName));
 	}
 	
 	public WebElement getCategoryItem(String categoryName, String categoryItem){
-		return getElementByXpath(String.format("//*[text()='%s']/following-sibling::*[text()='%s']", categoryName, categoryItem), String.format("Category: %s | Category name: %s", categoryName, categoryItem));
+		
+		String xpathExpression = "//*[text()='%s']/following-sibling::*[text()='%s']";
+		
+		if(categoryName.equals("Data Analytics") || categoryName.equals("XML Tutorials")){
+		
+			xpathExpression = String.format("(%s)[2]", xpathExpression);
+			
+		}
+		
+		return getElementByXpath(String.format(xpathExpression, categoryName, categoryItem), String.format("Category: %s | Category name: %s", categoryName, categoryItem));
 	}
 	
 	private static final String TUTORIAL_NAV_ID = "nav_tutorials";
