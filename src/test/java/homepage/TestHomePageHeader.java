@@ -95,7 +95,7 @@ public class TestHomePageHeader {
 
 		for(String categoryItem : categoryItems){
 			
-			baseTest.verifyElementIsDisplayed(homePageMenuItems.getCategoryItem(categoryName, categoryItem));
+			baseTest.verifyElementIsDisplayed(homePageMenuItems.getCategoryItem(categoryItem));
 			
 		}
 		
