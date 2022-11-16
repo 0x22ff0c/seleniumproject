@@ -1,6 +1,7 @@
 package homepage;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -24,6 +25,10 @@ public class TestHomePageHeader {
 		
 	}
 
+	String categoryName = "";
+	
+	String[] categoryItems = new String[]{};
+	
 	/**
 	 * Verifies the elements in the header.
 	 * 
@@ -89,9 +94,9 @@ public class TestHomePageHeader {
 		
 	}
 	
-	private void verifyCategoryItems(String categoryName, String[] categoryItems){
+	private void verifyCategoryItems(WebElement element, String[] categoryItems){
 		
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuCategoryName(categoryName));
+		baseTest.verifyElementIsDisplayed(element);
 
 		for(String categoryItem : categoryItems){
 			
@@ -100,7 +105,7 @@ public class TestHomePageHeader {
 		}
 		
 	}
-
+	
 	@Test(testName = "Verify Tutorial menu items", priority = 2)
 	private void testTutorialMenuIems(){
 
@@ -112,54 +117,56 @@ public class TestHomePageHeader {
 
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuContainer());
 
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuHeader());
+		
 		String categoryName = "HTML and CSS";
 
 		String[] categoryItems = new String[]{"Learn HTML", "Learn CSS", "Learn RWD", "Learn Bootstrap", "Learn W3.CSS", "Learn Colors", 
 				"Learn Icons", "Learn Graphics", "Learn SVG", "Learn Canvas", "Learn How To", "Learn Sass"};
 		
-		verifyCategoryItems(categoryName, categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
 		categoryName = "JavaScript";
 
 		categoryItems = new String[]{"Learn JavaScript", "Learn jQuery", "Learn React", "Learn AngularJS", "Learn JSON",
 				"Learn AJAX", "Learn AppML", "Learn W3.JS"};
 		
-		verifyCategoryItems(categoryName, categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 				
 		categoryName = "Programming";
 		
 		categoryItems = new String[]{"Learn Python", "Learn Java", "Learn C", "Learn C++", "Learn C#", "Learn R", 
 				"Learn Kotlin", "Learn Go", "Learn Django", "Learn TypeScript"};
 		
-		verifyCategoryItems(categoryName, categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
 		categoryName = "Server Side";
 		
 		categoryItems = new String[]{"Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
 				"Learn Raspberry Pi", "Learn Git", "Learn MongoDB", "Learn AWS Cloud"};
 		
-		verifyCategoryItems(categoryName, categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
 		categoryName = "Web Building";
 		
 		categoryItems = new String[] {"Create a Website ", "Where To Start", "Web Templates", "Web Statistics", "Web Certificates",
 				"Web Development", "Code Editor", "Test Your Typing Speed", "Play a Code Game", "Cyber Security", "Accessibility", "Join our Newsletter"};
 		
-		verifyCategoryItems(categoryName, categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
 		categoryName = "Data Analytics";
 		
 		categoryItems = new String[] {"Learn AI", "Learn Machine Learning", "Learn Data Science", "Learn NumPy", "Learn Pandas",
 				"Learn SciPy", "Learn Matplotlib", "Learn Statistics", "Learn Excel", "Learn Google Sheets"};
 		
-		verifyCategoryItems(categoryName, categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
 		categoryName = "XML Tutorials";
 		
 		categoryItems = new String[] {"Learn XML", "Learn XML AJAX", "Learn XML DOM", "Learn XML DTD", "Learn XML Schema",
 				"Learn XSLT", "Learn XPath", "Learn XQuery"};
 		
-		verifyCategoryItems(categoryName, categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
@@ -171,20 +178,82 @@ public class TestHomePageHeader {
 		
 	}
 	
-	@Test(testName = "Verify header menu items", priority =  3)
-	private void testHeaderMenuItems(){
-
+	
+	@Test(testName = "Verify References menu items", priority = 3)
+	private void testReferencesMenuItems(){
+		
 		homePageMenuItems = new HomePageMenuItems(driver);
 		
 		baseTest = new BaseTest(homePageMenuItems);
 		
 		homePageMenuItems.clickReferencesButton();
 		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesMenuContainer());
+		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesMenuHeader());
+		
+		categoryName = "HTML";
+		
+		categoryItems = new String[]{"HTML Tag Reference", "HTML Browser Support", "HTML Event Reference", "HTML Color Reference", "HTML Attribute Reference"
+				,"HTML Canvas Reference", "HTML SVG Reference", "Google Maps Reference"};
+		
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);
+		
+		categoryName = "CSS";
+		
+		categoryItems = new String[]{"CSS Reference", "CSS Browser Support", "CSS Selector Reference", "Bootstrap 3 Reference", "Bootstrap 4 Reference"
+				,"W3.CSS Reference", "Icon Reference", "Sass Reference"};
+		
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);
+		
+		categoryName = "JavaScript";
+		
+		categoryItems = new String[]{"JavaScript Reference", "HTML DOM Reference", "jQuery Reference", "AngularJS Reference", "AppML Reference"
+				,"W3.JS Reference"};
+		
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);
+		
+		categoryName = "Programming";
+		
+		categoryItems = new String[]{"Python Reference", "Java Reference"};
+		
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
+		
+		categoryName = "Server Side";
+		
+		categoryItems = new String[]{"SQL Reference", "MySQL Reference", "PHP Reference", "ASP Reference"};
+		
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
+		
+		categoryName = "XML";
+		
+		categoryItems = new String[]{"XML DOM Reference", "XML Http Reference", "XSLT Reference", "XML Schema Reference"};
+		
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
+		
+		categoryName = "Character Sets";
+		
+		categoryItems = new String[]{"HTML Character Sets", "HTML ASCII", "HTML ANSI", "HTML Windows-1252", "HTML ISO-8859-1"
+				,"HTML Symbols", "HTML UTF-8"};
+		
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
+		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCaretButton());
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCloseButton());
 		
 		homePageMenuItems.clickReferencesCloseButton();
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify header menu items", priority =  4)
+	private void testHeaderMenuItems(){
+
+		homePageMenuItems = new HomePageMenuItems(driver);
+		
+		baseTest = new BaseTest(homePageMenuItems);
 		
 		homePageMenuItems.clickExercisesButton();
 		
