@@ -74,14 +74,14 @@ public class HomePageMenuItems extends HomePageHeader{
 		return getMenuContainer(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
 	}
 	
-	public WebElement getTutorialsMenuCategoryName(String categoryName){
-		return getCategoryName(TUTORIAL_NAV_ID, categoryName);
-	}
-	
 	public WebElement getTutorialsMenuHeader(){
 		return getHeaderInMenuContainer(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
 	}
 	
+	public WebElement getTutorialsMenuCategoryName(String categoryName){
+		return getCategoryName(TUTORIAL_NAV_ID, categoryName);
+	}
+ 
 	public WebElement getTutorialsCloseButton(){
 		return getHeaderMenuCloseButton(TUTORIAL_NAV_ID, TUTORIALS_LABEL);
 	}
@@ -99,6 +99,14 @@ public class HomePageMenuItems extends HomePageHeader{
 	
 	public WebElement getReferencesMenuContainer(){
 		return getMenuContainer(REFERENCES_NAV_ID, REFERENCES_LABEL);
+	}
+	
+	public WebElement getReferencesMenuHeader(){
+		return getHeaderInMenuContainer(REFERENCES_NAV_ID, REFERENCES_LABEL);
+	}
+	
+	public WebElement getReferencesMenuCategoryName(String categoryName){
+		return getCategoryName(REFERENCES_NAV_ID, categoryName);
 	}
 	
 	public WebElement getReferencesCloseButton(){
