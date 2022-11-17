@@ -133,6 +133,12 @@ public class HomePageMenuItems extends HomePageHeader{
 		return getElementByXpath(String.format("//*[@id='nav_exercises']/descendant::*[contains(@class, 'yellow') and text()='%s']", buttonName), String.format("%s button", buttonName));
 	}
 	
+	public WebElement getExerciseMenuButton(String buttonName){
+		
+		return getElementByXpath(String.format("//*[@id='nav_exercises']/descendant::*[contains(@class, 'button') and text()='%s']", buttonName), String.format("%s button", buttonName));
+		
+	}
+	
 	public WebElement getExercisesMenuHeader(){
 		return getHeaderInMenuContainer(EXERCISES_NAV_ID, EXERCISES_LABEL);
 	}
