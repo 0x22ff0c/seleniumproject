@@ -106,7 +106,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-	@Test(testName = "Verify Tutorial menu items", priority = 2)
+//	@Test(testName = "Verify Tutorial menu items", priority = 2)
 	private void testTutorialMenuIems(){
 
 		homePageMenuItems = new HomePageMenuItems(driver);
@@ -179,7 +179,7 @@ public class TestHomePageHeader {
 	}
 	
 	
-	@Test(testName = "Verify References menu items", priority = 3)
+//	@Test(testName = "Verify References menu items", priority = 3)
 	private void testReferencesMenuItems(){
 		
 		homePageMenuItems = new HomePageMenuItems(driver);
@@ -258,7 +258,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-	@Test(testName = "Verify exercise header menu items", priority =  4)
+//	@Test(testName = "Verify exercise header menu items", priority =  4)
 	private void testExerciseMenuItems(){
 
 		homePageMenuItems = new HomePageMenuItems(driver);
