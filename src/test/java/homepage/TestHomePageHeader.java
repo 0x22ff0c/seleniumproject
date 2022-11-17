@@ -248,8 +248,8 @@ public class TestHomePageHeader {
 		
 	}
 	
-	@Test(testName = "Verify header menu items", priority =  4)
-	private void testHeaderMenuItems(){
+	@Test(testName = "Verify exercise header menu items", priority =  4)
+	private void testExerciseMenuItems(){
 
 		homePageMenuItems = new HomePageMenuItems(driver);
 		
