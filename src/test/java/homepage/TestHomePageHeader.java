@@ -301,6 +301,13 @@ public class TestHomePageHeader {
 		
 		verifyExerciseLinks(coursesLinks);
 		
+		String[] certificatesLinks = {"HTML Certificate", "CSS Certificate", "JavaScript Certificate", "Front End Certificate", "Python Certificate"
+				,"SQL Certificate", "PHP Certificate", "Java Certificate", "C++ Certificate", "C# Certificate", "jQuery Certificate", "React.js Certificate"
+				,"MySQL Certificate", "Bootstrap 5 Certificate", "Bootstrap 4 Certificate", "Bootstrap 3 Certificate", "TypeScript Certificate", "XML Certificate"
+				,"Excel Certificate", "Data Science Certificate", "Cyber Security Certificate", "Accessibility Certificate"};
+		
+		verifyExerciseLinks(certificatesLinks);
+		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCloseButton());
 		
 		homePageMenuItems.clickExercisesCloseButton();
