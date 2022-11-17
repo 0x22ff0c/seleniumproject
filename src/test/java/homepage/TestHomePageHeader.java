@@ -248,6 +248,16 @@ public class TestHomePageHeader {
 		
 	}
 	
+	private void verifyExerciseLinks(String[] links){
+		
+		for(String link : links){
+			
+			baseTest.verifyElementIsDisplayed(homePageMenuItems.getExerciseMenuButton(link));
+		
+		}
+		
+	}
+	
 	@Test(testName = "Verify exercise header menu items", priority =  4)
 	private void testExerciseMenuItems(){
 
@@ -268,6 +278,21 @@ public class TestHomePageHeader {
 			baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesYellowButtons(buttons));
 
 		}
+		
+		String[] exerciseLinks = {"HTML Exercises", "CSS Exercises", "JavaScript Exercises", "Python Exercises", "SQL Exercises"
+				,"PHP Exercises", "Java Exercises", "C Exercises", "C++ Exercises", "C# Exercises", "jQuery Exercises", "React.js Exercises"
+				,"MySQL Exercises", "Bootstrap 5 Exercises", "Bootstrap 4 Exercises", "Bootstrap 3 Exercises", "NumPy Exercises", "Pandas Exercises"
+				,"SciPy Exercises", "TypeScript Exercises", "Excel Exercises", "R Exercises", "Git Exercises", "Kotlin Exercises", "Go Exercises"
+				,"MongoDB Exercises"};
+		
+		verifyExerciseLinks(exerciseLinks);
+		
+		String[] quizzesLinks = {"HTML Quiz", "CSS Quiz", "JavaScript Quiz", "Python Quiz", "SQL Quiz", "PHP Quiz", "Java Quiz", "C Quiz"
+				,"C++ Quiz", "C# Quiz", "jQuery Quiz", "React.js Quiz", "MySQL Quiz", "Bootstrap 5 Quiz", "Bootstrap 4 Quiz", "Bootstrap 3 Quiz"
+				,"NumPy Quiz", "Pandas Quiz", "SciPy Quiz", "TypeScript Quiz", "XML Quiz", "R Quiz", "Git Quiz", "Kotlin Quiz", "Cyber Security Quiz"
+				,"Accessibility Quiz"};
+		
+		verifyExerciseLinks(quizzesLinks);
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCloseButton());
 		
