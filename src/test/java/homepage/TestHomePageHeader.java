@@ -294,6 +294,13 @@ public class TestHomePageHeader {
 		
 		verifyExerciseLinks(quizzesLinks);
 		
+		String[] coursesLinks = {"HTML Course", "CSS Course", "JavaScript Course", "Front End Course", "Python Course", "SQL Course", "PHP Course"
+				,"Java Course", "C++ Course", "C# Course", "jQuery Course", "React.js Course", "Bootstrap 4 Course", "Bootstrap 3 Course"
+				,"NumPy Course", "Pandas Course", "TypeScript Course", "XML Course", "R Course", "Data Analytics Course", "Cyber Security Course"
+				,"Accessibility Course"};
+		
+		verifyExerciseLinks(coursesLinks);
+		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCloseButton());
 		
 		homePageMenuItems.clickExercisesCloseButton();
