@@ -1,4 +1,4 @@
-package pages.homepage;
+package pages.homepage.maincontent;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,5 +41,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByLinkText("Not Sure Where To Begin?", "\"Not Sure Where To Begin?\"");
 	}
 	
+	public void clickWhereToBeginLink(){
+		control.clickButton(getWhereToBeginLink());
+	}
 
 }
