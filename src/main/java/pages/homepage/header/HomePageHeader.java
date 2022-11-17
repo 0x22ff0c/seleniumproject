@@ -28,7 +28,7 @@ public class HomePageHeader extends BasePage{
 	
 	protected static final String TUTORIALS_LABEL = "Tutorials";
 	protected static final String REFERENCES_LABEL = "References";
-	protected static final String EXCERCISES_LABEL = "Exercises";
+	protected static final String EXERCISES_LABEL = "Exercises";
 	
 	public WebElement getTutorialsButton(){
 		return getHeaderButton(TUTORIALS_LABEL);
@@ -55,7 +55,7 @@ public class HomePageHeader extends BasePage{
 	}
 
 	public WebElement getExercisesButton(){
-		return getHeaderButton(EXCERCISES_LABEL);
+		return getHeaderButton(EXERCISES_LABEL);
 	}
 	
 	public void clickExercisesButton(){
@@ -63,7 +63,7 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(EXCERCISES_LABEL);
+		return getHeaderCaretButton(EXERCISES_LABEL);
 	}
 	
 	public WebElement getVideosButton(){
