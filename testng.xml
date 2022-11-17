@@ -7,7 +7,7 @@
 	<test name="Test">
 		<classes>
 			<class name="homepage.TestHomePageHeader"></class>
-<!--			<class name="homepage.TestHomePageMainContent"></class>-->
+			<class name="homepage.TestHomePageMainContent"></class>
 <!--			<class name="homepage.TestHomePageFooter"></class>-->
 		</classes>
 	</test>
