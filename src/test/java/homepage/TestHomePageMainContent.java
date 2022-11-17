@@ -4,7 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pages.homepage.HomePageMainContent;
+import pages.homepage.maincontent.HomePageMainContent;
+import pages.homepage.maincontent.WhereToStartPage;
 import tests.BaseTest;
 import utilities.Listener;
 
@@ -46,6 +47,22 @@ public class TestHomePageMainContent {
 		
 		baseTest.assertAll();
 		
+	}
+	
+	@Test(testName = "Verify Where to start page", priority = 5)
+	private void testWhereToStartPage(){
+		
+		homePage.clickWhereToBeginLink();
+		
+		WhereToStartPage whereToStartPage = new WhereToStartPage(driver);
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getWhereToStartHeader());
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getSubheaderContent(), "To become a web developer, start with the subjects below, in the following order:");
+		
+		baseTest.assertAll();
 	}
 	
 }
