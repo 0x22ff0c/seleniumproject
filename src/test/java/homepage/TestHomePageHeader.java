@@ -259,6 +259,16 @@ public class TestHomePageHeader {
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCaretButton());
 		
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesMenuHeader());
+		
+		String[] yellowButtons = {"Exercises", "Quizzes", "Courses", "Certificates"};
+		
+		for(String buttons : yellowButtons){
+			
+			baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesYellowButtons(buttons));
+
+		}
+		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCloseButton());
 		
 		homePageMenuItems.clickExercisesCloseButton();
