@@ -121,15 +121,24 @@ public class HomePageMenuItems extends HomePageHeader{
 	
 	@Override
 	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(EXCERCISES_LABEL);
+		return getHeaderCaretButton(EXERCISES_LABEL);
 	}
 	
 	public WebElement getExercisesMenuButton(){
-		return getMenuContainer(EXERCISES_NAV_ID, EXCERCISES_LABEL);
+		return getMenuContainer(EXERCISES_NAV_ID, EXERCISES_LABEL);
+	}
+	
+	public WebElement getExercisesYellowButtons(String buttonName){
+		
+		return getElementByXpath(String.format("//*[@id='nav_exercises']/descendant::*[contains(@class, 'yellow') and text()='%s']", buttonName), String.format("%s button", buttonName));
+	}
+	
+	public WebElement getExercisesMenuHeader(){
+		return getHeaderInMenuContainer(EXERCISES_NAV_ID, EXERCISES_LABEL);
 	}
 	
 	public WebElement getExercisesCloseButton(){
-		return getHeaderMenuCloseButton(EXERCISES_NAV_ID, EXCERCISES_LABEL);
+		return getHeaderMenuCloseButton(EXERCISES_NAV_ID, EXERCISES_LABEL);
 	}
 	
 	public void clickExercisesCloseButton(){
