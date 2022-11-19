@@ -74,11 +74,30 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getHtmlLeftButton());
 		
-		baseTest.verifyTextIsTheSame(whereToStartPage.getHtmlFirstStep(), "1. Create your first web page");
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHtml1stStep(), "1. Create your first web page");
 		
-		baseTest.verifyTextIsTheSame(whereToStartPage.getHtmlFirstStepAdditionalInfo(), "The first thing you have to learn, is HTML, which is the standard markup language for creating web pages.");
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHtml1stStepAdditionalInfo(), "The first thing you have to learn, is HTML, which is the standard markup language for creating web pages.");
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getLearnHtmlButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Learn CSS section", priority = 7)
+	private void testLearnCSSSection(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToCSSsection();
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getCSSLeftButton());
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getCSS2ndStep(), "2. Style your web page");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getCSS2ndStepAdditionalInfo(), "The next step is to learn CSS, to set the layout of your web page with beautiful colors, fonts, and much more.");
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getLearnCSSButton());
 		
 		baseTest.assertAll();
 		
