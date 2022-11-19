@@ -28,16 +28,39 @@ public class WhereToStartPage extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'yellow')]/descendant::*[text()='HTML']", "HTML button");
 	}
 	
-	public String getHtmlFirstStep(){
+	public String getHtml1stStep(){
 		return getTextOfElement(By.xpath("(//*[@title='Go To Our HTML Tutorial']/following-sibling::*)[1]"));
 	}
 	
-	public String getHtmlFirstStepAdditionalInfo(){
+	public String getHtml1stStepAdditionalInfo(){
 		return getTextOfElement(By.xpath("(//*[@title='Go To Our HTML Tutorial']/following-sibling::*)[2]"));
 	}
 	
 	public WebElement getLearnHtmlButton(){
 		return getElementByXpath("//*[@title='Go To Our HTML Tutorial' and contains(@class, 'button')]", "Learn HTML button");
+	}
+	
+	//CSS section
+	public void scrollToCSSsection(){
+		
+		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our CSS Tutorial']/parent::*)[2]", "Learn CSS section"));
+		
+	}
+	
+	public WebElement getCSSLeftButton(){
+		return getElementByXpath("//*[contains(@class, 'pink')]/descendant::*[text()='CSS']", "CSS button");
+	}
+	
+	public String getCSS2ndStep(){
+		return getTextOfElement(By.xpath("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[1]"));
+	}
+	
+	public String getCSS2ndStepAdditionalInfo(){
+		return getTextOfElement(By.xpath("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[2]"));
+	}
+	
+	public WebElement getLearnCSSButton(){
+		return getElementByXpath("//*[@title='Go To Our CSS Tutorial' and contains(@class, 'button')]", "Learn CSS button");
 	}
 	
 	
