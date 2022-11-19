@@ -12,10 +12,12 @@ public class WhereToStartPage extends BasePage{
 		super(driver);
 	}
 	
-	public WebElement getWhereToStartHeader(){
-		return getElementByXpath("//*[@class='textsmallerscreens' and text()='Where To Start']", "\"Where To Start\" header");
-	}
+	//"Where To Start" section
 	
+	public String getWhereToStartHeaderContent(){
+		return getTextOfElement(By.xpath("//*[@class='textsmallerscreens' and text()='Where To Start']"));
+	}
+
 	public String getSubheaderContent(){
 		
 		String actualString = getTextOfElement(By.xpath("(//*[@class='textsmallerscreens' and text()='Where To Start']/following-sibling::*)[1]"));
