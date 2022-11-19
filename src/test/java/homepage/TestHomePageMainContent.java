@@ -103,5 +103,24 @@ public class TestHomePageMainContent {
 		
 	}
 	
+	@Test(testName = "Verify Learn JavaScript section", priority = 8)
+	private void testLearnJSSection(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToJavaScriptSection();
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getJSLeftButton());
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getJS3rdStep(), "3. Make your web page interactive");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getJS3rdStepAdditionalInfo(), "After studying HTML and CSS, you should learn JavaScript to create dynamic and interactive web pages for your users.");
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getLearnJSButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
 }
 
