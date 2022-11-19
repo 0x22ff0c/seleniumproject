@@ -114,4 +114,28 @@ public class WhereToStartPage extends BasePage{
 		return actualString.replace("\n", " ");
 	}
 	
+	//W3Schools Spaces
+	
+	public void scrollToW3SchoolsSpacesSection(){
+		
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[3]/parent::*/parent::*", "\"W3Schools Spaces\" section"));
+		
+	}
+	
+	public String getW3SchoolsSpacesHeader(){
+		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[3]"));
+	}
+	
+	public String getW3SchoolSpacesSubheader(){
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[3]/following-sibling::*)[1]"));
+	}
+	
+	public WebElement getGetStartedForFreeButton(){
+		return getElementByXpath("//*[contains(@class, 'button') and text()='Get Started for Free']", "\"Get Started for Free\" button");
+	}
+	
+	public WebElement getHowItWorksImage(){
+		return getElementByXpath("//*[@src='how-spaces-works3.png']", "\"How it works\" image");
+	}
+	
 }
