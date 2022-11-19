@@ -12,6 +12,8 @@ import utilities.Listener;
 public class TestHomePageMainContent {
 
 	HomePageMainContent homePage;
+	
+	WhereToStartPage whereToStartPage;
 
 	BaseTest baseTest;
 	
@@ -54,7 +56,7 @@ public class TestHomePageMainContent {
 		
 		homePage.clickWhereToBeginLink();
 		
-		WhereToStartPage whereToStartPage = new WhereToStartPage(driver);
+		whereToStartPage = new WhereToStartPage(driver);
 		
 		baseTest = new BaseTest(whereToStartPage);
 		
@@ -63,6 +65,23 @@ public class TestHomePageMainContent {
 		baseTest.verifyTextIsTheSame(whereToStartPage.getSubheaderContent(), "To become a web developer, start with the subjects below, in the following order:");
 		
 		baseTest.assertAll();
+	}
+	
+	@Test(testName = "Verify Learn HTML section", priority = 6)
+	private void testLearnHtmlSection(){
+	
+		baseTest = new BaseTest(whereToStartPage);
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getHtmlLeftButton());
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHtmlFirstStep(), "1. Create your first web page");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHtmlFirstStepAdditionalInfo(), "The first thing you have to learn, is HTML, which is the standard markup language for creating web pages.");
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getLearnHtmlButton());
+		
+		baseTest.assertAll();
+		
 	}
 	
 }
