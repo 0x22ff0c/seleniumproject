@@ -84,4 +84,34 @@ public class WhereToStartPage extends BasePage{
 		return getElementByXpath("//*[@title='Go To Our JavaScript Tutorial' and text()='Learn JavaScript']", "Learn JavaScript button");
 	}
 	
+	//What's next? section
+	public void scrollToWhatsNextSection(){
+		control.scrollToElement(getElementByXpath("//*[text()=\"What's Next?\"]/parent::*/parent::*", "\"What's Next?\" section"));
+	}
+	
+	public String getWhatsNextHeader(){
+		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[2]"));
+	}
+	
+	public String getWhatsNextSubHeader(){
+		
+		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[1]"));
+		
+		return actualString.replace("\n", " ");
+	}
+	
+	public String getWhatsNext2ndSubHeader(){
+		
+		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[2]"));
+		
+		return actualString.replace("\n", " ");
+	}
+	
+	public String getWhatsNext3rdSubHeader(){
+		
+		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[3]"));
+		
+		return actualString.replace("\n", " ");
+	}
+	
 }
