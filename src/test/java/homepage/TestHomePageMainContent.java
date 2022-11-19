@@ -122,5 +122,23 @@ public class TestHomePageMainContent {
 		
 	}
 	
+	@Test(testName = "Verify \"What's Next?\" section", priority = 9)
+	private void testWhatsNextSection(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToWhatsNextSection();
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getWhatsNextHeader(), "What's Next?");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getWhatsNextSubHeader(), "Now you know how to use HTML, CSS, and JavaScript to create, style, and make interactive web pages.");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getWhatsNext2ndSubHeader(), "The next step is to publish your website, so that the rest of the world can see your work.");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getWhatsNext3rdSubHeader(), "There are tons of hosting services to choose from. We have made one for you, for free:");
+		
+		baseTest.assertAll();
+		
+	}
+	
 }
-
