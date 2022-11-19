@@ -60,7 +60,7 @@ public class TestHomePageMainContent {
 		
 		baseTest = new BaseTest(whereToStartPage);
 		
-		baseTest.verifyElementIsDisplayed(whereToStartPage.getWhereToStartHeader());
+		baseTest.verifyTextIsTheSame(whereToStartPage.getWhereToStartHeaderContent(), "Where To Start");
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getSubheaderContent(), "To become a web developer, start with the subjects below, in the following order:");
 		
