@@ -12,6 +12,8 @@ import utilities.Listener;
 public class TestHomePageMainContent {
 
 	HomePageMainContent homePage;
+	
+	WhereToStartPage whereToStartPage;
 
 	BaseTest baseTest;
 	
@@ -54,7 +56,7 @@ public class TestHomePageMainContent {
 		
 		homePage.clickWhereToBeginLink();
 		
-		WhereToStartPage whereToStartPage = new WhereToStartPage(driver);
+		whereToStartPage = new WhereToStartPage(driver);
 		
 		baseTest = new BaseTest(whereToStartPage);
 		
@@ -63,6 +65,61 @@ public class TestHomePageMainContent {
 		baseTest.verifyTextIsTheSame(whereToStartPage.getSubheaderContent(), "To become a web developer, start with the subjects below, in the following order:");
 		
 		baseTest.assertAll();
+	}
+	
+	@Test(testName = "Verify Learn HTML section", priority = 6)
+	private void testLearnHtmlSection(){
+	
+		baseTest = new BaseTest(whereToStartPage);
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getHtmlLeftButton());
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHtml1stStep(), "1. Create your first web page");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHtml1stStepAdditionalInfo(), "The first thing you have to learn, is HTML, which is the standard markup language for creating web pages.");
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getLearnHtmlButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Learn CSS section", priority = 7)
+	private void testLearnCSSSection(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToCSSsection();
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getCSSLeftButton());
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getCSS2ndStep(), "2. Style your web page");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getCSS2ndStepAdditionalInfo(), "The next step is to learn CSS, to set the layout of your web page with beautiful colors, fonts, and much more.");
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getLearnCSSButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Learn JavaScript section", priority = 8)
+	private void testLearnJSSection(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToJavaScriptSection();
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getJSLeftButton());
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getJS3rdStep(), "3. Make your web page interactive");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getJS3rdStepAdditionalInfo(), "After studying HTML and CSS, you should learn JavaScript to create dynamic and interactive web pages for your users.");
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getLearnJSButton());
+		
+		baseTest.assertAll();
+		
 	}
 	
 }
