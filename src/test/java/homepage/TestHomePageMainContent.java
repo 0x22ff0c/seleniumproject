@@ -141,4 +141,22 @@ public class TestHomePageMainContent {
 		
 	}
 	
+	@Test(testName = "Verify \"W3Schools Spaces\" section", priority = 10)
+	private void testW3SchoolsSpacesSection(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToW3SchoolsSpacesSection();
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getW3SchoolsSpacesHeader(), "W3Schools Spaces");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getW3SchoolSpacesSubheader(), "Build your own website with W3Schools Spaces.");
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getGetStartedForFreeButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getHowItWorksImage());
+		
+		baseTest.assertAll();
+		
+	}
 }
