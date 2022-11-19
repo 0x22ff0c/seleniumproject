@@ -12,6 +12,7 @@ public class Control{
 	WebDriver driver;
 	BaseTest baseTest;
 	BasePage basePage;
+	String nameOfElement;
 	
 	public Control(WebDriver driver, BasePage basePage){
 		this.driver = driver;
@@ -20,7 +21,7 @@ public class Control{
 	
 	public void clickButton(WebElement element){
 	
-		String nameOfElement = basePage.getElementName();
+		nameOfElement = basePage.getElementName();
 		
 		System.out.println(String.format("Clicking element: %s...", nameOfElement));
 		
@@ -41,7 +42,15 @@ public class Control{
 	}
 	
 	public void scrollToElement(WebElement element){
+		
+		nameOfElement = basePage.getElementName();
+		
+		System.out.println(String.format("Scrolling to element: %s...", nameOfElement));
+		
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false)", element);
+		
+		System.out.println(String.format("Scrolled to element: %s.", nameOfElement));
+		
 	}
 	
 }
