@@ -203,8 +203,20 @@ public class WhereToStartPage extends BasePage{
 	public String getBackEnd2ndSubheader(){
 		
 		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[2]"));
-		
+			
 		return actualString.replace("\n", " ");
+	}
+	
+	public WebElement getBackEndPhpLink(){
+		return getElementByLinkText("PHP");
+	}
+	
+	public WebElement getBackEndPythonLink(){
+		return getElementByLinkText("Python");
+	}
+	
+	public WebElement getBackEndSqlLink(){
+		return getElementByLinkText("SQL");
 	}
 	
 	public String getBackEnd3rdSubheader(){
