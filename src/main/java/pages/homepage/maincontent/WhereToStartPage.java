@@ -183,4 +183,72 @@ public class WhereToStartPage extends BasePage{
 		return getElementByLinkText("Git");
 	}
 	
+	//What about back-end section
+	
+	public void scrollToBackEndSection(){
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*", "\"What About Back-End?\" section"));
+	}
+	
+	public String getBackEndHeader(){
+		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[5]"));
+	}
+	
+	public String getBackEndSubheader(){
+		
+		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]"));
+		
+		return actualString.replace("\n", " ");
+	}
+	
+	public WebElement getBackEndSubheaderFrontEndText(){
+		return getElementByXpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]/descendant::strong[text()='Front-end']", "Front-end");
+	}
+	
+	public WebElement getBackEndSubheaderClientText(){
+		return getElementByXpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]/descendant::strong[text()='client']", "client");
+	}
+	
+	public WebElement getBackEndSubheaderlooksText(){
+		return getElementByXpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]/descendant::strong[text()='looks']", "looks");
+	}
+	
+	public WebElement getBackEndSubheaderBackEndText(){
+		return getElementByXpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]/descendant::strong[text()='looks']", "Back-end");
+	}
+	
+	public WebElement getBackEndSubHeaderServerText(){
+		return getElementByXpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]/descendant::strong[text()='server']", "server");
+	}
+	
+	public WebElement getBackEndSubHeaderWorksText(){
+		return getElementByXpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]/descendant::strong[text()='server']", "works");
+	}
+	
+	public String getBackEnd2ndSubheader(){
+		
+		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[2]"));
+			
+		return actualString.replace("\n", " ");
+	}
+	
+	public WebElement getBackEndPhpLink(){
+		return getElementByLinkText("PHP");
+	}
+	
+	public WebElement getBackEndPythonLink(){
+		return getElementByLinkText("Python");
+	}
+	
+	public WebElement getBackEndSqlLink(){
+		return getElementByLinkText("SQL");
+	}
+	
+	public String getBackEnd3rdSubheader(){
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[3]"));
+	}
+	
+	public WebElement getBackEndHomePageLink(){
+		return getElementByLinkText("Homepage");
+	}
+	
 }

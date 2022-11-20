@@ -31,6 +31,14 @@ public class BaseTest {
 		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, String.format("\"%s\" is displayed", expectedTextInElement));
 	}
 
+	public void verifyIfTextIsMarkedAsImportant(WebElement textLabeledAsStrong){
+		
+		String nameOfElement = basePage.getElementName();
+		
+		softAssertion.assertTrue(textLabeledAsStrong.isDisplayed(), String.format("\"%s\" text labeled as strong.", nameOfElement));
+		
+	}
+	
 	private boolean exceptionHandler(WebElement element){
 		
 		boolean defaultValue = false;
