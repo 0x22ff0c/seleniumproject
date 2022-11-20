@@ -223,4 +223,8 @@ public class WhereToStartPage extends BasePage{
 		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[3]"));
 	}
 	
+	public WebElement getBackEndHomePageLink(){
+		return getElementByLinkText("Homepage");
+	}
+	
 }
