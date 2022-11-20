@@ -38,7 +38,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWhereToBeginLink(){
-		return getElementByLinkText("Not Sure Where To Begin?", "\"Not Sure Where To Begin?\"");
+		return getElementByLinkText("Not Sure Where To Begin?");
 	}
 	
 	public void clickWhereToBeginLink(){

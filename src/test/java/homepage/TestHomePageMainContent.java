@@ -60,7 +60,7 @@ public class TestHomePageMainContent {
 		
 		baseTest = new BaseTest(whereToStartPage);
 		
-		baseTest.verifyElementIsDisplayed(whereToStartPage.getWhereToStartHeader());
+		baseTest.verifyTextIsTheSame(whereToStartPage.getWhereToStartHeaderContent(), "Where To Start");
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getSubheaderContent(), "To become a web developer, start with the subjects below, in the following order:");
 		
@@ -155,6 +155,35 @@ public class TestHomePageMainContent {
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getGetStartedForFreeButton());
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getHowItWorksImage());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify \"Hello Developer!\" section", priority = 11)
+	private void testHelloDeveloperSection(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToHelloDeveloperSection();
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHelloDeveloperHeaderValue(), "Hello, Front-End Developer!");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHelloDeveloperSubheaderContent(), "People who create websites and web applications for a living, are called Front-End Developers.");
+		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getHelloDeveloper2ndSubheaderContent(), "Tip: Many Front-End Developers also have basic knowledge of "
+				+ "different CSS and JavaScript frameworks and libraries, "
+				+ "like Bootstrap, SASS (CSS pre-processor), jQuery and React, and the popular version control system, Git.");
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getBootstrapLink());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getSASSLink());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getJqueryLink());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getReactLink());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getGitLink());
 		
 		baseTest.assertAll();
 		

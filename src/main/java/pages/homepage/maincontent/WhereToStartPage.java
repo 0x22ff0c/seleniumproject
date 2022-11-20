@@ -12,10 +12,12 @@ public class WhereToStartPage extends BasePage{
 		super(driver);
 	}
 	
-	public WebElement getWhereToStartHeader(){
-		return getElementByXpath("//*[@class='textsmallerscreens' and text()='Where To Start']", "\"Where To Start\" header");
-	}
+	//"Where To Start" section
 	
+	public String getWhereToStartHeaderContent(){
+		return getTextOfElement(By.xpath("//*[@class='textsmallerscreens' and text()='Where To Start']"));
+	}
+
 	public String getSubheaderContent(){
 		
 		String actualString = getTextOfElement(By.xpath("(//*[@class='textsmallerscreens' and text()='Where To Start']/following-sibling::*)[1]"));
@@ -136,6 +138,49 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getHowItWorksImage(){
 		return getElementByXpath("//*[@src='how-spaces-works3.png']", "\"How it works\" image");
+	}
+	
+	//Hello Developer
+	
+	public void scrollToHelloDeveloperSection(){
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[4]/parent::*/parent::*", "\"Hello Developer!\" section"));
+	}
+	
+	public String getHelloDeveloperHeaderValue(){
+		String actualString = getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[4]"));
+		
+		return actualString.replace("\n", " ");
+	}
+	
+	public String getHelloDeveloperSubheaderContent(){
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[1]"));
+	}
+	
+	public String getHelloDeveloper2ndSubheaderContent(){
+		
+		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]"));
+
+		return actualString.replace("\n", " ");
+	}
+	
+	public WebElement getBootstrapLink(){
+		return getElementByLinkText("Bootstrap");
+	}
+	
+	public WebElement getSASSLink(){
+		return getElementByLinkText("SASS (CSS pre-processor)");
+	}
+	
+	public WebElement getJqueryLink(){
+		return getElementByLinkText("jQuery");
+	}
+	
+	public WebElement getReactLink(){
+		return getElementByLinkText("React");
+	}
+	
+	public WebElement getGitLink(){
+		return getElementByLinkText("Git");
 	}
 	
 }
