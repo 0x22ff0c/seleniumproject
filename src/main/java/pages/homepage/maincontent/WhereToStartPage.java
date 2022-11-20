@@ -183,4 +183,32 @@ public class WhereToStartPage extends BasePage{
 		return getElementByLinkText("Git");
 	}
 	
+	//What about back-end section
+	
+	public void scrollToBackEndSection(){
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*", "\"What About Back-End?\" section"));
+	}
+	
+	public String getBackEndHeader(){
+		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[5]"));
+	}
+	
+	public String getBackEndSubheader(){
+		
+		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]"));
+		
+		return actualString.replace("\n", " ");
+	}
+	
+	public String getBackEnd2ndSubheader(){
+		
+		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[2]"));
+		
+		return actualString.replace("\n", " ");
+	}
+	
+	public String getBackEnd3rdSubheader(){
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[3]"));
+	}
+	
 }
