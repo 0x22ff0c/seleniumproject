@@ -211,6 +211,8 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEnd3rdSubheader(), "A list of other popular languages can be found on our Homepage.");
 		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getBackEndHomePageLink());
+		
 		baseTest.assertAll();
 		
 	}
