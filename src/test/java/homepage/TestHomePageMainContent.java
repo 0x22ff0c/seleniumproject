@@ -199,7 +199,11 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEndHeader(), "What About Back-End?");
 		
+		//1st subheader
+		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEndSubheader(), "Front-end development refers to the client-side (how a web page looks). Back-end development refers to the server-side (how a web page works).");
+		
+		//2nd subheader
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEnd2ndSubheader(), "Front-end code is used to create static websites, where the purpose is to display the web page. However, if you want to make your website dynamic (manage files and databases, add contact forms, control user-access, etc.), you need to learn a back-end programming language, like PHP or Python, and use SQL to communicate with databases.");
 		
@@ -208,6 +212,8 @@ public class TestHomePageMainContent {
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getBackEndPythonLink());
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getBackEndSqlLink());
+		
+		//3rd subheader
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEnd3rdSubheader(), "A list of other popular languages can be found on our Homepage.");
 		
