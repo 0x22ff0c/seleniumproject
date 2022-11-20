@@ -164,23 +164,23 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public WebElement getBootstrapLink(){
-		return getElementByLinkText("Bootstrap", "Bootstrap");
+		return getElementByLinkText("Bootstrap");
 	}
 	
 	public WebElement getSASSLink(){
-		return getElementByLinkText("SASS (CSS pre-processor)", "SASS (CSS pre-processor)");
+		return getElementByLinkText("SASS (CSS pre-processor)");
 	}
 	
 	public WebElement getJqueryLink(){
-		return getElementByLinkText("jQuery", "jQuery");
+		return getElementByLinkText("jQuery");
 	}
 	
 	public WebElement getReactLink(){
-		return getElementByLinkText("React", "React");
+		return getElementByLinkText("React");
 	}
 	
 	public WebElement getGitLink(){
-		return getElementByLinkText("Git", "Git");
+		return getElementByLinkText("Git");
 	}
 	
 }
