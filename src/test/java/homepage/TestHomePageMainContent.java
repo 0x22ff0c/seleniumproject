@@ -203,6 +203,12 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEnd2ndSubheader(), "Front-end code is used to create static websites, where the purpose is to display the web page. However, if you want to make your website dynamic (manage files and databases, add contact forms, control user-access, etc.), you need to learn a back-end programming language, like PHP or Python, and use SQL to communicate with databases.");
 		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getBackEndPhpLink());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getBackEndPythonLink());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getBackEndSqlLink());
+		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEnd3rdSubheader(), "A list of other popular languages can be found on our Homepage.");
 		
 		baseTest.assertAll();
