@@ -54,11 +54,11 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getForumLink(){
-		return getElementByLinkText("FORUM", "FORUM");
+		return getElementByLinkText("FORUM");
 	}
 	
 	public WebElement getAboutLink(){
-		return getElementByLinkText("ABOUT", "ABOUT");
+		return getElementByLinkText("ABOUT");
 	}
 	
 	private WebElement getIconLink(String linkName){
@@ -91,11 +91,11 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getTermsOfUseLink(){
-		return getElementByLinkText("terms of use", "Terms of Use");
+		return getElementByLinkText("terms of use");
 	}
 	
 	public WebElement getCookieAndPrivacyPolicyLink(){
-		return getElementByLinkText("cookie and privacy policy", "Cookie and Privacy Policy");
+		return getElementByLinkText("cookie and privacy policy");
 	}
 	
 	public WebElement getCopyrightLink(){
