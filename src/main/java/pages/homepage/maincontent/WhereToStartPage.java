@@ -156,11 +156,19 @@ public class WhereToStartPage extends BasePage{
 		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[1]"));
 	}
 	
+	public WebElement getHelloDeveloperSubheaderFrontEndDevelopers(){
+		return getElementByXpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[1]/descendant::strong[text()='Front-End Developers']", "Front-End Developers");
+	}
+	
 	public String getHelloDeveloper2ndSubheaderContent(){
 		
 		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]"));
 
 		return actualString.replace("\n", " ");
+	}
+	
+	public WebElement getHelloDeveloper2ndSubheaderTip(){
+		return getElementByXpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]/descendant::strong[text()='Tip:']", "Tip:");
 	}
 	
 	public WebElement getBootstrapLink(){
