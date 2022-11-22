@@ -31,6 +31,16 @@ public class Control{
 		
 	}
 	
+	public void navigateBackToPreviousPage(){
+		
+		System.out.println("Navigating back...");
+		
+		driver.navigate().back();
+		
+		System.out.println("Navigated back to previous page.");
+		
+	}
+	
 	public void typeToField(WebElement fieldElement, String valueToFillInTheField){
 		
 		System.out.println(String.format("Filling-in field with value: %s...", valueToFillInTheField));
