@@ -37,6 +37,10 @@ public class BasePage {
 		
 	}
 	
+	private WebElement getElementByXpath(String xpath){
+		return getElement(By.xpath(xpath));
+	}
+	
 	protected WebElement getElementByXpath(String xpath, String nameOfElement){
 		
 		return getElement(By.xpath(xpath), nameOfElement);
@@ -77,11 +81,37 @@ public class BasePage {
 		
 	}
 	
+	private WebElement getElement(By byElement){
+
+		element = null;
+		
+		try {
+			
+			element = driver.findElement(byElement);
+			
+		} catch (NoSuchElementException noSuchElementException){
+
+			System.out.println(ExceptionUtils.getStackTrace(noSuchElementException));
+			
+		}
+	
+		return element;
+		
+	}
+	
 	public WebElement getButtonElement(By locator, String nameOfElement){
 		
-		this.nameOfElement = nameOfElement;
+		this.nameOfElement = nameOfElement + " button";
 		
 		return driver.findElement(locator);
+		
+	}
+	
+	public WebElement getButtonElement(String nameOfTheButton){
+		
+		this.nameOfElement = nameOfTheButton + " button";
+		
+		return getElementByXpath(String.format("//*[@title='%s']", nameOfTheButton));
 		
 	}
 	
