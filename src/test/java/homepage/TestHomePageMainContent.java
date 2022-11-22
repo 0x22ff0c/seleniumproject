@@ -135,6 +135,8 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getWhatsNext2ndSubHeader(), "The next step is to publish your website, so that the rest of the world can see your work.");
 		
+		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getWhatsNext2ndSubheaderNextStep());
+		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getWhatsNext3rdSubHeader(), "There are tons of hosting services to choose from. We have made one for you, for free:");
 		
 		baseTest.assertAll();
