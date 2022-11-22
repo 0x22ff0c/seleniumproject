@@ -77,6 +77,14 @@ public class BasePage {
 		
 	}
 	
+	public WebElement getButtonElement(By locator, String nameOfElement){
+		
+		this.nameOfElement = nameOfElement;
+		
+		return driver.findElement(locator);
+		
+	}
+	
 	protected String getTextOfElement(WebElement element){
 		
 		String textOfElement = "";
