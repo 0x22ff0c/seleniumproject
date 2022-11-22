@@ -171,9 +171,13 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getHelloDeveloperSubheaderContent(), "People who create websites and web applications for a living, are called Front-End Developers.");
 		
+		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getHelloDeveloperSubheaderFrontEndDevelopers());
+		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getHelloDeveloper2ndSubheaderContent(), "Tip: Many Front-End Developers also have basic knowledge of "
 				+ "different CSS and JavaScript frameworks and libraries, "
 				+ "like Bootstrap, SASS (CSS pre-processor), jQuery and React, and the popular version control system, Git.");
+		
+		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getHelloDeveloper2ndSubheaderTip());
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getBootstrapLink());
 		
