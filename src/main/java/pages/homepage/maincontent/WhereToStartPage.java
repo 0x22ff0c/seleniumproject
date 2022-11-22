@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import pages.BasePage;
-import utilities.Control;
 
 public class WhereToStartPage extends BasePage{
 
@@ -299,6 +298,10 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getFooterNewsletterButton(){
 		return getElementByXpath("(//*[@title='Join Our Newsletter'])[1]", "Join Our Newsletter button");
+	}
+	
+	public WebElement getFooterShopButton(){
+		return getElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", "W3Schools Shop button");
 	}
 	
 	
