@@ -26,7 +26,9 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getQuizzesButton(){
-		return getButton("Quizzes");
+		
+		return getButtonElement("Quizzes");
+		
 	}
 	
 	public WebElement getExcercisesButton(){
