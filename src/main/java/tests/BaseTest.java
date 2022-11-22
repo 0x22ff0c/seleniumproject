@@ -27,6 +27,14 @@ public class BaseTest {
 		
 	}
 	
+	public void verifyButtonIsDisplayed(WebElement element){
+		
+		String nameOfTheElement = basePage.getElementName();
+		
+		softAssertion.assertTrue(exceptionHandler(element), String.format("%s button is displayed", nameOfTheElement));
+		
+	}
+	
 	public void verifyTextIsTheSame(String actualTextInElement, String expectedTextInElement){
 		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, String.format("\"%s\" is displayed", expectedTextInElement));
 	}

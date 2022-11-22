@@ -263,6 +263,8 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterNewsletterButton());
 		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterShopButton());
+		
 		baseTest.assertAll();
 		
 	}
