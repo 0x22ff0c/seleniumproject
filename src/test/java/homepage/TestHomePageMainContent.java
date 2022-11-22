@@ -240,4 +240,30 @@ public class TestHomePageMainContent {
 		baseTest.assertAll();
 		
 	}
+	
+	
+	@Test(testName = "Verify Where to start page' footer is displayed", priority = 13)
+	private void testFooter(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToWhereToStartFooter();
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterHomeButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterQuizzesButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterExercisesButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterUpgradeButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterSpacesButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterSupportButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterNewsletterButton());
+		
+		baseTest.assertAll();
+		
+	}
 }
