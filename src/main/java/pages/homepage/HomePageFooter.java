@@ -20,11 +20,7 @@ public class HomePageFooter extends BasePage{
 	public void scrollToFooterSection(){
 		control.scrollToElement(getElementByXpath("//footer", "footer"));
 	}
-	
-	private WebElement getButton(String buttonName){
-		return getElementByXpath(String.format("//*[@title='%s']", buttonName), buttonName + " button");
-	}
-	
+
 	public WebElement getQuizzesButton(){
 		
 		return getButtonElement("Quizzes");
@@ -32,15 +28,20 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getExcercisesButton(){
-		return getButton("Exercises");
+		
+		return getButtonElement("Exercises");
+		
 	}
 	
 	public WebElement getCertificatesButton(){
-		return getButton("Courses and Certificates");
+		
+		return getButtonElement("Courses and Certificates");
 	}
 	
 	public WebElement getUpgradeButton(){
-		return getButton("Upgrade to Improve Your Learning Experiences");
+		
+		return getButtonElement("Upgrade to Improve Your Learning Experiences");
+		
 	}
 	
 	public WebElement getSpacesButton(){
@@ -48,11 +49,15 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getSupportButton(){
-		return getButton("Support");
+		
+		return getButtonElement("Support");
+		
 	}
 	
 	public WebElement getNewsLetterButton(){
-		return getButton("Join Our Newsletter");
+		
+		return getButtonElement("Join Our Newsletter");
+		
 	}
 	
 	public WebElement getForumLink(){
