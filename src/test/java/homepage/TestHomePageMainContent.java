@@ -135,6 +135,8 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getWhatsNext2ndSubHeader(), "The next step is to publish your website, so that the rest of the world can see your work.");
 		
+		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getWhatsNext2ndSubheaderNextStep());
+		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getWhatsNext3rdSubHeader(), "There are tons of hosting services to choose from. We have made one for you, for free:");
 		
 		baseTest.assertAll();
@@ -171,9 +173,13 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getHelloDeveloperSubheaderContent(), "People who create websites and web applications for a living, are called Front-End Developers.");
 		
+		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getHelloDeveloperSubheaderFrontEndDevelopers());
+		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getHelloDeveloper2ndSubheaderContent(), "Tip: Many Front-End Developers also have basic knowledge of "
 				+ "different CSS and JavaScript frameworks and libraries, "
 				+ "like Bootstrap, SASS (CSS pre-processor), jQuery and React, and the popular version control system, Git.");
+		
+		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getHelloDeveloper2ndSubheaderTip());
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getBootstrapLink());
 		
@@ -230,6 +236,32 @@ public class TestHomePageMainContent {
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEnd3rdSubheader(), "A list of other popular languages can be found on our Homepage.");
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getBackEndHomePageLink());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	
+	@Test(testName = "Verify Where to start page' footer is displayed", priority = 13)
+	private void testFooter(){
+		
+		baseTest = new BaseTest(whereToStartPage);
+		
+		whereToStartPage.scrollToWhereToStartFooter();
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterHomeButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterQuizzesButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterExercisesButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterUpgradeButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterSpacesButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterSupportButton());
+		
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getFooterNewsletterButton());
 		
 		baseTest.assertAll();
 		
