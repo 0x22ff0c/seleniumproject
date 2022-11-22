@@ -109,6 +109,10 @@ public class WhereToStartPage extends BasePage{
 		return actualString.replace("\n", " ");
 	}
 	
+	public WebElement getWhatsNext2ndSubheaderNextStep(){
+		return getElementByXpath("(//*[@class='textsmallerscreens'])[2]/following-sibling::*[2]/descendant::b[text()='next step']", "next step");
+	}
+	
 	public String getWhatsNext3rdSubHeader(){
 		
 		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[3]"));
