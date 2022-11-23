@@ -21,6 +21,10 @@ public class TestHomePageFooter {
 	private void setup(){
 
 		WebDriver driver = Listener.getDriver();
+
+		control = new Control(driver);
+		
+		control.navigateBackToPreviousPage();
 		
 		homePageFooter = new HomePageFooter(driver);
 		
