@@ -21,34 +21,48 @@ public class FooterSection extends HomePageFooter{
 	}
 	
 	public WebElement getFooterQuizzesButton(){
-		return getElementByXpath("(//*[@title='Quizzes'])[1]", "Quizzes button");
+		
+		return getButtonElement("Quizzes");
+		
 	}
 	
 	public WebElement getFooterExercisesButton(){
-		return getElementByXpath("(//*[@title='Exercises'])[1]", "Exercises button");
+		
+		return getButtonElement("Exercises");
+		
 	}
 	
 	public WebElement getFooterCertificatesButton(){
-		return getElementByXpath("(//*[@title='Courses and Certificates'])[1]", "Certificates button");
+		
+		return getButtonElement("Courses and Certificates"); //actual button name: Certificates
+		
 	}
 	
 	public WebElement getFooterUpgradeButton(){
-		return getElementByXpath("(//*[@title='Upgrade to Improve Your Learning Experiences'])[1]", "Upgrade button");
+		
+		return getButtonElement("Upgrade to Improve Your Learning Experiences"); //actual button name: Upgrade
 	}
 	
 	public WebElement getFooterSpacesButton(){
-		return getElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[1]", "Spaces button");
+		
+		return getButtonElement("Get Your Own Website With W3schools Spaces"); //actual button name: Spaces
+		
 	}
 	
 	public WebElement getFooterSupportButton(){
-		return getElementByXpath("(//*[@title='Support'])[1]", "Support button");
+		
+		return getButtonElement("Support");
+		
 	}
 	
 	public WebElement getFooterNewsletterButton(){
-		return getElementByXpath("(//*[@title='Join Our Newsletter'])[1]", "Join Our Newsletter button");
+		
+		return getButtonElement("Join Our Newsletter");
+		
 	}
 	
 	public WebElement getFooterShopButton(){
+
 		return getElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", "W3Schools Shop button");
 	}
 	
