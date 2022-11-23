@@ -91,9 +91,11 @@ public class BasePage {
 	
 	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
 		
+		element = getButtonElement(titleOfTheButton);
+		
 		this.nameOfElement = actualNameOfTheButton + " button";
 		
-		return getButtonElement(titleOfTheButton);
+		return element;
 		
 	}
 	
