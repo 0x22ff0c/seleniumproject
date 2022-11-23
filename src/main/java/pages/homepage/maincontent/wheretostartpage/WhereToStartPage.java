@@ -212,6 +212,14 @@ public class WhereToStartPage extends BasePage{
 		return actualString.replace("\n", " ");
 	}
 	
+	public WebElement getBackEndSubheaderTextEnclosedInStrongTag(String textEnclosedInStrongTag){
+		
+		String xpathExpression = "((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]/descendant::strong[text()='%s']";
+		
+		return getElementByXpath(String.format(xpathExpression, textEnclosedInStrongTag), textEnclosedInStrongTag);
+		
+	}
+	
 	public WebElement getBackEndSubheaderFrontEndText(){
 		return getElementByXpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]/descendant::strong[text()='Front-end']", "Front-end");
 	}

@@ -22,7 +22,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public String getSubheaderTextInMainContent(){
-		return getTextOfElement(getElementByXpath("//*[text()=\"With the world's largest web developer site.\"]", "\"With the world's largest web developer site.\" sub header"));
+		return getTextOfElement(getElementByXpath("//*[text()=\"With the world's largest web developer site.\"]", "\"With the world's largest web developer site.\" subheader"));
 	}
 	
 	public WebElement getSearchbarField(){

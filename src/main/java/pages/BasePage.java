@@ -36,11 +36,7 @@ public class BasePage {
 		return getElement(By.className(className), nameOfElement);
 		
 	}
-	
-	private WebElement getElementByXpath(String xpath){
-		return getElement(By.xpath(xpath));
-	}
-	
+
 	protected WebElement getElementByXpath(String xpath, String nameOfElement){
 		
 		return getElement(By.xpath(xpath), nameOfElement);
@@ -80,38 +76,30 @@ public class BasePage {
 		return element;
 		
 	}
-	
-	private WebElement getElement(By byElement){
 
-		element = null;
-		
-		try {
-			
-			element = driver.findElement(byElement);
-			
-		} catch (NoSuchElementException noSuchElementException){
-
-			System.out.println(ExceptionUtils.getStackTrace(noSuchElementException));
-			
-		}
-	
-		return element;
-		
-	}
+	private String setNameOfTheButton(String nameOfTheButtonElement){
+		return nameOfTheButtonElement + " button";
+	} 
 	
 	public WebElement getButtonElement(By locator, String nameOfElement){
-		
-		this.nameOfElement = nameOfElement + " button";
-		
-		return driver.findElement(locator);
+
+		return getElement(locator, setNameOfTheButton(nameOfElement));
 		
 	}
 	
 	public WebElement getButtonElement(String nameOfTheButton){
+
+		return getElementByXpath(String.format("//*[@title='%s']", nameOfTheButton), setNameOfTheButton(nameOfTheButton));
 		
-		this.nameOfElement = nameOfTheButton + " button";
+	}
+	
+	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
 		
-		return getElementByXpath(String.format("//*[@title='%s']", nameOfTheButton));
+		element = getButtonElement(titleOfTheButton);
+		
+		this.nameOfElement = setNameOfTheButton(actualNameOfTheButton);
+		
+		return element;
 		
 	}
 	
