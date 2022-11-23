@@ -21,6 +21,10 @@ public class TestHomePageFooter {
 	private void setup(){
 
 		WebDriver driver = Listener.getDriver();
+
+		control = new Control(driver);
+		
+		control.navigateBackToPreviousPage();
 		
 		homePageFooter = new HomePageFooter(driver);
 		
@@ -28,7 +32,7 @@ public class TestHomePageFooter {
 		
 	}
 	
-	@Test(testName = "Verify Home page footer buttons", priority = 5)
+	@Test(testName = "Verify Home page footer buttons", priority = 15)
 	private void verifyFooterButtons(){
 		
 		baseTest = new BaseTest(homePageFooter);
@@ -53,7 +57,7 @@ public class TestHomePageFooter {
 		
 	}
 	
-	@Test(testName = "Verify Home page footer links", priority = 6)
+	@Test(testName = "Verify Home page footer links", priority = 16)
 	private void verifyFooterLinks(){
 		
 		baseTest = new BaseTest(homePageFooter);
@@ -66,7 +70,7 @@ public class TestHomePageFooter {
 	
 	}
 	
-	@Test(testName = "Verify Home page footer icon links", priority = 7)
+	@Test(testName = "Verify Home page footer icon links", priority = 17)
 	private void verifyFooterIconLinks(){
 		
 		baseTest = new BaseTest(homePageFooter);
@@ -83,7 +87,7 @@ public class TestHomePageFooter {
 		
 	}
 	
-	@Test(testName = "Verify footer texts", priority = 8)
+	@Test(testName = "Verify footer texts", priority = 18)
 	private void verifyFooterTexts(){
 		
 		baseTest = new BaseTest(homePageFooter);

@@ -19,6 +19,10 @@ public class Control{
 		this.basePage = basePage;
 	}
 	
+	public Control(WebDriver driver){
+		this.driver = driver;
+	}
+	
 	public void clickButton(WebElement element){
 	
 		nameOfElement = basePage.getElementName();
