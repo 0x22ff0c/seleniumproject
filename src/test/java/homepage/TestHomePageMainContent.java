@@ -210,17 +210,13 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getBackEndSubheader(), "Front-end development refers to the client-side (how a web page looks). Back-end development refers to the server-side (how a web page works).");
 		
-		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getBackEndSubheaderFrontEndText());
+		String[] wordsEnclosedInStrongTag = {"Front-end", "client", "looks", "Back-end", "server", "works"};
 		
-		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getBackEndSubheaderClientText());
-		
-		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getBackEndSubheaderlooksText());
-		
-		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getBackEndSubheaderBackEndText());
-		
-		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getBackEndSubheaderClientText());
-		
-		baseTest.verifyIfTextIsMarkedAsImportant(whereToStartPage.getBackEndSubHeaderWorksText());
+		for(String word : wordsEnclosedInStrongTag){
+			
+			baseTest.verifyElementIsDisplayed(whereToStartPage.getBackEndSubheaderTextEnclosedInStrongTag(word));
+			
+		}
 		
 		//2nd subheader
 		
