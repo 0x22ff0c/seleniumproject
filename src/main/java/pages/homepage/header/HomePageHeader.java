@@ -17,11 +17,7 @@ public class HomePageHeader extends BasePage{
 	}
 
 	//Header - menu items
-	
-	private WebElement getHeaderButton(String title){
-		return getElementByXpath(String.format("//*[@title='%s']", title), String.format("%s button", title));
-	}
-	
+
 	protected WebElement getHeaderCaretButton(String title){
 		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down button", title));
 	}
@@ -31,7 +27,9 @@ public class HomePageHeader extends BasePage{
 	protected static final String EXERCISES_LABEL = "Exercises";
 	
 	public WebElement getTutorialsButton(){
-		return getHeaderButton(TUTORIALS_LABEL);
+		
+		return getButtonElement(TUTORIALS_LABEL);
+		
 	}
 	
 	public void clickTutorialsButton(){
@@ -43,7 +41,9 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getReferencesButton(){
-		return getHeaderButton(REFERENCES_LABEL);
+		
+		return getButtonElement(REFERENCES_LABEL);
+		
 	}
 	
 	public void clickReferencesButton(){
@@ -55,7 +55,9 @@ public class HomePageHeader extends BasePage{
 	}
 
 	public WebElement getExercisesButton(){
-		return getHeaderButton(EXERCISES_LABEL);
+		
+		return getButtonElement(EXERCISES_LABEL);
+		
 	}
 	
 	public void clickExercisesButton(){
@@ -67,7 +69,9 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getVideosButton(){
-		return getHeaderButton("Video Tutorials");
+		
+		return getButtonElement("Video Tutorials");
+		
 	}
 	
 	public WebElement getThemeToggle(){
