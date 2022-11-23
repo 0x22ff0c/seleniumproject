@@ -34,18 +34,18 @@ public class FooterSection extends HomePageFooter{
 	
 	public WebElement getFooterCertificatesButton(){
 		
-		return getButtonElement("Courses and Certificates"); //actual button name: Certificates
+		return getButtonElement("Courses and Certificates", "Certificates");
 		
 	}
 	
 	public WebElement getFooterUpgradeButton(){
 		
-		return getButtonElement("Upgrade to Improve Your Learning Experiences"); //actual button name: Upgrade
+		return getButtonElement("Upgrade to Improve Your Learning Experiences", "Upgrade");
 	}
 	
 	public WebElement getFooterSpacesButton(){
 		
-		return getButtonElement("Get Your Own Website With W3schools Spaces"); //actual button name: Spaces
+		return getButtonElement("Get Your Own Website With W3schools Spaces", "Spaces");
 		
 	}
 	
