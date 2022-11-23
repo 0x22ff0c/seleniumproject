@@ -77,15 +77,19 @@ public class BasePage {
 		
 	}
 
+	private String setNameOfTheButton(String nameOfTheButtonElement){
+		return nameOfTheButtonElement + " button";
+	} 
+	
 	public WebElement getButtonElement(By locator, String nameOfElement){
 
-		return getElement(locator, nameOfElement + " button");
+		return getElement(locator, setNameOfTheButton(nameOfElement));
 		
 	}
 	
 	public WebElement getButtonElement(String nameOfTheButton){
 
-		return getElementByXpath(String.format("//*[@title='%s']", nameOfTheButton), nameOfTheButton + " button");
+		return getElementByXpath(String.format("//*[@title='%s']", nameOfTheButton), setNameOfTheButton(nameOfTheButton));
 		
 	}
 	
@@ -93,7 +97,7 @@ public class BasePage {
 		
 		element = getButtonElement(titleOfTheButton);
 		
-		this.nameOfElement = actualNameOfTheButton + " button";
+		this.nameOfElement = setNameOfTheButton(actualNameOfTheButton);
 		
 		return element;
 		
