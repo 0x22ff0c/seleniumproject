@@ -93,6 +93,12 @@ public class BasePage {
 		
 	}
 	
+	public WebElement getButtonElementById(String idOfElement, String nameOfTheButton){
+		
+		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
+		
+	}
+	
 	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
 		
 		element = getButtonElement(titleOfTheButton);
