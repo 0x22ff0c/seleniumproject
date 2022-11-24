@@ -79,11 +79,15 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getTranslateButton(){
-		return getElementById("nav_translate_btn", "Translate button");
+		
+		return getButtonElementById("nav_translate_btn", "Translate");
+		
 	}
 	
 	public WebElement getSearchButton(){
-		return getElementById("nav_search_btn", "Search button");
+		
+		return getButtonElementById("nav_search_btn", "Search");
+		
 	}
 	
 	public WebElement getUpgradeButton(){
@@ -91,7 +95,9 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getCertifiedButton(){
-		return getElementById("cert_navbtn", "Cerified button");
+		
+		return getButtonElementById("cert_navbtn", "Certified");
+		
 	}
 	
 	public WebElement getFreeWebsiteButton(){
@@ -99,11 +105,15 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getLoginButton(){
-		return getElementById("w3loginbtn", "Login button");
+		
+		return getButtonElementById("w3loginbtn", "Login");
+		
 	}
 	
 	public WebElement getHomeLogo(){
-		return getElementByXpath("//*[@title='Home']", "Home logo");
+		
+		return getButtonElement("Home", "Home logo");
+		
 	}
 	
 }
