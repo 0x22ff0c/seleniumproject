@@ -29,28 +29,6 @@ public class TestHomePageHeader {
 	
 	String[] categoryItems = new String[]{};
 	
-	/**
-	 * Verifies the elements in the header.
-	 * 
-	 * <ul>
-	 * 	<li>Header container</li>
-	 * 	<li>Home logo</li>
-	 * 	<li>Tutorials button</li>
-	 * 	<li>Tutorials caret button</li>
-	 * 	<li>References button</li>
-	 * 	<li>References caret button</li>
-	 * 	<li>Exercises button</li>
-	 * 	<li>Exercises caret button</li>
-	 * 	<li>Videos button</li>
-	 * 	<li>Theme toggle button</li>
-	 * 	<li>Translate button</li>
-	 * 	<li>Search button</li>
-	 * 	<li>Upgrade button</li>
-	 * 	<li>Certified button</li>
-	 * 	<li>Free website button</li>
-	 * 	<li>Login button</li>
-	 * </ul>
-	 */
 	@Test(testName = "Verify Home page header elements", priority =  1)
 	private void testHomePageHeaderElements(){
 
