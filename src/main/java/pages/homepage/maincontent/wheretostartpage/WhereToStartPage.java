@@ -20,9 +20,8 @@ public class WhereToStartPage extends BasePage{
 
 	public String getSubheaderContent(){
 		
-		String actualString = getTextOfElement(By.xpath("(//*[@class='textsmallerscreens' and text()='Where To Start']/following-sibling::*)[1]"));
+		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens' and text()='Where To Start']/following-sibling::*)[1]"));
 		
-		return actualString.replace("\n", " ");
 	}
 	
 	//Learn HTML section
@@ -97,16 +96,14 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getWhatsNextSubHeader(){
 		
-		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[1]"));
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[1]"));
 		
-		return actualString.replace("\n", " ");
 	}
 	
 	public String getWhatsNext2ndSubHeader(){
 		
-		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[2]"));
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[2]"));
 		
-		return actualString.replace("\n", " ");
 	}
 	
 	public WebElement getWhatsNext2ndSubheaderNextStep(){
@@ -115,9 +112,8 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getWhatsNext3rdSubHeader(){
 		
-		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[3]"));
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[3]"));
 		
-		return actualString.replace("\n", " ");
 	}
 	
 	//W3Schools Spaces
@@ -151,9 +147,9 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getHelloDeveloperHeaderValue(){
-		String actualString = getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[4]"));
 		
-		return actualString.replace("\n", " ");
+		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[4]"));
+		
 	}
 	
 	public String getHelloDeveloperSubheaderContent(){
@@ -166,9 +162,8 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getHelloDeveloper2ndSubheaderContent(){
 		
-		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]"));
-
-		return actualString.replace("\n", " ");
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]"));
+		
 	}
 	
 	public WebElement getHelloDeveloper2ndSubheaderTip(){
@@ -207,9 +202,8 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getBackEndSubheader(){
 		
-		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]"));
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]"));
 		
-		return actualString.replace("\n", " ");
 	}
 	
 	public WebElement getBackEndSubheaderTextEnclosedInStrongTag(String textEnclosedInStrongTag){
@@ -246,9 +240,8 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getBackEnd2ndSubheader(){
 		
-		String actualString = getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[2]"));
-			
-		return actualString.replace("\n", " ");
+		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[2]"));
+		
 	}
 	
 	public WebElement getBackEndPhpLink(){

@@ -12,48 +12,59 @@ public class HomePageFooter extends BasePage{
 		super(driver);
 	}
 	
-	
+	//Remove
 	public WebElement getFooter(){
 		return getElementByTagName("footer", "Main page footer");
 	}
 	
+	//Retain
 	public void scrollToFooterSection(){
-		control.scrollToElement(getElementByXpath("//footer", "footer"));
+		
+		control.scrollToElement(getElementByTagName("footer", "Footer section of the page"));
+		
 	}
 
+	//Retain
 	public WebElement getQuizzesButton(){
 		
 		return getButtonElement("Quizzes");
 		
 	}
 	
+	//Retain
 	public WebElement getExcercisesButton(){
 		
 		return getButtonElement("Exercises");
 		
 	}
 	
+	//Add "Certificates" for the button name
 	public WebElement getCertificatesButton(){
 		
 		return getButtonElement("Courses and Certificates");
 	}
 	
+	//Add "Upgrade" for the button name
 	public WebElement getUpgradeButton(){
 		
 		return getButtonElement("Upgrade to Improve Your Learning Experiences");
 		
 	}
 	
+	//Change to getButtonElement that accepts By object
 	public WebElement getSpacesButton(){
+		
 		return getElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", "Spaces button");
 	}
 	
+	//Retain
 	public WebElement getSupportButton(){
 		
 		return getButtonElement("Support");
 		
 	}
 	
+	//Retain
 	public WebElement getNewsLetterButton(){
 		
 		return getButtonElement("Join Our Newsletter");

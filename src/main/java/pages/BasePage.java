@@ -93,6 +93,12 @@ public class BasePage {
 		
 	}
 	
+	public WebElement getButtonElementById(String idOfElement, String nameOfTheButton){
+		
+		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
+		
+	}
+	
 	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
 		
 		element = getButtonElement(titleOfTheButton);
@@ -118,7 +124,9 @@ public class BasePage {
 	
 	protected String getTextOfElement(By byLocator){
 		
-		return driver.findElement(byLocator).getText();
+		String actualString = driver.findElement(byLocator).getText();
+		
+		return actualString.replace("\n", " ");
 		
 	}
 	
