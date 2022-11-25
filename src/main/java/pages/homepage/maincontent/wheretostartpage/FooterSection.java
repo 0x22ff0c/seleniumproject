@@ -12,6 +12,7 @@ public class FooterSection extends HomePageFooter{
 		
 	}
 	
+	//Delete method
 	public void scrollToWhereToStartFooter(){
 		control.scrollToElement(getElementByTagName("footer", "Where to start - footer section"));
 	}
@@ -20,41 +21,48 @@ public class FooterSection extends HomePageFooter{
 		return getElementByXpath("//footer/*[@title='Home']", "Home button");
 	}
 	
+	//Delete method
 	public WebElement getFooterQuizzesButton(){
 		
 		return getButtonElement("Quizzes");
 		
 	}
 	
+	//Delete method
 	public WebElement getFooterExercisesButton(){
 		
 		return getButtonElement("Exercises");
 		
 	}
 	
+	//Delete method
 	public WebElement getFooterCertificatesButton(){
 		
 		return getButtonElement("Courses and Certificates", "Certificates");
 		
 	}
 	
+	//Delete method
 	public WebElement getFooterUpgradeButton(){
 		
 		return getButtonElement("Upgrade to Improve Your Learning Experiences", "Upgrade");
 	}
 	
+	//Delete method
 	public WebElement getFooterSpacesButton(){
 		
 		return getButtonElement("Get Your Own Website With W3schools Spaces", "Spaces");
 		
 	}
 	
+	//Delete method
 	public WebElement getFooterSupportButton(){
 		
 		return getButtonElement("Support");
 		
 	}
 	
+	//Delete method
 	public WebElement getFooterNewsletterButton(){
 		
 		return getButtonElement("Join Our Newsletter");
