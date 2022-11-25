@@ -124,7 +124,9 @@ public class BasePage {
 	
 	protected String getTextOfElement(By byLocator){
 		
-		return driver.findElement(byLocator).getText();
+		String actualString = driver.findElement(byLocator).getText();
+		
+		return actualString.replace("\n", " ");
 		
 	}
 	
