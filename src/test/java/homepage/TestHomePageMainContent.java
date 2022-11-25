@@ -258,7 +258,7 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyElementIsDisplayed(footerSection.getUpgradeButton());
 		
-		baseTest.verifyElementIsDisplayed(footerSection.getFooterSpacesButton());
+		baseTest.verifyElementIsDisplayed(footerSection.getSpacesButton());
 		
 		baseTest.verifyElementIsDisplayed(footerSection.getSupportButton());
 		
