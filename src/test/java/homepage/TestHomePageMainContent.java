@@ -246,21 +246,23 @@ public class TestHomePageMainContent {
 		
 		baseTest = new BaseTest(footerSection);
 		
-		footerSection.scrollToWhereToStartFooter();
-		
+		footerSection.scrollToFooterSection();
+	
 		baseTest.verifyElementIsDisplayed(footerSection.getFooterHomeButton());
 		
-		baseTest.verifyElementIsDisplayed(footerSection.getFooterQuizzesButton());
+		baseTest.verifyElementIsDisplayed(footerSection.getQuizzesButton());
 		
-		baseTest.verifyElementIsDisplayed(footerSection.getFooterExercisesButton());
+		baseTest.verifyElementIsDisplayed(footerSection.getExcercisesButton());
 		
-		baseTest.verifyElementIsDisplayed(footerSection.getFooterUpgradeButton());
+		baseTest.verifyElementIsDisplayed(footerSection.getCertificatesButton());
+		
+		baseTest.verifyElementIsDisplayed(footerSection.getUpgradeButton());
 		
 		baseTest.verifyElementIsDisplayed(footerSection.getFooterSpacesButton());
 		
-		baseTest.verifyElementIsDisplayed(footerSection.getFooterSupportButton());
+		baseTest.verifyElementIsDisplayed(footerSection.getSupportButton());
 		
-		baseTest.verifyElementIsDisplayed(footerSection.getFooterNewsletterButton());
+		baseTest.verifyElementIsDisplayed(footerSection.getNewsLetterButton());
 		
 		baseTest.verifyElementIsDisplayed(footerSection.getFooterShopButton());
 		
