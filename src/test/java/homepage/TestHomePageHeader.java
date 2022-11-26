@@ -24,10 +24,6 @@ public class TestHomePageHeader {
 		driver = Listener.getDriver();
 		
 	}
-
-	String categoryName = "";
-	
-	String[] categoryItems = new String[]{};
 	
 	@Test(testName = "Verify Home page header elements", priority =  1)
 	private void testHomePageHeaderElements(){
@@ -40,37 +36,54 @@ public class TestHomePageHeader {
 
 		baseTest.verifyElementIsDisplayed(homePageHeader.getHomeLogo());
 
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getTutorialsButton());
 
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getTutorialsCaretButton());
 	
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getReferencesButton());
 
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getReferencesCaretButton());
 
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getExercisesButton());
 
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getExercisesCaretButton());
 	
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getVideosButton());
 
 		baseTest.verifyElementIsDisplayed(homePageHeader.getThemeToggle());
 	
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getTranslateButton());
 	
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getSearchButton());
 	
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getUpgradeButton());
 		
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getCertifiedButton());
 		
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getFreeWebsiteButton());
 		
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageHeader.getLoginButton());
 		
 		baseTest.assertAll();
 		
 	}
+
+	String categoryName = "";
+	
+	String[] categoryItems = new String[]{};
 	
 	private void verifyCategoryItems(WebElement element, String[] categoryItems){
 		
@@ -146,8 +159,10 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
 		
 		homePageMenuItems.clickTutorialsCloseButton();
@@ -216,8 +231,10 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
 		
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCaretButton());
 		
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCloseButton());
 		
 		homePageMenuItems.clickReferencesCloseButton();
@@ -286,6 +303,7 @@ public class TestHomePageHeader {
 		
 		verifyExerciseLinks(certificatesLinks);
 		
+		//Change to verifyButtonIsDisplayed
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCloseButton());
 		
 		homePageMenuItems.clickExercisesCloseButton();
