@@ -43,6 +43,12 @@ public class BasePage {
 
 	}
 	
+	protected WebElement getElementByXpath(String xpath){
+		
+		return getElement(By.xpath(xpath));
+		
+	}
+	
 	protected WebElement getElementByTagName(String tagName, String nameOfElement){
 		
 		return getElement(By.tagName(tagName), nameOfElement);
@@ -50,11 +56,30 @@ public class BasePage {
 	}
 	
 	protected WebElement getElementByLinkText(String linkText){
+		
 		return getElement(By.linkText(linkText), linkText + " link");
+	
 	}
 	
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
+	
 		return getElement(By.linkText(linkText), nameOfElement + " link");
+	
+	}
+	
+	private WebElement getElement(By byElement){
+		
+		element = null; 
+		
+		try {
+			element = driver.findElement(byElement);
+		} catch (NoSuchElementException noSuchElementException) {
+			
+			System.out.println(ExceptionUtils.getStackTrace(noSuchElementException));
+			
+		}
+		
+		return element;
 	}
 	
 	private WebElement getElement(By byElement, String nameOfElement){
@@ -80,13 +105,7 @@ public class BasePage {
 	private String setNameOfTheButton(String nameOfTheButtonElement){
 		return nameOfTheButtonElement + " button";
 	} 
-	
-	public WebElement getButtonElement(By locator, String nameOfElement){
 
-		return getElement(locator, setNameOfTheButton(nameOfElement));
-		
-	}
-	
 	public WebElement getButtonElement(String nameOfTheButton){
 
 		return getElementByXpath(String.format("//*[@title='%s']", nameOfTheButton), setNameOfTheButton(nameOfTheButton));
@@ -122,14 +141,12 @@ public class BasePage {
 		return textOfElement;
 	}
 	
-	protected String getTextOfElement(By byLocator){
+	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
 		
-		String actualString = driver.findElement(byLocator).getText();
-		
-		return actualString.replace("\n", " ");
+		return getElementByXpath(xpathExpression).getText().replace("\n", " ");
 		
 	}
-	
+
 	protected String getPlaceholderTextOfField(WebElement element){
 		
 		String placeholderText = "";

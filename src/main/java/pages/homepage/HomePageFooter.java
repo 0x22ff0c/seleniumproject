@@ -1,6 +1,5 @@
 package pages.homepage;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -105,7 +104,7 @@ public class HomePageFooter extends BasePage{
 	
 	public String getFooterText(){
 		
-		return getTextOfElement(By.xpath("(//footer/descendant::p)[5]"));
+		return getTextOfElementUsingXpathLocator("(//footer/descendant::p)[5]");
 	}
 	
 	public WebElement getTermsOfUseLink(){
