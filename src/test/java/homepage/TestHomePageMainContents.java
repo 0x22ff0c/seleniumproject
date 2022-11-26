@@ -9,7 +9,7 @@ import pages.homepage.maincontent.wheretostartpage.WhereToStartPage;
 import tests.BaseTest;
 import utilities.Listener;
 
-public class TestHomePageMainContent {
+public class TestHomePageMainContents {
 
 	HomePageMainContent homePage;
 	
