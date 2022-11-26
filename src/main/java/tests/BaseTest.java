@@ -31,12 +31,18 @@ public class BaseTest {
 		
 		String nameOfTheElement = basePage.getElementName();
 		
+		String pattern = " button";
+		
+		if(nameOfTheElement.contains(pattern)){
+			nameOfTheElement = nameOfTheElement.replace(pattern, "");
+		}
+		
 		softAssertion.assertTrue(exceptionHandler(element), String.format("%s button is displayed", nameOfTheElement));
 		
 	}
 	
 	public void verifyTextIsTheSame(String actualTextInElement, String expectedTextInElement){
-		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, String.format("\"%s\" is displayed", expectedTextInElement));
+		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, String.format("\"%s\" text is displayed", expectedTextInElement));
 	}
 
 	public void verifyIfTextIsMarkedAsImportant(WebElement textLabeledAsStrong){
