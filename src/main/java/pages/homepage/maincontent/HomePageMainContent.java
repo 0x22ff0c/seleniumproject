@@ -41,6 +41,10 @@ public class HomePageMainContent extends BasePage{
 		return getElementByLinkText("Not Sure Where To Begin?");
 	}
 	
+	public void scrollToWhereToBeginLink(){
+		control.scrollToElement(getWhereToBeginLink());
+	}
+	
 	public void clickWhereToBeginLink(){
 		control.clickButton(getWhereToBeginLink());
 	}
