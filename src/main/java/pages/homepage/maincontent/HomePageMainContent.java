@@ -1,5 +1,6 @@
 package pages.homepage.maincontent;
 
+import org.checkerframework.checker.units.qual.m;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -74,6 +75,17 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElement("Add HTML Certification", "Get Certified");
 	}
 	
+	public String getHtmlCodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='HTML'])[2]/parent::*/following-sibling::*/descendant::*[2]");
+	}
+	
+	public WebElement getHtmlSampleCodeSection(){
+		return getElementByXpath("(//*[text()='HTML'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "HTML Sample code");
+	}
+	
+	public WebElement getHtmlTryItYourselfButton(){
+		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", "HTML Try It Yourself button");
+	}
 	
 
 }
