@@ -10,84 +10,29 @@ import pages.homepage.maincontent.wheretostartpage.WhereToStartPage;
 import tests.BaseTest;
 import utilities.Listener;
 
-public class TestHomePageMainContent {
-
-	HomePageMainContent homePage;
-	
-	WhereToStartPage whereToStartPage;
-
-	BaseTest baseTest;
+public class TestWhereToBeginPage {
 	
 	WebDriver driver;
+	
+	BaseTest baseTest;
+	
+	WhereToStartPage whereToStartPage;
 	
 	@BeforeClass
 	private void setup(){
 		
 		driver = Listener.getDriver();
 		
-	}
-
-	@Test(testName = "Verify Main page contents", priority = 5)
-	private void testMainPageContents(){
-
-		homePage = new HomePageMainContent(driver);
+		HomePageMainContent homePageMainContent = new HomePageMainContent(driver);
 		
-		baseTest = new BaseTest(homePage);
+		homePageMainContent.scrollToWhereToBeginLink();
 		
-		baseTest.verifyElementIsDisplayed(homePage.getMainContent());
-		
-		baseTest.verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code");
-	
-		baseTest.verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.");
-	
-		baseTest.verifyElementIsDisplayed(homePage.getSearchbarField());
-	
-		baseTest.verifyTextIsTheSame(homePage.getSearchbarfieldPlaceholder(), "Search our tutorials, e.g. HTML");
-	
-		baseTest.verifyElementIsDisplayed(homePage.getSearchbarButton());
-
-		baseTest.verifyElementIsDisplayed(homePage.getWhereToBeginLink());
-		
-		baseTest.assertAll();
+		homePageMainContent.clickWhereToBeginLink();
 		
 	}
 	
-	@Test(testName = "Verify Learn HTML section", priority = 15)
-	private void testLearnHtmlSection(){
-		
-		homePage = new HomePageMainContent(driver);
-		
-		baseTest = new BaseTest(homePage);
-		
-		homePage.scrollToHtmlSection();
-		
-		baseTest.verifyTextIsTheSame(homePage.getHtmlHeaderContent(), "HTML");
-		
-		baseTest.verifyTextIsTheSame(homePage.getHtmlSubheaderContent(), "The language for building web pages");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getHtmlLearnHtmlButton());
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getHtmlVideoTutorialButton());
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getHtmlReferenceButton());
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getHtmlGetCertifiedButton());
-		
-		baseTest.verifyTextIsTheSame(homePage.getHtmlCodeExampleHeader(), "HTML Example:");
-		
-		baseTest.verifyElementIsDisplayed(homePage.getHtmlSampleCodeSection());
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getHtmlTryItYourselfButton());
-		
-		baseTest.assertAll();
-		
-	}
-	
-	
-//	@Test(testName = "Verify Where to start page", priority = 6)
+	@Test(testName = "Verify Where to start page", priority = 11)
 	private void testWhereToStartPage(){
-		
-		homePage.clickWhereToBeginLink();
 		
 		whereToStartPage = new WhereToStartPage(driver);
 		
@@ -98,11 +43,12 @@ public class TestHomePageMainContent {
 		baseTest.verifyTextIsTheSame(whereToStartPage.getSubheaderContent(), "To become a web developer, start with the subjects below, in the following order:");
 		
 		baseTest.assertAll();
+		
 	}
 	
-//	@Test(testName = "Verify Learn HTML section", priority = 7)
-	private void testLearnHtmlSection2(){
-	
+	@Test(testName = "Verify Learn HTML section", priority = 12)
+	private void testLearnHtmlSection(){
+		
 		baseTest = new BaseTest(whereToStartPage);
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getHtmlLeftButton());
@@ -117,7 +63,7 @@ public class TestHomePageMainContent {
 		
 	}
 	
-//	@Test(testName = "Verify Learn CSS section", priority = 8)
+	@Test(testName = "Verify Learn CSS section", priority = 13)
 	private void testLearnCSSSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -136,8 +82,8 @@ public class TestHomePageMainContent {
 		
 	}
 	
-//	@Test(testName = "Verify Learn JavaScript section", priority = 9)
-	private void testLearnJSSection(){
+	@Test(testName = "Verify Learn JavaScript section", priority = 14)
+	private void testJavaScriptSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
 		
@@ -155,7 +101,7 @@ public class TestHomePageMainContent {
 		
 	}
 	
-//	@Test(testName = "Verify \"What's Next?\" section", priority = 10)
+	@Test(testName = "Verify \"What's Next?\" section", priority = 15)
 	private void testWhatsNextSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -176,7 +122,7 @@ public class TestHomePageMainContent {
 		
 	}
 	
-//	@Test(testName = "Verify \"W3Schools Spaces\" section", priority = 11)
+	@Test(testName = "Verify \"W3Schools Spaces\" section", priority = 16)
 	private void testW3SchoolsSpacesSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -195,7 +141,7 @@ public class TestHomePageMainContent {
 		
 	}
 	
-//	@Test(testName = "Verify \"Hello Developer!\" section", priority = 12)
+	@Test(testName = "Verify \"Hello Developer!\" section", priority = 17)
 	private void testHelloDeveloperSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -228,8 +174,7 @@ public class TestHomePageMainContent {
 		
 	}
 	
-	
-//	@Test(testName = "Verify \"What About Back-End?\" section", priority = 13)
+	@Test(testName = "Verify \"What About Back-End?\" section", priority = 18)
 	private void verifyBackEndSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -270,8 +215,7 @@ public class TestHomePageMainContent {
 		
 	}
 	
-	
-//	@Test(testName = "Verify Where to start page' footer is displayed", priority = 14)
+	@Test(testName = "Verify Where to start page' footer is displayed", priority = 19)
 	private void testFooter(){
 		
 		FooterSection footerSection = new FooterSection(driver);
@@ -324,4 +268,5 @@ public class TestHomePageMainContent {
 		baseTest.assertAll();
 		
 	}
+
 }
