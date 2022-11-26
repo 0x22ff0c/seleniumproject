@@ -31,6 +31,12 @@ public class BaseTest {
 		
 		String nameOfTheElement = basePage.getElementName();
 		
+		String pattern = " button";
+		
+		if(nameOfTheElement.contains(pattern)){
+			nameOfTheElement = nameOfTheElement.replace(pattern, "");
+		}
+		
 		softAssertion.assertTrue(exceptionHandler(element), String.format("%s button is displayed", nameOfTheElement));
 		
 	}
