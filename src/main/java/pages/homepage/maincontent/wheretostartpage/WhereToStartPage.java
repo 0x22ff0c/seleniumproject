@@ -1,6 +1,5 @@
 package pages.homepage.maincontent.wheretostartpage;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -15,12 +14,12 @@ public class WhereToStartPage extends BasePage{
 	//"Where To Start" section
 	
 	public String getWhereToStartHeaderContent(){
-		return getTextOfElement(By.xpath("//*[@class='textsmallerscreens' and text()='Where To Start']"));
+		return getTextOfElementUsingXpathLocator("//*[@class='textsmallerscreens' and text()='Where To Start']");
 	}
 
 	public String getSubheaderContent(){
 		
-		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens' and text()='Where To Start']/following-sibling::*)[1]"));
+		return getTextOfElementUsingXpathLocator("(//*[@class='textsmallerscreens' and text()='Where To Start']/following-sibling::*)[1]");
 		
 	}
 	
@@ -30,11 +29,11 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getHtml1stStep(){
-		return getTextOfElement(By.xpath("(//*[@title='Go To Our HTML Tutorial']/following-sibling::*)[1]"));
+		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our HTML Tutorial']/following-sibling::*)[1]");
 	}
 	
 	public String getHtml1stStepAdditionalInfo(){
-		return getTextOfElement(By.xpath("(//*[@title='Go To Our HTML Tutorial']/following-sibling::*)[2]"));
+		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our HTML Tutorial']/following-sibling::*)[2]");
 	}
 	
 	public WebElement getLearnHtmlButton(){
@@ -53,11 +52,11 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getCSS2ndStep(){
-		return getTextOfElement(By.xpath("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[1]"));
+		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[1]");
 	}
 	
 	public String getCSS2ndStepAdditionalInfo(){
-		return getTextOfElement(By.xpath("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[2]"));
+		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[2]");
 	}
 	
 	public WebElement getLearnCSSButton(){
@@ -74,11 +73,11 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getJS3rdStep(){
-		return getTextOfElement(By.xpath("(//*[@title='Go To Our JavaScript Tutorial']/following-sibling::*)[1]"));
+		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our JavaScript Tutorial']/following-sibling::*)[1]");
 	}
 	
 	public String getJS3rdStepAdditionalInfo(){
-		return getTextOfElement(By.xpath("(//*[@title='Go To Our JavaScript Tutorial']/following-sibling::*)[2]"));
+		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our JavaScript Tutorial']/following-sibling::*)[2]");
 	}
 	
 	public WebElement getLearnJSButton(){
@@ -91,18 +90,18 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getWhatsNextHeader(){
-		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[2]"));
+		return getTextOfElementUsingXpathLocator("(//*[@class='textsmallerscreens'])[2]");
 	}
 	
 	public String getWhatsNextSubHeader(){
 		
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[1]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[1]");
 		
 	}
 	
 	public String getWhatsNext2ndSubHeader(){
 		
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[2]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[2]");
 		
 	}
 	
@@ -112,7 +111,7 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getWhatsNext3rdSubHeader(){
 		
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[3]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[3]");
 		
 	}
 	
@@ -125,11 +124,11 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getW3SchoolsSpacesHeader(){
-		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[3]"));
+		return getTextOfElementUsingXpathLocator("(//*[@class='textsmallerscreens'])[3]");
 	}
 	
 	public String getW3SchoolSpacesSubheader(){
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[3]/following-sibling::*)[1]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[3]/following-sibling::*)[1]");
 	}
 	
 	public WebElement getGetStartedForFreeButton(){
@@ -148,12 +147,12 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getHelloDeveloperHeaderValue(){
 		
-		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[4]"));
+		return getTextOfElementUsingXpathLocator("(//*[@class='textsmallerscreens'])[4]");
 		
 	}
 	
 	public String getHelloDeveloperSubheaderContent(){
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[1]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[1]");
 	}
 	
 	public WebElement getHelloDeveloperSubheaderFrontEndDevelopers(){
@@ -162,7 +161,7 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getHelloDeveloper2ndSubheaderContent(){
 		
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]");
 		
 	}
 	
@@ -197,12 +196,12 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getBackEndHeader(){
-		return getTextOfElement(By.xpath("(//*[@class='textsmallerscreens'])[5]"));
+		return getTextOfElementUsingXpathLocator("(//*[@class='textsmallerscreens'])[5]");
 	}
 	
 	public String getBackEndSubheader(){
 		
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[1]");
 		
 	}
 	
@@ -240,7 +239,7 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getBackEnd2ndSubheader(){
 		
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[2]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[2]");
 		
 	}
 	
@@ -257,7 +256,7 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getBackEnd3rdSubheader(){
-		return getTextOfElement(By.xpath("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[3]"));
+		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[5]/following-sibling::*)[3]");
 	}
 	
 	public WebElement getBackEndHomePageLink(){
