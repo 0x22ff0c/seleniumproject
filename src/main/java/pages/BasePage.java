@@ -146,15 +146,7 @@ public class BasePage {
 		return getElementByXpath(xpathExpression).getText().replace("\n", " ");
 		
 	}
-	
-	protected String getTextOfElement(By byLocator){
-		
-		String actualString = driver.findElement(byLocator).getText();
-		
-		return actualString.replace("\n", " ");
-		
-	}
-	
+
 	protected String getPlaceholderTextOfField(WebElement element){
 		
 		String placeholderText = "";
