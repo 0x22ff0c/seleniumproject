@@ -36,7 +36,7 @@ public class BaseTest {
 	}
 	
 	public void verifyTextIsTheSame(String actualTextInElement, String expectedTextInElement){
-		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, String.format("\"%s\" is displayed", expectedTextInElement));
+		softAssertion.assertEquals(actualTextInElement, expectedTextInElement, String.format("\"%s\" text is displayed", expectedTextInElement));
 	}
 
 	public void verifyIfTextIsMarkedAsImportant(WebElement textLabeledAsStrong){
