@@ -36,46 +36,33 @@ public class TestHomePageHeader {
 
 		baseTest.verifyElementIsDisplayed(homePageHeader.getHomeLogo());
 
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getTutorialsButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getTutorialsButton());
 
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getTutorialsCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getTutorialsCaretButton());
 	
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getReferencesButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getReferencesButton());
 
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getReferencesCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getReferencesCaretButton());
 
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getExercisesButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getExercisesButton());
 
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getExercisesCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getExercisesCaretButton());
 	
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getVideosButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getVideosButton());
 
 		baseTest.verifyElementIsDisplayed(homePageHeader.getThemeToggle());
 	
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getTranslateButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getTranslateButton());
 	
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getSearchButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getSearchButton());
 	
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getUpgradeButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getUpgradeButton());
 		
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getCertifiedButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getCertifiedButton());
 		
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getFreeWebsiteButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getFreeWebsiteButton());
 		
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageHeader.getLoginButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getLoginButton());
 		
 		baseTest.assertAll();
 		
