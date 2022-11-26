@@ -216,11 +216,9 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
 		
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getReferencesCaretButton());
 		
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCloseButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getReferencesCloseButton());
 		
 		homePageMenuItems.clickReferencesCloseButton();
 		
