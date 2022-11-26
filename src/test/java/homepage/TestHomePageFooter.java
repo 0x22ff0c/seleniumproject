@@ -32,7 +32,7 @@ public class TestHomePageFooter {
 		
 	}
 	
-	@Test(testName = "Verify Home page footer buttons", priority = 15)
+	@Test(testName = "Verify Home page footer buttons", priority = 7)
 	private void verifyFooterButtons(){
 		
 		baseTest = new BaseTest(homePageFooter);
@@ -57,7 +57,7 @@ public class TestHomePageFooter {
 		
 	}
 	
-	@Test(testName = "Verify Home page footer links", priority = 16)
+	@Test(testName = "Verify Home page footer links", priority = 8)
 	private void verifyFooterLinks(){
 		
 		baseTest = new BaseTest(homePageFooter);
@@ -70,7 +70,7 @@ public class TestHomePageFooter {
 	
 	}
 	
-	@Test(testName = "Verify Home page footer icon links", priority = 17)
+	@Test(testName = "Verify Home page footer icon links", priority = 9)
 	private void verifyFooterIconLinks(){
 		
 		baseTest = new BaseTest(homePageFooter);
@@ -87,7 +87,7 @@ public class TestHomePageFooter {
 		
 	}
 	
-	@Test(testName = "Verify footer texts", priority = 18)
+	@Test(testName = "Verify footer texts", priority = 10)
 	private void verifyFooterTexts(){
 		
 		baseTest = new BaseTest(homePageFooter);
@@ -103,4 +103,5 @@ public class TestHomePageFooter {
 		
 		baseTest.assertAll();
 	}
+
 }
