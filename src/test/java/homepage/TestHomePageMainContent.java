@@ -73,6 +73,12 @@ public class TestHomePageMainContent {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getHtmlGetCertifiedButton());
 		
+		baseTest.verifyTextIsTheSame(homePage.getHtmlCodeExampleHeader(), "HTML Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getHtmlSampleCodeSection());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getHtmlTryItYourselfButton());
+		
 		baseTest.assertAll();
 		
 	}
