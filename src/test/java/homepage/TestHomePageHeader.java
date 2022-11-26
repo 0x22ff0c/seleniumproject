@@ -156,7 +156,6 @@ public class TestHomePageHeader {
 		
 	}
 	
-	
 	@Test(testName = "Verify References menu items", priority = 3)
 	private void testReferencesMenuItems(){
 		
