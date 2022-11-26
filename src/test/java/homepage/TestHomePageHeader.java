@@ -24,10 +24,6 @@ public class TestHomePageHeader {
 		driver = Listener.getDriver();
 		
 	}
-
-	String categoryName = "";
-	
-	String[] categoryItems = new String[]{};
 	
 	@Test(testName = "Verify Home page header elements", priority =  1)
 	private void testHomePageHeaderElements(){
@@ -40,37 +36,41 @@ public class TestHomePageHeader {
 
 		baseTest.verifyElementIsDisplayed(homePageHeader.getHomeLogo());
 
-		baseTest.verifyElementIsDisplayed(homePageHeader.getTutorialsButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getTutorialsButton());
 
-		baseTest.verifyElementIsDisplayed(homePageHeader.getTutorialsCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getTutorialsCaretButton());
 	
-		baseTest.verifyElementIsDisplayed(homePageHeader.getReferencesButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getReferencesButton());
 
-		baseTest.verifyElementIsDisplayed(homePageHeader.getReferencesCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getReferencesCaretButton());
 
-		baseTest.verifyElementIsDisplayed(homePageHeader.getExercisesButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getExercisesButton());
 
-		baseTest.verifyElementIsDisplayed(homePageHeader.getExercisesCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getExercisesCaretButton());
 	
-		baseTest.verifyElementIsDisplayed(homePageHeader.getVideosButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getVideosButton());
 
 		baseTest.verifyElementIsDisplayed(homePageHeader.getThemeToggle());
 	
-		baseTest.verifyElementIsDisplayed(homePageHeader.getTranslateButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getTranslateButton());
 	
-		baseTest.verifyElementIsDisplayed(homePageHeader.getSearchButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getSearchButton());
 	
-		baseTest.verifyElementIsDisplayed(homePageHeader.getUpgradeButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getUpgradeButton());
 		
-		baseTest.verifyElementIsDisplayed(homePageHeader.getCertifiedButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getCertifiedButton());
 		
-		baseTest.verifyElementIsDisplayed(homePageHeader.getFreeWebsiteButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getFreeWebsiteButton());
 		
-		baseTest.verifyElementIsDisplayed(homePageHeader.getLoginButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getLoginButton());
 		
 		baseTest.assertAll();
 		
 	}
+
+	String categoryName = "";
+	
+	String[] categoryItems = new String[]{};
 	
 	private void verifyCategoryItems(WebElement element, String[] categoryItems){
 		
@@ -146,9 +146,9 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
 		
 		homePageMenuItems.clickTutorialsCloseButton();
 		
@@ -216,9 +216,9 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
 		
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getReferencesCaretButton());
 		
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesCloseButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getReferencesCloseButton());
 		
 		homePageMenuItems.clickReferencesCloseButton();
 		
@@ -286,7 +286,7 @@ public class TestHomePageHeader {
 		
 		verifyExerciseLinks(certificatesLinks);
 		
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCloseButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getExercisesCloseButton());
 		
 		homePageMenuItems.clickExercisesCloseButton();
 		
