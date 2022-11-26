@@ -286,8 +286,7 @@ public class TestHomePageHeader {
 		
 		verifyExerciseLinks(certificatesLinks);
 		
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCloseButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getExercisesCloseButton());
 		
 		homePageMenuItems.clickExercisesCloseButton();
 		
