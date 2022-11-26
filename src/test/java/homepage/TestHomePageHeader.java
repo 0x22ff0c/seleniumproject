@@ -146,11 +146,9 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
 		
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
-		//Change to verifyButtonIsDisplayed
-		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
 		
 		homePageMenuItems.clickTutorialsCloseButton();
 		
