@@ -115,4 +115,16 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElement("Add CSS Certification", "Get Certfieid");
 	}
 	
+	public String getCSSCodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='CSS'])[2]/parent::*/following-sibling::*/descendant::*[2]");
+	}
+	
+	public WebElement getCSSSampleCodeSection(){
+		return getElementByXpath("(//*[text()='CSS'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "CSS Sample code");
+	}
+	
+	public WebElement getCSSTryItYourselfButton(){
+		return getElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", "CSS Try It Yourself button");
+	}
+	
 }
