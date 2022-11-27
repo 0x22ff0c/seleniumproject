@@ -81,5 +81,87 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 		
 	}
+	
+	@Test(testName = "Verify Learn CSS section", priority = 7)
+	private void testLearnCSSSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		baseTest.verifyTextIsTheSame(homePage.getCssHeaderContent(), "CSS");
+		
+		baseTest.verifyTextIsTheSame(homePage.getCssSubheaderContent(), "The language for styling web pages");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSLearnCSSButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSReferenceButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSGetCertifiedButton());
+		
+		baseTest.verifyTextIsTheSame(homePage.getCSSCodeExampleHeader(), "CSS Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCSSSampleCodeSection());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSTryItYourselfButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Learn JavaScript section", priority = 8)
+	private void testLearnJavaScriptSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptHeaderContent(), "JavaScript");
+		
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptSubheaderContent(), "The language for programming web pages");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptLearnJavaScriptButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptReferenceButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptGetCertifiedButton());
+		
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptCodeExampleHeader(), "JavaScript Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getJavaScriptSampleCodeSection());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getJavaScriptTryItYourselfButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	
+	@Test(testName =  "Verify Learn Python section", priority = 9)
+	private void testLearnPythonSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		baseTest.verifyTextIsTheSame(homePage.getPythonHeaderContent(), "Python");
+		
+		baseTest.verifyTextIsTheSame(homePage.getPythonSubheaderContent(), "A popular programming language");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonLearnPythonButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getPythontReferenceButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonGetCertifiedButton());
+		
+		baseTest.verifyTextIsTheSame(homePage.getPythonodeExampleHeader(), "Python Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getPythonSampleCodeSection());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonTryItYourselfButton());
+		
+		baseTest.assertAll();
+		
+	}
 
 }

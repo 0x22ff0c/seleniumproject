@@ -63,7 +63,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHtmlLearnHtmlButton(){
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'HTML')]", "HTML button");
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn HTML')]", "Learn HTML button");
 	}
 	
 	public WebElement getHtmlVideoTutorialButton(){
@@ -90,5 +90,115 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", "HTML Try It Yourself button");
 	}
 	
-
+	//CSS Section
+	public void scrollToCSSSection(){
+		control.scrollToElement(getElementByXpath("//h1[text()='CSS']/parent::*/parent::*/parent::*", "CSS section"));
+	}
+	
+	public String getCssHeaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'yellow')]/descendant::h1)[1]");
+	}
+	
+	public String getCssSubheaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'yellow')]/descendant::h1/following-sibling::*)[1]");
+	}
+	
+	public WebElement getCSSLearnCSSButton(){
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn CSS')]", "Learn CSS button");
+	} 
+	
+	public WebElement getCSSReferenceButton(){
+		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'CSS Reference')]", "CSS Reference button");
+	}
+	
+	public WebElement getCSSGetCertifiedButton(){
+		return getButtonElement("Add CSS Certification", "Get Certfieid");
+	}
+	
+	public String getCSSCodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='CSS'])[2]/parent::*/following-sibling::*/descendant::*[2]");
+	}
+	
+	public WebElement getCSSSampleCodeSection(){
+		return getElementByXpath("(//*[text()='CSS'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "CSS Sample code");
+	}
+	
+	public WebElement getCSSTryItYourselfButton(){
+		return getElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", "CSS Try It Yourself button");
+	}
+	
+	//JavaScript section
+	public void scrollToJavaScriptSection(){
+		control.scrollToElement(getElementByXpath("//h1[text()='JavaScript']/parent::*/parent::*/parent::*", "JavaScript section"));
+	}
+	
+	public String getJavaScriptHeaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'black')]/descendant::h1)[2]");
+	}
+	
+	public String getJavaScriptSubheaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'black')]/descendant::h1)[2]/following-sibling::*[1]");
+	}
+	
+	public WebElement getJavaScriptLearnJavaScriptButton(){
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn JavaScript')]", "Learn JavaScript button");
+	} 
+	
+	public WebElement getJavaScriptReferenceButton(){
+		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'JavaScript Reference')]", "JavaScript Reference button");
+	}
+	
+	public WebElement getJavaScriptGetCertifiedButton(){
+		return getButtonElement("Add JavaScript Certification", "JavaScript - Get Certfieid");
+	}
+	
+	public String getJavaScriptCodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='JavaScript'])[3]/parent::*/following-sibling::*/descendant::*[2]");
+	}
+	
+	public WebElement getJavaScriptSampleCodeSection(){
+		return getElementByXpath("(//*[text()='JavaScript'])[3]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "JavaScript Sample code");
+	}
+	
+	public WebElement getJavaScriptTryItYourselfButton(){
+		return getElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", "JavaScript Try It Yourself button");
+	}
+	
+	//Python section
+	public void scrollToPythonSection(){
+		control.scrollToElement(getElementByXpath("//h1[text()='Python']/parent::*/parent::*/parent::*", "Python section"));
+	}
+	
+	public String getPythonHeaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]");
+	}
+	
+	public String getPythonSubheaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]/following-sibling::*[1]");
+	}
+	
+	public WebElement getPythonLearnPythonButton(){
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn Python')]", "Learn Python button");
+	} 
+	
+	public WebElement getPythontReferenceButton(){
+		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'Python Reference')]", "Python Reference button");
+	}
+	
+	public WebElement getPythonGetCertifiedButton(){
+		return getButtonElement("Add Python Certification", "Python - Get Certfieid");
+	}	
+	
+	public String getPythonodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='Python'])/parent::*/following-sibling::*/descendant::*[2]");
+	}
+	
+	public WebElement getPythonSampleCodeSection(){
+		return getElementByXpath("//*[text()='Python']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "Python Sample code");
+	}
+	
+	public WebElement getPythonTryItYourselfButton(){
+		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", "Python Try It Yourself button");
+	}
+	
 }
