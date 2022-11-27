@@ -99,6 +99,12 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getCSSGetCertifiedButton());
 		
+		baseTest.verifyTextIsTheSame(homePage.getCSSCodeExampleHeader(), "CSS Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCSSSampleCodeSection());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSTryItYourselfButton());
+		
 		baseTest.assertAll();
 		
 	}
