@@ -91,7 +91,7 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyTextIsTheSame(homePage.getCssHeaderContent(), "CSS");
 		
-		baseTest.verifyTextIsTheSame(homePage.getHtmlCssSubheaderContent(), "The language for styling web pages");
+		baseTest.verifyTextIsTheSame(homePage.getCssSubheaderContent(), "The language for styling web pages");
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getCSSLearnCSSButton());
 		
@@ -104,6 +104,27 @@ public class TestHomePageMainContents {
 		baseTest.verifyElementIsDisplayed(homePage.getCSSSampleCodeSection());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getCSSTryItYourselfButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Learn JavaScript section", priority = 8)
+	private void testLearnJavaScriptSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptHeaderContent(), "JavaScript");
+		
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptSubheaderContent(), "The language for programming web pages");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptLearnJavaScriptButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptReferenceButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptGetCertifiedButton());
 		
 		baseTest.assertAll();
 		
