@@ -154,6 +154,12 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getPythonGetCertifiedButton());
 		
+		baseTest.verifyTextIsTheSame(homePage.getPythonodeExampleHeader(), "Python Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getPythonSampleCodeSection());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonTryItYourselfButton());
+		
 		baseTest.assertAll();
 		
 	}
