@@ -25,39 +25,48 @@ public class Control{
 	public Control(WebDriver driver){
 		this.driver = driver;
 	}
+
+	private void logBeforeAction(String message){
+		
+		LogUtility.logInfo(message + "...");
+	
+	}
+	
+	private void logAfterAction(String message){
+	
+		LogUtility.logInfo(message + ".");
+	
+	}
 	
 	public void clickButton(WebElement element){
 	
 		nameOfElement = basePage.getElementName();
 		
-		String beforeAction = String.format("Clicking element: %s...", nameOfElement);
-		String afterAction = String.format("Clicked element: %s", nameOfElement);
-		
-		LogUtility.logInfo(beforeAction);
+		logBeforeAction(String.format("Clicking element: %s", nameOfElement));
 
 		element.click();
-		
-		LogUtility.logInfo(afterAction);
+
+		logAfterAction( String.format("Clicked element: %s", nameOfElement));
 		
 	}
 	
 	public void navigateBackToPreviousPage(){
 		
-		System.out.println("Navigating back...");
+		logBeforeAction("Navigating back");
 		
 		driver.navigate().back();
 		
-		System.out.println("Navigated back to previous page.");
+		logAfterAction("Navigated back to previous page");
 		
 	}
 	
 	public void typeToField(WebElement fieldElement, String valueToFillInTheField){
 		
-		System.out.println(String.format("Filling-in field with value: %s...", valueToFillInTheField));
+		logBeforeAction(String.format("Filling-in field with value: %s", valueToFillInTheField));
 		
 		fieldElement.sendKeys(valueToFillInTheField);
 		
-		System.out.println(String.format("Filled-in field with value: %s", valueToFillInTheField));
+		logAfterAction(String.format("Filled-in field with value: %s", valueToFillInTheField));
 		
 	}
 	
@@ -65,11 +74,11 @@ public class Control{
 		
 		nameOfElement = basePage.getElementName();
 		
-		System.out.println(String.format("Scrolling to element: %s...", nameOfElement));
-		
+		logBeforeAction(String.format("Scrolling to element: %s", nameOfElement));
+
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false)", element);
 		
-		System.out.println(String.format("Scrolled to element: %s.", nameOfElement));
+		logBeforeAction(String.format("Scrolled to element: %s.", nameOfElement));
 		
 	}
 	
