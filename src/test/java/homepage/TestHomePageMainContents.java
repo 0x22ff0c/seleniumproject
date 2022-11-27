@@ -81,5 +81,26 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 		
 	}
+	
+	@Test(testName = "Verify Learn CSS section", priority = 7)
+	private void testLearnCSSSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		baseTest.verifyTextIsTheSame(homePage.getCssHeaderContent(), "CSS");
+		
+		baseTest.verifyTextIsTheSame(homePage.getHtmlCssSubheaderContent(), "The language for styling web pages");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSLearnCSSButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSReferenceButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSGetCertifiedButton());
+		
+		baseTest.assertAll();
+		
+	}
 
 }
