@@ -25,7 +25,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-//	@Test(testName = "Verify Home page header elements", priority =  1)
+	@Test(testName = "Verify Home page header elements", priority =  1)
 	private void testHomePageHeaderElements(){
 
 		HomePageHeader homePageHeader = new HomePageHeader(driver);
@@ -93,62 +93,62 @@ public class TestHomePageHeader {
 		
 		homePageMenuItems.clickTutorialsButton();
 
-//		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuContainer());
-//
-//		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuHeader());
-//		
-//		String categoryName = "HTML and CSS";
-//
-//		String[] categoryItems = new String[]{"Learn HTML", "Learn CSS", "Learn RWD", "Learn Bootstrap", "Learn W3.CSS", "Learn Colors", 
-//				"Learn Icons", "Learn Graphics", "Learn SVG", "Learn Canvas", "Learn How To", "Learn Sass"};
-//		
-//		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
-//		
-//		categoryName = "JavaScript";
-//
-//		categoryItems = new String[]{"Learn JavaScript", "Learn jQuery", "Learn React", "Learn AngularJS", "Learn JSON",
-//				"Learn AJAX", "Learn AppML", "Learn W3.JS"};
-//		
-//		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
-//				
-//		categoryName = "Programming";
-//		
-//		categoryItems = new String[]{"Learn Python", "Learn Java", "Learn C", "Learn C++", "Learn C#", "Learn R", 
-//				"Learn Kotlin", "Learn Go", "Learn Django", "Learn TypeScript"};
-//		
-//		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
-//		
-//		categoryName = "Server Side";
-//		
-//		categoryItems = new String[]{"Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
-//				"Learn Raspberry Pi", "Learn Git", "Learn MongoDB", "Learn AWS Cloud"};
-//		
-//		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
-//		
-//		categoryName = "Web Building";
-//		
-//		categoryItems = new String[] {"Create a Website ", "Where To Start", "Web Templates", "Web Statistics", "Web Certificates",
-//				"Web Development", "Code Editor", "Test Your Typing Speed", "Play a Code Game", "Cyber Security", "Accessibility", "Join our Newsletter"};
-//		
-//		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
-//		
-//		categoryName = "Data Analytics";
-//		
-//		categoryItems = new String[] {"Learn AI", "Learn Machine Learning", "Learn Data Science", "Learn NumPy", "Learn Pandas",
-//				"Learn SciPy", "Learn Matplotlib", "Learn Statistics", "Learn Excel", "Learn Google Sheets"};
-//		
-//		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
-//		
-//		categoryName = "XML Tutorials";
-//		
-//		categoryItems = new String[] {"Learn XML", "Learn XML AJAX", "Learn XML DOM", "Learn XML DTD", "Learn XML Schema",
-//				"Learn XSLT", "Learn XPath", "Learn XQuery"};
-//		
-//		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
-//		
-//		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuContainer());
+
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuHeader());
+		
+		String categoryName = "HTML and CSS";
+
+		String[] categoryItems = new String[]{"Learn HTML", "Learn CSS", "Learn RWD", "Learn Bootstrap", "Learn W3.CSS", "Learn Colors", 
+				"Learn Icons", "Learn Graphics", "Learn SVG", "Learn Canvas", "Learn How To", "Learn Sass"};
+		
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
+		
+		categoryName = "JavaScript";
+
+		categoryItems = new String[]{"Learn JavaScript", "Learn jQuery", "Learn React", "Learn AngularJS", "Learn JSON",
+				"Learn AJAX", "Learn AppML", "Learn W3.JS"};
+		
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
+				
+		categoryName = "Programming";
+		
+		categoryItems = new String[]{"Learn Python", "Learn Java", "Learn C", "Learn C++", "Learn C#", "Learn R", 
+				"Learn Kotlin", "Learn Go", "Learn Django", "Learn TypeScript"};
+		
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
+		
+		categoryName = "Server Side";
+		
+		categoryItems = new String[]{"Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
+				"Learn Raspberry Pi", "Learn Git", "Learn MongoDB", "Learn AWS Cloud"};
+		
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
+		
+		categoryName = "Web Building";
+		
+		categoryItems = new String[] {"Create a Website ", "Where To Start", "Web Templates", "Web Statistics", "Web Certificates",
+				"Web Development", "Code Editor", "Test Your Typing Speed", "Play a Code Game", "Cyber Security", "Accessibility", "Join our Newsletter"};
+		
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
+		
+		categoryName = "Data Analytics";
+		
+		categoryItems = new String[] {"Learn AI", "Learn Machine Learning", "Learn Data Science", "Learn NumPy", "Learn Pandas",
+				"Learn SciPy", "Learn Matplotlib", "Learn Statistics", "Learn Excel", "Learn Google Sheets"};
+		
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
+		
+		categoryName = "XML Tutorials";
+		
+		categoryItems = new String[] {"Learn XML", "Learn XML AJAX", "Learn XML DOM", "Learn XML DTD", "Learn XML Schema",
+				"Learn XSLT", "Learn XPath", "Learn XQuery"};
+		
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(categoryName), categoryItems);
+		
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
+
+		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCloseButton());
 		
 		homePageMenuItems.clickTutorialsCloseButton();
 		
@@ -156,7 +156,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-//	@Test(testName = "Verify References menu items", priority = 3)
+	@Test(testName = "Verify References menu items", priority = 3)
 	private void testReferencesMenuItems(){
 		
 		homePageMenuItems = new HomePageMenuItems(driver);
@@ -235,7 +235,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-//	@Test(testName = "Verify exercise header menu items", priority =  4)
+	@Test(testName = "Verify exercise header menu items", priority =  4)
 	private void testExerciseMenuItems(){
 
 		homePageMenuItems = new HomePageMenuItems(driver);
