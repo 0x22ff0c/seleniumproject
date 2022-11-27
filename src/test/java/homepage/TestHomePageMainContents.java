@@ -126,6 +126,12 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptGetCertifiedButton());
 		
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptCodeExampleHeader(), "JavaScript Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getJavaScriptSampleCodeSection());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getJavaScriptTryItYourselfButton());
+		
 		baseTest.assertAll();
 		
 	}
