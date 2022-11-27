@@ -1,5 +1,7 @@
 package utilities;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +15,7 @@ public class Control{
 	BaseTest baseTest;
 	BasePage basePage;
 	String nameOfElement;
+	Logger logger = LogManager.getLogger();
 	
 	public Control(WebDriver driver, BasePage basePage){
 		this.driver = driver;
@@ -27,11 +30,14 @@ public class Control{
 	
 		nameOfElement = basePage.getElementName();
 		
-		System.out.println(String.format("Clicking element: %s...", nameOfElement));
+		String beforeAction = String.format("Clicking element: %s...", nameOfElement);
+		String afterAction = String.format("Clicked element: %s", nameOfElement);
 		
+		LogUtility.logInfo(beforeAction);
+
 		element.click();
 		
-		System.out.println(String.format("Clicked element: %s", nameOfElement));
+		LogUtility.logInfo(afterAction);
 		
 	}
 	
