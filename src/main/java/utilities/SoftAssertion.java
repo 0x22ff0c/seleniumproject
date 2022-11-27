@@ -46,51 +46,49 @@ public class SoftAssertion extends SoftAssert{
 
 	  @Override
 	  protected void doAssert(IAssert<?> a) {
-		  System.out.println("Verify: " + a.getMessage());
 		  
-	    onBeforeAssert(a);
-	    try	{
-	    	a.doAssert();
-	    	onAssertSuccess(a);
+		  LogUtility.logInfo("Verify: " + a.getMessage());
+		  onBeforeAssert(a);
+		  try {
+			  a.doAssert();
+			  onAssertSuccess(a);
 		      
-	    	LogUtility.logInfo("Result: Passed\n");
-	    	LogUtility.logInfo("===========================================================================================");
+			  LogUtility.logInfo("Result: Passed\n");
+			  LogUtility.logInfo("===========================================================================================");
 		     
-	      
-	    } catch (AssertionError ex) {
-	    	onAssertFailure(a, ex);
-	    	LogUtility.logError(ExceptionUtils.getStackTrace(ex));
-	    	LogUtility.logError("Result: Failed\n");
-			printExpectedAndActual(a);
-			LogUtility.logError("===========================================================================================");
-			mErrors.put(ex, a);
+		  } catch (AssertionError ex) {
+			  onAssertFailure(a, ex);
+			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
+			  LogUtility.logError("Result: Failed\n");
+			  printExpectedAndActual(a);
+			  LogUtility.logError("===========================================================================================");
+			  mErrors.put(ex, a);
 	    
-	    } finally {
-	      onAfterAssert(a);
-	    }
-	  }
+		  } finally {
+			  onAfterAssert(a);
+			  }
+		  }
 
 	  @Override
 	  public void assertAll() {
-	    assertAll(null);
+		  assertAll(null);
 	  }
 
 	  @Override
 	  public void assertAll(String message) {
-	    if (!mErrors.isEmpty()) {
-	      StringBuilder sb = new StringBuilder(null == message ? DEFAULT_SOFT_ASSERT_MESSAGE : message);
-	      boolean first = true;
-	      for (AssertionError error : mErrors.keySet()) {
-	        if (first) {
-	          first = false;
-	        } else {
-	          sb.append(",");
-	        }
-	        sb.append("\n\t");
-	        sb.append(getErrorDetails(error));
-	      }
-	      throw new AssertionError(sb.toString());
-	    }
-	  }
-
+		  if (!mErrors.isEmpty()) {
+			  StringBuilder sb = new StringBuilder(null == message ? DEFAULT_SOFT_ASSERT_MESSAGE : message);
+			  boolean first = true;
+			  
+			  for (AssertionError error : mErrors.keySet()) {
+				  if (first) {
+					  first = false;
+					  } else {
+						  	sb.append(",");
+						  }
+				  sb.append("\n\t");
+				  sb.append(getErrorDetails(error));
+			  }throw new AssertionError(sb.toString());
+			  }
+		  }
 }
