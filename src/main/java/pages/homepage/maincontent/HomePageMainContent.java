@@ -63,7 +63,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHtmlLearnHtmlButton(){
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'HTML')]", "HTML button");
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn HTML')]", "Learn HTML button");
 	}
 	
 	public WebElement getHtmlVideoTutorialButton(){
@@ -90,5 +90,29 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", "HTML Try It Yourself button");
 	}
 	
-
+	//CSS Section
+	public void scrollToCSSSection(){
+		control.scrollToElement(getElementByXpath("//h1[text()='CSS']/parent::*/parent::*/parent::*", "CSS section"));
+	}
+	
+	public String getCssHeaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'yellow')]/descendant::h1)[1]");
+	}
+	
+	public String getHtmlCssSubheaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'yellow')]/descendant::h1/following-sibling::*)[1]");
+	}
+	
+	public WebElement getCSSLearnCSSButton(){
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn CSS')]", "Learn CSS button");
+	} 
+	
+	public WebElement getCSSReferenceButton(){
+		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'CSS Reference')]", "CSS Reference button");
+	}
+	
+	public WebElement getCSSGetCertifiedButton(){
+		return getButtonElement("Add CSS Certification", "Get Certfieid");
+	}
+	
 }
