@@ -25,6 +25,8 @@ public class SoftAssertion extends SoftAssert{
 		  
 	  }
 	  
+	  String message;
+	  
 	  private void printValues(Map<String, String> values){
 		  
 		  for(Map.Entry<String, String> entryMap : values.entrySet()){
@@ -33,8 +35,9 @@ public class SoftAssertion extends SoftAssert{
 			  
 			  if(value != null && !value.equals("true") && !value.equals("false")){
 				  
-				  System.out.println(String.format("%s : %s", entryMap.getKey(), entryMap.getValue()));
-			  
+				  message = String.format("%s : %s", entryMap.getKey(), entryMap.getValue());
+				  
+				  LogUtility.logError(message);
 			  }
 
 		  }
@@ -46,21 +49,21 @@ public class SoftAssertion extends SoftAssert{
 		  System.out.println("Verify: " + a.getMessage());
 		  
 	    onBeforeAssert(a);
-	    try {
-		      a.doAssert();
-		      onAssertSuccess(a);
-		      System.out.println("Result: Passed\n");
-		      System.out.println("===========================================================================================");
+	    try	{
+	    	a.doAssert();
+	    	onAssertSuccess(a);
+		      
+	    	LogUtility.logInfo("Result: Passed\n");
+	    	LogUtility.logInfo("===========================================================================================");
 		     
 	      
 	    } catch (AssertionError ex) {
-	      
-		    	onAssertFailure(a, ex);
-			    System.out.println(ExceptionUtils.getStackTrace(ex));
-			    System.out.println("Result: Failed\n");
-			    printExpectedAndActual(a);
-			    System.out.println("===========================================================================================");
-			    mErrors.put(ex, a);
+	    	onAssertFailure(a, ex);
+	    	LogUtility.logError(ExceptionUtils.getStackTrace(ex));
+	    	LogUtility.logError("Result: Failed\n");
+			printExpectedAndActual(a);
+			LogUtility.logError("===========================================================================================");
+			mErrors.put(ex, a);
 	    
 	    } finally {
 	      onAfterAssert(a);
