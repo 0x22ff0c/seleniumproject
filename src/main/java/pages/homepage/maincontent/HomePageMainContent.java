@@ -164,4 +164,30 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", "JavaScript Try It Yourself button");
 	}
 	
+	//Python section
+	public void scrollToPythonSection(){
+		control.scrollToElement(getElementByXpath("//h1[text()='Python']/parent::*/parent::*/parent::*", "Python section"));
+	}
+	
+	public String getPythonHeaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]");
+	}
+	
+	public String getPythonSubheaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]/following-sibling::*[1]");
+	}
+	
+	public WebElement getPythonLearnPythonButton(){
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn Python')]", "Learn Python button");
+	} 
+	
+	public WebElement getPythontReferenceButton(){
+		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'Python Reference')]", "Python Reference button");
+	}
+	
+	public WebElement getPythonGetCertifiedButton(){
+		return getButtonElement("Add Python Certification", "Python - Get Certfieid");
+	}
+	
+	
 }
