@@ -66,7 +66,7 @@ public class Listener implements ITestListener {
 		Test test = method.getAnnotation(Test.class);
 		testName = test.testName();
 		
-		message = String.format("==================== [Starting test: %s] ====================%n", testName);
+		message = String.format("==================== [Starting test: %s] ====================", testName);
 		
 		LogUtility.logInfo(message);
 		
