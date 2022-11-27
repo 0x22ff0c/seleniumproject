@@ -25,6 +25,8 @@ public class SoftAssertion extends SoftAssert{
 		  
 	  }
 	  
+	  String message;
+	  
 	  private void printValues(Map<String, String> values){
 		  
 		  for(Map.Entry<String, String> entryMap : values.entrySet()){
@@ -33,8 +35,9 @@ public class SoftAssertion extends SoftAssert{
 			  
 			  if(value != null && !value.equals("true") && !value.equals("false")){
 				  
-				  System.out.println(String.format("%s : %s", entryMap.getKey(), entryMap.getValue()));
-			  
+				  message = String.format("%s : %s", entryMap.getKey(), entryMap.getValue());
+				  
+				  LogUtility.logError(message);
 			  }
 
 		  }
@@ -43,51 +46,49 @@ public class SoftAssertion extends SoftAssert{
 
 	  @Override
 	  protected void doAssert(IAssert<?> a) {
-		  System.out.println("Verify: " + a.getMessage());
 		  
-	    onBeforeAssert(a);
-	    try {
-		      a.doAssert();
-		      onAssertSuccess(a);
-		      System.out.println("Result: Passed\n");
-		      System.out.println("===========================================================================================");
+		  LogUtility.logInfo("Verify: " + a.getMessage());
+		  
+		  onBeforeAssert(a);
+		  
+		  try {
+			  a.doAssert();
+			  onAssertSuccess(a);
+		      
+			  LogUtility.logInfo("Result: Passed");
 		     
-	      
-	    } catch (AssertionError ex) {
-	      
-		    	onAssertFailure(a, ex);
-			    System.out.println(ExceptionUtils.getStackTrace(ex));
-			    System.out.println("Result: Failed\n");
-			    printExpectedAndActual(a);
-			    System.out.println("===========================================================================================");
-			    mErrors.put(ex, a);
+		  } catch (AssertionError ex) {
+			  onAssertFailure(a, ex);
+			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
+			  LogUtility.logError("Result: Failed");
+			  printExpectedAndActual(a);
+			  mErrors.put(ex, a);
 	    
-	    } finally {
-	      onAfterAssert(a);
-	    }
-	  }
+		  } finally {
+			  onAfterAssert(a);
+			  }
+		  }
 
 	  @Override
 	  public void assertAll() {
-	    assertAll(null);
+		  assertAll(null);
 	  }
 
 	  @Override
 	  public void assertAll(String message) {
-	    if (!mErrors.isEmpty()) {
-	      StringBuilder sb = new StringBuilder(null == message ? DEFAULT_SOFT_ASSERT_MESSAGE : message);
-	      boolean first = true;
-	      for (AssertionError error : mErrors.keySet()) {
-	        if (first) {
-	          first = false;
-	        } else {
-	          sb.append(",");
-	        }
-	        sb.append("\n\t");
-	        sb.append(getErrorDetails(error));
-	      }
-	      throw new AssertionError(sb.toString());
-	    }
-	  }
-
+		  if (!mErrors.isEmpty()) {
+			  StringBuilder sb = new StringBuilder(null == message ? DEFAULT_SOFT_ASSERT_MESSAGE : message);
+			  boolean first = true;
+			  
+			  for (AssertionError error : mErrors.keySet()) {
+				  if (first) {
+					  first = false;
+					  } else {
+						  	sb.append(",");
+						  }
+				  sb.append("\n\t");
+				  sb.append(getErrorDetails(error));
+			  }throw new AssertionError(sb.toString());
+			  }
+		  }
 }

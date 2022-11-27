@@ -12,7 +12,8 @@ public class Listener implements ITestListener {
 	
 	WebdriverManager driverManager = null;
 	static WebDriver driver = null;
-	String testName = "";
+	String testName;
+	String message;
 	
 	public static WebDriver getDriver(){
 		
@@ -25,7 +26,7 @@ public class Listener implements ITestListener {
 		
 		driverManager.quitSession();
 		
-		System.out.println("End of testing session.");
+		LogUtility.logInfo("End of testing session.");
 		
 	}
 	
@@ -47,14 +48,14 @@ public class Listener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 
-		System.out.println("Test method passed: "+ testName);
+		LogUtility.logInfo("Test method passed: "+ testName);
 		
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
 
-		System.out.println("Test method failed: "+ testName);
+		LogUtility.logError("Test method failed: "+ testName);
 		
 	}
 	
@@ -65,14 +66,16 @@ public class Listener implements ITestListener {
 		Test test = method.getAnnotation(Test.class);
 		testName = test.testName();
 		
-		System.out.println(String.format("\n==================== [Starting test: %s] ====================\n", testName));
+		message = String.format("==================== [Starting test: %s] ====================", testName);
+		
+		LogUtility.logInfo(message);
 		
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		
-		System.out.println("Method skipped"+ result.getName());
+		LogUtility.logInfo("Method skipped"+ result.getName());
 	
 	}
 

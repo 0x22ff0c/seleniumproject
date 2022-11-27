@@ -27,10 +27,13 @@ public class WebdriverManager {
 	
 	public void quitSession(){
 
-		System.out.println("\nQuitting driver instance...");
+		LogUtility.logInfo("===========================================================================================");
+		LogUtility.logInfo("Terminating the driver...");
 		
 		driver.quit();
 
+		LogUtility.logInfo("Terminated the driver.");
+		
 	}
 
 	private void getChromeDriver(){
