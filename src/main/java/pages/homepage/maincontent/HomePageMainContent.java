@@ -187,7 +187,18 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getPythonGetCertifiedButton(){
 		return getButtonElement("Add Python Certification", "Python - Get Certfieid");
+	}	
+	
+	public String getPythonodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='Python'])/parent::*/following-sibling::*/descendant::*[2]");
 	}
 	
+	public WebElement getPythonSampleCodeSection(){
+		return getElementByXpath("//*[text()='Python']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "Python Sample code");
+	}
+	
+	public WebElement getPythonTryItYourselfButton(){
+		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", "Python Try It Yourself button");
+	}
 	
 }
