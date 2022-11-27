@@ -53,13 +53,13 @@ public class SoftAssertion extends SoftAssert{
 			  a.doAssert();
 			  onAssertSuccess(a);
 		      
-			  LogUtility.logInfo("Result: Passed\n");
+			  LogUtility.logInfo("Result: Passed");
 			  LogUtility.logInfo("===========================================================================================");
 		     
 		  } catch (AssertionError ex) {
 			  onAssertFailure(a, ex);
 			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
-			  LogUtility.logError("Result: Failed\n");
+			  LogUtility.logError("Result: Failed");
 			  printExpectedAndActual(a);
 			  LogUtility.logError("===========================================================================================");
 			  mErrors.put(ex, a);
