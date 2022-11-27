@@ -152,4 +152,16 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElement("Add JavaScript Certification", "JavaScript - Get Certfieid");
 	}
 	
+	public String getJavaScriptCodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='JavaScript'])[3]/parent::*/following-sibling::*/descendant::*[2]");
+	}
+	
+	public WebElement getJavaScriptSampleCodeSection(){
+		return getElementByXpath("(//*[text()='JavaScript'])[3]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "JavaScript Sample code");
+	}
+	
+	public WebElement getJavaScriptTryItYourselfButton(){
+		return getElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", "JavaScript Try It Yourself button");
+	}
+	
 }
