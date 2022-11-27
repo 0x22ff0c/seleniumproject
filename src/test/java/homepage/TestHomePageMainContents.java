@@ -135,5 +135,27 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 		
 	}
+	
+	
+	@Test(testName =  "Verify Learn Python section", priority = 9)
+	private void testLearnPythonSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		baseTest.verifyTextIsTheSame(homePage.getPythonHeaderContent(), "Python");
+		
+		baseTest.verifyTextIsTheSame(homePage.getPythonSubheaderContent(), "A popular programming language");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonLearnPythonButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getPythontReferenceButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonGetCertifiedButton());
+		
+		baseTest.assertAll();
+		
+	}
 
 }
