@@ -48,20 +48,20 @@ public class SoftAssertion extends SoftAssert{
 	  protected void doAssert(IAssert<?> a) {
 		  
 		  LogUtility.logInfo("Verify: " + a.getMessage());
+		  
 		  onBeforeAssert(a);
+		  
 		  try {
 			  a.doAssert();
 			  onAssertSuccess(a);
 		      
 			  LogUtility.logInfo("Result: Passed");
-			  LogUtility.logInfo("===========================================================================================");
 		     
 		  } catch (AssertionError ex) {
 			  onAssertFailure(a, ex);
 			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
 			  LogUtility.logError("Result: Failed");
 			  printExpectedAndActual(a);
-			  LogUtility.logError("===========================================================================================");
 			  mErrors.put(ex, a);
 	    
 		  } finally {
