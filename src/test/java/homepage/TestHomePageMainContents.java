@@ -150,17 +150,115 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getPythonLearnPythonButton());
 		
-		baseTest.verifyButtonIsDisplayed(homePage.getPythontReferenceButton());
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonReferenceButton());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getPythonGetCertifiedButton());
 		
-		baseTest.verifyTextIsTheSame(homePage.getPythonodeExampleHeader(), "Python Example:");
+		baseTest.verifyTextIsTheSame(homePage.getPythonCodeExampleHeader(), "Python Example:");
 		
 		baseTest.verifyElementIsDisplayed(homePage.getPythonSampleCodeSection());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getPythonTryItYourselfButton());
 		
 		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Learn SQL section", priority = 10)
+	private void testLearnSQLSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		baseTest.verifyTextIsTheSame(homePage.getSQLHeaderContent(), "SQL");
+		
+		baseTest.verifyTextIsTheSame(homePage.getSQLSubheaderContent(), "A language for accessing databases");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLLearnSQLButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLReferenceButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLGetCertifiedButton());
+		
+		baseTest.verifyTextIsTheSame(homePage.getSQLCodeExampleHeader(), "SQL Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getSQLSampleCodeSection());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLTryItYourselfButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Other tutorials section", priority =  11)
+	
+	private void testOtherTutorialsSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToOtherTutorialsSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getPHPHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getPHPSubheader(), "A web server programming language");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnPHPButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getjQueryHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), "A JS library for developing web pages");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnjQueryButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getJavaHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getJavaSubheader(), "A programming language");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnJavaButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCplusplusHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), "A programming language");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnCplusplusButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getW3CSSHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), "A CSS framework for faster and better responsive web pages");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnW3CSSButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getBootstrapHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), "A CSS framework for designing better web pages");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getLearnBootstrapButton());
+		
+		//Other buttons 
+		//Missing buttons - 
+		String[] buttonNames = {"C", "C#", "R", "Kotlin", "Node.js", "React", "JSON", "AngularJS", "MySQL",
+				"XML", "Sass", "Icons", "Responsive Web Design","Graphics", "SVG", "Canvas", "Raspberry Pi", "Cyber Security",
+				"Colors", "Git", "Python Matplotlib", "Python NumPy", "Python Pandas", "Python SciPy", "ASP", "Accessibility", "AppML",
+				"Go", "TypeScript", "Django", "MongoDB", "Statistics", "Data Science", "Typing Speed", "Excel",
+				"Google Sheets", "Machine Learning", "Artificial Intelligence"};
+		
+		for(String nameOfTutorial : buttonNames){
+			
+			verifyOtherTutorialButtons(nameOfTutorial);
+		}
+		
+		baseTest.assertAll();
+		
+	}
+	
+	private void verifyOtherTutorialButtons(String nameOfTutorial){
+		
+		homePage.scrollToButton(nameOfTutorial);
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getOtherTutorialButton(nameOfTutorial));
 		
 	}
 

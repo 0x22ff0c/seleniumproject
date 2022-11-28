@@ -181,7 +181,7 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn Python')]", "Learn Python button");
 	} 
 	
-	public WebElement getPythontReferenceButton(){
+	public WebElement getPythonReferenceButton(){
 		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'Python Reference')]", "Python Reference button");
 	}
 	
@@ -189,7 +189,7 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElement("Add Python Certification", "Python - Get Certfieid");
 	}	
 	
-	public String getPythonodeExampleHeader(){
+	public String getPythonCodeExampleHeader(){
 		return getTextOfElementUsingXpathLocator("(//*[text()='Python'])/parent::*/following-sibling::*/descendant::*[2]");
 	}
 	
@@ -201,4 +201,155 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", "Python Try It Yourself button");
 	}
 	
+	//SQL section
+	public void scrollToSQLSection(){
+		control.scrollToElement(getElementByXpath("//h1[text()='SQL']/parent::*/parent::*/parent::*", "SQL section"));
+	}
+	
+	public String getSQLHeaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]");
+	}
+	
+	public String getSQLSubheaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]/following-sibling::*[1]");
+	}
+	
+	public WebElement getSQLLearnSQLButton(){
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn SQL')]", "Learn SQL button");
+	} 
+	
+	public WebElement getSQLReferenceButton(){
+		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'SQL Reference')]", "SQL Reference button");
+	}
+	
+	public WebElement getSQLGetCertifiedButton(){
+		return getButtonElement("Add SQL Certification", "SQL - Get Certfieid");
+	}
+	
+	public String getSQLCodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='SQL'])/parent::*/following-sibling::*/descendant::*[2]");
+	}
+	
+	public WebElement getSQLSampleCodeSection(){
+		return getElementByXpath("//*[text()='SQL']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "SQL Sample code");
+	}
+	
+	public WebElement getSQLTryItYourselfButton(){
+		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", "SQL Try It Yourself button");
+	}
+	
+	//Other tutorials
+	public void scrollToOtherTutorialsSection(){
+		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
+	}
+	
+	//PHP
+	public WebElement getPHPHeader(){
+		return getElementByXpath("//*[text()='PHP']", "PHP Header");
+	}
+	
+	public String getPHPSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='PHP']/following-sibling::*/descendant::*");
+	}
+
+	public WebElement getLearnPHPButton(){
+		return getElementByXpath("//*[text()='PHP']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn PHP']");
+	}
+
+	//jQuery
+	public WebElement getjQueryHeader(){
+		return getElementByXpath("//*[text()='jQuery']", "jQuery Header");
+	}
+	
+	public String getjQuerySubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='jQuery']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnjQueryButton(){
+		return getElementByXpath("//*[text()='jQuery']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn jQuery']");
+	}
+	
+	//Java
+	public WebElement getJavaHeader(){
+		return getElementByXpath("//*[text()='Java']", "Java Header");
+	}
+	
+	public String getJavaSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='Java']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnJavaButton(){
+		return getElementByXpath("//*[text()='Java']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Java']");
+	}
+	
+	//C++
+	public WebElement getCplusplusHeader(){
+		return getElementByXpath("//*[text()='C++']", "C++ Header");
+	}
+	
+	public String getCplusplusSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='C++']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnCplusplusButton(){
+		return getElementByXpath("//*[text()='C++']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn C++']");
+	}
+	
+	//W3.CSS
+	public WebElement getW3CSSHeader(){
+		return getElementByXpath("//*[text()='W3.CSS']", "W3.CSS Header");
+	}
+	
+	public String getW3CSSSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='W3.CSS']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnW3CSSButton(){
+		return getElementByXpath("//*[text()='W3.CSS']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn W3.CSS']", "Learn W3.CSS button");
+	}
+	
+	//Bootstrap
+	public WebElement getBootstrapHeader(){
+		return getElementByXpath("//*[text()='Bootstrap']", "Bootstrap Header");
+	}
+	
+	public String getBootstrapSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='Bootstrap']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnBootstrapButton(){
+		return getElementByXpath("//*[text()='Bootstrap']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Bootstrap']", "Learn Bootstrap button");
+	}
+	
+	//Other tutorials button list
+	public void scrollToButton(String nameOfTutorial){
+		
+		if(nameOfTutorial.equals("Typing Speed")){
+			
+			nameOfTutorial = "Graphics"; 
+			
+		}
+		
+		nameOfTutorial = nameOfTutorial + " Tutorial";
+		
+		WebElement element = getButtonElement(nameOfTutorial);
+
+		control.scrollToElement(element);
+		
+	}
+	
+	public WebElement getOtherTutorialButton(String nameOfTutorial){
+
+		if(nameOfTutorial.equals("Typing Speed")){
+	
+			nameOfTutorial = "Graphics"; 
+			
+		}
+		
+		nameOfTutorial = nameOfTutorial + " Tutorial";
+		
+		return getButtonElement(nameOfTutorial);
+		
+	}
+
 }
