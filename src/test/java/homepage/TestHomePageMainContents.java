@@ -213,6 +213,18 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getLearnjQueryButton());
 		
+		baseTest.verifyElementIsDisplayed(homePage.getJavaHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getJavaSubheader(), "A programming language");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnJavaButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCplusplusHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), "A programming language");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnCplusplusButton());
+		
 		baseTest.assertAll();
 		
 	}
