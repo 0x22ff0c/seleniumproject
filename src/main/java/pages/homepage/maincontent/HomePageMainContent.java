@@ -243,6 +243,7 @@ public class HomePageMainContent extends BasePage{
 		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
 	}
 	
+	//PHP
 	public WebElement getPHPHeader(){
 		return getElementByXpath("//*[text()='PHP']", "PHP Header");
 	}
@@ -250,11 +251,12 @@ public class HomePageMainContent extends BasePage{
 	public String getPHPSubheader(){
 		return getTextOfElementUsingXpathLocator("//*[text()='PHP']/following-sibling::*/descendant::*");
 	}
-	
+
 	public WebElement getLearnPHPButton(){
 		return getElementByXpath("//*[text()='PHP']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn PHP']");
 	}
-	
+
+	//jQuery
 	public WebElement getjQueryHeader(){
 		return getElementByXpath("//*[text()='jQuery']", "jQuery Header");
 	}
@@ -266,5 +268,32 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getLearnjQueryButton(){
 		return getElementByXpath("//*[text()='jQuery']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn jQuery']");
 	}
+	
+	//Java
+	public WebElement getJavaHeader(){
+		return getElementByXpath("//*[text()='Java']", "Java Header");
+	}
+	
+	public String getJavaSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='Java']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnJavaButton(){
+		return getElementByXpath("//*[text()='Java']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Java']");
+	}
+	
+	//C++
+	public WebElement getCplusplusHeader(){
+		return getElementByXpath("//*[text()='C++']", "C++ Header");
+	}
+	
+	public String getCplusplusSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='C++']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnCplusplusButton(){
+		return getElementByXpath("//*[text()='C++']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn C++']");
+	}
+	
 	
 }
