@@ -295,5 +295,30 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='C++']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn C++']");
 	}
 	
+	//W3.CSS
+	public WebElement getW3CSSHeader(){
+		return getElementByXpath("//*[text()='W3.CSS']", "W3.CSS Header");
+	}
+	
+	public String getW3CSSSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='W3.CSS']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnW3CSSButton(){
+		return getElementByXpath("//*[text()='W3.CSS']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn W3.CSS']", "Learn W3.CSS button");
+	}
+	
+	//Bootstrap
+	public WebElement getBootstrapHeader(){
+		return getElementByXpath("//*[text()='Bootstrap']", "Bootstrap Header");
+	}
+	
+	public String getBootstrapSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='Bootstrap']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnBootstrapButton(){
+		return getElementByXpath("//*[text()='Bootstrap']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Bootstrap']", "Learn Bootstrap button");
+	}
 	
 }
