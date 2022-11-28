@@ -27,7 +27,6 @@ public class WebdriverManager {
 	
 	public void quitSession(){
 
-		LogUtility.logInfo("===========================================================================================");
 		LogUtility.logInfo("Terminating the driver...");
 		
 		driver.quit();
