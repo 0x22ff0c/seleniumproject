@@ -154,7 +154,7 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getPythonGetCertifiedButton());
 		
-		baseTest.verifyTextIsTheSame(homePage.getPythonodeExampleHeader(), "Python Example:");
+		baseTest.verifyTextIsTheSame(homePage.getPythonCodeExampleHeader(), "Python Example:");
 		
 		baseTest.verifyElementIsDisplayed(homePage.getPythonSampleCodeSection());
 		
@@ -180,6 +180,14 @@ public class TestHomePageMainContents {
 		baseTest.verifyButtonIsDisplayed(homePage.getSQLReferenceButton());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getSQLGetCertifiedButton());
+		
+		baseTest.verifyTextIsTheSame(homePage.getSQLCodeExampleHeader(), "SQL Example:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getSQLSampleCodeSection());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLTryItYourselfButton());
+		
+		baseTest.assertAll();
 		
 	}
 
