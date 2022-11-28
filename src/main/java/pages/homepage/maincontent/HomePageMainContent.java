@@ -238,4 +238,33 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", "SQL Try It Yourself button");
 	}
 	
+	//Other tutorials
+	public void scrollToOtherTutorialsSection(){
+		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
+	}
+	
+	public WebElement getPHPHeader(){
+		return getElementByXpath("//*[text()='PHP']", "PHP Header");
+	}
+	
+	public String getPHPSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='PHP']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnPHPButton(){
+		return getElementByXpath("//*[text()='PHP']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn PHP']");
+	}
+	
+	public WebElement getjQueryHeader(){
+		return getElementByXpath("//*[text()='jQuery']", "jQuery Header");
+	}
+	
+	public String getjQuerySubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='jQuery']/following-sibling::*/descendant::*");
+	}
+	
+	public WebElement getLearnjQueryButton(){
+		return getElementByXpath("//*[text()='jQuery']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn jQuery']");
+	}
+	
 }
