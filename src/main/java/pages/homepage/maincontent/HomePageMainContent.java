@@ -181,7 +181,7 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn Python')]", "Learn Python button");
 	} 
 	
-	public WebElement getPythontReferenceButton(){
+	public WebElement getPythonReferenceButton(){
 		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'Python Reference')]", "Python Reference button");
 	}
 	
@@ -199,6 +199,31 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getPythonTryItYourselfButton(){
 		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", "Python Try It Yourself button");
+	}
+	
+	//SQL section
+	public void scrollToSQLSection(){
+		control.scrollToElement(getElementByXpath("//h1[text()='SQL']/parent::*/parent::*/parent::*", "SQL section"));
+	}
+	
+	public String getSQLHeaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]");
+	}
+	
+	public String getSQLSubheaderContent(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]/following-sibling::*[1]");
+	}
+	
+	public WebElement getSQLLearnSQLButton(){
+		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn SQL')]", "Learn SQL button");
+	} 
+	
+	public WebElement getSQLReferenceButton(){
+		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'SQL Reference')]", "SQL Reference button");
+	}
+	
+	public WebElement getSQLGetCertifiedButton(){
+		return getButtonElement("Add SQL Certification", "SQL - Get Certfieid");
 	}
 	
 }
