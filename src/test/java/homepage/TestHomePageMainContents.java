@@ -190,5 +190,31 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 		
 	}
+	
+	@Test(testName = "Verify Other tutorials section", priority =  11)
+	
+	private void testOtherTutorialsSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToOtherTutorialsSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getPHPHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getPHPSubheader(), "A web server programming language");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnPHPButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getjQueryHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), "A JS library for developing web pages");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnjQueryButton());
+		
+		baseTest.assertAll();
+		
+	}
 
 }
