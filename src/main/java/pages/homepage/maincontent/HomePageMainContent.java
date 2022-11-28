@@ -189,7 +189,7 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElement("Add Python Certification", "Python - Get Certfieid");
 	}	
 	
-	public String getPythonodeExampleHeader(){
+	public String getPythonCodeExampleHeader(){
 		return getTextOfElementUsingXpathLocator("(//*[text()='Python'])/parent::*/following-sibling::*/descendant::*[2]");
 	}
 	
@@ -224,6 +224,18 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getSQLGetCertifiedButton(){
 		return getButtonElement("Add SQL Certification", "SQL - Get Certfieid");
+	}
+	
+	public String getSQLCodeExampleHeader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='SQL'])/parent::*/following-sibling::*/descendant::*[2]");
+	}
+	
+	public WebElement getSQLSampleCodeSection(){
+		return getElementByXpath("//*[text()='SQL']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "SQL Sample code");
+	}
+	
+	public WebElement getSQLTryItYourselfButton(){
+		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", "SQL Try It Yourself button");
 	}
 	
 }
