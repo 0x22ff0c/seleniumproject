@@ -237,7 +237,28 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyElementIsDisplayed(homePage.getLearnBootstrapButton());
 		
+		//Other buttons 
+		//Missing buttons - 
+		String[] buttonNames = {"C", "C#", "R", "Kotlin", "Node.js", "React", "JSON", "AngularJS", "MySQL",
+				"XML", "Sass", "Icons", "Responsive Web Design","Graphics", "SVG", "Canvas", "Raspberry Pi", "Cyber Security",
+				"Colors", "Git", "Python Matplotlib", "Python NumPy", "Python Pandas", "Python SciPy", "ASP", "Accessibility", "AppML",
+				"Go", "TypeScript", "Django", "MongoDB", "Statistics", "Data Science", "Typing Speed", "Excel",
+				"Google Sheets", "Machine Learning", "Artificial Intelligence"};
+		
+		for(String nameOfTutorial : buttonNames){
+			
+			verifyOtherTutorialButtons(nameOfTutorial);
+		}
+		
 		baseTest.assertAll();
+		
+	}
+	
+	private void verifyOtherTutorialButtons(String nameOfTutorial){
+		
+		homePage.scrollToButton(nameOfTutorial);
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getOtherTutorialButton(nameOfTutorial));
 		
 	}
 
