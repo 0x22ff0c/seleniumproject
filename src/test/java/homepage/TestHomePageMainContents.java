@@ -150,7 +150,7 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getPythonLearnPythonButton());
 		
-		baseTest.verifyButtonIsDisplayed(homePage.getPythontReferenceButton());
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonReferenceButton());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getPythonGetCertifiedButton());
 		
@@ -161,6 +161,25 @@ public class TestHomePageMainContents {
 		baseTest.verifyButtonIsDisplayed(homePage.getPythonTryItYourselfButton());
 		
 		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Learn SQL section", priority = 10)
+	private void testLearnSQLSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		baseTest.verifyTextIsTheSame(homePage.getSQLHeaderContent(), "SQL");
+		
+		baseTest.verifyTextIsTheSame(homePage.getSQLSubheaderContent(), "A language for accessing databases");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLLearnSQLButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLReferenceButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLGetCertifiedButton());
 		
 	}
 
