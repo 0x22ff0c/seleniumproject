@@ -321,4 +321,35 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Bootstrap']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Bootstrap']", "Learn Bootstrap button");
 	}
 	
+	//Other tutorials button list
+	public void scrollToButton(String nameOfTutorial){
+		
+		if(nameOfTutorial.equals("Typing Speed")){
+			
+			nameOfTutorial = "Graphics"; 
+			
+		}
+		
+		nameOfTutorial = nameOfTutorial + " Tutorial";
+		
+		WebElement element = getButtonElement(nameOfTutorial);
+
+		control.scrollToElement(element);
+		
+	}
+	
+	public WebElement getOtherTutorialButton(String nameOfTutorial){
+
+		if(nameOfTutorial.equals("Typing Speed")){
+	
+			nameOfTutorial = "Graphics"; 
+			
+		}
+		
+		nameOfTutorial = nameOfTutorial + " Tutorial";
+		
+		return getButtonElement(nameOfTutorial);
+		
+	}
+
 }
