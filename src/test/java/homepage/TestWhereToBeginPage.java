@@ -31,7 +31,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify Where to start page", priority = 11)
+	@Test(testName = "Verify Where to start page", priority = 1)
 	private void testWhereToStartPage(){
 		
 		whereToStartPage = new WhereToStartPage(driver);
@@ -46,7 +46,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify Learn HTML section", priority = 12)
+	@Test(testName = "Verify Learn HTML section", priority = 2)
 	private void testLearnHtmlSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -63,7 +63,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify Learn CSS section", priority = 13)
+	@Test(testName = "Verify Learn CSS section", priority = 3)
 	private void testLearnCSSSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -82,7 +82,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify Learn JavaScript section", priority = 14)
+	@Test(testName = "Verify Learn JavaScript section", priority = 4)
 	private void testJavaScriptSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -101,7 +101,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify \"What's Next?\" section", priority = 15)
+	@Test(testName = "Verify \"What's Next?\" section", priority = 5)
 	private void testWhatsNextSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -122,7 +122,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify \"W3Schools Spaces\" section", priority = 16)
+	@Test(testName = "Verify \"W3Schools Spaces\" section", priority = 6)
 	private void testW3SchoolsSpacesSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -141,7 +141,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify \"Hello Developer!\" section", priority = 17)
+	@Test(testName = "Verify \"Hello Developer!\" section", priority = 7)
 	private void testHelloDeveloperSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -174,7 +174,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify \"What About Back-End?\" section", priority = 18)
+	@Test(testName = "Verify \"What About Back-End?\" section", priority = 8)
 	private void verifyBackEndSection(){
 		
 		baseTest = new BaseTest(whereToStartPage);
@@ -215,7 +215,7 @@ public class TestWhereToBeginPage {
 		
 	}
 	
-	@Test(testName = "Verify Where to start page' footer is displayed", priority = 19)
+	@Test(testName = "Verify Where to start page' footer is displayed", priority = 9)
 	private void testFooter(){
 		
 		FooterSection footerSection = new FooterSection(driver);
