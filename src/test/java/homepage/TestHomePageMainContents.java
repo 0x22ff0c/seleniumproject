@@ -225,6 +225,18 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getLearnCplusplusButton());
 		
+		baseTest.verifyElementIsDisplayed(homePage.getW3CSSHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), "A CSS framework for faster and better responsive web pages");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnW3CSSButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getBootstrapHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), "A CSS framework for designing better web pages");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getLearnBootstrapButton());
+		
 		baseTest.assertAll();
 		
 	}
