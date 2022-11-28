@@ -48,14 +48,14 @@ public class Listener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 
-		LogUtility.logInfo("Test method passed: "+ testName);
+		LogUtility.logInfo(String.format("TEST RESULT %s: PASSED %n", testName));
 		
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
 
-		LogUtility.logError("Test method failed: "+ testName);
+		LogUtility.logError(String.format("TEST RESULT %s: FAILED %n", testName));
 		
 	}
 	
@@ -64,9 +64,9 @@ public class Listener implements ITestListener {
 
 		Method method = result.getMethod().getConstructorOrMethod().getMethod();
 		Test test = method.getAnnotation(Test.class);
-		testName = test.testName();
+		testName = test.testName().toUpperCase();
 		
-		message = String.format("==================== [Starting test: %s] ====================", testName);
+		message = String.format("STARTING TEST: %s", testName);
 		
 		LogUtility.logInfo(message);
 		
