@@ -354,7 +354,7 @@ public class HomePageMainContent extends BasePage{
 
 	//Code editor section
 	public void scrollToCodeEditorSection(){
-		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'black')]/descendant::h1)[3]", "Code Editor section"));
+		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", "Code Editor section"));
 	}
 	
 	public String getCodeEditorHeader(){
@@ -374,7 +374,36 @@ public class HomePageMainContent extends BasePage{
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::input");
 	}
 	
-
+	public WebElement getCodeEditorFrontendActive(){
+		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
+	}
 	
+	public WebElement getCodeEditorFrontendNotActive(){
+		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']/parent::*/following-sibling::*[@id='Frontend' and contains(@style, 'none')]", "Frontend inactive button");
+	}
+	
+	public WebElement getCodeEditorBackEndActive(){
+		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
+	}
+	
+	public WebElement getCodeEditorBackendNotActive(){
+		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", "Backend inactive button");
+	}
+	
+	public WebElement getCodeEditorFrontendGIF(){
+		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", "Frontend GIF");
+	}
+
+	public WebElement getCodeEditorBackendGIF(){
+		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", "Backend GIF");
+	}
+	
+	public WebElement getCodeEditorTryFrontend(){
+		return getElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", "Frontend editor button");
+	}
+	
+	public WebElement getCodeEditorTryBackend(){
+		return getElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", "Backend editor button");
+	}
 	
 }
