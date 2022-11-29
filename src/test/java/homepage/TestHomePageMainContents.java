@@ -282,7 +282,20 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyTextIsTheSame(homePage.getCodeEditorUrlValue(), "www.w3schools.com/tryit/");
 		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackendNotActive());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
+		
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryFrontend());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryBackend());
+		
 		baseTest.assertAll();
+	
 	}
 
 }
