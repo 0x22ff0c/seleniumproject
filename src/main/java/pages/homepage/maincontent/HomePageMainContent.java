@@ -390,6 +390,10 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", "Backend inactive button");
 	}
 	
+	public int getCodeEditorBackEndActiveDisplayCount(){
+		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
+	}
+	
 	public WebElement getCodeEditorFrontendGIF(){
 		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", "Frontend GIF");
 	}
