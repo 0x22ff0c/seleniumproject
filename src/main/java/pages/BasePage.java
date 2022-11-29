@@ -143,7 +143,17 @@ public class BasePage {
 	
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
 		
-		return getElementByXpath(xpathExpression).getText().replace("\n", " ");
+		element = getElementByXpath(xpathExpression);
+		
+		String contentValue = element.getText().replace("\n", " ");
+		
+		if(contentValue.isEmpty()){
+			
+			contentValue = element.getAttribute("value").replace("\n", " ");
+			
+		}
+		
+		return contentValue;
 		
 	}
 
