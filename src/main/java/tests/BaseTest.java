@@ -35,6 +35,14 @@ public class BaseTest {
 		
 	}
 	
+	public void verifyElementIsNotDisplayed(int elementCount){
+		
+		String nameOfElement = basePage.getElementName();
+		
+		softAssertion.assertEquals(elementCount, 0, String.format("%s is NOT displayed", nameOfElement));
+		
+	}
+	
 	public void verifyButtonIsDisplayed(WebElement element){
 		
 		String nameOfTheElement = basePage.getElementName();
