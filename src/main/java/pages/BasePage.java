@@ -1,14 +1,10 @@
 package pages;
 
-import java.time.Duration;
-
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.Control;
 
@@ -42,13 +38,17 @@ public class BasePage {
 	}
 
 	protected WebElement getElementByXpath(String xpath, String nameOfElement){
-		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
-		
+
 		return getElement(By.xpath(xpath), nameOfElement);
 
+	}
+	
+	protected int getElementByXpathCount(String xpath, String nameOfElement){
+		
+		this.nameOfElement = nameOfElement;
+		
+		return driver.findElements(By.xpath(xpath)).size();
+		
 	}
 	
 	protected WebElement getElementByXpath(String xpath){
