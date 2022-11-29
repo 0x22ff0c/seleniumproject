@@ -365,4 +365,16 @@ public class HomePageMainContent extends BasePage{
 		return getTextOfElementUsingXpathLocator("((//*[contains(@class, 'black')]/descendant::h1)[3]/following-sibling::*)[1]");
 	}
 	
+	//Code editor window
+	public WebElement getCodeEditorDotButton(int dotButtonNumber){
+		return getElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("Code editor dot button - %s", dotButtonNumber));
+	}
+	
+	public String getCodeEditorUrlValue(){
+		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::input");
+	}
+	
+
+	
+	
 }
