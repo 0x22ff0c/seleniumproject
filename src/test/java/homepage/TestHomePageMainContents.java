@@ -284,7 +284,7 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
 
-		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackendNotActive());
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
 		
 		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
 		
