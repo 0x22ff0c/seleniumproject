@@ -300,6 +300,16 @@ public class TestHomePageMainContents {
 
 		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackendGIF());
 		
+		homePage.clickFrontendButton();
+		
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
+		
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
+		
 		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryFrontend());
 		
 		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryBackend());
