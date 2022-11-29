@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 		
 	}
 
-	@Test(testName = "Verify Main page contents", priority = 1)
+//	@Test(testName = "Verify Main page contents", priority = 1)
 	private void testMainPageContents(){
 
 		homePage = new HomePageMainContent(driver);
@@ -51,7 +51,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Learn HTML section", priority = 2)
+//	@Test(testName = "Verify Learn HTML section", priority = 2)
 	private void testLearnHtmlSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -82,7 +82,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Learn CSS section", priority = 3)
+//	@Test(testName = "Verify Learn CSS section", priority = 3)
 	private void testLearnCSSSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -109,7 +109,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Learn JavaScript section", priority = 4)
+//	@Test(testName = "Verify Learn JavaScript section", priority = 4)
 	private void testLearnJavaScriptSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -136,7 +136,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName =  "Verify Learn Python section", priority = 5)
+//	@Test(testName =  "Verify Learn Python section", priority = 5)
 	private void testLearnPythonSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -163,7 +163,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Learn SQL section", priority = 6)
+//	@Test(testName = "Verify Learn SQL section", priority = 6)
 	private void testLearnSQLSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -190,7 +190,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Other tutorials section", priority =  7)
+//	@Test(testName = "Verify Other tutorials section", priority =  7)
 	
 	private void testOtherTutorialsSection(){
 		
@@ -259,6 +259,53 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getOtherTutorialButton(nameOfTutorial));
 		
+	}
+	
+	@Test(testName = "Verify Code Editor section", priority = 8)
+	private void testCodeEditorSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToCodeEditorSection();
+		
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorHeader(), "Code Editor");
+		
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorSubheader(), "With our online code editor, you can edit code and view the result in your browser");
+		
+		for(int buttonNumber = 1; buttonNumber <= 3; buttonNumber++){
+			
+			baseTest.verifyElementIsDisplayed(homePage.getCodeEditorDotButton(buttonNumber));
+			
+		}
+		
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorUrlValue(), "www.w3schools.com/tryit/");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
+		
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
+		
+		homePage.clickBackEndButton();
+		
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendActiveDisplayCount());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackEndActive());
+		
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendGIF());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackendGIF());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryFrontend());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryBackend());
+		
+		baseTest.assertAll();
+	
 	}
 
 }
