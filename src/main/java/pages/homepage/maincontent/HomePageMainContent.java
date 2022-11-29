@@ -387,7 +387,7 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", "Frontend inactive button");
 	}
 	
-	public void clickFrotendButton(){
+	public void clickFrontendButton(){
 		control.clickButton(getCodeEditorFrontEndNotActive());
 	}
 
