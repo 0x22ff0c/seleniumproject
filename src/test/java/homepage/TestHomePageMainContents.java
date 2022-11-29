@@ -274,6 +274,14 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyTextIsTheSame(homePage.getCodeEditorSubheader(), "With our online code editor, you can edit code and view the result in your browser");
 		
+		for(int buttonNumber = 1; buttonNumber <= 3; buttonNumber++){
+			
+			baseTest.verifyElementIsDisplayed(homePage.getCodeEditorDotButton(buttonNumber));
+			
+		}
+		
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorUrlValue(), "www.w3schools.com/tryit/");
+		
 		baseTest.assertAll();
 	}
 
