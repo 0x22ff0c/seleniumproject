@@ -76,7 +76,7 @@ public class Control{
 		
 		logBeforeAction(String.format("Scrolling to element: %s", nameOfElement));
 
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false)", element);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
 		
 		logBeforeAction(String.format("Scrolled to element: %s.", nameOfElement));
 		
