@@ -1,5 +1,6 @@
 package pages.homepage.maincontent;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -378,15 +379,23 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
 	}
 	
-	public WebElement getCodeEditorFrontendNotActive(){
-		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']/parent::*/following-sibling::*[@id='Frontend' and contains(@style, 'none')]", "Frontend inactive button");
+	public int getCodeEditorFrontendActiveDisplayCount(){
+		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
 	}
 	
+	private WebElement getCodeEditorFrontEndNotActive(){
+		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", "Frontend inactive button");
+	}
+	
+	public void clickFrotendButton(){
+		control.clickButton(getCodeEditorFrontEndNotActive());
+	}
+
 	public WebElement getCodeEditorBackEndActive(){
 		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
 	}
-	
-	public WebElement getCodeEditorBackendNotActive(){
+		
+	private WebElement getCodeEditorBackendNotActive(){
 		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", "Backend inactive button");
 	}
 	
@@ -394,6 +403,13 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
 	}
 	
+	public void clickBackEndButton(){
+		
+		control.clickButton(getCodeEditorBackendNotActive());
+		
+		control.waitForElmentToBeDisplayedInPage(By.xpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']"));
+	}
+
 	public WebElement getCodeEditorFrontendGIF(){
 		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", "Frontend GIF");
 	}
