@@ -261,7 +261,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Code Editor section", priority = 8)
+//	@Test(testName = "Verify Code Editor section", priority = 8)
 	private void testCodeEditorSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -318,4 +318,27 @@ public class TestHomePageMainContents {
 	
 	}
 
+	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
+	private void testW3SchoolsSpacesSectio(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToW3SchoolsSpacesSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getW3SchoolsSpacesSubheader(), "Build your own website with W3Schools Spaces.");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesSampleScreenshot());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHowItWorksImage());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getW3schoolsSpacesGetStartedForFreeButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
 }
