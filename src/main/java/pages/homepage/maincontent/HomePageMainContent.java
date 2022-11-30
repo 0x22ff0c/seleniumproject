@@ -522,4 +522,40 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElementById("myLearningFromDefault", "Sign Up for Free");
 			
 	}
+	
+	
+	//Become a Pro user section
+	public void scrollToBecomeProUserSection(){
+		
+		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User section"));
+		
+	}
+	
+	public WebElement getBecomeProUserHeader(){
+		
+		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User header");
+		
+	}
+	
+	public String getBecomeProUserSubheader(){
+		
+		return getTextOfElementUsingXpathLocator("//*[text()='Become a PRO User']/following-sibling::*[1]");
+				
+	}
+	
+	public WebElement getBecomeProUser1stCheckbox(){
+		
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[1]", "Become Pro User - 1st checkbox");
+	}
+	
+	public String getBecomeProUser1stCheckboxText(){
+		
+		return getTextOfElementUsingXpathLocator("(//*[@src='/spaces/files/check3.db67d31e.svg']/parent::*)[1]");
+	}
+	
+	public WebElement getBecomeProUser1stCheckboxStrongText(){
+		
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg']/following-sibling::*)[1]", "without ads");
+	}
+	
 }
