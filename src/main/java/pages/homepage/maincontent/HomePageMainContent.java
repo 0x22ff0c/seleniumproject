@@ -426,4 +426,100 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", "Backend editor button");
 	}
 	
+	//W3Schools Spaces section
+	public void scrollToW3SchoolsSpacesSection(){
+		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", "W3Schools Spaces"));
+	}
+	
+	public WebElement getW3SchoolsSpacesHeader(){
+		return getElementByXpath("//*[text()='W3Schools Spaces']", "W3Schools Spaces");
+	}
+	
+	public String getW3SchoolsSpacesSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='W3Schools Spaces']/following-sibling::*[1]");
+	}
+	
+	public WebElement getW3SchoolsSpacesSampleScreenshot(){
+		
+		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='/pro/picture_spaces_ide.png']";
+		
+		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		
+		return getElementByXpath(xpathExpression, "W3Schools Spaces sample screenshot");
+		
+	}
+	
+	public void scrollToW3SchoolsSpacesScreenshotsSection(){
+		
+		control.scrollToElement(getW3SchoolsSpacesSampleScreenshot());
+		
+	}
+	
+	public WebElement getW3SchoolsSpacesHowItWorksImage(){
+		
+		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='how-spaces-works3.png']";
+		
+		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		
+		return getElementByXpath(xpathExpression, "W3Schools Spaces how it works image");
+		
+	}
+	
+	public WebElement getW3schoolsSpacesGetStartedForFreeButton(){
+		
+		return getElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started for Free']", "W3Schools Spaces - Get Started for Free");
+	
+	}
+	
+	
+	//My Learning section
+	public void scrollToMyLearningSection(){
+
+		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning section"));
+	}
+	
+	public WebElement getMyLearningHeader(){
+		
+		return getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning header");
+	}
+	
+	public String getMyLearningSubheader(){
+		
+		return getTextOfElementUsingXpathLocator("//*[text()='My Learning']/following-sibling::*[1]");
+		
+	}
+	
+	public WebElement getMyLearningFreeStrongText(){
+		
+		return getElementByXpath("//*[text()='My Learning']/following-sibling::*[1]/descendant::strong[text()='free']", "free");
+		
+	}
+	
+	public String getMyLearning2ndSubheader(){
+		
+		return getTextOfElementUsingXpathLocator("//*[text()='My Learning']/following-sibling::*[2]");
+	
+	}
+	
+	String myLearningSampleScreenshotId = "img_mylearning";
+	
+	public void scrollToMyLearningSampleScreenshot(){
+		
+		control.scrollToElement(getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot"));
+		
+	}
+	
+	public WebElement getMyLearningSampleScreenshot(){
+		
+		control.waitForElmentToBeDisplayedInPage(By.id(myLearningSampleScreenshotId));
+		
+		return getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot");
+		
+	}
+	
+	public WebElement getMyLearningSignupButton(){
+		
+		return getButtonElementById("myLearningFromDefault", "Sign Up for Free");
+			
+	}
 }
