@@ -470,5 +470,56 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started for Free']", "W3Schools Spaces - Get Started for Free");
 	
 	}
+	
+	
+	//My Learning section
+	public void scrollToMyLearningSection(){
 
+		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning section"));
+	}
+	
+	public WebElement getMyLearningHeader(){
+		
+		return getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning header");
+	}
+	
+	public String getMyLearningSubheader(){
+		
+		return getTextOfElementUsingXpathLocator("//*[text()='My Learning']/following-sibling::*[1]");
+		
+	}
+	
+	public WebElement getMyLearningFreeStrongText(){
+		
+		return getElementByXpath("//*[text()='My Learning']/following-sibling::*[1]/descendant::strong[text()='free']", "free");
+		
+	}
+	
+	public String getMyLearning2ndSubheader(){
+		
+		return getTextOfElementUsingXpathLocator("//*[text()='My Learning']/following-sibling::*[2]");
+	
+	}
+	
+	String myLearningSampleScreenshotId = "img_mylearning";
+	
+	public void scrollToMyLearningSampleScreenshot(){
+		
+		control.scrollToElement(getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot"));
+		
+	}
+	
+	public WebElement getMyLearningSampleScreenshot(){
+		
+		control.waitForElmentToBeDisplayedInPage(By.id(myLearningSampleScreenshotId));
+		
+		return getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot");
+		
+	}
+	
+	public WebElement getMyLearningSignupButton(){
+		
+		return getButtonElementById("myLearningFromDefault", "Sign Up for Free");
+			
+	}
 }
