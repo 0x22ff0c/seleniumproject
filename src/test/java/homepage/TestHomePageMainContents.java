@@ -319,7 +319,7 @@ public class TestHomePageMainContents {
 	}
 
 	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
-	private void testW3SchoolsSpacesSectio(){
+	private void testW3SchoolsSpacesSection(){
 		
 		homePage = new HomePageMainContent(driver);
 		
@@ -330,6 +330,8 @@ public class TestHomePageMainContents {
 		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHeader());
 		
 		baseTest.verifyTextIsTheSame(homePage.getW3SchoolsSpacesSubheader(), "Build your own website with W3Schools Spaces.");
+		
+		homePage.scrollToW3SchoolsSpacesScreenshotsSection();
 		
 		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesSampleScreenshot());
 		
