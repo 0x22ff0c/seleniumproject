@@ -426,4 +426,42 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", "Backend editor button");
 	}
 	
+	//W3Schools Spaces section
+	public void scrollToW3SchoolsSpacesSection(){
+		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", "W3Schools Spaces"));
+	}
+	
+	public WebElement getW3SchoolsSpacesHeader(){
+		return getElementByXpath("//*[text()='W3Schools Spaces']", "W3Schools Spaces");
+	}
+	
+	public String getW3SchoolsSpacesSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='W3Schools Spaces']/following-sibling::*[1]");
+	}
+	
+	public WebElement getW3SchoolsSpacesSampleScreenshot(){
+		
+		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='/pro/picture_spaces_ide.png']";
+		
+		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		
+		return getElementByXpath(xpathExpression, "W3Schools Spaces sample screenshot");
+	}
+	
+	public WebElement getW3SchoolsSpacesHowItWorksImage(){
+		
+		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='how-spaces-works3.png']";
+		
+		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		
+		return getElementByXpath(xpathExpression, "W3Schools Spaces how it works image");
+		
+	}
+	
+	public WebElement getW3schoolsSpacesGetStartedForFreeButton(){
+		
+		return getElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started for Free']", "W3Schools Spaces - Get Started for Free");
+	
+	}
+
 }
