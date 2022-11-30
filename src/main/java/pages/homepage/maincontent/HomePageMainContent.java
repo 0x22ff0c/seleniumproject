@@ -528,19 +528,16 @@ public class HomePageMainContent extends BasePage{
 	public void scrollToBecomeProUserSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User section"));
-		
 	}
 	
 	public WebElement getBecomeProUserHeader(){
 		
 		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User header");
-		
 	}
 	
 	public String getBecomeProUserSubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='Become a PRO User']/following-sibling::*[1]");
-				
+		return getTextOfElementUsingXpathLocator("//*[text()='Become a PRO User']/following-sibling::*[1]");		
 	}
 	
 	public WebElement getBecomeProUser1stCheckbox(){
@@ -556,6 +553,21 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getBecomeProUser1stCheckboxStrongText(){
 		
 		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg']/following-sibling::*)[1]", "without ads");
+	}
+	
+	public WebElement getBecomeProUser2ndCheckbox(){
+		
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[2]", "Become Pro User - 2nd checkbox");
+	}
+	
+	public String getBecomeProUser2ndCheckboxText(){
+		
+		return getTextOfElementUsingXpathLocator("(//*[@src='/spaces/files/check3.db67d31e.svg']/parent::*)[2]");
+	}
+	
+	public WebElement getBecomeProUser2ndCheckboxLink(){
+		
+		return getElementByLinkText("Spaces", "Become Pro User - Spaces");
 	}
 	
 }
