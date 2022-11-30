@@ -396,8 +396,17 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckboxLink());
 		
-		baseTest.assertAll();
+		//3rd checkbox
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckbox());
 		
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser3rdCheckboxText(), "Access to our HTML Video Tutorial");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckboxLink());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getBecomeProUserLearnMoreButton());
+		
+		baseTest.assertAll();
+				
 	}
 	
 }
