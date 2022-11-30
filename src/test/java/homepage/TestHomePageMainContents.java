@@ -382,11 +382,19 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyTextIsTheSame(homePage.getBecomeProUserSubheader(), "And unlock powerful features:");
 		
+		// 1st checkbox
 		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckbox());
 		
 		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser1stCheckboxText(), "Browse W3Schools without ads");
 		
 		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckboxStrongText());
+		
+		//2nd checkbox
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckbox());
+		
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser2ndCheckboxText(), "Website hosting (Includes Spaces PRO)");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckboxLink());
 		
 		baseTest.assertAll();
 		
