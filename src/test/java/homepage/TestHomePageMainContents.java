@@ -318,7 +318,7 @@ public class TestHomePageMainContents {
 	
 	}
 
-	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
+//	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
 	private void testW3SchoolsSpacesSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -342,5 +342,32 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 		
 	}
+	
+	@Test(testName = "Verify My Learning section", priority = 10)
+	private void testMyLearningSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToMyLearningSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getMyLearningHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getMyLearningSubheader(), "Track your progress with the free \"My Learning\" program here at W3Schools.");
+		
+		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getMyLearningFreeStrongText());
+		
+		homePage.scrollToMyLearningSampleScreenshot();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getMyLearningSampleScreenshot());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getMyLearningSignupButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	
 	
 }
