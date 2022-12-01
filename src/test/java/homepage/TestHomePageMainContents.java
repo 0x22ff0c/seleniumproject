@@ -409,7 +409,7 @@ public class TestHomePageMainContents {
 				
 	}
 	
-	@Test(testName = "Verify Color Picker", priority = 12)
+//	@Test(testName = "Verify Color Picker section", priority = 12)
 	private void testColorPickerSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -423,6 +423,27 @@ public class TestHomePageMainContents {
 		baseTest.verifyTextIsTheSame(homePage.getColorPickerSubheader(), "W3Schools' famous color picker:");
 		
 		baseTest.verifyElementIsDisplayed(homePage.getColorPickerImage());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify Code Game section", priority = 13)
+	private void testCodeGameSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToCodeGameSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeGameHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getCodeGameSubheader(), "Help the Lynx collect pine cones!");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeGameImageOfLynx());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCodeGamePlayGameButton());
 		
 		baseTest.assertAll();
 		
