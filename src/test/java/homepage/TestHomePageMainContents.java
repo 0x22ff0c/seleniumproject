@@ -368,7 +368,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Become a Pro User section", priority = 11)
+//	@Test(testName = "Verify Become a Pro User section", priority = 11)
 	
 	private void testBecomeProUserSection(){
 		
@@ -407,6 +407,25 @@ public class TestHomePageMainContents {
 		
 		baseTest.assertAll();
 				
+	}
+	
+	@Test(testName = "Verify Color Picker", priority = 12)
+	private void testColorPickerSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToColorPickerSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getColorPickerHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getColorPickerSubheader(), "W3Schools' famous color picker:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getColorPickerImage());
+		
+		baseTest.assertAll();
+		
 	}
 	
 }
