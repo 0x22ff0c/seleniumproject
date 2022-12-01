@@ -428,7 +428,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Code Game section", priority = 13)
+//	@Test(testName = "Verify Code Game section", priority = 13)
 	private void testCodeGameSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -449,4 +449,24 @@ public class TestHomePageMainContents {
 		
 	}
 	
+	@Test(testName = "Verify Exercises and Quizzes section", priority = 14)
+	private void testExercisesAndQuizzesSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToExercisesQuizzesSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getExercisesAndQuizzesHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getExercisesAndQuizzesSubheader(), "Test your skills!");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesExercisesButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesQuizzesButton());
+		
+		baseTest.assertAll();
+		
+	}
 }
