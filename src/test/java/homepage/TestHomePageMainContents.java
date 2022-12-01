@@ -449,7 +449,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Exercises and Quizzes section", priority = 14)
+//	@Test(testName = "Verify Exercises and Quizzes section", priority = 14)
 	private void testExercisesAndQuizzesSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -465,6 +465,27 @@ public class TestHomePageMainContents {
 		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesExercisesButton());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesQuizzesButton());
+		
+		baseTest.assertAll();
+		
+	}
+
+//	@Test(testName = "Verify Web Templates section", priority = 15)
+	private void testWebTemplatesSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToWebTemplatesSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getWebTemplatesSubheader(), "Browse our selection of free responsive HTML Templates");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesSampleImage());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getWebTemplatesBrowseTemplatesButton());
 		
 		baseTest.assertAll();
 		
