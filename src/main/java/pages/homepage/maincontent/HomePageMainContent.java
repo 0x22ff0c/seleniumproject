@@ -610,5 +610,31 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']");
 	}
 	
+	//Code Game section
+	public void scrollToCodeGameSection(){
+		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", "Code Game section"));
+	}
+	
+	public WebElement getCodeGameHeader(){
+		return getElementByXpath("//*[text()='Code Game']", "Code Game header");
+	}
+	
+	public String getCodeGameSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='Code Game']/following-sibling::*[1]");
+	}
+	
+	public WebElement getCodeGameImageOfLynx(){
+		
+		String xpathExpression = "//*[text()='Code Game']/following-sibling::*/descendant::*[@src='/images/w3lynx_200.png']";
+		
+		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		
+		return getElementByXpath(xpathExpression, "Image of Lynx");
+	}
+	
+	public WebElement getCodeGamePlayGameButton(){
+		return getElementByXpath("//*[text()='Play Game']", "Play Game");
+	}
+	
 	
 }
