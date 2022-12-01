@@ -593,4 +593,22 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElementById("proFromDefault", "Learn More");
 	}
 	
+	//Color Picker section
+	public void scrollToColorPickerSection(){
+		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", "Color Picker section"));
+	}
+	
+	public WebElement getColorPickerHeader(){
+		return getElementByXpath("//*[text()='Color Picker']", "Color Picker header");
+	}
+	
+	public String getColorPickerSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='Color Picker']/following-sibling::*[1]");
+	}
+	
+	public WebElement getColorPickerImage(){
+		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']");
+	}
+	
+	
 }
