@@ -1,5 +1,6 @@
 package homepage;
 
+import org.checkerframework.checker.units.qual.s;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -486,6 +487,29 @@ public class TestHomePageMainContents {
 		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesSampleImage());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getWebTemplatesBrowseTemplatesButton());
+		
+		baseTest.assertAll();
+		
+	}
+
+//	@Test(testName = "Verify Certification section", priority = 16)
+	private void testCertificationSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToCertificationSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getCertificationSubheader(), "Get certified by completing a course");
+	
+		baseTest.verifyButtonIsDisplayed(homePage.getCertificationGetStartedButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationArrow());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationBadge());
 		
 		baseTest.assertAll();
 		
