@@ -1,6 +1,5 @@
 package pages.homepage.maincontent;
 
-import org.checkerframework.checker.units.qual.m;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -714,6 +713,27 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getCertificationBadge(){
 		return getElementById("w3_cert_badge", "Certification badge");
+	}
+	
+	//How To Section
+	public void scrollToHowToSection(){
+		control.scrollToElement(getElementById("howto_padding", "How To Section"));
+	}
+	
+	public WebElement getHowToSectionHeader(){
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']");
+	}
+	
+	public String getHowToSectionSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[@id='howto_padding']/descendant::*[2]");
+	}
+	
+	public String getHowToSection2ndSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[@id='howto_padding']/descendant::*[3]");
+	}
+	
+	public WebElement getHowToLearnButton(){
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", "Learn How To");
 	}
 	
 }
