@@ -1,5 +1,6 @@
 package homepage;
 
+import org.checkerframework.checker.units.qual.s;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -368,7 +369,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-	@Test(testName = "Verify Become a Pro User section", priority = 11)
+//	@Test(testName = "Verify Become a Pro User section", priority = 11)
 	
 	private void testBecomeProUserSection(){
 		
@@ -409,4 +410,130 @@ public class TestHomePageMainContents {
 				
 	}
 	
+//	@Test(testName = "Verify Color Picker section", priority = 12)
+	private void testColorPickerSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToColorPickerSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getColorPickerHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getColorPickerSubheader(), "W3Schools' famous color picker:");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getColorPickerImage());
+		
+		baseTest.assertAll();
+		
+	}
+	
+//	@Test(testName = "Verify Code Game section", priority = 13)
+	private void testCodeGameSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToCodeGameSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeGameHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getCodeGameSubheader(), "Help the Lynx collect pine cones!");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCodeGameImageOfLynx());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getCodeGamePlayGameButton());
+		
+		baseTest.assertAll();
+		
+	}
+	
+//	@Test(testName = "Verify Exercises and Quizzes section", priority = 14)
+	private void testExercisesAndQuizzesSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToExercisesQuizzesSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getExercisesAndQuizzesHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getExercisesAndQuizzesSubheader(), "Test your skills!");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesExercisesButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesQuizzesButton());
+		
+		baseTest.assertAll();
+		
+	}
+
+//	@Test(testName = "Verify Web Templates section", priority = 15)
+	private void testWebTemplatesSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToWebTemplatesSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getWebTemplatesSubheader(), "Browse our selection of free responsive HTML Templates");
+		
+		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesSampleImage());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getWebTemplatesBrowseTemplatesButton());
+		
+		baseTest.assertAll();
+		
+	}
+
+//	@Test(testName = "Verify Certification section", priority = 16)
+	private void testCertificationSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToCertificationSection();
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getCertificationSubheader(), "Get certified by completing a course");
+	
+		baseTest.verifyButtonIsDisplayed(homePage.getCertificationGetStartedButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationArrow());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationBadge());
+		
+		baseTest.assertAll();
+		
+	}
+	
+	@Test(testName = "Verify How To Section", priority = 17)
+	private void testHowToSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToHowToSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSubheader(), "Code snippets for HTML, CSS and JavaScript");
+		
+		baseTest.verifyTextIsTheSame(homePage.getHowToSection2ndSubheader(), "For example, how to create a slideshow:");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getHowToLearnButton());
+		
+		baseTest.assertAll();
+		
+	}
+		
 }

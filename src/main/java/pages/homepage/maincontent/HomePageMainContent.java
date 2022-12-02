@@ -593,4 +593,147 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElementById("proFromDefault", "Learn More");
 	}
 	
+	//Color Picker section
+	public void scrollToColorPickerSection(){
+		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", "Color Picker section"));
+	}
+	
+	public WebElement getColorPickerHeader(){
+		return getElementByXpath("//*[text()='Color Picker']", "Color Picker header");
+	}
+	
+	public String getColorPickerSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='Color Picker']/following-sibling::*[1]");
+	}
+	
+	public WebElement getColorPickerImage(){
+		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']");
+	}
+	
+	//Code Game section
+	public void scrollToCodeGameSection(){
+		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", "Code Game section"));
+	}
+	
+	public WebElement getCodeGameHeader(){
+		return getElementByXpath("//*[text()='Code Game']", "Code Game header");
+	}
+	
+	public String getCodeGameSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[text()='Code Game']/following-sibling::*[1]");
+	}
+	
+	public WebElement getCodeGameImageOfLynx(){
+		
+		String xpathExpression = "//*[text()='Code Game']/following-sibling::*/descendant::*[@src='/images/w3lynx_200.png']";
+		
+		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		
+		return getElementByXpath(xpathExpression, "Image of Lynx");
+	}
+	
+	public WebElement getCodeGamePlayGameButton(){
+		return getElementByXpath("//*[text()='Play Game']", "Play Game");
+	}
+	
+	//Exercises and Quizzes section
+	public void scrollToExercisesQuizzesSection(){
+		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", "Exercises and Quizzes section"));
+	}
+	
+	public WebElement getExercisesAndQuizzesHeader(){
+		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", "Exercises and Quizzes header");
+	}
+	
+	public String getExercisesAndQuizzesSubheader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='Exercises and Quizzes']/following-sibling::*)[1]");
+	}
+	
+	public WebElement getExercisesAndQuizzesExercisesButton(){
+		return getElementByXpath("(//*[text()='Exercises'])[2]/parent::*", "Exercises");
+	}
+	
+	public WebElement getExercisesAndQuizzesQuizzesButton(){
+		return getElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", "Quizzes");
+	}
+	
+	//Web Templates section
+	public void scrollToWebTemplatesSection(){
+		
+		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", "Web Templates section"));
+		
+	}
+	
+	public WebElement getWebTemplatesHeader(){
+		return getElementByXpath("(//*[text()='Web Templates'])[2]");
+	}
+	
+	public String getWebTemplatesSubheader(){
+		return getTextOfElementUsingXpathLocator("(//*[text()='Web Templates'])[2]/following-sibling::*[2]");
+	}
+	
+	public WebElement getWebTemplatesSubheaderFreeText(){
+		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*[2]/descendant::strong[text()='free']", "free");
+	}
+	
+	public WebElement getWebTemplatesSampleImage(){
+		
+		String xpathExpression = "(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[@src='w3css_templates.jpg']";
+		
+		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		
+		return getElementByXpath(xpathExpression, "Web Templates sample images");
+	}
+	
+	public WebElement getWebTemplatesBrowseTemplatesButton(){
+		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", "Browse Templates");
+	}
+	
+	//Certification section
+	public void scrollToCertificationSection(){
+		
+		control.scrollToElement(getElementById("getdiploma", "Certification section"));
+	}
+	
+	public WebElement getCertificationHeader(){
+		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", "Kickstart your career header");
+	}
+	
+	public String getCertificationSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[1]");
+	}
+	
+	public WebElement getCertificationGetStartedButton(){
+		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", "Get started");
+	}
+	
+	public WebElement getCertificationArrow(){
+		return getElementById("w3_cert_arrow", "Arrow pointing to certification badge");
+	}
+	
+	public WebElement getCertificationBadge(){
+		return getElementById("w3_cert_badge", "Certification badge");
+	}
+	
+	//How To Section
+	public void scrollToHowToSection(){
+		control.scrollToElement(getElementById("howto_padding", "How To Section"));
+	}
+	
+	public WebElement getHowToSectionHeader(){
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']");
+	}
+	
+	public String getHowToSectionSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[@id='howto_padding']/descendant::*[2]");
+	}
+	
+	public String getHowToSection2ndSubheader(){
+		return getTextOfElementUsingXpathLocator("//*[@id='howto_padding']/descendant::*[3]");
+	}
+	
+	public WebElement getHowToLearnButton(){
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", "Learn How To");
+	}
+	
 }
