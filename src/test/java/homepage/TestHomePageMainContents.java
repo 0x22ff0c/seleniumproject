@@ -514,4 +514,26 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 		
 	}
+	
+	@Test(testName = "Verify How To Section", priority = 17)
+	private void testHowToSection(){
+		
+		homePage = new HomePageMainContent(driver);
+		
+		baseTest = new BaseTest(homePage);
+		
+		homePage.scrollToHowToSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionHeader());
+		
+		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSubheader(), "Code snippets for HTML, CSS and JavaScript");
+		
+		baseTest.verifyTextIsTheSame(homePage.getHowToSection2ndSubheader(), "For example, how to create a slideshow:");
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getHowToLearnButton());
+		
+		baseTest.assertAll();
+		
+	}
+		
 }
