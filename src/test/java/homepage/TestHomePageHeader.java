@@ -138,12 +138,7 @@ public class TestHomePageHeader {
 
 		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.HTML.name()), ReferenceHeaderEnum.HTML_CATEGORY_ITEMS.getCategoryItems());
 		
-		categoryName = "CSS";
-		
-		categoryItems = new String[]{"CSS Reference", "CSS Browser Support", "CSS Selector Reference", "Bootstrap 3 Reference", "Bootstrap 4 Reference"
-				,"W3.CSS Reference", "Icon Reference", "Sass Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.CSS.name()), ReferenceHeaderEnum.CSS_CATEGORY_ITEMS.getCategoryItems());
 		
 		categoryName = "JavaScript";
 		
