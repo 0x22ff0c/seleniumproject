@@ -108,10 +108,7 @@ public class TestHomePageHeader {
 
 		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.WEB_BUILDING_CATEGORY.toString()), HomePageHeaderEnum.WEB_BUILDING_CATEGORY_ITEMS.getCategoryItems());
 
-		categoryItems = new String[] {"Learn AI", "Learn Machine Learning", "Learn Data Science", "Learn NumPy", "Learn Pandas",
-				"Learn SciPy", "Learn Matplotlib", "Learn Statistics", "Learn Excel", "Learn Google Sheets"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.DATA_ANALYTICS_CATEGORY.toString()), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.DATA_ANALYTICS_CATEGORY.toString()), HomePageHeaderEnum.DATA_ANALYTICS_CATEGORY_ITEMS.getCategoryItems());
 
 		categoryItems = new String[] {"Learn XML", "Learn XML AJAX", "Learn XML DOM", "Learn XML DTD", "Learn XML Schema",
 				"Learn XSLT", "Learn XPath", "Learn XQuery"};
