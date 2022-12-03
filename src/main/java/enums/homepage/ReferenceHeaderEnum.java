@@ -15,7 +15,15 @@ public enum ReferenceHeaderEnum {
 	JAVASCRIPT("JavaScript"),
 	
 	JAVASCRIPT_CATEGORY_ITEMS(new String[]{"JavaScript Reference", "HTML DOM Reference", "jQuery Reference", "AngularJS Reference", "AppML Reference"
-			,"W3.JS Reference"});
+			,"W3.JS Reference"}),
+	
+	PROGRAMMING("Programming"),
+	
+	PROGRAMMING_CATEGORY_ITEMS(new String[]{"Python Reference", "Java Reference"}),
+	
+	SERVER_SIDE("Server Side"),
+	
+	SERVER_SIDE_CATEGORY_ITEMS(new String[]{"SQL Reference", "MySQL Reference", "PHP Reference", "ASP Reference"});
 	
 	private String[] categoryItems;
 
