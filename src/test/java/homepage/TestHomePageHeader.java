@@ -140,19 +140,11 @@ public class TestHomePageHeader {
 		
 		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.CSS.name()), ReferenceHeaderEnum.CSS_CATEGORY_ITEMS.getCategoryItems());
 
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.JAVASCRIPT.name()), ReferenceHeaderEnum.JAVASCRIPT_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.JAVASCRIPT.toString()), ReferenceHeaderEnum.JAVASCRIPT_CATEGORY_ITEMS.getCategoryItems());
+
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.PROGRAMMING.toString()), ReferenceHeaderEnum.PROGRAMMING_CATEGORY_ITEMS.getCategoryItems());	
 		
-		categoryName = "Programming";
-		
-		categoryItems = new String[]{"Python Reference", "Java Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
-		
-		categoryName = "Server Side";
-		
-		categoryItems = new String[]{"SQL Reference", "MySQL Reference", "PHP Reference", "ASP Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.SERVER_SIDE.toString()), ReferenceHeaderEnum.SERVER_SIDE_CATEGORY_ITEMS.getCategoryItems());	
 		
 		categoryName = "XML";
 		
