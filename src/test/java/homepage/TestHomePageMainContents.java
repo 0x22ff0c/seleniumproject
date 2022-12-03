@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 		
 	}
 
-//	@Test(testName = "Verify Main page contents", priority = 1)
+	@Test(testName = "Verify Main page contents", priority = 1)
 	private void testMainPageContents(){
 
 		homePage = new HomePageMainContent(driver);
@@ -51,7 +51,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Learn HTML section", priority = 2)
+	@Test(testName = "Verify Learn HTML section", priority = 2)
 	private void testLearnHtmlSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -82,7 +82,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Learn CSS section", priority = 3)
+	@Test(testName = "Verify Learn CSS section", priority = 3)
 	private void testLearnCSSSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -109,7 +109,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Learn JavaScript section", priority = 4)
+	@Test(testName = "Verify Learn JavaScript section", priority = 4)
 	private void testLearnJavaScriptSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -136,7 +136,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName =  "Verify Learn Python section", priority = 5)
+	@Test(testName =  "Verify Learn Python section", priority = 5)
 	private void testLearnPythonSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -163,7 +163,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Learn SQL section", priority = 6)
+	@Test(testName = "Verify Learn SQL section", priority = 6)
 	private void testLearnSQLSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -190,7 +190,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Other tutorials section", priority =  7)
+	@Test(testName = "Verify Other tutorials section", priority =  7)
 	
 	private void testOtherTutorialsSection(){
 		
@@ -261,7 +261,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Code EdiCtor section", priority = 8)
+	@Test(testName = "Verify Code EdiCtor section", priority = 8)
 	private void testCodeEditorSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -318,7 +318,7 @@ public class TestHomePageMainContents {
 	
 	}
 
-//	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
+	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
 	private void testW3SchoolsSpacesSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -343,7 +343,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify My Learning section", priority = 10)
+	@Test(testName = "Verify My Learning section", priority = 10)
 	private void testMyLearningSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -368,7 +368,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Become a Pro User section", priority = 11)
+	@Test(testName = "Verify Become a Pro User section", priority = 11)
 	
 	private void testBecomeProUserSection(){
 		
@@ -409,7 +409,7 @@ public class TestHomePageMainContents {
 				
 	}
 	
-//	@Test(testName = "Verify Color Picker section", priority = 12)
+	@Test(testName = "Verify Color Picker section", priority = 12)
 	private void testColorPickerSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -428,7 +428,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Code Game section", priority = 13)
+	@Test(testName = "Verify Code Game section", priority = 13)
 	private void testCodeGameSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -449,7 +449,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Exercises and Quizzes section", priority = 14)
+	@Test(testName = "Verify Exercises and Quizzes section", priority = 14)
 	private void testExercisesAndQuizzesSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -470,7 +470,7 @@ public class TestHomePageMainContents {
 		
 	}
 
-//	@Test(testName = "Verify Web Templates section", priority = 15)
+	@Test(testName = "Verify Web Templates section", priority = 15)
 	private void testWebTemplatesSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -491,7 +491,7 @@ public class TestHomePageMainContents {
 		
 	}
 
-//	@Test(testName = "Verify Certification section", priority = 16)
+	@Test(testName = "Verify Certification section", priority = 16)
 	private void testCertificationSection(){
 		
 		homePage = new HomePageMainContent(driver);
