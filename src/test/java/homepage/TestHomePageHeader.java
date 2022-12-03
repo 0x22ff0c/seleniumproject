@@ -145,12 +145,8 @@ public class TestHomePageHeader {
 		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.PROGRAMMING.toString()), ReferenceHeaderEnum.PROGRAMMING_CATEGORY_ITEMS.getCategoryItems());	
 		
 		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.SERVER_SIDE.toString()), ReferenceHeaderEnum.SERVER_SIDE_CATEGORY_ITEMS.getCategoryItems());	
-		
-		categoryName = "XML";
-		
-		categoryItems = new String[]{"XML DOM Reference", "XML Http Reference", "XSLT Reference", "XML Schema Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
+
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.XML.name()), ReferenceHeaderEnum.XML_CATEGORY_ITEMS.getCategoryItems());	
 		
 		categoryName = "Character Sets";
 		
