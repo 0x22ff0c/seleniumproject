@@ -110,8 +110,8 @@ public class BasePage {
 			element = driver.findElement(byElement);
 		} catch (NoSuchElementException noSuchElementException) {
 			
-			System.out.println(ExceptionUtils.getStackTrace(noSuchElementException));
-			
+			LogUtility.logError(ExceptionUtils.getStackTrace(noSuchElementException));
+		
 		}
 		
 		return element;
@@ -129,7 +129,7 @@ public class BasePage {
 			
 		} catch (NoSuchElementException noSuchElementException){
 
-			System.out.println(ExceptionUtils.getStackTrace(noSuchElementException));
+			LogUtility.logError(ExceptionUtils.getStackTrace(noSuchElementException));
 			
 		}
 	
@@ -170,7 +170,9 @@ public class BasePage {
 		if(element != null){
 			textOfElement = element.getText();
 		}else {
-			System.out.println("WARNING, unable to locate the element. Text is empty.");
+			
+			LogUtility.logWarn("Unable to locate the element. Text is empty.");
+			
 		}
 		
 		return textOfElement;
@@ -199,7 +201,9 @@ public class BasePage {
 		if(element != null){
 			placeholderText = element.getAttribute("placeholder");
 		}else {
-			System.out.println("WARNING, unable to locate the element. Inner text is empty.");
+			
+			LogUtility.logWarn("Unable to locate the element. Inner text is empty.");
+			
 		}
 		
 		return placeholderText;
