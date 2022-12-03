@@ -23,7 +23,11 @@ public enum ReferenceHeaderEnum {
 	
 	SERVER_SIDE("Server Side"),
 	
-	SERVER_SIDE_CATEGORY_ITEMS(new String[]{"SQL Reference", "MySQL Reference", "PHP Reference", "ASP Reference"});
+	SERVER_SIDE_CATEGORY_ITEMS(new String[]{"SQL Reference", "MySQL Reference", "PHP Reference", "ASP Reference"}),
+	
+	XML,
+	
+	XML_CATEGORY_ITEMS(new String[]{"XML DOM Reference", "XML Http Reference", "XSLT Reference", "XML Schema Reference"});
 	
 	private String[] categoryItems;
 
