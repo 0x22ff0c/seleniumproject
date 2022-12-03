@@ -14,6 +14,9 @@ public enum HomePageHeaderEnum {
 	
 	PROGRAMMING_CATEGORY("Programming"),
 	
+	PROGRAMMING_CATEGORY_ITEMS(new String[]{"Learn Python", "Learn Java", "Learn C", "Learn C++", "Learn C#", "Learn R", 
+			"Learn Kotlin", "Learn Go", "Learn Django", "Learn TypeScript"}),
+	
 	SERVER_SIDE_CATEGORY("Server Side"),
 	
 	WEB_BUILDING_CATEGORY("Web Building"),
