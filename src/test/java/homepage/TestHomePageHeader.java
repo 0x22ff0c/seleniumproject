@@ -5,7 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import enums.homepage.HomePageHeaderEnum;
+import enums.homepage.ReferenceHeaderEnum;
+import enums.homepage.TutorialsHeaderEnum;
 import pages.homepage.header.HomePageHeader;
 import pages.homepage.header.HomePageMenuItems;
 import tests.BaseTest;
@@ -85,7 +86,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-	@Test(testName = "Verify Tutorial menu items", priority = 2)
+//	@Test(testName = "Verify Tutorial menu items", priority = 2)
 	private void testTutorialMenuIems(){
 
 		homePageMenuItems = new HomePageMenuItems(driver);
@@ -98,37 +99,19 @@ public class TestHomePageHeader {
 
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuHeader());
 
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.HTML_AND_CSS_CATEGORY.toString()), HomePageHeaderEnum.HTML_AND_CSS_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.HTML_AND_CSS_CATEGORY.toString()), TutorialsHeaderEnum.HTML_AND_CSS_CATEGORY_ITEMS.getCategoryItems());
+		
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.JAVASCRIPT_CATEGORY.toString()), TutorialsHeaderEnum.JAVA_SCRIPT_CATEGORY_ITEMS.getCategoryItems());
 	
-		categoryItems = new String[]{"Learn JavaScript", "Learn jQuery", "Learn React", "Learn AngularJS", "Learn JSON",
-				"Learn AJAX", "Learn AppML", "Learn W3.JS"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.JAVASCRIPT_CATEGORY.toString()), categoryItems);
-	
-		categoryItems = new String[]{"Learn Python", "Learn Java", "Learn C", "Learn C++", "Learn C#", "Learn R", 
-				"Learn Kotlin", "Learn Go", "Learn Django", "Learn TypeScript"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.PROGRAMMING_CATEGORY.toString()), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.PROGRAMMING_CATEGORY.toString()), TutorialsHeaderEnum.PROGRAMMING_CATEGORY_ITEMS.getCategoryItems());
 
-		categoryItems = new String[]{"Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
-				"Learn Raspberry Pi", "Learn Git", "Learn MongoDB", "Learn AWS Cloud"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.SERVER_SIDE_CATEGORY.toString()), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.SERVER_SIDE_CATEGORY.toString()), TutorialsHeaderEnum.SERVER_SIDE_CATEGORY_ITEMS.getCategoryItems());
 
-		categoryItems = new String[] {"Create a Website ", "Where To Start", "Web Templates", "Web Statistics", "Web Certificates",
-				"Web Development", "Code Editor", "Test Your Typing Speed", "Play a Code Game", "Cyber Security", "Accessibility", "Join our Newsletter"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.WEB_BUILDING_CATEGORY.toString()), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.WEB_BUILDING_CATEGORY.toString()), TutorialsHeaderEnum.WEB_BUILDING_CATEGORY_ITEMS.getCategoryItems());
 
-		categoryItems = new String[] {"Learn AI", "Learn Machine Learning", "Learn Data Science", "Learn NumPy", "Learn Pandas",
-				"Learn SciPy", "Learn Matplotlib", "Learn Statistics", "Learn Excel", "Learn Google Sheets"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.DATA_ANALYTICS_CATEGORY.toString()), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.DATA_ANALYTICS_CATEGORY.toString()), TutorialsHeaderEnum.DATA_ANALYTICS_CATEGORY_ITEMS.getCategoryItems());
 
-		categoryItems = new String[] {"Learn XML", "Learn XML AJAX", "Learn XML DOM", "Learn XML DTD", "Learn XML Schema",
-				"Learn XSLT", "Learn XPath", "Learn XQuery"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.XML_TUTORIALS_CATEGORY.toString()), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.XML_TUTORIALS_CATEGORY.toString()), TutorialsHeaderEnum.XML_TUTORIALS_CATEGORY_ITEMS.getCategoryItems());
 		
 		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
@@ -140,7 +123,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-//	@Test(testName = "Verify References menu items", priority = 3)
+	@Test(testName = "Verify References menu items", priority = 3)
 	private void testReferencesMenuItems(){
 		
 		homePageMenuItems = new HomePageMenuItems(driver);
@@ -152,52 +135,20 @@ public class TestHomePageHeader {
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesMenuContainer());
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesMenuHeader());
+
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.HTML.name()), ReferenceHeaderEnum.HTML_CATEGORY_ITEMS.getCategoryItems());
 		
-		categoryName = "HTML";
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.CSS.name()), ReferenceHeaderEnum.CSS_CATEGORY_ITEMS.getCategoryItems());
+
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.JAVASCRIPT.toString()), ReferenceHeaderEnum.JAVASCRIPT_CATEGORY_ITEMS.getCategoryItems());
+
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.PROGRAMMING.toString()), ReferenceHeaderEnum.PROGRAMMING_CATEGORY_ITEMS.getCategoryItems());	
 		
-		categoryItems = new String[]{"HTML Tag Reference", "HTML Browser Support", "HTML Event Reference", "HTML Color Reference", "HTML Attribute Reference"
-				,"HTML Canvas Reference", "HTML SVG Reference", "Google Maps Reference"};
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.SERVER_SIDE.toString()), ReferenceHeaderEnum.SERVER_SIDE_CATEGORY_ITEMS.getCategoryItems());	
+
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.XML.name()), ReferenceHeaderEnum.XML_CATEGORY_ITEMS.getCategoryItems());	
 		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);
-		
-		categoryName = "CSS";
-		
-		categoryItems = new String[]{"CSS Reference", "CSS Browser Support", "CSS Selector Reference", "Bootstrap 3 Reference", "Bootstrap 4 Reference"
-				,"W3.CSS Reference", "Icon Reference", "Sass Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);
-		
-		categoryName = "JavaScript";
-		
-		categoryItems = new String[]{"JavaScript Reference", "HTML DOM Reference", "jQuery Reference", "AngularJS Reference", "AppML Reference"
-				,"W3.JS Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);
-		
-		categoryName = "Programming";
-		
-		categoryItems = new String[]{"Python Reference", "Java Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
-		
-		categoryName = "Server Side";
-		
-		categoryItems = new String[]{"SQL Reference", "MySQL Reference", "PHP Reference", "ASP Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
-		
-		categoryName = "XML";
-		
-		categoryItems = new String[]{"XML DOM Reference", "XML Http Reference", "XSLT Reference", "XML Schema Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
-		
-		categoryName = "Character Sets";
-		
-		categoryItems = new String[]{"HTML Character Sets", "HTML ASCII", "HTML ANSI", "HTML Windows-1252", "HTML ISO-8859-1"
-				,"HTML Symbols", "HTML UTF-8"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.CHARACTER_SETS.toString()), ReferenceHeaderEnum.CHARACTER_SETS_ITEMS.getCategoryItems());	
 		
 		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getReferencesCaretButton());
 		
