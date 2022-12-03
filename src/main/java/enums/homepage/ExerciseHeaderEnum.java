@@ -2,6 +2,8 @@ package enums.homepage;
 
 public enum ExerciseHeaderEnum {
 
+	EXERCISES_LABEL("Exercises"),
+	
 	BUTTON_NAMES(new String[]{"Exercises", "Quizzes", "Courses", "Certificates"}),
 	
 	EXERCISE_LINKS(new String[]{"HTML Exercises", "CSS Exercises", "JavaScript Exercises", "Python Exercises", "SQL Exercises"
@@ -33,6 +35,17 @@ public enum ExerciseHeaderEnum {
 	
 	public String[] getLinksArray(){
 		return linksArray;
+	}
+	
+	private String buttonLabel;
+	
+	private ExerciseHeaderEnum(String buttonLabel){
+		this.buttonLabel = buttonLabel;
+	}
+	
+	@Override
+	public String toString(){
+		return buttonLabel;
 	}
 	
 }
