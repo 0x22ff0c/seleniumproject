@@ -3,6 +3,7 @@ package pages.homepage.header;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import enums.homepage.HeaderEnum;
 import pages.BasePage;
 
 public class HomePageHeader extends BasePage{
@@ -13,107 +14,105 @@ public class HomePageHeader extends BasePage{
 	}
 
 	public WebElement getHeader(){
-		return getElementByXpath("//*[@title='Home']/parent::*", "Header");		
+		
+		return getElementByXpath("//*[@title='Home']/parent::*", HeaderEnum.HOME_PAGE_HEADER.toString());		
 	}
 
 	//Header - menu items
 
 	protected WebElement getHeaderCaretButton(String title){
+		
 		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down button", title));
 	}
-	
-	protected static final String TUTORIALS_LABEL = "Tutorials";
-	protected static final String REFERENCES_LABEL = "References";
-	protected static final String EXERCISES_LABEL = "Exercises";
-	
+
 	public WebElement getTutorialsButton(){
 		
-		return getButtonElement(TUTORIALS_LABEL);
-		
+		return getButtonElement(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());		
 	}
 	
 	public void clickTutorialsButton(){
+		
 		control.clickButton(getTutorialsButton());
 	}
 	
 	public WebElement getTutorialsCaretButton(){
-		return getHeaderCaretButton(TUTORIALS_LABEL);
+		
+		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getReferencesButton(){
 		
-		return getButtonElement(REFERENCES_LABEL);
-		
+		return getButtonElement(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
 	}
 	
 	public void clickReferencesButton(){
+		
 		control.clickButton(getReferencesButton());
 	}
 	
 	public WebElement getReferencesCaretButton(){
-		return getHeaderCaretButton(REFERENCES_LABEL);
+		
+		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
 	}
 
 	public WebElement getExercisesButton(){
 		
-		return getButtonElement(EXERCISES_LABEL);
-		
+		return getButtonElement(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
 	}
 	
 	public void clickExercisesButton(){
+		
 		control.clickButton(getExercisesButton());
 	}
 	
 	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(EXERCISES_LABEL);
+		
+		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getVideosButton(){
 		
-		return getButtonElement("Video Tutorials");
-		
+		return getButtonElement(HeaderEnum.VIDEO_TUTORIALS_BUTTON.toString());
 	}
 	
 	public WebElement getThemeToggle(){
-		return getElementByXpath("//*[@xxtitle='Toggle Dark Code']", "Toggle Dark Code");
+		
+		return getElementByXpath(String.format("//*[@xxtitle='%s']", HeaderEnum.TOGGLE_DARK_CODE.toString()), HeaderEnum.TOGGLE_DARK_CODE.toString());
 	}
 	
 	public WebElement getTranslateButton(){
 		
-		return getButtonElementById("nav_translate_btn", "Translate");
-		
+		return getButtonElementById("nav_translate_btn", HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getSearchButton(){
 		
-		return getButtonElementById("nav_search_btn", "Search");
-		
+		return getButtonElementById("nav_search_btn", HeaderEnum.SEARCH_BUTTON.toString());
 	}
 	
 	public WebElement getUpgradeButton(){
-		return getElementByXpath("//*[@title='Courses']/following-sibling::*[contains(@title,'Upgrade')]", "Upgrade button");
+		
+		return getElementByXpath(String.format("//*[@title='Courses']/following-sibling::*[contains(@title,'%s')]", HeaderEnum.UPGRADE_BUTTON.toString()), HeaderEnum.UPGRADE_BUTTON.toString());
 	}
 	
 	public WebElement getCertifiedButton(){
 		
-		return getButtonElementById("cert_navbtn", "Certified");
-		
+		return getButtonElementById("cert_navbtn", HeaderEnum.CERTIFIED_BUTTON.toString());
 	}
 	
 	public WebElement getFreeWebsiteButton(){
-		return getElementByXpath("//*[@title='Courses']/preceding-sibling::*[contains(@title, 'Get Your Own Website')]", "Free website button");
+		
+		return getElementByXpath("//*[@title='Courses']/preceding-sibling::*[contains(@title, 'Get Your Own Website')]", HeaderEnum.FREE_WEBSITE_BUTTON.toString());
 	}
 	
 	public WebElement getLoginButton(){
 		
-		return getButtonElementById("w3loginbtn", "Login");
-		
+		return getButtonElementById("w3loginbtn", HeaderEnum.LOGIN_BUTTON.toString());
 	}
 	
 	public WebElement getHomeLogo(){
 		
-		return getButtonElement("Home", "Home logo");
-		
+		return getButtonElement("Home", HeaderEnum.HOME_LOGO.toString());
 	}
 	
 }
