@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import enums.homepage.HomePageHeaderEnum;
+import enums.homepage.TutorialsHeaderEnum;
 import pages.homepage.header.HomePageHeader;
 import pages.homepage.header.HomePageMenuItems;
 import tests.BaseTest;
@@ -98,19 +98,19 @@ public class TestHomePageHeader {
 
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getTutorialsMenuHeader());
 
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.HTML_AND_CSS_CATEGORY.toString()), HomePageHeaderEnum.HTML_AND_CSS_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.HTML_AND_CSS_CATEGORY.toString()), TutorialsHeaderEnum.HTML_AND_CSS_CATEGORY_ITEMS.getCategoryItems());
 		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.JAVASCRIPT_CATEGORY.toString()), HomePageHeaderEnum.JAVA_SCRIPT_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.JAVASCRIPT_CATEGORY.toString()), TutorialsHeaderEnum.JAVA_SCRIPT_CATEGORY_ITEMS.getCategoryItems());
 	
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.PROGRAMMING_CATEGORY.toString()), HomePageHeaderEnum.PROGRAMMING_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.PROGRAMMING_CATEGORY.toString()), TutorialsHeaderEnum.PROGRAMMING_CATEGORY_ITEMS.getCategoryItems());
 
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.SERVER_SIDE_CATEGORY.toString()), HomePageHeaderEnum.SERVER_SIDE_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.SERVER_SIDE_CATEGORY.toString()), TutorialsHeaderEnum.SERVER_SIDE_CATEGORY_ITEMS.getCategoryItems());
 
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.WEB_BUILDING_CATEGORY.toString()), HomePageHeaderEnum.WEB_BUILDING_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.WEB_BUILDING_CATEGORY.toString()), TutorialsHeaderEnum.WEB_BUILDING_CATEGORY_ITEMS.getCategoryItems());
 
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.DATA_ANALYTICS_CATEGORY.toString()), HomePageHeaderEnum.DATA_ANALYTICS_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.DATA_ANALYTICS_CATEGORY.toString()), TutorialsHeaderEnum.DATA_ANALYTICS_CATEGORY_ITEMS.getCategoryItems());
 
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.XML_TUTORIALS_CATEGORY.toString()), HomePageHeaderEnum.XML_TUTORIALS_CATEGORY_ITEMS.getCategoryItems());
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(TutorialsHeaderEnum.XML_TUTORIALS_CATEGORY.toString()), TutorialsHeaderEnum.XML_TUTORIALS_CATEGORY_ITEMS.getCategoryItems());
 		
 		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 

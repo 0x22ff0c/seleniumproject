@@ -1,6 +1,6 @@
 package enums.homepage;
 
-public enum HomePageHeaderEnum {
+public enum TutorialsHeaderEnum {
 
 	HTML_AND_CSS_CATEGORY("HTML and CSS"),
 
@@ -41,7 +41,7 @@ public enum HomePageHeaderEnum {
 	
 	private String[] categoryItems;
 	
-	private HomePageHeaderEnum(final String[] categoryItems){
+	private TutorialsHeaderEnum(final String[] categoryItems){
 		
 		this.categoryItems = categoryItems;
 		
@@ -51,7 +51,7 @@ public enum HomePageHeaderEnum {
 		return categoryItems;
 	}
 	
-	private HomePageHeaderEnum(final String categoryName){
+	private TutorialsHeaderEnum(final String categoryName){
 		
 		this.categoryName = categoryName;
 		
