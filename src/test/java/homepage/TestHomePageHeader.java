@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import enums.homepage.ReferenceHeaderEnum;
 import enums.homepage.TutorialsHeaderEnum;
 import pages.homepage.header.HomePageHeader;
 import pages.homepage.header.HomePageMenuItems;
@@ -85,7 +86,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-	@Test(testName = "Verify Tutorial menu items", priority = 2)
+//	@Test(testName = "Verify Tutorial menu items", priority = 2)
 	private void testTutorialMenuIems(){
 
 		homePageMenuItems = new HomePageMenuItems(driver);
@@ -122,7 +123,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-//	@Test(testName = "Verify References menu items", priority = 3)
+	@Test(testName = "Verify References menu items", priority = 3)
 	private void testReferencesMenuItems(){
 		
 		homePageMenuItems = new HomePageMenuItems(driver);
@@ -134,13 +135,8 @@ public class TestHomePageHeader {
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesMenuContainer());
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getReferencesMenuHeader());
-		
-		categoryName = "HTML";
-		
-		categoryItems = new String[]{"HTML Tag Reference", "HTML Browser Support", "HTML Event Reference", "HTML Color Reference", "HTML Attribute Reference"
-				,"HTML Canvas Reference", "HTML SVG Reference", "Google Maps Reference"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);
+
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.HTML.name()), ReferenceHeaderEnum.HTML_CATEGORY_ITEMS.getCategoryItems());
 		
 		categoryName = "CSS";
 		
