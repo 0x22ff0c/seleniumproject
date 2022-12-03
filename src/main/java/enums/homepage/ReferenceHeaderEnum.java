@@ -27,7 +27,12 @@ public enum ReferenceHeaderEnum {
 	
 	XML,
 	
-	XML_CATEGORY_ITEMS(new String[]{"XML DOM Reference", "XML Http Reference", "XSLT Reference", "XML Schema Reference"});
+	XML_CATEGORY_ITEMS(new String[]{"XML DOM Reference", "XML Http Reference", "XSLT Reference", "XML Schema Reference"}), 
+	
+	CHARACTER_SETS("Character Sets"),
+	
+	CHARACTER_SETS_ITEMS(new String[]{"HTML Character Sets", "HTML ASCII", "HTML ANSI", "HTML Windows-1252", "HTML ISO-8859-1"
+			,"HTML Symbols", "HTML UTF-8"});
 	
 	private String[] categoryItems;
 
