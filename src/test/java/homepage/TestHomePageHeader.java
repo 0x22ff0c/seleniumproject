@@ -104,10 +104,7 @@ public class TestHomePageHeader {
 	
 		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.PROGRAMMING_CATEGORY.toString()), HomePageHeaderEnum.PROGRAMMING_CATEGORY_ITEMS.getCategoryItems());
 
-		categoryItems = new String[]{"Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
-				"Learn Raspberry Pi", "Learn Git", "Learn MongoDB", "Learn AWS Cloud"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.SERVER_SIDE_CATEGORY.toString()), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.SERVER_SIDE_CATEGORY.toString()), HomePageHeaderEnum.SERVER_SIDE_CATEGORY_ITEMS.getCategoryItems());
 
 		categoryItems = new String[] {"Create a Website ", "Where To Start", "Web Templates", "Web Statistics", "Web Certificates",
 				"Web Development", "Code Editor", "Test Your Typing Speed", "Play a Code Game", "Cyber Security", "Accessibility", "Join our Newsletter"};
