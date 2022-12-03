@@ -32,7 +32,10 @@ public enum HomePageHeaderEnum {
 	DATA_ANALYTICS_CATEGORY_ITEMS(new String[]{"Learn AI", "Learn Machine Learning", "Learn Data Science", "Learn NumPy", "Learn Pandas",
 			"Learn SciPy", "Learn Matplotlib", "Learn Statistics", "Learn Excel", "Learn Google Sheets"}),
 			
-	XML_TUTORIALS_CATEGORY("XML Tutorials");
+	XML_TUTORIALS_CATEGORY("XML Tutorials"),
+	
+	XML_TUTORIALS_CATEGORY_ITEMS(new String[]{"Learn XML", "Learn XML AJAX", "Learn XML DOM", "Learn XML DTD", "Learn XML Schema",
+			"Learn XSLT", "Learn XPath", "Learn XQuery"});
 	
 	private String categoryName;
 	
