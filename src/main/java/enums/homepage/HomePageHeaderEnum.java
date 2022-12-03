@@ -19,6 +19,9 @@ public enum HomePageHeaderEnum {
 	
 	SERVER_SIDE_CATEGORY("Server Side"),
 	
+	SERVER_SIDE_CATEGORY_ITEMS(new String[]{"Learn SQL", "Learn MySQL", "Learn PHP", "Learn ASP", "Learn Node.js",
+			"Learn Raspberry Pi", "Learn Git", "Learn MongoDB", "Learn AWS Cloud"}),
+	
 	WEB_BUILDING_CATEGORY("Web Building"),
 	
 	DATA_ANALYTICS_CATEGORY("Data Analytics"),
