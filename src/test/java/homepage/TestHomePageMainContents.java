@@ -1,6 +1,5 @@
 package homepage;
 
-import org.checkerframework.checker.units.qual.s;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -262,7 +261,7 @@ public class TestHomePageMainContents {
 		
 	}
 	
-//	@Test(testName = "Verify Code Editor section", priority = 8)
+//	@Test(testName = "Verify Code EdiCtor section", priority = 8)
 	private void testCodeEditorSection(){
 		
 		homePage = new HomePageMainContent(driver);
@@ -274,10 +273,10 @@ public class TestHomePageMainContents {
 		baseTest.verifyTextIsTheSame(homePage.getCodeEditorHeader(), "Code Editor");
 		
 		baseTest.verifyTextIsTheSame(homePage.getCodeEditorSubheader(), "With our online code editor, you can edit code and view the result in your browser");
-		
-		for(int buttonNumber = 1; buttonNumber <= 3; buttonNumber++){
-			
-			baseTest.verifyElementIsDisplayed(homePage.getCodeEditorDotButton(buttonNumber));
+
+		for(int dotNumber = 1; dotNumber <= 3; dotNumber++){
+
+			baseTest.verifyElementIsDisplayed(homePage.getCodeEditorDotButton(dotNumber));
 			
 		}
 		
@@ -529,6 +528,58 @@ public class TestHomePageMainContents {
 		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSubheader(), "Code snippets for HTML, CSS and JavaScript");
 		
 		baseTest.verifyTextIsTheSame(homePage.getHowToSection2ndSubheader(), "For example, how to create a slideshow:");
+		
+		for(int buttonNumber = 1; buttonNumber <= 3; buttonNumber++){
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowDotButton(buttonNumber));
+			
+		}
+		
+		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSampleWindowUrlValue(), "www.w3schools.com/howto/");
+		
+		homePage.switchToHowToSliderFrame();
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowPreviousButton());
+		
+		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowNextButton());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
+		
+		baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
+
+		for(int iteration = 1; iteration <= 3; iteration++){
+			
+			homePage.clickNextButton();
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
+			
+		}
+		
+		for(int iteration = 1; iteration <= 3; iteration++){
+			
+			homePage.clickPreviousButton();
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
+			
+			baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
+			
+		}
+		
+		homePage.switchToDefaultContent();
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getHowToLearnButton());
 		
