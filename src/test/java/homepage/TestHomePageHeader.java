@@ -110,10 +110,7 @@ public class TestHomePageHeader {
 
 		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.DATA_ANALYTICS_CATEGORY.toString()), HomePageHeaderEnum.DATA_ANALYTICS_CATEGORY_ITEMS.getCategoryItems());
 
-		categoryItems = new String[] {"Learn XML", "Learn XML AJAX", "Learn XML DOM", "Learn XML DTD", "Learn XML Schema",
-				"Learn XSLT", "Learn XPath", "Learn XQuery"};
-		
-		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.XML_TUTORIALS_CATEGORY.toString()), categoryItems);
+		verifyCategoryItems(homePageMenuItems.getTutorialsMenuCategoryName(HomePageHeaderEnum.XML_TUTORIALS_CATEGORY.toString()), HomePageHeaderEnum.XML_TUTORIALS_CATEGORY_ITEMS.getCategoryItems());
 		
 		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getTutorialsCaretButton());
 
