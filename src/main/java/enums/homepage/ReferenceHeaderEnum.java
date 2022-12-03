@@ -10,7 +10,12 @@ public enum ReferenceHeaderEnum {
 	CSS,
 	
 	CSS_CATEGORY_ITEMS(new String[]{"CSS Reference", "CSS Browser Support", "CSS Selector Reference", "Bootstrap 3 Reference", "Bootstrap 4 Reference"
-			,"W3.CSS Reference", "Icon Reference", "Sass Reference"});
+			,"W3.CSS Reference", "Icon Reference", "Sass Reference"}),
+	
+	JAVASCRIPT("JavaScript"),
+	
+	JAVASCRIPT_CATEGORY_ITEMS(new String[]{"JavaScript Reference", "HTML DOM Reference", "jQuery Reference", "AngularJS Reference", "AppML Reference"
+			,"W3.JS Reference"});
 	
 	private String[] categoryItems;
 
