@@ -2,7 +2,7 @@ package enums.homepage;
 
 public enum TutorialsHeaderEnum {
 
-	TUTORIALS_LABEL("Exercises"),
+	TUTORIALS_LABEL("Tutorials"),
 	
 	HTML_AND_CSS_CATEGORY("HTML and CSS"),
 
