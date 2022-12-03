@@ -2,6 +2,8 @@ package enums.homepage;
 
 public enum ExerciseHeaderEnum {
 
+	BUTTON_NAMES(new String[]{"Exercises", "Quizzes", "Courses", "Certificates"}),
+	
 	EXERCISE_LINKS(new String[]{"HTML Exercises", "CSS Exercises", "JavaScript Exercises", "Python Exercises", "SQL Exercises"
 			,"PHP Exercises", "Java Exercises", "C Exercises", "C++ Exercises", "C# Exercises", "jQuery Exercises", "React.js Exercises"
 			,"MySQL Exercises", "Bootstrap 5 Exercises", "Bootstrap 4 Exercises", "Bootstrap 3 Exercises", "NumPy Exercises", "Pandas Exercises"
