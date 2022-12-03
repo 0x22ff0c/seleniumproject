@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.Control;
+import utilities.LogUtility;
 
 public class BasePage {
 
@@ -28,6 +29,24 @@ public class BasePage {
 		return nameOfElement;
 	}
 	
+	public void switchToDefaultContent(){
+		
+		LogUtility.logInfo("Switching back to default content...");
+		
+		driver.switchTo().defaultContent();
+		
+		LogUtility.logInfo("Switched back to default content.");
+	}
+		
+	protected void switchToIframe(WebElement element){
+		
+		LogUtility.logInfo(String.format("Swithcing to frame: %s...", nameOfElement));
+		
+		driver.switchTo().frame(element);
+		
+		LogUtility.logInfo(String.format("Switched to frame: %s.", nameOfElement));
+		
+	}
 	
 	protected WebElement getElementById(String id, String nameOfElement){
 		
