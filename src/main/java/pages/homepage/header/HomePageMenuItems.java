@@ -3,9 +3,7 @@ package pages.homepage.header;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import enums.homepage.ExerciseHeaderEnum;
-import enums.homepage.ReferenceHeaderEnum;
-import enums.homepage.TutorialsHeaderEnum;
+import enums.homepage.HeaderEnum;
 
 public class HomePageMenuItems extends HomePageHeader{
 
@@ -71,15 +69,15 @@ public class HomePageMenuItems extends HomePageHeader{
 	
 	@Override
 	public WebElement getTutorialsCaretButton(){
-		return getHeaderCaretButton(TutorialsHeaderEnum.TUTORIALS_LABEL.toString());
+		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getTutorialsMenuContainer(){
-		return getMenuContainer(TUTORIAL_NAV_ID, TutorialsHeaderEnum.TUTORIALS_LABEL.toString());
+		return getMenuContainer(TUTORIAL_NAV_ID, HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getTutorialsMenuHeader(){
-		return getHeaderInMenuContainer(TUTORIAL_NAV_ID, TutorialsHeaderEnum.TUTORIALS_LABEL.toString());
+		return getHeaderInMenuContainer(TUTORIAL_NAV_ID, HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getTutorialsMenuCategoryName(String categoryName){
@@ -87,7 +85,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
  
 	public WebElement getTutorialsCloseButton(){
-		return getHeaderMenuCloseButton(TUTORIAL_NAV_ID, TutorialsHeaderEnum.TUTORIALS_LABEL.toString());
+		return getHeaderMenuCloseButton(TUTORIAL_NAV_ID, HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
 	}
 	
 	public void clickTutorialsCloseButton(){
@@ -98,15 +96,15 @@ public class HomePageMenuItems extends HomePageHeader{
 	
 	@Override
 	public WebElement getReferencesCaretButton(){
-		return getHeaderCaretButton(ReferenceHeaderEnum.REFERENCES_LABEL.toString());
+		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getReferencesMenuContainer(){
-		return getMenuContainer(REFERENCES_NAV_ID, ReferenceHeaderEnum.REFERENCES_LABEL.toString());
+		return getMenuContainer(REFERENCES_NAV_ID, HeaderEnum.REFERENCE_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getReferencesMenuHeader(){
-		return getHeaderInMenuContainer(REFERENCES_NAV_ID, ReferenceHeaderEnum.REFERENCES_LABEL.toString());
+		return getHeaderInMenuContainer(REFERENCES_NAV_ID, HeaderEnum.REFERENCE_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getReferencesMenuCategoryName(String categoryName){
@@ -114,7 +112,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getReferencesCloseButton(){
-		return getHeaderMenuCloseButton(REFERENCES_NAV_ID, ReferenceHeaderEnum.REFERENCES_LABEL.toString());
+		return getHeaderMenuCloseButton(REFERENCES_NAV_ID, HeaderEnum.REFERENCE_MENU_BUTTON.toString());
 	}
 	
 	public void clickReferencesCloseButton(){
@@ -125,11 +123,11 @@ public class HomePageMenuItems extends HomePageHeader{
 	
 	@Override
 	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(ExerciseHeaderEnum.EXERCISES_LABEL.toString());
+		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getExercisesMenuButton(){
-		return getMenuContainer(EXERCISES_NAV_ID, ExerciseHeaderEnum.EXERCISES_LABEL.toString());
+		return getMenuContainer(EXERCISES_NAV_ID, HeaderEnum.EXERCISES_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getExercisesYellowButtons(String buttonName){
@@ -144,11 +142,11 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getExercisesMenuHeader(){
-		return getHeaderInMenuContainer(EXERCISES_NAV_ID, ExerciseHeaderEnum.EXERCISES_LABEL.toString());
+		return getHeaderInMenuContainer(EXERCISES_NAV_ID, HeaderEnum.EXERCISES_MENU_BUTTON.toString());
 	}
 	
 	public WebElement getExercisesCloseButton(){
-		return getHeaderMenuCloseButton(EXERCISES_NAV_ID, ExerciseHeaderEnum.EXERCISES_LABEL.toString());
+		return getHeaderMenuCloseButton(EXERCISES_NAV_ID, HeaderEnum.EXERCISES_MENU_BUTTON.toString());
 	}
 	
 	public void clickExercisesCloseButton(){
