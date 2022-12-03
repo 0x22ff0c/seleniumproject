@@ -5,7 +5,12 @@ public enum ReferenceHeaderEnum {
 	HTML,
 	
 	HTML_CATEGORY_ITEMS(new String[]{"HTML Tag Reference", "HTML Browser Support", "HTML Event Reference", "HTML Color Reference", "HTML Attribute Reference"
-			,"HTML Canvas Reference", "HTML SVG Reference", "Google Maps Reference"});
+			,"HTML Canvas Reference", "HTML SVG Reference", "Google Maps Reference"}),
+	
+	CSS,
+	
+	CSS_CATEGORY_ITEMS(new String[]{"CSS Reference", "CSS Browser Support", "CSS Selector Reference", "Bootstrap 3 Reference", "Bootstrap 4 Reference"
+			,"W3.CSS Reference", "Icon Reference", "Sass Reference"});
 	
 	private String[] categoryItems;
 
