@@ -3,6 +3,9 @@ package pages.homepage.header;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import enums.homepage.ExerciseHeaderEnum;
+import enums.homepage.ReferenceHeaderEnum;
+import enums.homepage.TutorialsHeaderEnum;
 import pages.BasePage;
 
 public class HomePageHeader extends BasePage{
@@ -21,15 +24,10 @@ public class HomePageHeader extends BasePage{
 	protected WebElement getHeaderCaretButton(String title){
 		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down button", title));
 	}
-	
-	protected static final String TUTORIALS_LABEL = "Tutorials";
-	protected static final String REFERENCES_LABEL = "References";
-	protected static final String EXERCISES_LABEL = "Exercises";
-	
+
 	public WebElement getTutorialsButton(){
 		
-		return getButtonElement(TUTORIALS_LABEL);
-		
+		return getButtonElement(TutorialsHeaderEnum.TUTORIALS_LABEL.toString());		
 	}
 	
 	public void clickTutorialsButton(){
@@ -37,13 +35,12 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getTutorialsCaretButton(){
-		return getHeaderCaretButton(TUTORIALS_LABEL);
+		return getHeaderCaretButton(TutorialsHeaderEnum.TUTORIALS_LABEL.toString());
 	}
 	
 	public WebElement getReferencesButton(){
 		
-		return getButtonElement(REFERENCES_LABEL);
-		
+		return getButtonElement(ReferenceHeaderEnum.REFERENCES_LABEL.toString());
 	}
 	
 	public void clickReferencesButton(){
@@ -51,12 +48,12 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getReferencesCaretButton(){
-		return getHeaderCaretButton(REFERENCES_LABEL);
+		return getHeaderCaretButton(ReferenceHeaderEnum.REFERENCES_LABEL.toString());
 	}
 
 	public WebElement getExercisesButton(){
 		
-		return getButtonElement(EXERCISES_LABEL);
+		return getButtonElement(ExerciseHeaderEnum.EXERCISES_LABEL.toString());
 		
 	}
 	
@@ -65,7 +62,7 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(EXERCISES_LABEL);
+		return getHeaderCaretButton(ExerciseHeaderEnum.EXERCISES_LABEL.toString());
 	}
 	
 	public WebElement getVideosButton(){
