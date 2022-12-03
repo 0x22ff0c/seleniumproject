@@ -2,6 +2,8 @@ package enums.homepage;
 
 public enum ReferenceHeaderEnum {
 
+	REFERENCES_LABEL("References"),
+	
 	HTML,
 	
 	HTML_CATEGORY_ITEMS(new String[]{"HTML Tag Reference", "HTML Browser Support", "HTML Event Reference", "HTML Color Reference", "HTML Attribute Reference"
