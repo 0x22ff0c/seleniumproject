@@ -9,6 +9,9 @@ public enum HomePageHeaderEnum {
 	
 	JAVASCRIPT_CATEGORY("JavaScript"),
 	
+	JAVA_SCRIPT_CATEGORY_ITEMS(new String[]{"Learn JavaScript", "Learn jQuery", "Learn React", "Learn AngularJS", "Learn JSON",
+			"Learn AJAX", "Learn AppML", "Learn W3.JS"}),
+	
 	PROGRAMMING_CATEGORY("Programming"),
 	
 	SERVER_SIDE_CATEGORY("Server Side"),
