@@ -148,12 +148,7 @@ public class TestHomePageHeader {
 
 		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.XML.name()), ReferenceHeaderEnum.XML_CATEGORY_ITEMS.getCategoryItems());	
 		
-		categoryName = "Character Sets";
-		
-		categoryItems = new String[]{"HTML Character Sets", "HTML ASCII", "HTML ANSI", "HTML Windows-1252", "HTML ISO-8859-1"
-				,"HTML Symbols", "HTML UTF-8"};
-		
-		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(categoryName), categoryItems);	
+		verifyCategoryItems(homePageMenuItems.getReferencesMenuCategoryName(ReferenceHeaderEnum.CHARACTER_SETS.toString()), ReferenceHeaderEnum.CHARACTER_SETS_ITEMS.getCategoryItems());	
 		
 		baseTest.verifyButtonIsDisplayed(homePageMenuItems.getReferencesCaretButton());
 		
