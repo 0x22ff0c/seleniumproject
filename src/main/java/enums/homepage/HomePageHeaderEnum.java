@@ -24,6 +24,9 @@ public enum HomePageHeaderEnum {
 	
 	WEB_BUILDING_CATEGORY("Web Building"),
 	
+	WEB_BUILDING_CATEGORY_ITEMS(new String[]{"Create a Website ", "Where To Start", "Web Templates", "Web Statistics", "Web Certificates",
+			"Web Development", "Code Editor", "Test Your Typing Speed", "Play a Code Game", "Cyber Security", "Accessibility", "Join our Newsletter"}),
+	
 	DATA_ANALYTICS_CATEGORY("Data Analytics"),
 	
 	XML_TUTORIALS_CATEGORY("XML Tutorials");
