@@ -68,12 +68,12 @@ public class HomePageFooter extends BasePage{
 	
 	public WebElement getForumLink(){
 		
-		return getElementByLinkText("FORUM");
+		return getElementByLinkText(FooterEnum.FORUM.name());
 	}
 	
 	public WebElement getAboutLink(){
 		
-		return getElementByLinkText("ABOUT");
+		return getElementByLinkText(FooterEnum.ABOUT.name());
 	}
 	
 	private WebElement getIconLink(String linkName){
@@ -83,22 +83,22 @@ public class HomePageFooter extends BasePage{
 	
 	public WebElement getFacebookIconLink(){
 		
-		return getIconLink("W3Schools on Facebook");
+		return getIconLink(FooterEnum.FACEBOOK_ICON_LINK.toString());
 	}
 	
 	public WebElement getInstagramIconLink(){
 		
-		return getIconLink("W3Schools on Instagram");
+		return getIconLink(FooterEnum.INSTAGRAM_ICON_LINK.toString());
 	}
 	
 	public WebElement getLinkedInLink(){
 		
-		return getIconLink("W3Schools on LinkedIn");
+		return getIconLink(FooterEnum.LINKEDIN_ICON_LINK.toString());
 	}
 	
 	public WebElement getDiscordLink(){
 		
-		return getIconLink("Join the W3schools community on Discord");
+		return getIconLink(FooterEnum.DISCORD_ICON_LINK.toString());
 	}
 	
 	public WebElement getLinkOnFacebookButton(){
