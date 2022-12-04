@@ -13,7 +13,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	
 	@Override
 	protected WebElement getHeaderCaretButton(String title){
-		return getElementByXpath(String.format("//*[@title='%s']/descendant::*[contains(@class, 'caret-up') and contains(@style, 'inline')]", title), String.format("%s caret up button", title));
+		return getElementByXpath(String.format("//*[@title='%s']/descendant::*[contains(@class, 'caret-up') and contains(@style, 'inline')]", title), String.format("%s caret up", title));
 	}
 	
 	private WebElement getHeaderMenuCloseButton(String idValue, String elementName){

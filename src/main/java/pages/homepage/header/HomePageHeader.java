@@ -22,7 +22,7 @@ public class HomePageHeader extends BasePage{
 
 	protected WebElement getHeaderCaretButton(String title){
 		
-		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down button", title));
+		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down", title));
 	}
 
 	public WebElement getTutorialsButton(){
