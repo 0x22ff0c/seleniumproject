@@ -12,7 +12,7 @@ public enum WhereToStartMainEnum {
 	
 	LEARN_CSS_BUTTON("Learn CSS"),
 	
-	LEARN_JAVASCRIPT_SECTION("Learn JavaScript"),
+	LEARN_JAVASCRIPT_SECTION("Learn JavaScript section"),
 	
 	JAVASCRIPT("JavaScript"),
 	
