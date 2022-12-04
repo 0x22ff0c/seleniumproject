@@ -3,6 +3,7 @@ package pages.homepage.maincontent.wheretostartpage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import enums.wheretostartpage.WhereToStartMainEnum;
 import pages.BasePage;
 
 public class WhereToStartPage extends BasePage{
@@ -25,7 +26,7 @@ public class WhereToStartPage extends BasePage{
 	//Learn HTML section
 	public WebElement getHtmlLeftButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'yellow')]/descendant::*[text()='HTML']", "HTML button");
+		return getElementByXpath("//*[contains(@class, 'yellow')]/descendant::*[text()='HTML']", WhereToStartMainEnum.HTML.name());
 	}
 	
 	public String getHtml1stStep(){
@@ -39,19 +40,20 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public WebElement getLearnHtmlButton(){
-		return getElementByXpath("//*[@title='Go To Our HTML Tutorial' and contains(@class, 'button')]", "Learn HTML button");
+		
+		return getElementByXpath("//*[@title='Go To Our HTML Tutorial' and contains(@class, 'button')]", WhereToStartMainEnum.LEARN_HTML_BUTTON.toString());
 	}
 	
 	//CSS section
 	public void scrollToCSSsection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our CSS Tutorial']/parent::*)[2]", "Learn CSS section"));
+		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our CSS Tutorial']/parent::*)[2]", WhereToStartMainEnum.LEARN_CSS_SECTION.toString()));
 		
 	}
 	
 	public WebElement getCSSLeftButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'pink')]/descendant::*[text()='CSS']", "CSS button");
+		return getElementByXpath("//*[contains(@class, 'pink')]/descendant::*[text()='CSS']", WhereToStartMainEnum.CSS.name());
 	}
 	
 	public String getCSS2ndStep(){
@@ -66,18 +68,18 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getLearnCSSButton(){
 		
-		return getElementByXpath("//*[@title='Go To Our CSS Tutorial' and contains(@class, 'button')]", "Learn CSS button");
+		return getElementByXpath("//*[@title='Go To Our CSS Tutorial' and contains(@class, 'button')]", WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
 	}
 	
 	//JavaScript section
 	public void scrollToJavaScriptSection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our JavaScript Tutorial']/parent::*/parent::*)[1]", "Learn JavaScript section"));
+		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our JavaScript Tutorial']/parent::*/parent::*)[1]", WhereToStartMainEnum.LEARN_JAVASCRIPT_SECTION.toString()));
 	}
 	
 	public WebElement getJSLeftButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'turquoise')]/descendant::*[text()='JavaScript']", "JavaScript button");
+		return getElementByXpath("//*[contains(@class, 'turquoise')]/descendant::*[text()='JavaScript']", WhereToStartMainEnum.JAVASCRIPT.toString());
 	}
 	
 	public String getJS3rdStep(){
@@ -92,7 +94,7 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getLearnJSButton(){
 		
-		return getElementByXpath("//*[@title='Go To Our JavaScript Tutorial' and text()='Learn JavaScript']", "Learn JavaScript button");
+		return getElementByXpath("//*[@title='Go To Our JavaScript Tutorial' and text()='Learn JavaScript']", WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
 	}
 	
 	//What's next? section
