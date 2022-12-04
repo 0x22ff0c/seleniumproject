@@ -2,8 +2,6 @@ package enums.homepage;
 
 public enum TutorialsHeaderEnum {
 
-	TUTORIALS_LABEL("Tutorials"),
-	
 	HTML_AND_CSS_CATEGORY("HTML and CSS"),
 
 	HTML_AND_CSS_CATEGORY_ITEMS(new String[]{"Learn HTML", "Learn CSS", "Learn RWD", "Learn Bootstrap", "Learn W3.CSS", "Learn Colors", 
