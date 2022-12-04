@@ -3,6 +3,7 @@ package pages.homepage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import enums.footer.FooterEnum;
 import pages.BasePage;
 
 public class HomePageFooter extends BasePage{
@@ -14,31 +15,31 @@ public class HomePageFooter extends BasePage{
 	//Remove
 	public WebElement getFooter(){
 		
-		return getElementByTagName("footer", "Main page footer");
+		return getElementByTagName("footer", FooterEnum.FOOTER_SECTION.toString());
 	}
 	
 	//Retain
 	public void scrollToFooterSection(){
 		
-		control.scrollToElement(getElementByTagName("footer", "Footer section of the page"));
+		control.scrollToElement(getElementByTagName("footer", FooterEnum.FOOTER_SECTION.toString()));
 	}
 
 	//Retain
 	public WebElement getQuizzesButton(){
 		
-		return getButtonElement("Quizzes");
+		return getButtonElement(FooterEnum.QUIZZES_BUTTON.toString());
 	}
 	
 	//Retain
 	public WebElement getExcercisesButton(){
 		
-		return getButtonElement("Exercises");
+		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString());
 	}
 	
 	//Add "Certificates" for the button name
 	public WebElement getCertificatesButton(){
 		
-		return getButtonElement("Courses and Certificates");
+		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString());
 	}
 	
 	//Add "Upgrade" for the button name
