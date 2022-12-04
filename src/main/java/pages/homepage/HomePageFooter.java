@@ -103,7 +103,7 @@ public class HomePageFooter extends BasePage{
 	
 	public WebElement getLinkOnFacebookButton(){
 		
-		return getElementByXpath("//*[@title='Like W3Schools on Facebook']", "Facebook button");
+		return getButtonElement("Like W3Schools on Facebook", FooterEnum.FACEBOOK_LIKE_BUTTON.toString());
 	}
 	
 	public String getFooterText(){
@@ -113,17 +113,17 @@ public class HomePageFooter extends BasePage{
 	
 	public WebElement getTermsOfUseLink(){
 		
-		return getElementByLinkText("terms of use");
+		return getElementByLinkText(FooterEnum.TERMS_OF_USE_LINK.toString());
 	}
 	
 	public WebElement getCookieAndPrivacyPolicyLink(){
 		
-		return getElementByLinkText("cookie and privacy policy");
+		return getElementByLinkText(FooterEnum.COOKIE_AND_PRIVACY_POLICY_LINK.toString());
 	}
 	
 	public WebElement getCopyrightLink(){
 		
-		return getElementByLinkText("Copyright 1999-2022", "Copyright");
+		return getElementByLinkText(FooterEnum.COPYRIGHT_LINK.toString(), "Copyright");
 	}
 	
 }
