@@ -165,7 +165,7 @@ public class TestHomePageHeader {
 		
 		for(String link : links){
 			
-			baseTest.verifyElementIsDisplayed(homePageMenuItems.getExerciseMenuButton(link));
+			baseTest.verifyButtonIsDisplayed(homePageMenuItems.getExerciseMenuButton(link));
 		
 		}
 		
@@ -186,7 +186,7 @@ public class TestHomePageHeader {
 
 		for(String buttons : ExerciseHeaderEnum.BUTTON_NAMES.getLinksArray()){
 			
-			baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesYellowButtons(buttons));
+			baseTest.verifyButtonIsDisplayed(homePageMenuItems.getExercisesYellowButtons(buttons));
 
 		}
 
