@@ -45,25 +45,25 @@ public class HomePageFooter extends BasePage{
 	//Add "Upgrade" for the button name
 	public WebElement getUpgradeButton(){
 		
-		return getButtonElement("Upgrade to Improve Your Learning Experiences");
+		return getButtonElement(FooterEnum.UPGRADE_BUTTON.toString());
 	}
 	
 	//Change to getButtonElement that accepts By object
 	public WebElement getSpacesButton(){
 		
-		return getElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", "Spaces button");
+		return getElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", FooterEnum.SPACES_BUTTON.toString());
 	}
 	
 	//Retain
 	public WebElement getSupportButton(){
 		
-		return getButtonElement("Support");
+		return getButtonElement(FooterEnum.SUPPORT_BUTTON.toString());
 	}
 	
 	//Retain
 	public WebElement getNewsLetterButton(){
 		
-		return getButtonElement("Join Our Newsletter");
+		return getButtonElement(FooterEnum.NEWSLETTER_BUTTON.toString());
 	}
 	
 	public WebElement getForumLink(){
