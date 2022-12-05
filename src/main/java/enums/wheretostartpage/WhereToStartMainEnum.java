@@ -2,6 +2,8 @@ package enums.wheretostartpage;
 
 public enum WhereToStartMainEnum {
 
+	WHERE_TO_START("Where To Start"),
+	
 	HTML,
 	
 	LEARN_HTML_BUTTON("Learn HTML"),
@@ -42,7 +44,17 @@ public enum WhereToStartMainEnum {
 	
 	REACT("React"),
 	
-	GIT("Git");
+	GIT("Git"),
+	
+	WHAT_ABOUT_BACK_END_SECTION("What About Back-End?"),
+	
+	PHP,
+	
+	PYTHON("Python"),
+	
+	SQL,
+	
+	HOME_PAGE_LINK("Homepage");
 	
 	private WhereToStartMainEnum(){
 		
