@@ -20,7 +20,13 @@ public enum WhereToStartMainEnum {
 	
 	WHATS_NEXT_SECTION("What's Next?"),
 	
-	NEXT_STEP("next step");
+	NEXT_STEP("next step"),
+	
+	W3SCHOOLS_SPACES_SECTION("\"W3Schools Spaces\" section"),
+	
+	GET_STARTED_BUTTON("Get Started for Free"),
+	
+	HOW_IT_WORKS("How it works");
 	
 	private WhereToStartMainEnum(){
 		
