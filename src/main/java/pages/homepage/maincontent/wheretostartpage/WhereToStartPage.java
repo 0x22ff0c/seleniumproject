@@ -15,18 +15,24 @@ public class WhereToStartPage extends BasePage{
 	//"Where To Start" section
 	public String getWhereToStartHeaderContent(){
 		
-		return getTextOfElementUsingXpathLocator("//*[@class='textsmallerscreens' and text()='Where To Start']");
+		String whereToStartHeaderXpathExpression = "//*[@class='textsmallerscreens' and text()='%s']";
+		
+		return getTextOfElementUsingXpathLocator(String.format(whereToStartHeaderXpathExpression, WhereToStartMainEnum.WHERE_TO_START.toString()));
 	}
 
 	public String getSubheaderContent(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@class='textsmallerscreens' and text()='Where To Start']/following-sibling::*)[1]");
+		String whereToStartSubheaderXpathExpression = "(//*[@class='textsmallerscreens' and text()='%s']/following-sibling::*)[1]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(whereToStartSubheaderXpathExpression, WhereToStartMainEnum.WHERE_TO_START.toString()));
 	}
 	
 	//Learn HTML section
 	public WebElement getHtmlLeftButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'yellow')]/descendant::*[text()='HTML']", WhereToStartMainEnum.HTML.name());
+		String htmlLinkXpathExpression = "//*[contains(@class, 'yellow')]/descendant::*[text()='%s']";
+		
+		return getElementByXpath(String.format(htmlLinkXpathExpression, WhereToStartMainEnum.HTML.name()), WhereToStartMainEnum.HTML.name());
 	}
 	
 	public String getHtml1stStep(){
@@ -226,7 +232,8 @@ public class WhereToStartPage extends BasePage{
 	//What about back-end section
 	public void scrollToBackEndSection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*", "\"What About Back-End?\" section"));
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*", 
+				String.format("\"%s\" section",WhereToStartMainEnum.WHAT_ABOUT_BACK_END_SECTION.toString())));
 	}
 	
 	public String getBackEndHeader(){
@@ -253,17 +260,17 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getBackEndPhpLink(){
 		
-		return getElementByLinkText("PHP");
+		return getElementByLinkText(WhereToStartMainEnum.PHP.name());
 	}
 	
 	public WebElement getBackEndPythonLink(){
 		
-		return getElementByLinkText("Python");
+		return getElementByLinkText(WhereToStartMainEnum.PYTHON.toString());
 	}
 	
 	public WebElement getBackEndSqlLink(){
 		
-		return getElementByLinkText("SQL");
+		return getElementByLinkText(WhereToStartMainEnum.SQL.name());
 	}
 	
 	public String getBackEnd3rdSubheader(){
@@ -273,7 +280,7 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getBackEndHomePageLink(){
 		
-		return getElementByLinkText("Homepage");
+		return getElementByLinkText(WhereToStartMainEnum.HOME_PAGE_LINK.toString());
 	}
 	
 }
