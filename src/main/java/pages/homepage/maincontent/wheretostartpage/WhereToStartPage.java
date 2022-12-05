@@ -37,17 +37,24 @@ public class WhereToStartPage extends BasePage{
 	
 	public String getHtml1stStep(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our HTML Tutorial']/following-sibling::*)[1]");
+		String html1stStepXpathExpression = "(//*[@title='%s']/following-sibling::*)[1]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(html1stStepXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()));
 	}
 	
 	public String getHtml1stStepAdditionalInfo(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our HTML Tutorial']/following-sibling::*)[2]");
+		String html1stStepAdditionalInfoXpathExpression = "(//*[@title='%s']/following-sibling::*)[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(html1stStepAdditionalInfoXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnHtmlButton(){
 		
-		return getElementByXpath("//*[@title='Go To Our HTML Tutorial' and contains(@class, 'button')]", WhereToStartMainEnum.LEARN_HTML_BUTTON.toString());
+		String learnHtmlButtonXpathExpression = "//*[@title='%s' and contains(@class, 'button')]";
+		
+		return getElementByXpath(String.format(learnHtmlButtonXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()), 
+				WhereToStartMainEnum.LEARN_HTML_BUTTON.toString());
 	}
 	
 	//CSS section
