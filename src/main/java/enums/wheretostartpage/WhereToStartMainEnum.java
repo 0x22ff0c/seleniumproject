@@ -26,7 +26,23 @@ public enum WhereToStartMainEnum {
 	
 	GET_STARTED_BUTTON("Get Started for Free"),
 	
-	HOW_IT_WORKS("How it works");
+	HOW_IT_WORKS("How it works"),
+	
+	HELLO_DEVELOPER("Hello Developer!"),
+	
+	FRONT_END_DEVELOPERS("Front-End Developers"),
+	
+	TIP("Tip:"),
+	
+	BOOTSTRAP("Bootstrap"),
+	
+	SASS("SASS (CSS pre-processor)"),
+	
+	JQUERY("jQuery"),
+	
+	REACT("React"),
+	
+	GIT("Git");
 	
 	private WhereToStartMainEnum(){
 		
