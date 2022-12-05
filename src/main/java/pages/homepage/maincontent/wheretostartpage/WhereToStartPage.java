@@ -100,7 +100,10 @@ public class WhereToStartPage extends BasePage{
 	//What's next? section
 	public void scrollToWhatsNextSection(){
 		
-		control.scrollToElement(getElementByXpath("//*[text()=\"What's Next?\"]/parent::*/parent::*", "\"What's Next?\" section"));
+		String whatsNextSectionXpathExpression = "//*[text()=\"%s\"]/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(whatsNextSectionXpathExpression, WhereToStartMainEnum.WHATS_NEXT_SECTION.toString()),
+				String.format("\"%s\" section", WhereToStartMainEnum.WHATS_NEXT_SECTION.toString())));
 	}
 	
 	public String getWhatsNextHeader(){
@@ -120,7 +123,9 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getWhatsNext2ndSubheaderNextStep(){
 		
-		return getElementByXpath("(//*[@class='textsmallerscreens'])[2]/following-sibling::*[2]/descendant::b[text()='next step']", "next step");
+		String whatsNext2ndSubheaderNextStepXpathExpression = "(//*[@class='textsmallerscreens'])[2]/following-sibling::*[2]/descendant::b[text()='%s']";
+		
+		return getElementByXpath(String.format(whatsNext2ndSubheaderNextStepXpathExpression, WhereToStartMainEnum.NEXT_STEP.toString()), WhereToStartMainEnum.NEXT_STEP.toString());
 	}
 	
 	public String getWhatsNext3rdSubHeader(){
