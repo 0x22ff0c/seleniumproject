@@ -6,6 +6,8 @@ public enum WhereToStartMainEnum {
 	
 	HTML,
 	
+	GO_TO_HTML_TUTORIAL("Go To Our HTML Tutorial"),
+	
 	LEARN_HTML_BUTTON("Learn HTML"),
 	
 	LEARN_CSS_SECTION("Learn CSS section"),
