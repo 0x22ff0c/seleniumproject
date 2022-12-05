@@ -135,8 +135,8 @@ public class WhereToStartPage extends BasePage{
 	
 	//W3Schools Spaces
 	public void scrollToW3SchoolsSpacesSection(){
-		
-		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[3]/parent::*/parent::*", "\"W3Schools Spaces\" section"));
+
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[3]/parent::*/parent::*", WhereToStartMainEnum.W3SCHOOLS_SPACES_SECTION.toString()));
 	}
 	
 	public String getW3SchoolsSpacesHeader(){
@@ -151,12 +151,15 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getGetStartedForFreeButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'button') and text()='Get Started for Free']", "\"Get Started for Free\" button");
+		String getStartedButtonXpathExpression = "//*[contains(@class, 'button') and text()='%s']";
+		
+		return getElementByXpath(String.format(getStartedButtonXpathExpression, WhereToStartMainEnum.GET_STARTED_BUTTON.toString()),
+				String.format("\"%s\" button", WhereToStartMainEnum.GET_STARTED_BUTTON.toString()));
 	}
 	
 	public WebElement getHowItWorksImage(){
 		
-		return getElementByXpath("//*[@src='how-spaces-works3.png']", "\"How it works\" image");
+		return getElementByXpath("//*[@src='how-spaces-works3.png']", String.format("\"%s\" image", WhereToStartMainEnum.HOW_IT_WORKS.toString()));
 	}
 	
 	//Hello Developer
