@@ -165,7 +165,8 @@ public class WhereToStartPage extends BasePage{
 	//Hello Developer
 	public void scrollToHelloDeveloperSection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[4]/parent::*/parent::*", "\"Hello Developer!\" section"));
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[4]/parent::*/parent::*",
+				String.format("\"%s\" section", WhereToStartMainEnum.HELLO_DEVELOPER.toString())));
 	}
 	
 	public String getHelloDeveloperHeaderValue(){
@@ -180,7 +181,9 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getHelloDeveloperSubheaderFrontEndDevelopers(){
 		
-		return getElementByXpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[1]/descendant::strong[text()='Front-End Developers']", "Front-End Developers");
+		String frontEndDevelopersSubheaderXpathExpresssion = "((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[1]/descendant::strong[text()='%s']";
+		
+		return getElementByXpath(String.format(frontEndDevelopersSubheaderXpathExpresssion, WhereToStartMainEnum.FRONT_END_DEVELOPERS.toString()), WhereToStartMainEnum.FRONT_END_DEVELOPERS.toString());
 	}
 	
 	public String getHelloDeveloper2ndSubheaderContent(){
@@ -190,32 +193,34 @@ public class WhereToStartPage extends BasePage{
 	
 	public WebElement getHelloDeveloper2ndSubheaderTip(){
 		
-		return getElementByXpath("((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]/descendant::strong[text()='Tip:']", "Tip:");
+		String tipXpathExpression = "((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]/descendant::strong[text()='%s']";
+		
+		return getElementByXpath(String.format(tipXpathExpression, WhereToStartMainEnum.TIP.toString()), WhereToStartMainEnum.TIP.toString());
 	}
 	
 	public WebElement getBootstrapLink(){
 		
-		return getElementByLinkText("Bootstrap");
+		return getElementByLinkText(WhereToStartMainEnum.BOOTSTRAP.toString());
 	}
 	
 	public WebElement getSASSLink(){
 		
-		return getElementByLinkText("SASS (CSS pre-processor)");
+		return getElementByLinkText(WhereToStartMainEnum.SASS.toString());
 	}
 	
 	public WebElement getJqueryLink(){
 		
-		return getElementByLinkText("jQuery");
+		return getElementByLinkText(WhereToStartMainEnum.JQUERY.toString());
 	}
 	
 	public WebElement getReactLink(){
 		
-		return getElementByLinkText("React");
+		return getElementByLinkText(WhereToStartMainEnum.REACT.toString());
 	}
 	
 	public WebElement getGitLink(){
 		
-		return getElementByLinkText("Git");
+		return getElementByLinkText(WhereToStartMainEnum.GIT.toString());
 	}
 	
 	//What about back-end section
