@@ -16,7 +16,11 @@ public enum WhereToStartMainEnum {
 	
 	JAVASCRIPT("JavaScript"),
 	
-	LEARN_JAVASCRIPT_BUTTON("Learn JavaScript");
+	LEARN_JAVASCRIPT_BUTTON("Learn JavaScript"),
+	
+	WHATS_NEXT_SECTION("What's Next?"),
+	
+	NEXT_STEP("next step");
 	
 	private WhereToStartMainEnum(){
 		
