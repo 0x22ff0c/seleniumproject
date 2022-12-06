@@ -333,14 +333,17 @@ public class HomePageMainContent extends BasePage{
 	
 	//Java
 	public WebElement getJavaHeader(){
+		
 		return getElementByXpath("//*[text()='Java']", "Java Header");
 	}
 	
 	public String getJavaSubheader(){
+
 		return getTextOfElementUsingXpathLocator("//*[text()='Java']/following-sibling::*/descendant::*");
 	}
 	
 	public WebElement getLearnJavaButton(){
+		
 		return getElementByXpath("//*[text()='Java']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Java']");
 	}
 	
