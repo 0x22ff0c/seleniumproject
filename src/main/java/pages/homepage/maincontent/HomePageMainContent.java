@@ -295,19 +295,23 @@ public class HomePageMainContent extends BasePage{
 	
 	//Other tutorials
 	public void scrollToOtherTutorialsSection(){
+		
 		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
 	}
 	
 	//PHP
 	public WebElement getPHPHeader(){
+		
 		return getElementByXpath("//*[text()='PHP']", "PHP Header");
 	}
 	
 	public String getPHPSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='PHP']/following-sibling::*/descendant::*");
 	}
 
 	public WebElement getLearnPHPButton(){
+		
 		return getElementByXpath("//*[text()='PHP']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn PHP']");
 	}
 
