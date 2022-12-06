@@ -22,6 +22,8 @@ public enum WhereToStartMainEnum {
 	
 	JAVASCRIPT("JavaScript"),
 	
+	GO_TO_JAVASCRIPT_TUTORIAL("Go To Our JavaScript Tutorial"),
+	
 	LEARN_JAVASCRIPT_BUTTON("Learn JavaScript"),
 	
 	WHATS_NEXT_SECTION("What's Next?"),
