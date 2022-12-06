@@ -365,14 +365,17 @@ public class HomePageMainContent extends BasePage{
 	
 	//W3.CSS
 	public WebElement getW3CSSHeader(){
+		
 		return getElementByXpath("//*[text()='W3.CSS']", "W3.CSS Header");
 	}
 	
 	public String getW3CSSSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='W3.CSS']/following-sibling::*/descendant::*");
 	}
 	
 	public WebElement getLearnW3CSSButton(){
+		
 		return getElementByXpath("//*[text()='W3.CSS']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn W3.CSS']", "Learn W3.CSS button");
 	}
 	
