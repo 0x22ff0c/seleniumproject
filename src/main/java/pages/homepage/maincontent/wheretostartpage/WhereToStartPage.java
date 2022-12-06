@@ -42,11 +42,15 @@ public class WhereToStartPage extends BasePage{
 		return getTextOfElementUsingXpathLocator(String.format(html1stStepXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()));
 	}
 	
+	private String setAdditionalInfoXpathExpression(String titleOfTheSection){
+		
+		return String.format("(//*[@title='%s']/following-sibling::*)[2]", titleOfTheSection);
+		
+	}
+	
 	public String getHtml1stStepAdditionalInfo(){
 		
-		String html1stStepAdditionalInfoXpathExpression = "(//*[@title='%s']/following-sibling::*)[2]";
-		
-		return getTextOfElementUsingXpathLocator(String.format(html1stStepAdditionalInfoXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()));
+		return getTextOfElementUsingXpathLocator(setAdditionalInfoXpathExpression( WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnHtmlButton(){
@@ -82,10 +86,8 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getCSS2ndStepAdditionalInfo(){
-		
-		String css2ndStepAdditionalInfo = "(//*[@title='%s']/following-sibling::*)[2]";
-		
-		return getTextOfElementUsingXpathLocator(String.format(css2ndStepAdditionalInfo, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()));
+
+		return getTextOfElementUsingXpathLocator(setAdditionalInfoXpathExpression(WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnCSSButton(){
@@ -120,10 +122,8 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public String getJS3rdStepAdditionalInfo(){
-		
-		String js3rdStepAdditionalInfoXpathExpression = "(//*[@title='%s']/following-sibling::*)[2]";
-		
-		return getTextOfElementUsingXpathLocator(String.format(js3rdStepAdditionalInfoXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()));
+
+		return getTextOfElementUsingXpathLocator(setAdditionalInfoXpathExpression(WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnJSButton(){
