@@ -381,14 +381,17 @@ public class HomePageMainContent extends BasePage{
 	
 	//Bootstrap
 	public WebElement getBootstrapHeader(){
+		
 		return getElementByXpath("//*[text()='Bootstrap']", "Bootstrap Header");
 	}
 	
 	public String getBootstrapSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='Bootstrap']/following-sibling::*/descendant::*");
 	}
 	
 	public WebElement getLearnBootstrapButton(){
+		
 		return getElementByXpath("//*[text()='Bootstrap']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Bootstrap']", "Learn Bootstrap button");
 	}
 	
