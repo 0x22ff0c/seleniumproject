@@ -249,38 +249,47 @@ public class HomePageMainContent extends BasePage{
 	
 	//SQL section
 	public void scrollToSQLSection(){
+		
 		control.scrollToElement(getElementByXpath("//h1[text()='SQL']/parent::*/parent::*/parent::*", "SQL section"));
 	}
 	
 	public String getSQLHeaderContent(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]");
 	}
 	
 	public String getSQLSubheaderContent(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]/following-sibling::*[1]");
 	}
 	
 	public WebElement getSQLLearnSQLButton(){
+		
 		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn SQL')]", "Learn SQL button");
 	} 
 	
 	public WebElement getSQLReferenceButton(){
+		
 		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'SQL Reference')]", "SQL Reference button");
 	}
 	
 	public WebElement getSQLGetCertifiedButton(){
+		
 		return getButtonElement("Add SQL Certification", "SQL - Get Certfieid");
 	}
 	
 	public String getSQLCodeExampleHeader(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[text()='SQL'])/parent::*/following-sibling::*/descendant::*[2]");
 	}
 	
 	public WebElement getSQLSampleCodeSection(){
+		
 		return getElementByXpath("//*[text()='SQL']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "SQL Sample code");
 	}
 	
 	public WebElement getSQLTryItYourselfButton(){
+		
 		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", "SQL Try It Yourself button");
 	}
 	
