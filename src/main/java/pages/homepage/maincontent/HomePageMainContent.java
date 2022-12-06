@@ -428,14 +428,17 @@ public class HomePageMainContent extends BasePage{
 
 	//Code editor section
 	public void scrollToCodeEditorSection(){
+		
 		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", "Code Editor section"));
 	}
 	
 	public String getCodeEditorHeader(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'black')]/descendant::h1)[3]");
 	}
 	
 	public String getCodeEditorSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("((//*[contains(@class, 'black')]/descendant::h1)[3]/following-sibling::*)[1]");
 	}
 	
@@ -447,34 +450,42 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public String getCodeEditorUrlValue(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::input");
 	}
 	
 	public WebElement getCodeEditorFrontendActive(){
+		
 		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
 	}
 	
 	public int getCodeEditorFrontendActiveDisplayCount(){
+		
 		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
 	}
 	
 	private WebElement getCodeEditorFrontEndNotActive(){
+		
 		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", "Frontend inactive button");
 	}
 	
 	public void clickFrontendButton(){
+		
 		control.clickButton(getCodeEditorFrontEndNotActive());
 	}
 
 	public WebElement getCodeEditorBackEndActive(){
+		
 		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
 	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
+		
 		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", "Backend inactive button");
 	}
 	
 	public int getCodeEditorBackEndActiveDisplayCount(){
+		
 		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
 	}
 	
@@ -486,31 +497,38 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorFrontendGIF(){
+		
 		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", "Frontend GIF");
 	}
 
 	public WebElement getCodeEditorBackendGIF(){
+		
 		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", "Backend GIF");
 	}
 	
 	public WebElement getCodeEditorTryFrontend(){
+		
 		return getElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", "Frontend editor button");
 	}
 	
 	public WebElement getCodeEditorTryBackend(){
+		
 		return getElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", "Backend editor button");
 	}
 	
 	//W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
+		
 		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", "W3Schools Spaces"));
 	}
 	
 	public WebElement getW3SchoolsSpacesHeader(){
+		
 		return getElementByXpath("//*[text()='W3Schools Spaces']", "W3Schools Spaces");
 	}
 	
 	public String getW3SchoolsSpacesSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='W3Schools Spaces']/following-sibling::*[1]");
 	}
 	
@@ -670,31 +688,38 @@ public class HomePageMainContent extends BasePage{
 	
 	//Color Picker section
 	public void scrollToColorPickerSection(){
+		
 		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", "Color Picker section"));
 	}
 	
 	public WebElement getColorPickerHeader(){
+		
 		return getElementByXpath("//*[text()='Color Picker']", "Color Picker header");
 	}
 	
 	public String getColorPickerSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='Color Picker']/following-sibling::*[1]");
 	}
 	
 	public WebElement getColorPickerImage(){
+		
 		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']");
 	}
 	
 	//Code Game section
 	public void scrollToCodeGameSection(){
+		
 		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", "Code Game section"));
 	}
 	
 	public WebElement getCodeGameHeader(){
+		
 		return getElementByXpath("//*[text()='Code Game']", "Code Game header");
 	}
 	
 	public String getCodeGameSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='Code Game']/following-sibling::*[1]");
 	}
 	
@@ -708,27 +733,33 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeGamePlayGameButton(){
+		
 		return getElementByXpath("//*[text()='Play Game']", "Play Game");
 	}
 	
 	//Exercises and Quizzes section
 	public void scrollToExercisesQuizzesSection(){
+		
 		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", "Exercises and Quizzes section"));
 	}
 	
 	public WebElement getExercisesAndQuizzesHeader(){
+		
 		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", "Exercises and Quizzes header");
 	}
 	
 	public String getExercisesAndQuizzesSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[text()='Exercises and Quizzes']/following-sibling::*)[1]");
 	}
 	
 	public WebElement getExercisesAndQuizzesExercisesButton(){
+		
 		return getElementByXpath("(//*[text()='Exercises'])[2]/parent::*", "Exercises");
 	}
 	
 	public WebElement getExercisesAndQuizzesQuizzesButton(){
+		
 		return getElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", "Quizzes");
 	}
 	
@@ -740,14 +771,17 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWebTemplatesHeader(){
+		
 		return getElementByXpath("(//*[text()='Web Templates'])[2]");
 	}
 	
 	public String getWebTemplatesSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[text()='Web Templates'])[2]/following-sibling::*[2]");
 	}
 	
 	public WebElement getWebTemplatesSubheaderFreeText(){
+
 		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*[2]/descendant::strong[text()='free']", "free");
 	}
 	
@@ -761,6 +795,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWebTemplatesBrowseTemplatesButton(){
+
 		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", "Browse Templates");
 	}
 	
@@ -771,53 +806,65 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCertificationHeader(){
+		
 		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", "Kickstart your career header");
 	}
 	
 	public String getCertificationSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[1]");
 	}
 	
 	public WebElement getCertificationGetStartedButton(){
+		
 		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", "Get started");
 	}
 	
 	public WebElement getCertificationArrow(){
+
 		return getElementById("w3_cert_arrow", "Arrow pointing to certification badge");
 	}
 	
 	public WebElement getCertificationBadge(){
+		
 		return getElementById("w3_cert_badge", "Certification badge");
 	}
 	
 	//How To Section
 	public void scrollToHowToSection(){
+		
 		control.scrollToElement(getElementById("howto_padding", "How To Section"));
 	}
 	
 	public WebElement getHowToSectionHeader(){
+		
 		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']");
 	}
 	
 	public String getHowToSectionSubheader(){
+
 		return getTextOfElementUsingXpathLocator("//*[@id='howto_padding']/descendant::*[2]");
 	}
 	
 	public String getHowToSection2ndSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[@id='howto_padding']/descendant::*[3]");
 	}
 	
 	public WebElement getHowToSectionSampleWindowDotButton(int dotButtonNumber){
+		
 		return getElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[2]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("How To Section Window dot button - %s", dotButtonNumber));
 	}
 	
 	public String getHowToSectionSampleWindowUrlValue(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'codeeditorbr-container')])[2]/descendant::input");
 	}
 	
 	int slideNumber = 1;
 	
 	public void scrollToHowToSectionSliderContainer(){
+		
 		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", "How To Section window"));
 	}
 	
@@ -874,10 +921,12 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowNextButton(){
+		
 		return getElementByClass("next", "How To Section Sample Window - Next");
 	}
 	
 	public WebElement getHowToSectionSampleWindowCounter(){
+		
 		return getElementByXpath(String.format("(//*[@class='numbertext'])[%s]", slideNumber), String.format("How to slider: %s / 3", slideNumber));
 	}
 	
@@ -892,14 +941,12 @@ public class HomePageMainContent extends BasePage{
 
 		String[] filesImagesArray = {"img_nature_wide.jpg", "img_snow_wide.jpg", "img_mountains_wide.jpg"};
 
-		return getElementByXpath(String.format("//*[@src='%s']",filesImagesArray[getArrayIndex(slideNumber)]), String.format("Slider image: %s", slideNumber));
-		
+		return getElementByXpath(String.format("//*[@src='%s']",filesImagesArray[getArrayIndex(slideNumber)]), String.format("Slider image: %s", slideNumber));		
 	}
 	
 	public WebElement getHowtoSectionActiveDot(){
 		
 		return getElementByXpath(String.format("//*[contains(@class, 'dot active') and @onclick='currentSlide(%s)']", slideNumber), String.format("How To Section - Active Dot: %s", slideNumber));
-		
 	}
 	
 	public WebElement getHowToLearnButton(){
