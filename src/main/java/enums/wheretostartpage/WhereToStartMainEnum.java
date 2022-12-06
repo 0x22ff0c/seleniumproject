@@ -14,11 +14,15 @@ public enum WhereToStartMainEnum {
 	
 	CSS,
 	
+	GO_TO_CSS_TUTORIAL("Go To Our CSS Tutorial"),
+	
 	LEARN_CSS_BUTTON("Learn CSS"),
 	
 	LEARN_JAVASCRIPT_SECTION("Learn JavaScript section"),
 	
 	JAVASCRIPT("JavaScript"),
+	
+	GO_TO_JAVASCRIPT_TUTORIAL("Go To Our JavaScript Tutorial"),
 	
 	LEARN_JAVASCRIPT_BUTTON("Learn JavaScript"),
 	

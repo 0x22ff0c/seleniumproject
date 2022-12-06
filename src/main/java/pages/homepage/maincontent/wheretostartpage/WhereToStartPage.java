@@ -42,11 +42,15 @@ public class WhereToStartPage extends BasePage{
 		return getTextOfElementUsingXpathLocator(String.format(html1stStepXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()));
 	}
 	
+	private String setAdditionalInfoXpathExpression(String titleOfTheSection){
+		
+		return String.format("(//*[@title='%s']/following-sibling::*)[2]", titleOfTheSection);
+		
+	}
+	
 	public String getHtml1stStepAdditionalInfo(){
 		
-		String html1stStepAdditionalInfoXpathExpression = "(//*[@title='%s']/following-sibling::*)[2]";
-		
-		return getTextOfElementUsingXpathLocator(String.format(html1stStepAdditionalInfoXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()));
+		return getTextOfElementUsingXpathLocator(setAdditionalInfoXpathExpression( WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnHtmlButton(){
@@ -60,54 +64,77 @@ public class WhereToStartPage extends BasePage{
 	//CSS section
 	public void scrollToCSSsection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our CSS Tutorial']/parent::*)[2]", WhereToStartMainEnum.LEARN_CSS_SECTION.toString()));
+		String cssSectionXpathExpression = "(//*[@title='%s']/parent::*)[2]";
+		
+		control.scrollToElement(getElementByXpath(String.format(cssSectionXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), 
+				WhereToStartMainEnum.LEARN_CSS_SECTION.toString()));
 		
 	}
 	
 	public WebElement getCSSLeftButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'pink')]/descendant::*[text()='CSS']", WhereToStartMainEnum.CSS.name());
+		String cssLeftButtonXpathExpression = "//*[contains(@class, 'pink')]/descendant::*[text()='%s']";
+		
+		return getElementByXpath(String.format(cssLeftButtonXpathExpression, WhereToStartMainEnum.CSS.name()), WhereToStartMainEnum.CSS.name());
 	}
 	
 	public String getCSS2ndStep(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[1]");
+		String css2ndStepXpathExpression = "(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[1]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(css2ndStepXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()));
 	}
 	
 	public String getCSS2ndStepAdditionalInfo(){
-		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[2]");
+
+		return getTextOfElementUsingXpathLocator(setAdditionalInfoXpathExpression(WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnCSSButton(){
 		
-		return getElementByXpath("//*[@title='Go To Our CSS Tutorial' and contains(@class, 'button')]", WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
+		String cssLearnCSSButtonXpathExpression = "//*[@title='%s' and contains(@class, 'button')]";
+		
+		return getElementByXpath(String.format(cssLearnCSSButtonXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
 	}
 	
 	//JavaScript section
 	public void scrollToJavaScriptSection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our JavaScript Tutorial']/parent::*/parent::*)[1]", WhereToStartMainEnum.LEARN_JAVASCRIPT_SECTION.toString()));
+		String javaScriptSectionXpathExpression = "(//*[@title='%s']/parent::*/parent::*)[1]";
+		
+		control.scrollToElement(getElementByXpath(String.format(javaScriptSectionXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), 
+				WhereToStartMainEnum.LEARN_JAVASCRIPT_SECTION.toString()));
 	}
 	
 	public WebElement getJSLeftButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'turquoise')]/descendant::*[text()='JavaScript']", WhereToStartMainEnum.JAVASCRIPT.toString());
+		String jsLeftButtonXpathExpression = "//*[contains(@class, 'turquoise')]/descendant::*[text()='%s']";
+		
+		return getElementByXpath(String.format(jsLeftButtonXpathExpression, WhereToStartMainEnum.JAVASCRIPT.toString()), 
+				WhereToStartMainEnum.JAVASCRIPT.toString());
 	}
 	
 	public String getJS3rdStep(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our JavaScript Tutorial']/following-sibling::*)[1]");
+		String js3rdStepXpathExpression = "(//*[@title='%s']/following-sibling::*)[1]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(js3rdStepXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()));
 	}
 	
 	public String getJS3rdStepAdditionalInfo(){
-		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our JavaScript Tutorial']/following-sibling::*)[2]");
+
+		return getTextOfElementUsingXpathLocator(setAdditionalInfoXpathExpression(WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnJSButton(){
 		
-		return getElementByXpath("//*[@title='Go To Our JavaScript Tutorial' and text()='Learn JavaScript']", WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
+		String learnJSButtonXpathExpression = "//*[@title='%s' and text()='Learn JavaScript']";
+		
+		return getElementByXpath(String.format(learnJSButtonXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
+	}
+	
+	private String setNameSection(String sectioName){
+		return String.format("\"%s\" section", sectioName);
 	}
 	
 	//What's next? section
@@ -115,8 +142,8 @@ public class WhereToStartPage extends BasePage{
 		
 		String whatsNextSectionXpathExpression = "//*[text()=\"%s\"]/parent::*/parent::*";
 		
-		control.scrollToElement(getElementByXpath(String.format(whatsNextSectionXpathExpression, WhereToStartMainEnum.WHATS_NEXT_SECTION.toString()),
-				String.format("\"%s\" section", WhereToStartMainEnum.WHATS_NEXT_SECTION.toString())));
+		control.scrollToElement(getElementByXpath(String.format(whatsNextSectionXpathExpression, WhereToStartMainEnum.WHATS_NEXT_SECTION.toString()), 
+				setNameSection(WhereToStartMainEnum.WHATS_NEXT_SECTION.toString())));
 	}
 	
 	public String getWhatsNextHeader(){
@@ -179,7 +206,7 @@ public class WhereToStartPage extends BasePage{
 	public void scrollToHelloDeveloperSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[4]/parent::*/parent::*",
-				String.format("\"%s\" section", WhereToStartMainEnum.HELLO_DEVELOPER.toString())));
+				setNameSection(WhereToStartMainEnum.HELLO_DEVELOPER.toString())));
 	}
 	
 	public String getHelloDeveloperHeaderValue(){
@@ -239,8 +266,8 @@ public class WhereToStartPage extends BasePage{
 	//What about back-end section
 	public void scrollToBackEndSection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*", 
-				String.format("\"%s\" section",WhereToStartMainEnum.WHAT_ABOUT_BACK_END_SECTION.toString())));
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*",
+				setNameSection(WhereToStartMainEnum.WHAT_ABOUT_BACK_END_SECTION.toString())));
 	}
 	
 	public String getBackEndHeader(){
