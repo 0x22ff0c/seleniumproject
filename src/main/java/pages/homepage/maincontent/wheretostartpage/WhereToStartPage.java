@@ -133,13 +133,17 @@ public class WhereToStartPage extends BasePage{
 		return getElementByXpath(String.format(learnJSButtonXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
 	}
 	
+	private String setNameSection(String sectioName){
+		return String.format("\"%s\" section", sectioName);
+	}
+	
 	//What's next? section
 	public void scrollToWhatsNextSection(){
 		
 		String whatsNextSectionXpathExpression = "//*[text()=\"%s\"]/parent::*/parent::*";
 		
-		control.scrollToElement(getElementByXpath(String.format(whatsNextSectionXpathExpression, WhereToStartMainEnum.WHATS_NEXT_SECTION.toString()),
-				String.format("\"%s\" section", WhereToStartMainEnum.WHATS_NEXT_SECTION.toString())));
+		control.scrollToElement(getElementByXpath(String.format(whatsNextSectionXpathExpression, WhereToStartMainEnum.WHATS_NEXT_SECTION.toString()), 
+				setNameSection(WhereToStartMainEnum.WHATS_NEXT_SECTION.toString())));
 	}
 	
 	public String getWhatsNextHeader(){
@@ -202,7 +206,7 @@ public class WhereToStartPage extends BasePage{
 	public void scrollToHelloDeveloperSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[4]/parent::*/parent::*",
-				String.format("\"%s\" section", WhereToStartMainEnum.HELLO_DEVELOPER.toString())));
+				setNameSection(WhereToStartMainEnum.HELLO_DEVELOPER.toString())));
 	}
 	
 	public String getHelloDeveloperHeaderValue(){
@@ -262,8 +266,8 @@ public class WhereToStartPage extends BasePage{
 	//What about back-end section
 	public void scrollToBackEndSection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*", 
-				String.format("\"%s\" section",WhereToStartMainEnum.WHAT_ABOUT_BACK_END_SECTION.toString())));
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*",
+				setNameSection(WhereToStartMainEnum.WHAT_ABOUT_BACK_END_SECTION.toString())));
 	}
 	
 	public String getBackEndHeader(){
