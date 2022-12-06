@@ -317,14 +317,17 @@ public class HomePageMainContent extends BasePage{
 
 	//jQuery
 	public WebElement getjQueryHeader(){
+		
 		return getElementByXpath("//*[text()='jQuery']", "jQuery Header");
 	}
 	
 	public String getjQuerySubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='jQuery']/following-sibling::*/descendant::*");
 	}
 	
 	public WebElement getLearnjQueryButton(){
+		
 		return getElementByXpath("//*[text()='jQuery']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn jQuery']");
 	}
 	
