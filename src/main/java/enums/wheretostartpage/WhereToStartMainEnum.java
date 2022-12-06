@@ -14,6 +14,8 @@ public enum WhereToStartMainEnum {
 	
 	CSS,
 	
+	GO_TO_CSS_TUTORIAL("Go To Our CSS Tutorial"),
+	
 	LEARN_CSS_BUTTON("Learn CSS"),
 	
 	LEARN_JAVASCRIPT_SECTION("Learn JavaScript section"),
