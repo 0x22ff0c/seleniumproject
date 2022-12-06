@@ -60,28 +60,39 @@ public class WhereToStartPage extends BasePage{
 	//CSS section
 	public void scrollToCSSsection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our CSS Tutorial']/parent::*)[2]", WhereToStartMainEnum.LEARN_CSS_SECTION.toString()));
+		String cssSectionXpathExpression = "(//*[@title='%s']/parent::*)[2]";
+		
+		control.scrollToElement(getElementByXpath(String.format(cssSectionXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), 
+				WhereToStartMainEnum.LEARN_CSS_SECTION.toString()));
 		
 	}
 	
 	public WebElement getCSSLeftButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'pink')]/descendant::*[text()='CSS']", WhereToStartMainEnum.CSS.name());
+		String cssLeftButtonXpathExpression = "//*[contains(@class, 'pink')]/descendant::*[text()='%s']";
+		
+		return getElementByXpath(String.format(cssLeftButtonXpathExpression, WhereToStartMainEnum.CSS.name()), WhereToStartMainEnum.CSS.name());
 	}
 	
 	public String getCSS2ndStep(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[1]");
+		String css2ndStepXpathExpression = "(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[1]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(css2ndStepXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()));
 	}
 	
 	public String getCSS2ndStepAdditionalInfo(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our CSS Tutorial']/following-sibling::*)[2]");
+		String css2ndStepAdditionalInfo = "(//*[@title='%s']/following-sibling::*)[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(css2ndStepAdditionalInfo, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnCSSButton(){
 		
-		return getElementByXpath("//*[@title='Go To Our CSS Tutorial' and contains(@class, 'button')]", WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
+		String cssLearnCSSButtonXpathExpression = "//*[@title='%s' and contains(@class, 'button')]";
+		
+		return getElementByXpath(String.format(cssLearnCSSButtonXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
 	}
 	
 	//JavaScript section
