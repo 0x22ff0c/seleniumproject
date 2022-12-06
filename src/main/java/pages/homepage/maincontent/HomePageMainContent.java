@@ -518,14 +518,17 @@ public class HomePageMainContent extends BasePage{
 	
 	//W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
+		
 		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", "W3Schools Spaces"));
 	}
 	
 	public WebElement getW3SchoolsSpacesHeader(){
+		
 		return getElementByXpath("//*[text()='W3Schools Spaces']", "W3Schools Spaces");
 	}
 	
 	public String getW3SchoolsSpacesSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='W3Schools Spaces']/following-sibling::*[1]");
 	}
 	
