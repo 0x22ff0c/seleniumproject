@@ -98,27 +98,39 @@ public class WhereToStartPage extends BasePage{
 	//JavaScript section
 	public void scrollToJavaScriptSection(){
 		
-		control.scrollToElement(getElementByXpath("(//*[@title='Go To Our JavaScript Tutorial']/parent::*/parent::*)[1]", WhereToStartMainEnum.LEARN_JAVASCRIPT_SECTION.toString()));
+		String javaScriptSectionXpathExpression = "(//*[@title='%s']/parent::*/parent::*)[1]";
+		
+		control.scrollToElement(getElementByXpath(String.format(javaScriptSectionXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), 
+				WhereToStartMainEnum.LEARN_JAVASCRIPT_SECTION.toString()));
 	}
 	
 	public WebElement getJSLeftButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'turquoise')]/descendant::*[text()='JavaScript']", WhereToStartMainEnum.JAVASCRIPT.toString());
+		String jsLeftButtonXpathExpression = "//*[contains(@class, 'turquoise')]/descendant::*[text()='%s']";
+		
+		return getElementByXpath(String.format(jsLeftButtonXpathExpression, WhereToStartMainEnum.JAVASCRIPT.toString()), 
+				WhereToStartMainEnum.JAVASCRIPT.toString());
 	}
 	
 	public String getJS3rdStep(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our JavaScript Tutorial']/following-sibling::*)[1]");
+		String js3rdStepXpathExpression = "(//*[@title='%s']/following-sibling::*)[1]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(js3rdStepXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()));
 	}
 	
 	public String getJS3rdStepAdditionalInfo(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[@title='Go To Our JavaScript Tutorial']/following-sibling::*)[2]");
+		String js3rdStepAdditionalInfoXpathExpression = "(//*[@title='%s']/following-sibling::*)[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(js3rdStepAdditionalInfoXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()));
 	}
 	
 	public WebElement getLearnJSButton(){
 		
-		return getElementByXpath("//*[@title='Go To Our JavaScript Tutorial' and text()='Learn JavaScript']", WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
+		String learnJSButtonXpathExpression = "//*[@title='%s' and text()='Learn JavaScript']";
+		
+		return getElementByXpath(String.format(learnJSButtonXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
 	}
 	
 	//What's next? section
