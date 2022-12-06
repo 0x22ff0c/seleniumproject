@@ -349,14 +349,17 @@ public class HomePageMainContent extends BasePage{
 	
 	//C++
 	public WebElement getCplusplusHeader(){
+		
 		return getElementByXpath("//*[text()='C++']", "C++ Header");
 	}
 	
 	public String getCplusplusSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("//*[text()='C++']/following-sibling::*/descendant::*");
 	}
 	
 	public WebElement getLearnCplusplusButton(){
+		
 		return getElementByXpath("//*[text()='C++']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn C++']");
 	}
 	
