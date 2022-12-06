@@ -771,14 +771,17 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWebTemplatesHeader(){
+		
 		return getElementByXpath("(//*[text()='Web Templates'])[2]");
 	}
 	
 	public String getWebTemplatesSubheader(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[text()='Web Templates'])[2]/following-sibling::*[2]");
 	}
 	
 	public WebElement getWebTemplatesSubheaderFreeText(){
+
 		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*[2]/descendant::strong[text()='free']", "free");
 	}
 	
@@ -792,6 +795,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWebTemplatesBrowseTemplatesButton(){
+
 		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", "Browse Templates");
 	}
 	
