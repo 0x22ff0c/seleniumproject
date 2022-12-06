@@ -203,38 +203,47 @@ public class HomePageMainContent extends BasePage{
 	
 	//Python section
 	public void scrollToPythonSection(){
+		
 		control.scrollToElement(getElementByXpath("//h1[text()='Python']/parent::*/parent::*/parent::*", "Python section"));
 	}
 	
 	public String getPythonHeaderContent(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]");
 	}
 	
 	public String getPythonSubheaderContent(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]/following-sibling::*[1]");
 	}
 	
 	public WebElement getPythonLearnPythonButton(){
+		
 		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn Python')]", "Learn Python button");
 	} 
 	
 	public WebElement getPythonReferenceButton(){
+		
 		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'Python Reference')]", "Python Reference button");
 	}
 	
 	public WebElement getPythonGetCertifiedButton(){
+		
 		return getButtonElement("Add Python Certification", "Python - Get Certfieid");
 	}	
 	
 	public String getPythonCodeExampleHeader(){
+		
 		return getTextOfElementUsingXpathLocator("(//*[text()='Python'])/parent::*/following-sibling::*/descendant::*[2]");
 	}
 	
 	public WebElement getPythonSampleCodeSection(){
+		
 		return getElementByXpath("//*[text()='Python']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "Python Sample code");
 	}
 	
 	public WebElement getPythonTryItYourselfButton(){
+		
 		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", "Python Try It Yourself button");
 	}
 	
