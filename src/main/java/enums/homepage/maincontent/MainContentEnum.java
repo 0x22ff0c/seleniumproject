@@ -10,9 +10,23 @@ public enum MainContentEnum {
 	
 	SEARCH_FIELD("Search field"),
 	
-	SEARCH_FIELD_BUTTON("Search field button"),
+	SEARCH_FIELD_BUTTON("Search field"),
 	
-	NOT_SURE_WHERE_TO_BEGIN_LINK("Not Sure Where To Begin?");
+	NOT_SURE_WHERE_TO_BEGIN_LINK("Not Sure Where To Begin?"),
+	
+	HTML,
+	
+	LEARN_HTML("Learn HTML"),
+	
+	VIDEO_TUTORIAL("Video Tutorial"),
+	
+	HTML_REFERENCE("HTML Reference"),
+	
+	GET_CERTIFIED("Get Certified");
+	
+	private MainContentEnum(){
+		
+	}
 	
 	private String elementName; 
 	
