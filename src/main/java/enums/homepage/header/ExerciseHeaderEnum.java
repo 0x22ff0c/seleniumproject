@@ -1,4 +1,4 @@
-package enums.homepage;
+package enums.homepage.header;
 
 public enum ExerciseHeaderEnum {
 
