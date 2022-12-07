@@ -3,7 +3,7 @@ package pages.homepage.header;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import enums.homepage.HeaderEnum;
+import enums.homepage.header.HeaderEnum;
 
 public class HomePageMenuItems extends HomePageHeader{
 
