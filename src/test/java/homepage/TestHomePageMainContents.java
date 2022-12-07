@@ -35,9 +35,9 @@ public class TestHomePageMainContents {
 		
 		baseTest.verifyElementIsDisplayed(homePage.getMainContent());
 		
-		baseTest.verifyTextIsTheSame(homePage.getHeaderTextInMainContent(), "Learn to Code");
+		baseTest.verifyElementIsDisplayed(homePage.getHeaderTextInMainContent());
 	
-		baseTest.verifyTextIsTheSame(homePage.getSubheaderTextInMainContent(), "With the world's largest web developer site.");
+		baseTest.verifyElementIsDisplayed(homePage.getSubheaderTextInMainContent());
 	
 		baseTest.verifyElementIsDisplayed(homePage.getSearchbarField());
 	
