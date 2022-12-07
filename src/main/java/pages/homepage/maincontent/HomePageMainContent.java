@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import enums.homepage.maincontent.MainContentEnum;
 import pages.BasePage;
 
 public class HomePageMainContent extends BasePage{
@@ -15,22 +16,29 @@ public class HomePageMainContent extends BasePage{
 	//Main Content
 	public WebElement getMainContent(){
 		
-		return getElementById("main", "Main homepage content");
+		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION.toString());
 	}
 	
-	public String getHeaderTextInMainContent(){
+	public WebElement getHeaderTextInMainContent(){
 		
-		return getTextOfElement(getElementByXpath("//*[text()='Learn to Code']",  "\"Learn to Code\" header"));
+		String learnToCodeHeaderXpathExpression = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(learnToCodeHeaderXpathExpression, MainContentEnum.LEARN_TO_CODE_HEADER.toString()), 
+				MainContentEnum.LEARN_TO_CODE_HEADER.toString() + " header");
+		
 	}
 	
-	public String getSubheaderTextInMainContent(){
+	public WebElement getSubheaderTextInMainContent(){
 		
-		return getTextOfElement(getElementByXpath("//*[text()=\"With the world's largest web developer site.\"]", "\"With the world's largest web developer site.\" subheader"));
+		String learnToCodeSubheaderXpathExpression = "//*[text()=\"%s\"]";
+		
+		return getElementByXpath(String.format(learnToCodeSubheaderXpathExpression, MainContentEnum.LEARN_TO_CODE_SUBHEADER.toString()), 
+				MainContentEnum.LEARN_TO_CODE_SUBHEADER.toString() + " subheader");
 	}
 	
 	public WebElement getSearchbarField(){
 		
-		return getElementById("search2", "Search field");
+		return getElementById("search2", MainContentEnum.SEARCH_FIELD.toString());
 	}
 	
 	public String getSearchbarfieldPlaceholder(){
@@ -40,12 +48,12 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getSearchbarButton(){
 		
-		return getElementById("learntocode_searchbtn", "Search field button");	
+		return getElementById("learntocode_searchbtn", MainContentEnum.SEARCH_FIELD_BUTTON.toString());	
 	}
 	
 	public WebElement getWhereToBeginLink(){
 		
-		return getElementByLinkText("Not Sure Where To Begin?");
+		return getElementByLinkText(MainContentEnum.NOT_SURE_WHERE_TO_BEGIN_LINK.toString());
 	}
 	
 	public void scrollToWhereToBeginLink(){
