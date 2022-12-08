@@ -189,7 +189,9 @@ public class HomePageMainContent extends BasePage{
 	//JavaScript section
 	public void scrollToJavaScriptSection(){
 		
-		control.scrollToElement(getElementByXpath("//h1[text()='JavaScript']/parent::*/parent::*/parent::*", "JavaScript section"));
+		String javaScriptSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(javaScriptSectionXpathExpression, MainContentEnum.JAVASCRIPT.toString()), MainContentEnum.JAVASCRIPT.toString() + " section"));
 	}
 	
 	public String getJavaScriptHeaderContent(){
@@ -204,32 +206,41 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getJavaScriptLearnJavaScriptButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn JavaScript')]", "Learn JavaScript button");
+		String learnJavaScriptButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(learnJavaScriptButtonXpathExpression, MainContentEnum.LEARN_JAVASCRIPT.toString()), MainContentEnum.LEARN_JAVASCRIPT.toString() + " button");
 	} 
 	
 	public WebElement getJavaScriptReferenceButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'JavaScript Reference')]", "JavaScript Reference button");
+		String javaScriptReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(javaScriptReferenceButtonXpathExpression, MainContentEnum.JAVASCRIPT_REFERENCE.toString()), 
+				MainContentEnum.JAVASCRIPT_REFERENCE.toString() + " button");
 	}
 	
 	public WebElement getJavaScriptGetCertifiedButton(){
 		
-		return getButtonElement("Add JavaScript Certification", "JavaScript - Get Certfieid");
+		return getButtonElement("Add JavaScript Certification", MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getJavaScriptCodeExampleHeader(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[text()='JavaScript'])[3]/parent::*/following-sibling::*/descendant::*[2]");
+		String javaScriptCodeHeaderXpathExpression = "(//*[text()='%s'])[3]/parent::*/following-sibling::*/descendant::*[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(javaScriptCodeHeaderXpathExpression, MainContentEnum.JAVASCRIPT.toString()));
 	}
 	
 	public WebElement getJavaScriptSampleCodeSection(){
 		
-		return getElementByXpath("(//*[text()='JavaScript'])[3]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "JavaScript Sample code");
+		String javaScriptSampleCodeSectionXpathExpression = "(//*[text()='%s'])[3]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
+		
+		return getElementByXpath(String.format(javaScriptSampleCodeSectionXpathExpression, MainContentEnum.JAVASCRIPT.toString()), MainContentEnum.JAVASCRIPT_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getJavaScriptTryItYourselfButton(){
 		
-		return getElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", "JavaScript Try It Yourself button");
+		return getElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.JAVASCRIPT_TRY_IT_YOURSELF_BUTTON.toString());
 	}
 	
 	//Python section
