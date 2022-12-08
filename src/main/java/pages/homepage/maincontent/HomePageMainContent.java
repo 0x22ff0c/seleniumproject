@@ -116,15 +116,14 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getHtmlSampleCodeSection(){
 		
-		
 		String htmlSampleCodeXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
 		
-		return getElementByXpath(String.format(htmlSampleCodeXpathExpression, MainContentEnum.HTML.name()), "HTML Sample code");
+		return getElementByXpath(String.format(htmlSampleCodeXpathExpression, MainContentEnum.HTML.name()), MainContentEnum.HTML_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getHtmlTryItYourselfButton(){
 		
-		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", "HTML Try It Yourself button");
+		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", MainContentEnum.HTML_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	
 	//CSS Section
