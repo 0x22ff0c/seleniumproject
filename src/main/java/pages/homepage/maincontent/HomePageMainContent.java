@@ -130,7 +130,10 @@ public class HomePageMainContent extends BasePage{
 	//CSS Section
 	public void scrollToCSSSection(){
 		
-		control.scrollToElement(getElementByXpath("//h1[text()='CSS']/parent::*/parent::*/parent::*", "CSS section"));
+		String cssSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(cssSectionXpathExpression, MainContentEnum.CSS.name()), 
+				MainContentEnum.CSS.name() + " section"));
 	}
 	
 	public String getCssHeaderContent(){
@@ -145,32 +148,42 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getCSSLearnCSSButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn CSS')]", "Learn CSS button");
+		String learnCSSButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(learnCSSButtonXpathExpression, MainContentEnum.LEARN_CSS.toString()), 
+				MainContentEnum.LEARN_CSS.toString() + " button");
 	} 
 	
 	public WebElement getCSSReferenceButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'CSS Reference')]", "CSS Reference button");
+		String cssReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(cssReferenceButtonXpathExpression, MainContentEnum.CSS_REFERENCE.toString()), 
+				MainContentEnum.CSS_REFERENCE.toString() + " button");
 	}
 	
 	public WebElement getCSSGetCertifiedButton(){
 		
-		return getButtonElement("Add CSS Certification", "Get Certfieid");
+		return getButtonElement("Add CSS Certification", MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getCSSCodeExampleHeader(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[text()='CSS'])[2]/parent::*/following-sibling::*/descendant::*[2]");
+		String cssCodeExampleHeaderXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(cssCodeExampleHeaderXpathExpression, MainContentEnum.CSS.name()));
 	}
 	
 	public WebElement getCSSSampleCodeSection(){
 		
-		return getElementByXpath("(//*[text()='CSS'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "CSS Sample code");
+		String sampleCodeSectionXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
+		
+		return getElementByXpath(String.format(sampleCodeSectionXpathExpression, MainContentEnum.CSS.name()), MainContentEnum.CSS_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getCSSTryItYourselfButton(){
 		
-		return getElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", "CSS Try It Yourself button");
+		return getElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.CSS_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	
 	//JavaScript section
