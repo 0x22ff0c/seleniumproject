@@ -42,7 +42,17 @@ public enum MainContentEnum {
 	
 	JAVASCRIPT_SAMPLE_CODE_SECTION("JavaScript Sample code"),
 	
-	JAVASCRIPT_TRY_IT_YOURSELF_BUTTON("JavaScript Try It Yourself");
+	JAVASCRIPT_TRY_IT_YOURSELF_BUTTON("JavaScript Try It Yourself"),
+	
+	PYTHON("Python"),
+	
+	LEARN_PYTHON("Learn Python"),
+	
+	PYTHON_REFERENCE("Python Reference"),
+	
+	PYTHON_SAMPLE_CODE_SECTION("Python Sample code"),
+	
+	PYTHON_TRY_IT_YOURSELF_BUTTON("Python Try It Yourself");
 	
 	private MainContentEnum(){
 		
