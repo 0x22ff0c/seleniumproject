@@ -22,6 +22,10 @@ public enum MainContentEnum {
 	
 	HTML_REFERENCE("HTML Reference"),
 	
+	HTML_SAMPLE_CODE_SECTION("HTML Sample code"),
+	
+	HTML_TRY_IT_YOURSELF_BUTTON("HTML Try It Yourself"),
+	
 	GET_CERTIFIED("Get Certified"),
 	
 	CSS,
