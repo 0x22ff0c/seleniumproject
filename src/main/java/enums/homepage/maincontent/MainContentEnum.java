@@ -52,7 +52,17 @@ public enum MainContentEnum {
 	
 	PYTHON_SAMPLE_CODE_SECTION("Python Sample code"),
 	
-	PYTHON_TRY_IT_YOURSELF_BUTTON("Python Try It Yourself");
+	PYTHON_TRY_IT_YOURSELF_BUTTON("Python Try It Yourself"),
+	
+	SQL,
+	
+	LEARN_SQL("Learn SQL"),
+	
+	SQL_REFERENCE("SQL Reference"),
+	
+	SQL_SAMPLE_CODE_SECTION("SQL Sample code"),
+	
+	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself");
 	
 	private MainContentEnum(){
 		
