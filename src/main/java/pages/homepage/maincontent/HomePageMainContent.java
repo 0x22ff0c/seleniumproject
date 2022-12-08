@@ -116,21 +116,23 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getHtmlSampleCodeSection(){
 		
-		
 		String htmlSampleCodeXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
 		
-		return getElementByXpath(String.format(htmlSampleCodeXpathExpression, MainContentEnum.HTML.name()), "HTML Sample code");
+		return getElementByXpath(String.format(htmlSampleCodeXpathExpression, MainContentEnum.HTML.name()), MainContentEnum.HTML_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getHtmlTryItYourselfButton(){
 		
-		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", "HTML Try It Yourself button");
+		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", MainContentEnum.HTML_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	
 	//CSS Section
 	public void scrollToCSSSection(){
 		
-		control.scrollToElement(getElementByXpath("//h1[text()='CSS']/parent::*/parent::*/parent::*", "CSS section"));
+		String cssSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(cssSectionXpathExpression, MainContentEnum.CSS.name()), 
+				MainContentEnum.CSS.name() + " section"));
 	}
 	
 	public String getCssHeaderContent(){
@@ -145,38 +147,50 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getCSSLearnCSSButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn CSS')]", "Learn CSS button");
+		String learnCSSButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(learnCSSButtonXpathExpression, MainContentEnum.LEARN_CSS.toString()), 
+				MainContentEnum.LEARN_CSS.toString() + " button");
 	} 
 	
 	public WebElement getCSSReferenceButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'CSS Reference')]", "CSS Reference button");
+		String cssReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(cssReferenceButtonXpathExpression, MainContentEnum.CSS_REFERENCE.toString()), 
+				MainContentEnum.CSS_REFERENCE.toString() + " button");
 	}
 	
 	public WebElement getCSSGetCertifiedButton(){
 		
-		return getButtonElement("Add CSS Certification", "Get Certfieid");
+		return getButtonElement("Add CSS Certification", MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getCSSCodeExampleHeader(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[text()='CSS'])[2]/parent::*/following-sibling::*/descendant::*[2]");
+		String cssCodeExampleHeaderXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(cssCodeExampleHeaderXpathExpression, MainContentEnum.CSS.name()));
 	}
 	
 	public WebElement getCSSSampleCodeSection(){
 		
-		return getElementByXpath("(//*[text()='CSS'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "CSS Sample code");
+		String sampleCodeSectionXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
+		
+		return getElementByXpath(String.format(sampleCodeSectionXpathExpression, MainContentEnum.CSS.name()), MainContentEnum.CSS_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getCSSTryItYourselfButton(){
 		
-		return getElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", "CSS Try It Yourself button");
+		return getElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.CSS_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	
 	//JavaScript section
 	public void scrollToJavaScriptSection(){
 		
-		control.scrollToElement(getElementByXpath("//h1[text()='JavaScript']/parent::*/parent::*/parent::*", "JavaScript section"));
+		String javaScriptSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(javaScriptSectionXpathExpression, MainContentEnum.JAVASCRIPT.toString()), MainContentEnum.JAVASCRIPT.toString() + " section"));
 	}
 	
 	public String getJavaScriptHeaderContent(){
@@ -191,38 +205,49 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getJavaScriptLearnJavaScriptButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn JavaScript')]", "Learn JavaScript button");
+		String learnJavaScriptButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(learnJavaScriptButtonXpathExpression, MainContentEnum.LEARN_JAVASCRIPT.toString()), MainContentEnum.LEARN_JAVASCRIPT.toString() + " button");
 	} 
 	
 	public WebElement getJavaScriptReferenceButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'JavaScript Reference')]", "JavaScript Reference button");
+		String javaScriptReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(javaScriptReferenceButtonXpathExpression, MainContentEnum.JAVASCRIPT_REFERENCE.toString()), 
+				MainContentEnum.JAVASCRIPT_REFERENCE.toString() + " button");
 	}
 	
 	public WebElement getJavaScriptGetCertifiedButton(){
 		
-		return getButtonElement("Add JavaScript Certification", "JavaScript - Get Certfieid");
+		return getButtonElement("Add JavaScript Certification", MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getJavaScriptCodeExampleHeader(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[text()='JavaScript'])[3]/parent::*/following-sibling::*/descendant::*[2]");
+		String javaScriptCodeHeaderXpathExpression = "(//*[text()='%s'])[3]/parent::*/following-sibling::*/descendant::*[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(javaScriptCodeHeaderXpathExpression, MainContentEnum.JAVASCRIPT.toString()));
 	}
 	
 	public WebElement getJavaScriptSampleCodeSection(){
 		
-		return getElementByXpath("(//*[text()='JavaScript'])[3]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "JavaScript Sample code");
+		String javaScriptSampleCodeSectionXpathExpression = "(//*[text()='%s'])[3]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
+		
+		return getElementByXpath(String.format(javaScriptSampleCodeSectionXpathExpression, MainContentEnum.JAVASCRIPT.toString()), MainContentEnum.JAVASCRIPT_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getJavaScriptTryItYourselfButton(){
 		
-		return getElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", "JavaScript Try It Yourself button");
+		return getElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.JAVASCRIPT_TRY_IT_YOURSELF_BUTTON.toString());
 	}
 	
 	//Python section
 	public void scrollToPythonSection(){
 		
-		control.scrollToElement(getElementByXpath("//h1[text()='Python']/parent::*/parent::*/parent::*", "Python section"));
+		String pythonSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(pythonSectionXpathExpression, MainContentEnum.PYTHON.toString()), MainContentEnum.PYTHON.toString() + " section"));
 	}
 	
 	public String getPythonHeaderContent(){
@@ -237,38 +262,48 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getPythonLearnPythonButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn Python')]", "Learn Python button");
+		String learnPythonButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(learnPythonButtonXpathExpression, MainContentEnum.LEARN_PYTHON.toString()), MainContentEnum.LEARN_PYTHON.toString() + " button");
 	} 
 	
 	public WebElement getPythonReferenceButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'Python Reference')]", "Python Reference button");
+		String pythonReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(pythonReferenceButtonXpathExpression, MainContentEnum.PYTHON_REFERENCE.toString()), MainContentEnum.PYTHON_REFERENCE.toString() + " button");
 	}
 	
 	public WebElement getPythonGetCertifiedButton(){
 		
-		return getButtonElement("Add Python Certification", "Python - Get Certfieid");
+		return getButtonElement("Add Python Certification", MainContentEnum.GET_CERTIFIED.toString());
 	}	
 	
 	public String getPythonCodeExampleHeader(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[text()='Python'])/parent::*/following-sibling::*/descendant::*[2]");
+		String pythonCodeHeaderXpathExpression = "(//*[text()='%s'])/parent::*/following-sibling::*/descendant::*[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(pythonCodeHeaderXpathExpression, MainContentEnum.PYTHON.toString()));
 	}
 	
 	public WebElement getPythonSampleCodeSection(){
 		
-		return getElementByXpath("//*[text()='Python']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "Python Sample code");
+		String pythonSampleCodeSection = "//*[text()='%s']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
+		
+		return getElementByXpath(String.format(pythonSampleCodeSection, MainContentEnum.PYTHON.toString()), MainContentEnum.PYTHON_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getPythonTryItYourselfButton(){
 		
-		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", "Python Try It Yourself button");
+		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.PYTHON_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	
 	//SQL section
 	public void scrollToSQLSection(){
 		
-		control.scrollToElement(getElementByXpath("//h1[text()='SQL']/parent::*/parent::*/parent::*", "SQL section"));
+		String sqlSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(sqlSectionXpathExpression, MainContentEnum.SQL.name()), MainContentEnum.SQL.name() + " section"));
 	}
 	
 	public String getSQLHeaderContent(){
@@ -283,32 +318,40 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getSQLLearnSQLButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn SQL')]", "Learn SQL button");
+		String learnSQLButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(learnSQLButtonXpathExpression, MainContentEnum.LEARN_SQL.toString()), MainContentEnum.LEARN_SQL.toString() + " button");
 	} 
 	
 	public WebElement getSQLReferenceButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'SQL Reference')]", "SQL Reference button");
+		String sqlReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(sqlReferenceButtonXpathExpression, MainContentEnum.SQL_REFERENCE.toString()), MainContentEnum.SQL_REFERENCE.toString() + " button");
 	}
 	
 	public WebElement getSQLGetCertifiedButton(){
 		
-		return getButtonElement("Add SQL Certification", "SQL - Get Certfieid");
+		return getButtonElement("Add SQL Certification", MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getSQLCodeExampleHeader(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[text()='SQL'])/parent::*/following-sibling::*/descendant::*[2]");
+		String sqlCodeExampleHeader = "(//*[text()='%s'])/parent::*/following-sibling::*/descendant::*[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(sqlCodeExampleHeader, MainContentEnum.SQL.name()));
 	}
 	
 	public WebElement getSQLSampleCodeSection(){
 		
-		return getElementByXpath("//*[text()='SQL']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "SQL Sample code");
+		String sqlSampleCodeXpathExpression = "//*[text()='%s']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
+		
+		return getElementByXpath(String.format(sqlSampleCodeXpathExpression, MainContentEnum.SQL.name()), MainContentEnum.SQL_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getSQLTryItYourselfButton(){
 		
-		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", "SQL Try It Yourself button");
+		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.SQL_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	
 	//Other tutorials
