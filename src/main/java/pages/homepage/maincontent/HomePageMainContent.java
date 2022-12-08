@@ -302,7 +302,9 @@ public class HomePageMainContent extends BasePage{
 	//SQL section
 	public void scrollToSQLSection(){
 		
-		control.scrollToElement(getElementByXpath("//h1[text()='SQL']/parent::*/parent::*/parent::*", "SQL section"));
+		String sqlSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(sqlSectionXpathExpression, MainContentEnum.SQL.name()), MainContentEnum.SQL.name() + " section"));
 	}
 	
 	public String getSQLHeaderContent(){
@@ -317,32 +319,40 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getSQLLearnSQLButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'tut-button') and contains(text(), 'Learn SQL')]", "Learn SQL button");
+		String learnSQLButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(learnSQLButtonXpathExpression, MainContentEnum.LEARN_SQL.toString()), MainContentEnum.LEARN_SQL.toString() + " button");
 	} 
 	
 	public WebElement getSQLReferenceButton(){
 		
-		return getElementByXpath("//*[contains(@class, 'ref-button') and contains(text(), 'SQL Reference')]", "SQL Reference button");
+		String sqlReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(sqlReferenceButtonXpathExpression, MainContentEnum.SQL_REFERENCE.toString()), MainContentEnum.SQL_REFERENCE.toString() + " button");
 	}
 	
 	public WebElement getSQLGetCertifiedButton(){
 		
-		return getButtonElement("Add SQL Certification", "SQL - Get Certfieid");
+		return getButtonElement("Add SQL Certification", MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getSQLCodeExampleHeader(){
 		
-		return getTextOfElementUsingXpathLocator("(//*[text()='SQL'])/parent::*/following-sibling::*/descendant::*[2]");
+		String sqlCodeExampleHeader = "(//*[text()='%s'])/parent::*/following-sibling::*/descendant::*[2]";
+		
+		return getTextOfElementUsingXpathLocator(String.format(sqlCodeExampleHeader, MainContentEnum.SQL.name()));
 	}
 	
 	public WebElement getSQLSampleCodeSection(){
 		
-		return getElementByXpath("//*[text()='SQL']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]", "SQL Sample code");
+		String sqlSampleCodeXpathExpression = "//*[text()='%s']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
+		
+		return getElementByXpath(String.format(sqlSampleCodeXpathExpression, MainContentEnum.SQL.name()), MainContentEnum.SQL_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getSQLTryItYourselfButton(){
 		
-		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", "SQL Try It Yourself button");
+		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.SQL_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	
 	//Other tutorials
