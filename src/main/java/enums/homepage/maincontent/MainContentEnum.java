@@ -22,7 +22,17 @@ public enum MainContentEnum {
 	
 	HTML_REFERENCE("HTML Reference"),
 	
-	GET_CERTIFIED("Get Certified");
+	GET_CERTIFIED("Get Certified"),
+	
+	CSS,
+	
+	LEARN_CSS("Learn CSS"),
+	
+	CSS_REFERENCE("CSS Reference"),
+	
+	CSS_SAMPLE_CODE_SECTION("CSS Sample code"),
+	
+	CSS_TRY_IT_YOURSELF_BUTTON("CSS Try It Yourself");
 	
 	private MainContentEnum(){
 		
