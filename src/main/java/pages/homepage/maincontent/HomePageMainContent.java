@@ -1,5 +1,6 @@
 package pages.homepage.maincontent;
 
+import org.checkerframework.checker.units.qual.m;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -363,17 +364,22 @@ public class HomePageMainContent extends BasePage{
 	//PHP
 	public WebElement getPHPHeader(){
 		
-		return getElementByXpath("//*[text()='PHP']", "PHP Header");
+		String phpHeaderXpathExpression = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(phpHeaderXpathExpression, MainContentEnum.PHP.name()), MainContentEnum.PHP.name() + " header");
 	}
 	
 	public String getPHPSubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='PHP']/following-sibling::*/descendant::*");
+		return getTextOfElementUsingXpathLocator(String.format("//*[text()='%s']/following-sibling::*/descendant::*", MainContentEnum.PHP.name()));
 	}
 
 	public WebElement getLearnPHPButton(){
 		
-		return getElementByXpath("//*[text()='PHP']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn PHP']");
+		String learnPhpButtonXpathExpression = "//*[text()='{0}']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn {0}']";
+		
+		return getElementByXpath(String.format(learnPhpButtonXpathExpression, MainContentEnum.PHP.name()), MainContentEnum.PHP.name() + " button");
+		
 	}
 
 	//jQuery
