@@ -66,7 +66,9 @@ public enum MainContentEnum {
 	
 	SQL_SAMPLE_CODE_SECTION("SQL Sample code"),
 	
-	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself");
+	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
+	
+	PHP;
 	
 	private MainContentEnum(){
 		
