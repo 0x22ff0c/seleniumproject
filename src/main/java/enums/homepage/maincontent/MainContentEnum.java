@@ -70,7 +70,15 @@ public enum MainContentEnum {
 	
 	PHP,
 	
-	JQUERY("jQuery");
+	JQUERY("jQuery"),
+	
+	JAVA("Java"),
+	
+	CPLUSPLUS("C++"),
+	
+	W3CSS("W3.CSS"),
+	
+	BOOTSTRAP("Bootstrap");
 	
 	private MainContentEnum(){
 		

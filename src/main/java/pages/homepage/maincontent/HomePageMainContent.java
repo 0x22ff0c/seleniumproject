@@ -1,5 +1,7 @@
 package pages.homepage.maincontent;
 
+import java.text.MessageFormat;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -375,9 +377,9 @@ public class HomePageMainContent extends BasePage{
 
 	public WebElement getLearnPHPButton(){
 		
-		String learnPhpButtonXpathExpression = "//*[text()='{0}']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn {0}']";
+		String learnPhpButtonXpathExpression = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
 		
-		return getElementByXpath(String.format(learnPhpButtonXpathExpression, MainContentEnum.PHP.name()), MainContentEnum.PHP.name() + " button");
+		return getElementByXpath(MessageFormat.format(learnPhpButtonXpathExpression, MainContentEnum.PHP.name()), MainContentEnum.PHP.name() + " button");
 		
 	}
 
@@ -398,73 +400,98 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getLearnjQueryButton(){
 		
-		String learnjQueryButton = "//*[text()='{0}']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn {0}']";
+		String learnjQueryButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
 		
-		return getElementByXpath(String.format(learnjQueryButton, MainContentEnum.JQUERY.toString()));
+		return getElementByXpath(MessageFormat.format(learnjQueryButton, MainContentEnum.JQUERY.toString()));
 	}
 	
 	//Java
 	public WebElement getJavaHeader(){
 		
-		return getElementByXpath("//*[text()='Java']", "Java Header");
+		String javaHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(javaHeader, MainContentEnum.JAVA.toString()), MainContentEnum.JAVA.toString() + " Header");
 	}
 	
 	public String getJavaSubheader(){
 
-		return getTextOfElementUsingXpathLocator("//*[text()='Java']/following-sibling::*/descendant::*");
+		String javaSubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(javaSubheader, MainContentEnum.JAVA.toString()));
 	}
 	
 	public WebElement getLearnJavaButton(){
 		
-		return getElementByXpath("//*[text()='Java']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Java']");
+		String learnJavaButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
+		
+		return getElementByXpath(MessageFormat.format(learnJavaButton, MainContentEnum.JAVA.toString()));
 	}
 	
 	//C++
 	public WebElement getCplusplusHeader(){
 		
-		return getElementByXpath("//*[text()='C++']", "C++ Header");
+		String cPlusPlusHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(cPlusPlusHeader, MainContentEnum.CPLUSPLUS.toString()), MainContentEnum.CPLUSPLUS.toString() + " Header");
 	}
 	
 	public String getCplusplusSubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='C++']/following-sibling::*/descendant::*");
+		String cPlusPlusSubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(cPlusPlusSubheader, MainContentEnum.CPLUSPLUS.toString()));
 	}
 	
 	public WebElement getLearnCplusplusButton(){
 		
-		return getElementByXpath("//*[text()='C++']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn C++']");
+		String learnCplusplusButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
+		
+		return getElementByXpath(MessageFormat.format(learnCplusplusButton, MainContentEnum.CPLUSPLUS.toString()));
 	}
 	
 	//W3.CSS
 	public WebElement getW3CSSHeader(){
 		
-		return getElementByXpath("//*[text()='W3.CSS']", "W3.CSS Header");
+		String w3CSSHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(w3CSSHeader, MainContentEnum.W3CSS.toString()), MainContentEnum.W3CSS.toString() + " Header");
 	}
 	
 	public String getW3CSSSubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='W3.CSS']/following-sibling::*/descendant::*");
+		String w3CSSSubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(w3CSSSubheader, MainContentEnum.W3CSS.toString()));
 	}
 	
 	public WebElement getLearnW3CSSButton(){
 		
-		return getElementByXpath("//*[text()='W3.CSS']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn W3.CSS']", "Learn W3.CSS button");
+		String learW3CSSButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
+		
+		return getElementByXpath(MessageFormat.format(learW3CSSButton, MainContentEnum.W3CSS.toString()), MainContentEnum.W3CSS.toString());
 	}
 	
 	//Bootstrap
 	public WebElement getBootstrapHeader(){
 		
-		return getElementByXpath("//*[text()='Bootstrap']", "Bootstrap Header");
+		String bootstrapHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(bootstrapHeader, MainContentEnum.BOOTSTRAP.toString()), MainContentEnum.BOOTSTRAP.toString() + " Header");
+		
 	}
 	
 	public String getBootstrapSubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='Bootstrap']/following-sibling::*/descendant::*");
+		String bootstrapSubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(bootstrapSubheader, MainContentEnum.BOOTSTRAP.toString()));
 	}
 	
 	public WebElement getLearnBootstrapButton(){
+
+		String learnBootStrapButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
 		
-		return getElementByXpath("//*[text()='Bootstrap']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Bootstrap']", "Learn Bootstrap button");
+		return getElementByXpath(MessageFormat.format(learnBootStrapButton, MainContentEnum.BOOTSTRAP.toString()), MainContentEnum.BOOTSTRAP.toString());
 	}
 	
 	//Other tutorials button list
