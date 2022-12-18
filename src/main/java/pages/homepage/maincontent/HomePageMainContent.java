@@ -408,17 +408,23 @@ public class HomePageMainContent extends BasePage{
 	//Java
 	public WebElement getJavaHeader(){
 		
-		return getElementByXpath("//*[text()='Java']", "Java Header");
+		String javaHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(javaHeader, MainContentEnum.JAVA.toString()), MainContentEnum.JAVA.toString() + " Header");
 	}
 	
 	public String getJavaSubheader(){
 
-		return getTextOfElementUsingXpathLocator("//*[text()='Java']/following-sibling::*/descendant::*");
+		String javaSubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(javaSubheader, MainContentEnum.JAVA.toString()));
 	}
 	
 	public WebElement getLearnJavaButton(){
 		
-		return getElementByXpath("//*[text()='Java']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Java']");
+		String learnJavaButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
+		
+		return getElementByXpath(MessageFormat.format(learnJavaButton, MainContentEnum.JAVA.toString()));
 	}
 	
 	//C++
