@@ -76,7 +76,9 @@ public enum MainContentEnum {
 	
 	CPLUSPLUS("C++"),
 	
-	W3CSS("W3.CSS");
+	W3CSS("W3.CSS"),
+	
+	BOOTSTRAP("Bootstrap");
 	
 	private MainContentEnum(){
 		
