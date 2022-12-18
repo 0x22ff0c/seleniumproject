@@ -474,17 +474,24 @@ public class HomePageMainContent extends BasePage{
 	//Bootstrap
 	public WebElement getBootstrapHeader(){
 		
-		return getElementByXpath("//*[text()='Bootstrap']", "Bootstrap Header");
+		String bootstrapHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(bootstrapHeader, MainContentEnum.BOOTSTRAP.toString()), MainContentEnum.BOOTSTRAP.toString() + " Header");
+		
 	}
 	
 	public String getBootstrapSubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='Bootstrap']/following-sibling::*/descendant::*");
+		String bootstrapSubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(bootstrapSubheader, MainContentEnum.BOOTSTRAP.toString()));
 	}
 	
 	public WebElement getLearnBootstrapButton(){
+
+		String learnBootStrapButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
 		
-		return getElementByXpath("//*[text()='Bootstrap']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn Bootstrap']", "Learn Bootstrap button");
+		return getElementByXpath(MessageFormat.format(learnBootStrapButton, MainContentEnum.BOOTSTRAP.toString()), MainContentEnum.BOOTSTRAP.toString());
 	}
 	
 	//Other tutorials button list
