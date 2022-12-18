@@ -430,17 +430,23 @@ public class HomePageMainContent extends BasePage{
 	//C++
 	public WebElement getCplusplusHeader(){
 		
-		return getElementByXpath("//*[text()='C++']", "C++ Header");
+		String cPlusPlusHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(cPlusPlusHeader, MainContentEnum.CPLUSPLUS.toString()), MainContentEnum.CPLUSPLUS.toString() + " Header");
 	}
 	
 	public String getCplusplusSubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='C++']/following-sibling::*/descendant::*");
+		String cPlusPlusSubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(cPlusPlusSubheader, MainContentEnum.CPLUSPLUS.toString()));
 	}
 	
 	public WebElement getLearnCplusplusButton(){
 		
-		return getElementByXpath("//*[text()='C++']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn C++']");
+		String learnCplusplusButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
+		
+		return getElementByXpath(MessageFormat.format(learnCplusplusButton, MainContentEnum.CPLUSPLUS.toString()));
 	}
 	
 	//W3.CSS
