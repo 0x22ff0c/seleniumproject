@@ -74,7 +74,9 @@ public enum MainContentEnum {
 	
 	JAVA("Java"),
 	
-	CPLUSPLUS("C++");
+	CPLUSPLUS("C++"),
+	
+	W3CSS("W3.CSS");
 	
 	private MainContentEnum(){
 		
