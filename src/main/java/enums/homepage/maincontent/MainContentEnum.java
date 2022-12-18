@@ -72,7 +72,9 @@ public enum MainContentEnum {
 	
 	JQUERY("jQuery"),
 	
-	JAVA("Java");
+	JAVA("Java"),
+	
+	CPLUSPLUS("C++");
 	
 	private MainContentEnum(){
 		
