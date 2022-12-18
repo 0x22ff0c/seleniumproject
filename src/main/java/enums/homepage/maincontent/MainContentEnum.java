@@ -68,7 +68,9 @@ public enum MainContentEnum {
 	
 	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
 	
-	PHP;
+	PHP,
+	
+	JQUERY("jQuery");
 	
 	private MainContentEnum(){
 		
