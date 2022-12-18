@@ -1,6 +1,5 @@
 package pages.homepage.maincontent;
 
-import org.checkerframework.checker.units.qual.m;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -385,17 +384,23 @@ public class HomePageMainContent extends BasePage{
 	//jQuery
 	public WebElement getjQueryHeader(){
 		
-		return getElementByXpath("//*[text()='jQuery']", "jQuery Header");
+		String jqueryHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(jqueryHeader, MainContentEnum.JQUERY.toString()),  MainContentEnum.JQUERY.toString() + " Header");
 	}
 	
 	public String getjQuerySubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='jQuery']/following-sibling::*/descendant::*");
+		String jquerySubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(jquerySubheader, MainContentEnum.JQUERY.toString()));
 	}
 	
 	public WebElement getLearnjQueryButton(){
 		
-		return getElementByXpath("//*[text()='jQuery']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn jQuery']");
+		String learnjQueryButton = "//*[text()='{0}']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn {0}']";
+		
+		return getElementByXpath(String.format(learnjQueryButton, MainContentEnum.JQUERY.toString()));
 	}
 	
 	//Java
