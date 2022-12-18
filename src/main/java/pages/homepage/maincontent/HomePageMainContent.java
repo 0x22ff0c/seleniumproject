@@ -452,17 +452,23 @@ public class HomePageMainContent extends BasePage{
 	//W3.CSS
 	public WebElement getW3CSSHeader(){
 		
-		return getElementByXpath("//*[text()='W3.CSS']", "W3.CSS Header");
+		String w3CSSHeader = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(w3CSSHeader, MainContentEnum.W3CSS.toString()), MainContentEnum.W3CSS.toString() + " Header");
 	}
 	
 	public String getW3CSSSubheader(){
 		
-		return getTextOfElementUsingXpathLocator("//*[text()='W3.CSS']/following-sibling::*/descendant::*");
+		String w3CSSSubheader = "//*[text()='%s']/following-sibling::*/descendant::*";
+		
+		return getTextOfElementUsingXpathLocator(String.format(w3CSSSubheader, MainContentEnum.W3CSS.toString()));
 	}
 	
 	public WebElement getLearnW3CSSButton(){
 		
-		return getElementByXpath("//*[text()='W3.CSS']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn W3.CSS']", "Learn W3.CSS button");
+		String learW3CSSButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
+		
+		return getElementByXpath(MessageFormat.format(learW3CSSButton, MainContentEnum.W3CSS.toString()), MainContentEnum.W3CSS.toString());
 	}
 	
 	//Bootstrap
