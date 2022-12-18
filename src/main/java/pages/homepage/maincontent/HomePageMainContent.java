@@ -1,5 +1,7 @@
 package pages.homepage.maincontent;
 
+import java.text.MessageFormat;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -375,9 +377,9 @@ public class HomePageMainContent extends BasePage{
 
 	public WebElement getLearnPHPButton(){
 		
-		String learnPhpButtonXpathExpression = "//*[text()='{0}']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn {0}']";
+		String learnPhpButtonXpathExpression = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
 		
-		return getElementByXpath(String.format(learnPhpButtonXpathExpression, MainContentEnum.PHP.name()), MainContentEnum.PHP.name() + " button");
+		return getElementByXpath(MessageFormat.format(learnPhpButtonXpathExpression, MainContentEnum.PHP.name()), MainContentEnum.PHP.name() + " button");
 		
 	}
 
@@ -398,9 +400,9 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getLearnjQueryButton(){
 		
-		String learnjQueryButton = "//*[text()='{0}']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn {0}']";
+		String learnjQueryButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
 		
-		return getElementByXpath(String.format(learnjQueryButton, MainContentEnum.JQUERY.toString()));
+		return getElementByXpath(MessageFormat.format(learnjQueryButton, MainContentEnum.JQUERY.toString()));
 	}
 	
 	//Java
