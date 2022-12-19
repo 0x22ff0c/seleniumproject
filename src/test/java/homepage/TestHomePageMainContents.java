@@ -34,9 +34,7 @@ public class TestHomePageMainContents {
 		baseTest = new BaseTest(homePage);
 		
 		baseTest.verifyElementIsDisplayed(homePage.getMainContent());
-		
-		baseTest.verifyElementIsDisplayed(homePage.getHeaderTextInMainContent());
-	
+
 		baseTest.verifyElementIsDisplayed(homePage.getSubheaderTextInMainContent());
 	
 		baseTest.verifyElementIsDisplayed(homePage.getSearchbarField());
