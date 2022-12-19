@@ -21,12 +21,17 @@ public class HomePageMainContent extends BasePage{
 		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION.toString());
 	}
 	
+	private WebElement getHeaderElement(String nameOfTheSection){
+	
+		String headerXpathExpression = "//*[text()='%s']";
+		
+		return getElementByXpath(String.format(headerXpathExpression, nameOfTheSection), nameOfTheSection + " header");
+		
+	}
+	
 	public WebElement getHeaderTextInMainContent(){
 		
-		String learnToCodeHeaderXpathExpression = "//*[text()='%s']";
-		
-		return getElementByXpath(String.format(learnToCodeHeaderXpathExpression, MainContentEnum.LEARN_TO_CODE_HEADER.toString()), 
-				MainContentEnum.LEARN_TO_CODE_HEADER.toString() + " header");
+		return getHeaderElement(MainContentEnum.LEARN_TO_CODE_HEADER.toString());
 	}
 	
 	public WebElement getSubheaderTextInMainContent(){
@@ -362,9 +367,7 @@ public class HomePageMainContent extends BasePage{
 	//PHP
 	public WebElement getPHPHeader(){
 		
-		String phpHeaderXpathExpression = "//*[text()='%s']";
-		
-		return getElementByXpath(String.format(phpHeaderXpathExpression, MainContentEnum.PHP.name()), MainContentEnum.PHP.name() + " header");
+		return getHeaderElement(MainContentEnum.PHP.name());
 	}
 	
 	public String getPHPSubheader(){
@@ -383,9 +386,7 @@ public class HomePageMainContent extends BasePage{
 	//jQuery
 	public WebElement getjQueryHeader(){
 		
-		String jqueryHeader = "//*[text()='%s']";
-		
-		return getElementByXpath(String.format(jqueryHeader, MainContentEnum.JQUERY.toString()),  MainContentEnum.JQUERY.toString() + " Header");
+		return getHeaderElement(MainContentEnum.JQUERY.toString());
 	}
 	
 	public String getjQuerySubheader(){
@@ -405,9 +406,7 @@ public class HomePageMainContent extends BasePage{
 	//Java
 	public WebElement getJavaHeader(){
 		
-		String javaHeader = "//*[text()='%s']";
-		
-		return getElementByXpath(String.format(javaHeader, MainContentEnum.JAVA.toString()), MainContentEnum.JAVA.toString() + " Header");
+		return getHeaderElement(MainContentEnum.JAVA.toString());
 	}
 	
 	public String getJavaSubheader(){
@@ -427,9 +426,7 @@ public class HomePageMainContent extends BasePage{
 	//C++
 	public WebElement getCplusplusHeader(){
 		
-		String cPlusPlusHeader = "//*[text()='%s']";
-		
-		return getElementByXpath(String.format(cPlusPlusHeader, MainContentEnum.CPLUSPLUS.toString()), MainContentEnum.CPLUSPLUS.toString() + " Header");
+		return getHeaderElement(MainContentEnum.CPLUSPLUS.toString());
 	}
 	
 	public String getCplusplusSubheader(){
@@ -449,9 +446,7 @@ public class HomePageMainContent extends BasePage{
 	//W3.CSS
 	public WebElement getW3CSSHeader(){
 		
-		String w3CSSHeader = "//*[text()='%s']";
-		
-		return getElementByXpath(String.format(w3CSSHeader, MainContentEnum.W3CSS.toString()), MainContentEnum.W3CSS.toString() + " Header");
+		return getHeaderElement(MainContentEnum.W3CSS.toString());
 	}
 	
 	public String getW3CSSSubheader(){
@@ -470,7 +465,7 @@ public class HomePageMainContent extends BasePage{
 	
 	//Bootstrap
 	public WebElement getBootstrapHeader(){
-		
+		//TODO: Remove duplicate
 		String bootstrapHeader = "//*[text()='%s']";
 		
 		return getElementByXpath(String.format(bootstrapHeader, MainContentEnum.BOOTSTRAP.toString()), MainContentEnum.BOOTSTRAP.toString() + " Header");
