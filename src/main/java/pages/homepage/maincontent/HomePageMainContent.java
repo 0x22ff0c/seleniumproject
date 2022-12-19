@@ -67,12 +67,18 @@ public class HomePageMainContent extends BasePage{
 		control.clickButton(getWhereToBeginLink());
 	}
 	
+	private void scrollToSection(String nameOfTheSection){
+		
+		String sectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
+		
+		control.scrollToElement(getElementByXpath(String.format(sectionXpathExpression, nameOfTheSection), nameOfTheSection + " section"));
+		
+	}
+	
 	//HTML section
 	public void scrollToHtmlSection(){
 		
-		String htmlSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
-		
-		control.scrollToElement(getElementByXpath(String.format(htmlSectionXpathExpression, MainContentEnum.HTML.name()), MainContentEnum.HTML.name() + " section"));
+		scrollToSection(MainContentEnum.HTML.name());
 	}
 	
 	public String getHtmlHeaderContent(){
@@ -131,10 +137,7 @@ public class HomePageMainContent extends BasePage{
 	//CSS Section
 	public void scrollToCSSSection(){
 		
-		String cssSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
-		
-		control.scrollToElement(getElementByXpath(String.format(cssSectionXpathExpression, MainContentEnum.CSS.name()), 
-				MainContentEnum.CSS.name() + " section"));
+		scrollToSection(MainContentEnum.CSS.name());
 	}
 	
 	public String getCssHeaderContent(){
@@ -190,9 +193,7 @@ public class HomePageMainContent extends BasePage{
 	//JavaScript section
 	public void scrollToJavaScriptSection(){
 		
-		String javaScriptSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
-		
-		control.scrollToElement(getElementByXpath(String.format(javaScriptSectionXpathExpression, MainContentEnum.JAVASCRIPT.toString()), MainContentEnum.JAVASCRIPT.toString() + " section"));
+		scrollToSection(MainContentEnum.JAVASCRIPT.toString());
 	}
 	
 	public String getJavaScriptHeaderContent(){
@@ -247,9 +248,7 @@ public class HomePageMainContent extends BasePage{
 	//Python section
 	public void scrollToPythonSection(){
 		
-		String pythonSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
-		
-		control.scrollToElement(getElementByXpath(String.format(pythonSectionXpathExpression, MainContentEnum.PYTHON.toString()), MainContentEnum.PYTHON.toString() + " section"));
+		scrollToSection(MainContentEnum.PYTHON.toString());
 	}
 	
 	public String getPythonHeaderContent(){
@@ -303,9 +302,7 @@ public class HomePageMainContent extends BasePage{
 	//SQL section
 	public void scrollToSQLSection(){
 		
-		String sqlSectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
-		
-		control.scrollToElement(getElementByXpath(String.format(sqlSectionXpathExpression, MainContentEnum.SQL.name()), MainContentEnum.SQL.name() + " section"));
+		scrollToSection(MainContentEnum.SQL.name());
 	}
 	
 	public String getSQLHeaderContent(){
