@@ -461,12 +461,9 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	//Bootstrap
-	public WebElement getBootstrapHeader(){	
-		//TODO: Remove duplicate
-		String bootstrapHeader = "//*[text()='%s']";
+	public WebElement getBootstrapHeader(){
 		
-		return getElementByXpath(String.format(bootstrapHeader, MainContentEnum.BOOTSTRAP.toString()), MainContentEnum.BOOTSTRAP.toString() + " Header");
-		
+		return getHeaderElement(MainContentEnum.BOOTSTRAP.toString());		
 	}
 	
 	public String getBootstrapSubheader(){
