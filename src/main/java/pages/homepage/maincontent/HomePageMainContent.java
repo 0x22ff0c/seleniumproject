@@ -75,8 +75,8 @@ public class HomePageMainContent extends BasePage{
 		
 		String learnToCodeSubheaderXpathExpression = "//*[text()=\"%s\"]";
 		
-		return getElementByXpath(String.format(learnToCodeSubheaderXpathExpression, MainContentEnum.LEARN_TO_CODE_SUBHEADER.toString()), 
-				MainContentEnum.LEARN_TO_CODE_SUBHEADER.toString() + " subheader");
+		return getElementByXpath(String.format(learnToCodeSubheaderXpathExpression, MainContentEnum.LEARN_TO_CODE_SUB_HEADER.toString()), 
+				MainContentEnum.LEARN_TO_CODE_SUB_HEADER.toString() + " subheader");
 	}
 	
 	public WebElement getSearchbarField(){
