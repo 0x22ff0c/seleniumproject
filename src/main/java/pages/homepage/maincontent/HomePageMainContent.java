@@ -30,7 +30,7 @@ public class HomePageMainContent extends BasePage{
 		control.scrollToElement(getElementByXpath(String.format(sectionXpathExpression, nameOfTheSection), nameOfTheSection + " section"));
 	}
 	
-	private WebElement getHeaderElement(String nameOfTheSection){
+	public WebElement getHeaderElement(String nameOfTheSection){
 	
 		String headerXpathExpression = "//*[text()='%s']";
 		
@@ -44,7 +44,7 @@ public class HomePageMainContent extends BasePage{
 		return getTextOfElementUsingXpathLocator(String.format(subheaderXpathExpression, nameOfTheSection));
 	}
 	
-	private WebElement getLearnButtonElement(String nameOfTheButton){
+	public WebElement getLearnButtonElement(String nameOfTheButton){
 		
 		String learnButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
 		

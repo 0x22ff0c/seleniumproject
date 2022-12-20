@@ -1,5 +1,6 @@
 package homepage;
 
+import enums.homepage.maincontent.MainContentEnum;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -187,7 +188,15 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 		
 	}
-	
+
+	private void verifyElementsInSections(String nameOfTheSection){
+
+		baseTest.verifyElementIsDisplayed(homePage.getHeaderElement(nameOfTheSection));
+
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnButtonElement(nameOfTheSection));
+
+	}
+
 	@Test(testName = "Verify Other tutorials section", priority =  7)
 	
 	private void testOtherTutorialsSection(){
@@ -197,43 +206,31 @@ public class TestHomePageMainContents {
 		baseTest = new BaseTest(homePage);
 		
 		homePage.scrollToOtherTutorialsSection();
-		
-		baseTest.verifyElementIsDisplayed(homePage.getPHPHeader());
-		
+
+		verifyElementsInSections(MainContentEnum.PHP.name());
+
 		baseTest.verifyTextIsTheSame(homePage.getPHPSubheader(), "A web server programming language");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getLearnPHPButton());
-		
-		baseTest.verifyElementIsDisplayed(homePage.getjQueryHeader());
-		
+
+		verifyElementsInSections(MainContentEnum.JQUERY.toString());
+
 		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), "A JS library for developing web pages");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getLearnjQueryButton());
-		
-		baseTest.verifyElementIsDisplayed(homePage.getJavaHeader());
-		
+
+		verifyElementsInSections(MainContentEnum.JAVA.toString());
+
 		baseTest.verifyTextIsTheSame(homePage.getJavaSubheader(), "A programming language");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getLearnJavaButton());
-		
-		baseTest.verifyElementIsDisplayed(homePage.getCplusplusHeader());
-		
+
+		verifyElementsInSections(MainContentEnum.CPLUSPLUS.toString());
+
 		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), "A programming language");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getLearnCplusplusButton());
-		
-		baseTest.verifyElementIsDisplayed(homePage.getW3CSSHeader());
-		
+
+		verifyElementsInSections(MainContentEnum.W3CSS.toString());
+
 		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), "A CSS framework for faster and better responsive web pages");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getLearnW3CSSButton());
-		
-		baseTest.verifyElementIsDisplayed(homePage.getBootstrapHeader());
-		
+
+		verifyElementsInSections(MainContentEnum.BOOTSTRAP.toString());
+
 		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), "A CSS framework for designing better web pages");
-		
-		baseTest.verifyElementIsDisplayed(homePage.getLearnBootstrapButton());
-		
+
 		//Other buttons 
 		//Missing buttons - 
 		String[] buttonNames = {"C", "C#", "R", "Kotlin", "Node.js", "React", "JSON", "AngularJS", "MySQL",
