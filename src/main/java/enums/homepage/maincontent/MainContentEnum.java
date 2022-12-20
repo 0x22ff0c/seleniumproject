@@ -25,7 +25,9 @@ public enum MainContentEnum {
 	HTML_SAMPLE_CODE_SECTION("HTML Sample code"),
 	
 	HTML_TRY_IT_YOURSELF_BUTTON("HTML Try It Yourself"),
-	
+
+	HTML_ADD_CERTIFICATION_ID("Add HTML Certification"),
+
 	GET_CERTIFIED("Get Certified"),
 	
 	CSS,
@@ -33,7 +35,9 @@ public enum MainContentEnum {
 	LEARN_CSS("Learn CSS"),
 	
 	CSS_REFERENCE("CSS Reference"),
-	
+
+	CSS_ADD_CERTIFICATION_ID("Add CSS Certification"),
+
 	CSS_SAMPLE_CODE_SECTION("CSS Sample code"),
 	
 	CSS_TRY_IT_YOURSELF_BUTTON("CSS Try It Yourself"),
@@ -43,7 +47,9 @@ public enum MainContentEnum {
 	LEARN_JAVASCRIPT("Learn JavaScript"),
 	
 	JAVASCRIPT_REFERENCE("JavaScript Reference"),
-	
+
+	JAVASCRIPT_ADD_CERTIFICATION_ID("Add JavaScript Certification"),
+
 	JAVASCRIPT_SAMPLE_CODE_SECTION("JavaScript Sample code"),
 	
 	JAVASCRIPT_TRY_IT_YOURSELF_BUTTON("JavaScript Try It Yourself"),
@@ -53,7 +59,9 @@ public enum MainContentEnum {
 	LEARN_PYTHON("Learn Python"),
 	
 	PYTHON_REFERENCE("Python Reference"),
-	
+
+	PYTHON_ADD_CERTIFICATION_ID("Add Python Certification"),
+
 	PYTHON_SAMPLE_CODE_SECTION("Python Sample code"),
 	
 	PYTHON_TRY_IT_YOURSELF_BUTTON("Python Try It Yourself"),
@@ -63,7 +71,9 @@ public enum MainContentEnum {
 	LEARN_SQL("Learn SQL"),
 	
 	SQL_REFERENCE("SQL Reference"),
-	
+
+	SQL_ADD_CERTIFICATION_ID("Add SQL Certification"),
+
 	SQL_SAMPLE_CODE_SECTION("SQL Sample code"),
 	
 	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
