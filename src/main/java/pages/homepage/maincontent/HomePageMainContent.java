@@ -60,6 +60,13 @@ public class HomePageMainContent extends BasePage{
 		
 	}
 	
+	private WebElement getTutorialButton(String nameOfTheButton){
+		
+		String tutorialButtonExpathExpression = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
+		
+		return getElementByXpath(MessageFormat.format(tutorialButtonExpathExpression, nameOfTheButton), nameOfTheButton + " button");
+	}
+	
 	public WebElement getHeaderTextInMainContent(){
 		
 		return getHeaderElement(MainContentEnum.LEARN_TO_CODE_HEADER.toString());
@@ -379,10 +386,7 @@ public class HomePageMainContent extends BasePage{
 
 	public WebElement getLearnPHPButton(){
 		
-		String learnPhpButtonXpathExpression = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
-		
-		return getElementByXpath(MessageFormat.format(learnPhpButtonXpathExpression, MainContentEnum.PHP.name()), MainContentEnum.PHP.name() + " button");
-		
+		return getTutorialButton(MainContentEnum.PHP.name());
 	}
 
 	//jQuery
@@ -398,9 +402,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getLearnjQueryButton(){
 		
-		String learnjQueryButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
-		
-		return getElementByXpath(MessageFormat.format(learnjQueryButton, MainContentEnum.JQUERY.toString()));
+		return getTutorialButton(MainContentEnum.JQUERY.toString());
 	}
 	
 	//Java
@@ -416,9 +418,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getLearnJavaButton(){
 		
-		String learnJavaButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
-		
-		return getElementByXpath(MessageFormat.format(learnJavaButton, MainContentEnum.JAVA.toString()));
+		return getTutorialButton(MainContentEnum.JAVA.toString());
 	}
 	
 	//C++
@@ -434,9 +434,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getLearnCplusplusButton(){
 		
-		String learnCplusplusButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
-		
-		return getElementByXpath(MessageFormat.format(learnCplusplusButton, MainContentEnum.CPLUSPLUS.toString()));
+		return getTutorialButton(MainContentEnum.CPLUSPLUS.toString());
 	}
 	
 	//W3.CSS
@@ -452,9 +450,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getLearnW3CSSButton(){
 		
-		String learW3CSSButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
-		
-		return getElementByXpath(MessageFormat.format(learW3CSSButton, MainContentEnum.W3CSS.toString()), MainContentEnum.W3CSS.toString());
+		return getTutorialButton(MainContentEnum.W3CSS.toString());
 	}
 	
 	//Bootstrap
@@ -470,9 +466,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getLearnBootstrapButton(){
 
-		String learnBootStrapButton = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
-		
-		return getElementByXpath(MessageFormat.format(learnBootStrapButton, MainContentEnum.BOOTSTRAP.toString()), MainContentEnum.BOOTSTRAP.toString());
+		return getTutorialButton(MainContentEnum.BOOTSTRAP.toString());
 	}
 	
 	//Other tutorials button list
