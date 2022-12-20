@@ -6,7 +6,7 @@ public enum MainContentEnum {
 	
 	LEARN_TO_CODE_HEADER("Learn to Code"),
 	
-	LEARN_TO_CODE_SUBHEADER("With the world's largest web developer site."),
+	LEARN_TO_CODE_SUB_HEADER("With the world's largest web developer site."),
 	
 	SEARCH_FIELD("Search field"),
 	
@@ -90,13 +90,11 @@ public enum MainContentEnum {
 	
 	BOOTSTRAP("Bootstrap");
 	
-	private MainContentEnum(){
-		
-	}
+	MainContentEnum(){}
 	
 	private String elementName; 
 	
-	private MainContentEnum(String elementName){
+	MainContentEnum(String elementName){
 		this.elementName = elementName;
 	}
 	
