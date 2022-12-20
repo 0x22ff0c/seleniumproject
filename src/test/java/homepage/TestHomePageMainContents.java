@@ -223,12 +223,10 @@ public class TestHomePageMainContents {
 
 		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), "A programming language");
 
-		baseTest.verifyElementIsDisplayed(homePage.getW3CSSHeader());
-		
+		verifyElementsInSections(MainContentEnum.W3CSS.toString());
+
 		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), "A CSS framework for faster and better responsive web pages");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getLearnW3CSSButton());
-		
+
 		baseTest.verifyElementIsDisplayed(homePage.getBootstrapHeader());
 		
 		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), "A CSS framework for designing better web pages");
