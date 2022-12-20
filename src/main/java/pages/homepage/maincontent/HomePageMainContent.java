@@ -676,19 +676,16 @@ public class HomePageMainContent extends BasePage{
 	public String getMyLearningSubheader(){
 		
 		return getTextOfElementUsingXpathLocator("//*[text()='My Learning']/following-sibling::*[1]");
-		
 	}
 	
 	public WebElement getMyLearningFreeStrongText(){
 		
 		return getElementByXpath("//*[text()='My Learning']/following-sibling::*[1]/descendant::strong[text()='free']", "free");
-		
 	}
 	
 	public String getMyLearning2ndSubheader(){
 		
 		return getTextOfElementUsingXpathLocator("//*[text()='My Learning']/following-sibling::*[2]");
-	
 	}
 	
 	String myLearningSampleScreenshotId = "img_mylearning";
@@ -696,7 +693,6 @@ public class HomePageMainContent extends BasePage{
 	public void scrollToMyLearningSampleScreenshot(){
 		
 		control.scrollToElement(getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot"));
-		
 	}
 	
 	public WebElement getMyLearningSampleScreenshot(){
@@ -704,13 +700,11 @@ public class HomePageMainContent extends BasePage{
 		control.waitForElmentToBeDisplayedInPage(By.id(myLearningSampleScreenshotId));
 		
 		return getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot");
-		
 	}
 	
 	public WebElement getMyLearningSignupButton(){
 		
 		return getButtonElementById("myLearningFromDefault", "Sign Up for Free");
-			
 	}
 	//endregion
 	
