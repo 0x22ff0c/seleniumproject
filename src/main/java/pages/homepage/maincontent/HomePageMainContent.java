@@ -51,6 +51,15 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath(String.format(learnButtonXpathExpression, nameOfTheButton), nameOfTheButton + " button");
 	}
 	
+	private WebElement getReferenceButton(String nameOfTheButton){
+	
+		String referenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+		
+		return getElementByXpath(String.format(referenceButtonXpathExpression, nameOfTheButton), 
+				nameOfTheButton + " button");
+		
+	}
+	
 	public WebElement getHeaderTextInMainContent(){
 		
 		return getHeaderElement(MainContentEnum.LEARN_TO_CODE_HEADER.toString());
@@ -124,9 +133,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getHtmlReferenceButton(){
 		
-		String htmlReferenceXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
-		
-		return getElementByXpath(String.format(htmlReferenceXpathExpression, MainContentEnum.HTML_REFERENCE.toString()),  MainContentEnum.HTML_REFERENCE.toString() + " button");
+		return getReferenceButton(MainContentEnum.HTML_REFERENCE.toString());
 	}
 	
 	public WebElement getHtmlGetCertifiedButton(){
@@ -176,10 +183,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getCSSReferenceButton(){
 		
-		String cssReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
-		
-		return getElementByXpath(String.format(cssReferenceButtonXpathExpression, MainContentEnum.CSS_REFERENCE.toString()), 
-				MainContentEnum.CSS_REFERENCE.toString() + " button");
+		return getReferenceButton(MainContentEnum.CSS_REFERENCE.toString());
 	}
 	
 	public WebElement getCSSGetCertifiedButton(){
@@ -229,10 +233,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getJavaScriptReferenceButton(){
 		
-		String javaScriptReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
-		
-		return getElementByXpath(String.format(javaScriptReferenceButtonXpathExpression, MainContentEnum.JAVASCRIPT_REFERENCE.toString()), 
-				MainContentEnum.JAVASCRIPT_REFERENCE.toString() + " button");
+		return getReferenceButton(MainContentEnum.JAVASCRIPT_REFERENCE.toString());
 	}
 	
 	public WebElement getJavaScriptGetCertifiedButton(){
@@ -282,9 +283,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getPythonReferenceButton(){
 		
-		String pythonReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
-		
-		return getElementByXpath(String.format(pythonReferenceButtonXpathExpression, MainContentEnum.PYTHON_REFERENCE.toString()), MainContentEnum.PYTHON_REFERENCE.toString() + " button");
+		return getReferenceButton(MainContentEnum.PYTHON_REFERENCE.toString());
 	}
 	
 	public WebElement getPythonGetCertifiedButton(){
@@ -334,9 +333,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getSQLReferenceButton(){
 		
-		String sqlReferenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
-		
-		return getElementByXpath(String.format(sqlReferenceButtonXpathExpression, MainContentEnum.SQL_REFERENCE.toString()), MainContentEnum.SQL_REFERENCE.toString() + " button");
+		return getReferenceButton(MainContentEnum.SQL_REFERENCE.toString());
 	}
 	
 	public WebElement getSQLGetCertifiedButton(){
