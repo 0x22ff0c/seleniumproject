@@ -1,5 +1,6 @@
 package homepage;
 
+import enums.homepage.maincontent.MainContentEnum;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -187,7 +188,15 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 		
 	}
-	
+
+	private void verifyElementsInSections(String nameOfTheSection){
+
+		baseTest.verifyElementIsDisplayed(homePage.getHeaderElement(nameOfTheSection));
+
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnButtonElement(nameOfTheSection));
+
+	}
+
 	@Test(testName = "Verify Other tutorials section", priority =  7)
 	
 	private void testOtherTutorialsSection(){
@@ -197,13 +206,11 @@ public class TestHomePageMainContents {
 		baseTest = new BaseTest(homePage);
 		
 		homePage.scrollToOtherTutorialsSection();
-		
-		baseTest.verifyElementIsDisplayed(homePage.getPHPHeader());
-		
+
+		verifyElementsInSections(MainContentEnum.PHP.name());
+
 		baseTest.verifyTextIsTheSame(homePage.getPHPSubheader(), "A web server programming language");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getLearnPHPButton());
-		
+
 		baseTest.verifyElementIsDisplayed(homePage.getjQueryHeader());
 		
 		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), "A JS library for developing web pages");
