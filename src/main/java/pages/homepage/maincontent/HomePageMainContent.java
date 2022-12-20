@@ -506,7 +506,6 @@ public class HomePageMainContent extends BasePage{
 		WebElement element = getButtonElement(nameOfTutorial);
 
 		control.scrollToElement(element);
-		
 	}
 	
 	public WebElement getOtherTutorialButton(String nameOfTutorial){
@@ -520,7 +519,6 @@ public class HomePageMainContent extends BasePage{
 		nameOfTutorial = nameOfTutorial + " Tutorial";
 		
 		return getButtonElement(nameOfTutorial);
-		
 	}
 	//endregion
 
