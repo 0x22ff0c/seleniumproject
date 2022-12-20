@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import enums.homepage.maincontent.MainContentEnum;
+import org.testng.reporters.jq.Main;
 import pages.BasePage;
 
 public class HomePageMainContent extends BasePage{
@@ -144,7 +145,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getHtmlGetCertifiedButton(){
 		
-		return getButtonElement("Add HTML Certification", MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement(MainContentEnum.HTML_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getHtmlCodeExampleHeader(){
@@ -196,7 +197,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getCSSGetCertifiedButton(){
 		
-		return getButtonElement("Add CSS Certification", MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement(MainContentEnum.CSS_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getCSSCodeExampleHeader(){
@@ -248,7 +249,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getJavaScriptGetCertifiedButton(){
 		
-		return getButtonElement("Add JavaScript Certification", MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement(MainContentEnum.JAVASCRIPT_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getJavaScriptCodeExampleHeader(){
@@ -300,7 +301,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getPythonGetCertifiedButton(){
 		
-		return getButtonElement("Add Python Certification", MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement(MainContentEnum.PYTHON_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
 	}	
 	
 	public String getPythonCodeExampleHeader(){
@@ -352,7 +353,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getSQLGetCertifiedButton(){
 		
-		return getButtonElement("Add SQL Certification", MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement(MainContentEnum.SQL_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getSQLCodeExampleHeader(){
