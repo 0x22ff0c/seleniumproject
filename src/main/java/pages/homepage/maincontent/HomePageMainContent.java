@@ -27,7 +27,6 @@ public class HomePageMainContent extends BasePage{
 		String sectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
 		
 		control.scrollToElement(getElementByXpath(String.format(sectionXpathExpression, nameOfTheSection), nameOfTheSection + " section"));
-		
 	}
 	
 	private WebElement getHeaderElement(String nameOfTheSection){
@@ -35,7 +34,6 @@ public class HomePageMainContent extends BasePage{
 		String headerXpathExpression = "//*[text()='%s']";
 		
 		return getElementByXpath(String.format(headerXpathExpression, nameOfTheSection), nameOfTheSection + " header");
-		
 	}
 	
 	private String getSubheaderValue(String nameOfTheSection){
@@ -58,7 +56,6 @@ public class HomePageMainContent extends BasePage{
 		
 		return getElementByXpath(String.format(referenceButtonXpathExpression, nameOfTheButton), 
 				nameOfTheButton + " button");
-		
 	}
 	
 	private WebElement getTutorialButton(String nameOfTheButton){
