@@ -227,12 +227,10 @@ public class TestHomePageMainContents {
 
 		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), "A CSS framework for faster and better responsive web pages");
 
-		baseTest.verifyElementIsDisplayed(homePage.getBootstrapHeader());
-		
+		verifyElementsInSections(MainContentEnum.BOOTSTRAP.toString());
+
 		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), "A CSS framework for designing better web pages");
-		
-		baseTest.verifyElementIsDisplayed(homePage.getLearnBootstrapButton());
-		
+
 		//Other buttons 
 		//Missing buttons - 
 		String[] buttonNames = {"C", "C#", "R", "Kotlin", "Node.js", "React", "JSON", "AngularJS", "MySQL",
