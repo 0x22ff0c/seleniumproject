@@ -981,7 +981,7 @@ public class HomePageMainContent extends BasePage{
 		switchToIframe(getElementById("howto_iframe", "How To Section - Slider"));
 	}
 	
-	private void increaseSlideNumber(){
+	private void incrementSlideNumber(){
 		
 		slideNumber++;
 		
@@ -990,7 +990,7 @@ public class HomePageMainContent extends BasePage{
 		}
 	}
 	
-	private void decreaseSlideNumber(){
+	private void decrementSlideNumber(){
 		
 		slideNumber--;
 		
@@ -1003,14 +1003,14 @@ public class HomePageMainContent extends BasePage{
 		
 		control.clickButton(getHowToSectionSampleWindowPreviousButton());
 		
-		decreaseSlideNumber();
+		decrementSlideNumber();
 	}
 	
 	public void clickNextButton(){
 		
 		control.clickButton(getHowToSectionSampleWindowNextButton());
 		
-		increaseSlideNumber();
+		incrementSlideNumber();
 	}
 	
 	private int getArrayIndex(int slideNumber){
