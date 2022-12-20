@@ -979,7 +979,6 @@ public class HomePageMainContent extends BasePage{
 	public void switchToHowToSliderFrame(){
 		
 		switchToIframe(getElementById("howto_iframe", "How To Section - Slider"));
-		
 	}
 	
 	private void increaseSlideNumber(){
@@ -989,7 +988,6 @@ public class HomePageMainContent extends BasePage{
 		if(slideNumber == 4){
 			slideNumber = 1;
 		}
-		
 	}
 	
 	private void decreaseSlideNumber(){
@@ -999,7 +997,6 @@ public class HomePageMainContent extends BasePage{
 		if(slideNumber == 0){
 			slideNumber = 3;
 		}
-		
 	}
 	
 	public void clickPreviousButton(){
@@ -1007,7 +1004,6 @@ public class HomePageMainContent extends BasePage{
 		control.clickButton(getHowToSectionSampleWindowPreviousButton());
 		
 		decreaseSlideNumber();
-		
 	}
 	
 	public void clickNextButton(){
@@ -1015,7 +1011,6 @@ public class HomePageMainContent extends BasePage{
 		control.clickButton(getHowToSectionSampleWindowNextButton());
 		
 		increaseSlideNumber();
-		
 	}
 	
 	private int getArrayIndex(int slideNumber){
