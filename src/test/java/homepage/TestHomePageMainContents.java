@@ -215,12 +215,10 @@ public class TestHomePageMainContents {
 
 		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), "A JS library for developing web pages");
 
-		baseTest.verifyElementIsDisplayed(homePage.getJavaHeader());
-		
+		verifyElementsInSections(MainContentEnum.JAVA.toString());
+
 		baseTest.verifyTextIsTheSame(homePage.getJavaSubheader(), "A programming language");
-		
-		baseTest.verifyButtonIsDisplayed(homePage.getLearnJavaButton());
-		
+
 		baseTest.verifyElementIsDisplayed(homePage.getCplusplusHeader());
 		
 		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), "A programming language");
