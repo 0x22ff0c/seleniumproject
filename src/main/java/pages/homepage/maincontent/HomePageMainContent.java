@@ -867,7 +867,6 @@ public class HomePageMainContent extends BasePage{
 	public void scrollToWebTemplatesSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", "Web Templates section"));
-		
 	}
 	
 	public WebElement getWebTemplatesHeader(){
