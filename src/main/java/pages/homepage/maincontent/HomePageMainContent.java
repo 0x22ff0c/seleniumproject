@@ -356,9 +356,8 @@ public class HomePageMainContent extends BasePage{
 		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
 	}
 	//endregion
-	
-	//PHP
-	//region
+
+	//region PHP section
 	public String getPHPSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.PHP.name());
