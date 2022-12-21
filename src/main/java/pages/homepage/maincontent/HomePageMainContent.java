@@ -733,9 +733,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Play Game']", "Play Game");
 	}
 	//endregion
-	
-	//Exercises and Quizzes section
-	//region
+
+	//region Exercises and Quizzes section
 	public void scrollToExercisesQuizzesSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", "Exercises and Quizzes section"));
