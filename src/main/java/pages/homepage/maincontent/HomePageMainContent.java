@@ -382,19 +382,9 @@ public class HomePageMainContent extends BasePage{
 	
 	//Java
 	//region
-	public WebElement getJavaHeader(){
-		
-		return getHeaderElement(MainContentEnum.JAVA.toString());
-	}
-	
 	public String getJavaSubheader(){
 
 		return getSubheaderValue(MainContentEnum.JAVA.toString());
-	}
-	
-	public WebElement getLearnJavaButton(){
-		
-		return getTutorialButton(MainContentEnum.JAVA.toString());
 	}
 	//endregion
 
