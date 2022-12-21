@@ -370,9 +370,8 @@ public class HomePageMainContent extends BasePage{
 		return getSubheaderValue(MainContentEnum.JQUERY.toString());
 	}
 	//endregion
-	
-	//Java
-	//region
+
+	//region Java section
 	public String getJavaSubheader(){
 
 		return getSubheaderValue(MainContentEnum.JAVA.toString());
