@@ -364,8 +364,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//jQuery
-	//region
+	//region jQuery section
 	public String getjQuerySubheader(){
 		
 		return getSubheaderValue(MainContentEnum.JQUERY.toString());
