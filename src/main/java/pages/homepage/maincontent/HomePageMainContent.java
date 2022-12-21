@@ -217,11 +217,6 @@ public class HomePageMainContent extends BasePage{
 
 	//JavaScript section
 	//region
-	public void scrollToJavaScriptSection(){
-		
-		scrollToSection(MainContentEnum.JAVASCRIPT.toString());
-	}
-	
 	public String getJavaScriptHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'black')]/descendant::h1)[2]");
