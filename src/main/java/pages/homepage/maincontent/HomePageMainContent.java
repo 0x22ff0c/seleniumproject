@@ -520,8 +520,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//W3Schools Spaces section
-	//region
+	//region W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", "W3Schools Spaces"));
