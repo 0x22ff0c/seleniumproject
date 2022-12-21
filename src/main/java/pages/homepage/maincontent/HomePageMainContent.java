@@ -349,9 +349,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.SQL_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	//endregion
-	
-	//Other tutorials
-	//region
+
+	//region Other tutorials section
 	public void scrollToOtherTutorialsSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
