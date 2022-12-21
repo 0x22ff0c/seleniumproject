@@ -828,9 +828,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementById("w3_cert_badge", "Certification badge");
 	}
 	//endregion
-	
-	//How To Section
-	//region
+
+	//region How To section
 	public void scrollToHowToSection(){
 		
 		control.scrollToElement(getElementById("howto_padding", "How To Section"));
