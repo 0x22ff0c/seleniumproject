@@ -264,11 +264,6 @@ public class HomePageMainContent extends BasePage{
 
 	//Python section
 	//region
-	public void scrollToPythonSection(){
-		
-		scrollToSection(MainContentEnum.PYTHON.toString());
-	}
-	
 	public String getPythonHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]");
