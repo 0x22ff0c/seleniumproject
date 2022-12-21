@@ -378,8 +378,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//C++
-	//region
+	//region C++ section
 	public String getCplusplusSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.CPLUSPLUS.toString());
