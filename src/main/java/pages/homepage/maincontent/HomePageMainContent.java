@@ -390,19 +390,9 @@ public class HomePageMainContent extends BasePage{
 
 	//C++
 	//region
-	public WebElement getCplusplusHeader(){
-		
-		return getHeaderElement(MainContentEnum.CPLUSPLUS.toString());
-	}
-	
 	public String getCplusplusSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.CPLUSPLUS.toString());
-	}
-	
-	public WebElement getLearnCplusplusButton(){
-		
-		return getTutorialButton(MainContentEnum.CPLUSPLUS.toString());
 	}
 	//endregion
 
