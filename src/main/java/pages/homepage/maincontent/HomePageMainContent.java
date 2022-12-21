@@ -385,8 +385,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//W3.CSS
-	//region
+	//region W3.CSS section
 	public String getW3CSSSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.W3CSS.toString());
