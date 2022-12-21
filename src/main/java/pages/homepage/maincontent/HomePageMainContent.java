@@ -366,19 +366,9 @@ public class HomePageMainContent extends BasePage{
 	
 	//PHP
 	//region
-	public WebElement getPHPHeader(){
-		
-		return getHeaderElement(MainContentEnum.PHP.name());
-	}
-	
 	public String getPHPSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.PHP.name());
-	}
-
-	public WebElement getLearnPHPButton(){
-		
-		return getTutorialButton(MainContentEnum.PHP.name());
 	}
 	//endregion
 
