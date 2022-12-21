@@ -105,8 +105,7 @@ public class HomePageMainContent extends BasePage{
 
 	//endregion
 
-	//HTML section
-	//region
+	//region HTML section
 	public void scrollToHtmlSection(){
 		
 		scrollToSection(MainContentEnum.HTML.name());
