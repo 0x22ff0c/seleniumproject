@@ -429,8 +429,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Code editor section
-	//region
+	//region Code editor section
 	public void scrollToCodeEditorSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", "Code Editor section"));
