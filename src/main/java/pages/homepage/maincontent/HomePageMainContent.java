@@ -161,8 +161,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//CSS Section
-	//region
+	//region CSS section
 	public void scrollToCSSSection(){
 		
 		scrollToSection(MainContentEnum.CSS.name());
