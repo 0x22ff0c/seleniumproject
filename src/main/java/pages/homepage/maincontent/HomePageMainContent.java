@@ -65,12 +65,7 @@ public class HomePageMainContent extends BasePage{
 		
 		return getElementByXpath(MessageFormat.format(tutorialButtonExpathExpression, nameOfTheButton), nameOfTheButton + " button");
 	}
-	
-	public WebElement getHeaderTextInMainContent(){
-		
-		return getHeaderElement(MainContentEnum.LEARN_TO_CODE_HEADER.toString());
-	}
-	
+
 	public WebElement getSubheaderTextInMainContent(){
 		
 		String learnToCodeSubheaderXpathExpression = "//*[text()=\"%s\"]";
@@ -222,11 +217,6 @@ public class HomePageMainContent extends BasePage{
 
 	//JavaScript section
 	//region
-	public void scrollToJavaScriptSection(){
-		
-		scrollToSection(MainContentEnum.JAVASCRIPT.toString());
-	}
-	
 	public String getJavaScriptHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'black')]/descendant::h1)[2]");
@@ -274,11 +264,6 @@ public class HomePageMainContent extends BasePage{
 
 	//Python section
 	//region
-	public void scrollToPythonSection(){
-		
-		scrollToSection(MainContentEnum.PYTHON.toString());
-	}
-	
 	public String getPythonHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]");
@@ -326,11 +311,6 @@ public class HomePageMainContent extends BasePage{
 	
 	//SQL section
 	//region
-	public void scrollToSQLSection(){
-		
-		scrollToSection(MainContentEnum.SQL.name());
-	}
-	
 	public String getSQLHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]");
@@ -386,109 +366,49 @@ public class HomePageMainContent extends BasePage{
 	
 	//PHP
 	//region
-	public WebElement getPHPHeader(){
-		
-		return getHeaderElement(MainContentEnum.PHP.name());
-	}
-	
 	public String getPHPSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.PHP.name());
-	}
-
-	public WebElement getLearnPHPButton(){
-		
-		return getTutorialButton(MainContentEnum.PHP.name());
 	}
 	//endregion
 
 	//jQuery
 	//region
-	public WebElement getjQueryHeader(){
-		
-		return getHeaderElement(MainContentEnum.JQUERY.toString());
-	}
-	
 	public String getjQuerySubheader(){
 		
 		return getSubheaderValue(MainContentEnum.JQUERY.toString());
-	}
-	
-	public WebElement getLearnjQueryButton(){
-		
-		return getTutorialButton(MainContentEnum.JQUERY.toString());
 	}
 	//endregion
 	
 	//Java
 	//region
-	public WebElement getJavaHeader(){
-		
-		return getHeaderElement(MainContentEnum.JAVA.toString());
-	}
-	
 	public String getJavaSubheader(){
 
 		return getSubheaderValue(MainContentEnum.JAVA.toString());
-	}
-	
-	public WebElement getLearnJavaButton(){
-		
-		return getTutorialButton(MainContentEnum.JAVA.toString());
 	}
 	//endregion
 
 	//C++
 	//region
-	public WebElement getCplusplusHeader(){
-		
-		return getHeaderElement(MainContentEnum.CPLUSPLUS.toString());
-	}
-	
 	public String getCplusplusSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.CPLUSPLUS.toString());
-	}
-	
-	public WebElement getLearnCplusplusButton(){
-		
-		return getTutorialButton(MainContentEnum.CPLUSPLUS.toString());
 	}
 	//endregion
 
 	//W3.CSS
 	//region
-	public WebElement getW3CSSHeader(){
-		
-		return getHeaderElement(MainContentEnum.W3CSS.toString());
-	}
-	
 	public String getW3CSSSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.W3CSS.toString());
-	}
-	
-	public WebElement getLearnW3CSSButton(){
-		
-		return getTutorialButton(MainContentEnum.W3CSS.toString());
 	}
 	//endregion
 	
 	//Bootstrap
 	//region
-	public WebElement getBootstrapHeader(){
-		
-		return getHeaderElement(MainContentEnum.BOOTSTRAP.toString());		
-	}
-	
 	public String getBootstrapSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.BOOTSTRAP.toString());
-	}
-	
-	public WebElement getLearnBootstrapButton(){
-
-		return getTutorialButton(MainContentEnum.BOOTSTRAP.toString());
 	}
 	//endregion
 	
