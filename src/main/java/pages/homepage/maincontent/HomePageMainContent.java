@@ -212,8 +212,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//JavaScript section
-	//region
+	//region JavaScript section
 	public String getJavaScriptHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'black')]/descendant::h1)[2]");
