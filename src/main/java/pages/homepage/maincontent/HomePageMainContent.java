@@ -564,9 +564,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started for Free']", "W3Schools Spaces - Get Started for Free");
 	}
 	//endregion
-	
-	//My Learning section
-	//region
+
+	//region My Learning section
 	public void scrollToMyLearningSection(){
 
 		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning section"));
