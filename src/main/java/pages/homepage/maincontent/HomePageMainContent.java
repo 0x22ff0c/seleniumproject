@@ -681,8 +681,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Color Picker section
-	//region
+	//region Color Picker section
 	public void scrollToColorPickerSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", "Color Picker section"));
