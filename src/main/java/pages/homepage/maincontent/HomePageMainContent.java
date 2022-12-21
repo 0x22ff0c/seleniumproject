@@ -398,9 +398,8 @@ public class HomePageMainContent extends BasePage{
 		return getSubheaderValue(MainContentEnum.BOOTSTRAP.toString());
 	}
 	//endregion
-	
-	//Other tutorials button list
-	//region
+
+	//region Other tutorials button list section
 	public void scrollToButton(String nameOfTutorial){
 		
 		if(nameOfTutorial.equals("Typing Speed")){
