@@ -374,19 +374,9 @@ public class HomePageMainContent extends BasePage{
 
 	//jQuery
 	//region
-	public WebElement getjQueryHeader(){
-		
-		return getHeaderElement(MainContentEnum.JQUERY.toString());
-	}
-	
 	public String getjQuerySubheader(){
 		
 		return getSubheaderValue(MainContentEnum.JQUERY.toString());
-	}
-	
-	public WebElement getLearnjQueryButton(){
-		
-		return getTutorialButton(MainContentEnum.JQUERY.toString());
 	}
 	//endregion
 	
