@@ -16,8 +16,7 @@ public class HomePageMainContent extends BasePage{
 		super(driver);
 	}
 
-	//Main Content
-	//region
+	//region Main Content
 	public WebElement getMainContent(){
 		
 		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION.toString());
@@ -106,8 +105,7 @@ public class HomePageMainContent extends BasePage{
 
 	//endregion
 
-	//HTML section
-	//region
+	//region HTML section
 	public void scrollToHtmlSection(){
 		
 		scrollToSection(MainContentEnum.HTML.name());
@@ -163,8 +161,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//CSS Section
-	//region
+	//region CSS section
 	public void scrollToCSSSection(){
 		
 		scrollToSection(MainContentEnum.CSS.name());
@@ -215,8 +212,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//JavaScript section
-	//region
+	//region JavaScript section
 	public String getJavaScriptHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'black')]/descendant::h1)[2]");
@@ -262,8 +258,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Python section
-	//region
+	//region Python section
 	public String getPythonHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]");
@@ -308,9 +303,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.PYTHON_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	//endregion
-	
-	//SQL section
-	//region
+
+	//region SQL section
 	public String getSQLHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]");
@@ -355,65 +349,57 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.SQL_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	//endregion
-	
-	//Other tutorials
-	//region
+
+	//region Other tutorials section
 	public void scrollToOtherTutorialsSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
 	}
 	//endregion
-	
-	//PHP
-	//region
+
+	//region PHP section
 	public String getPHPSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.PHP.name());
 	}
 	//endregion
 
-	//jQuery
-	//region
+	//region jQuery section
 	public String getjQuerySubheader(){
 		
 		return getSubheaderValue(MainContentEnum.JQUERY.toString());
 	}
 	//endregion
-	
-	//Java
-	//region
+
+	//region Java section
 	public String getJavaSubheader(){
 
 		return getSubheaderValue(MainContentEnum.JAVA.toString());
 	}
 	//endregion
 
-	//C++
-	//region
+	//region C++ section
 	public String getCplusplusSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.CPLUSPLUS.toString());
 	}
 	//endregion
 
-	//W3.CSS
-	//region
+	//region W3.CSS section
 	public String getW3CSSSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.W3CSS.toString());
 	}
 	//endregion
-	
-	//Bootstrap
-	//region
+
+	//region Bootstrap section
 	public String getBootstrapSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.BOOTSTRAP.toString());
 	}
 	//endregion
-	
-	//Other tutorials button list
-	//region
+
+	//region Other tutorials button list section
 	public void scrollToButton(String nameOfTutorial){
 		
 		if(nameOfTutorial.equals("Typing Speed")){
@@ -443,8 +429,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Code editor section
-	//region
+	//region Code editor section
 	public void scrollToCodeEditorSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", "Code Editor section"));
@@ -461,8 +446,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Code editor window
-	//region
+	//region Code editor window
 	public WebElement getCodeEditorDotButton(int dotButtonNumber){
 
 		return getElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("Code editor dot button - %s", dotButtonNumber));
@@ -536,8 +520,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//W3Schools Spaces section
-	//region
+	//region W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", "W3Schools Spaces"));
@@ -581,9 +564,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started for Free']", "W3Schools Spaces - Get Started for Free");
 	}
 	//endregion
-	
-	//My Learning section
-	//region
+
+	//region My Learning section
 	public void scrollToMyLearningSection(){
 
 		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning section"));
@@ -628,9 +610,8 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElementById("myLearningFromDefault", "Sign Up for Free");
 	}
 	//endregion
-	
-	//Become a Pro user section
-	//region
+
+	//region Become a Pro user section
 	public void scrollToBecomeProUserSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User section"));
@@ -700,8 +681,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Color Picker section
-	//region
+	//region Color Picker section
 	public void scrollToColorPickerSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", "Color Picker section"));
@@ -723,8 +703,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Code Game section
-	//region
+	//region Code Game section
 	public void scrollToCodeGameSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", "Code Game section"));
@@ -754,9 +733,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Play Game']", "Play Game");
 	}
 	//endregion
-	
-	//Exercises and Quizzes section
-	//region
+
+	//region Exercises and Quizzes section
 	public void scrollToExercisesQuizzesSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", "Exercises and Quizzes section"));
@@ -782,9 +760,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", "Quizzes");
 	}
 	//endregion
-	
-	//Web Templates section
-	//region
+
+	//region Web Templates section
 	public void scrollToWebTemplatesSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", "Web Templates section"));
@@ -820,8 +797,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Certification section
-	//region
+	//region Certification section
 	public void scrollToCertificationSection(){
 		
 		control.scrollToElement(getElementById("getdiploma", "Certification section"));
@@ -852,9 +828,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementById("w3_cert_badge", "Certification badge");
 	}
 	//endregion
-	
-	//How To Section
-	//region
+
+	//region How To section
 	public void scrollToHowToSection(){
 		
 		control.scrollToElement(getElementById("howto_padding", "How To Section"));
