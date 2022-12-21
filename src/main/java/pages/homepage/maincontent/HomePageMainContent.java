@@ -65,12 +65,7 @@ public class HomePageMainContent extends BasePage{
 		
 		return getElementByXpath(MessageFormat.format(tutorialButtonExpathExpression, nameOfTheButton), nameOfTheButton + " button");
 	}
-	
-	public WebElement getHeaderTextInMainContent(){
-		
-		return getHeaderElement(MainContentEnum.LEARN_TO_CODE_HEADER.toString());
-	}
-	
+
 	public WebElement getSubheaderTextInMainContent(){
 		
 		String learnToCodeSubheaderXpathExpression = "//*[text()=\"%s\"]";
