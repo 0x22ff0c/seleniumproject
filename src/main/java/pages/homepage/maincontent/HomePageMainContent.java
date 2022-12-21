@@ -797,8 +797,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Certification section
-	//region
+	//region Certification section
 	public void scrollToCertificationSection(){
 		
 		control.scrollToElement(getElementById("getdiploma", "Certification section"));
