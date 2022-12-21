@@ -311,11 +311,6 @@ public class HomePageMainContent extends BasePage{
 	
 	//SQL section
 	//region
-	public void scrollToSQLSection(){
-		
-		scrollToSection(MainContentEnum.SQL.name());
-	}
-	
 	public String getSQLHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]");
