@@ -258,8 +258,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//Python section
-	//region
+	//region Python section
 	public String getPythonHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-pink')]/descendant::h1)[1]");
