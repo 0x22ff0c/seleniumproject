@@ -303,9 +303,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.PYTHON_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	//endregion
-	
-	//SQL section
-	//region
+
+	//region SQL section
 	public String getSQLHeaderContent(){
 		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]");
