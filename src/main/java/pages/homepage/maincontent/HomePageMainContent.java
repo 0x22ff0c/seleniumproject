@@ -406,19 +406,9 @@ public class HomePageMainContent extends BasePage{
 	
 	//Bootstrap
 	//region
-	public WebElement getBootstrapHeader(){
-		
-		return getHeaderElement(MainContentEnum.BOOTSTRAP.toString());		
-	}
-	
 	public String getBootstrapSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.BOOTSTRAP.toString());
-	}
-	
-	public WebElement getLearnBootstrapButton(){
-
-		return getTutorialButton(MainContentEnum.BOOTSTRAP.toString());
 	}
 	//endregion
 	
