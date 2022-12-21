@@ -610,9 +610,8 @@ public class HomePageMainContent extends BasePage{
 		return getButtonElementById("myLearningFromDefault", "Sign Up for Free");
 	}
 	//endregion
-	
-	//Become a Pro user section
-	//region
+
+	//region Become a Pro user section
 	public void scrollToBecomeProUserSection(){
 		
 		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User section"));
