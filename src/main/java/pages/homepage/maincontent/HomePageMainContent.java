@@ -760,9 +760,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", "Quizzes");
 	}
 	//endregion
-	
-	//Web Templates section
-	//region
+
+	//region Web Templates section
 	public void scrollToWebTemplatesSection(){
 		
 		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", "Web Templates section"));
