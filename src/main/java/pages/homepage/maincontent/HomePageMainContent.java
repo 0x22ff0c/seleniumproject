@@ -16,8 +16,7 @@ public class HomePageMainContent extends BasePage{
 		super(driver);
 	}
 
-	//Main Content
-	//region
+	//region Main Content
 	public WebElement getMainContent(){
 		
 		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION.toString());
