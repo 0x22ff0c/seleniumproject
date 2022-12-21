@@ -398,19 +398,9 @@ public class HomePageMainContent extends BasePage{
 
 	//W3.CSS
 	//region
-	public WebElement getW3CSSHeader(){
-		
-		return getHeaderElement(MainContentEnum.W3CSS.toString());
-	}
-	
 	public String getW3CSSSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.W3CSS.toString());
-	}
-	
-	public WebElement getLearnW3CSSButton(){
-		
-		return getTutorialButton(MainContentEnum.W3CSS.toString());
 	}
 	//endregion
 	
