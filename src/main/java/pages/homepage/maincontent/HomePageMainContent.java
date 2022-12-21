@@ -391,9 +391,8 @@ public class HomePageMainContent extends BasePage{
 		return getSubheaderValue(MainContentEnum.W3CSS.toString());
 	}
 	//endregion
-	
-	//Bootstrap
-	//region
+
+	//region Bootstrap section
 	public String getBootstrapSubheader(){
 		
 		return getSubheaderValue(MainContentEnum.BOOTSTRAP.toString());
