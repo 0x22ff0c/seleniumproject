@@ -20,7 +20,7 @@ public class HomePageFooter extends BasePage{
 		return getButtonElement(FooterEnum.QUIZZES_BUTTON.toString());
 	}
 
-	public WebElement getExcercisesButton(){
+	public WebElement getExercisesButton(){
 		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString());
 	}
 
