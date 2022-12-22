@@ -297,7 +297,6 @@ public class HomePageMainContent extends BasePage{
 
 	//region Other tutorials section
 	public void scrollToOtherTutorialsSection(){
-		
 		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
 	}
 	//endregion
