@@ -369,17 +369,14 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code editor section
 	public void scrollToCodeEditorSection(){
-		
 		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", "Code Editor section"));
 	}
 	
 	public String getCodeEditorHeader(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'black')]/descendant::h1)[3]");
 	}
 	
 	public String getCodeEditorSubheader(){
-		
 		return getTextOfElementUsingXpathLocator("((//*[contains(@class, 'black')]/descendant::h1)[3]/following-sibling::*)[1]");
 	}
 	//endregion
