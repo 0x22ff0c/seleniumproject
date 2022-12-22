@@ -526,70 +526,57 @@ public class HomePageMainContent extends BasePage{
 
 	//region Become a Pro user section
 	public void scrollToBecomeProUserSection(){
-		
 		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User section"));
 	}
 	
 	public WebElement getBecomeProUserHeader(){
-		
 		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User header");
 	}
 	
 	public String getBecomeProUserSubheader(){
-		
 		return getTextOfElementUsingXpathLocator("//*[text()='Become a PRO User']/following-sibling::*[1]");		
 	}
 	
 	//1st checkbox
 	public WebElement getBecomeProUser1stCheckbox(){
-		
 		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[1]", "Become Pro User - 1st checkbox");
 	}
 	
 	public String getBecomeProUser1stCheckboxText(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[@src='/spaces/files/check3.db67d31e.svg']/parent::*)[1]");
 	}
 	
 	public WebElement getBecomeProUser1stCheckboxStrongText(){
-		
 		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg']/following-sibling::*)[1]", "without ads");
 	}
 	
 	//2nd checkbox
 	public WebElement getBecomeProUser2ndCheckbox(){
-		
 		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[2]", "Become Pro User - 2nd checkbox");
 	}
 	
 	public String getBecomeProUser2ndCheckboxText(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[@src='/spaces/files/check3.db67d31e.svg']/parent::*)[2]");
 	}
 	
 	public WebElement getBecomeProUser2ndCheckboxLink(){
-		
 		return getElementByLinkText("Spaces", "Become Pro User - Spaces");
 	}
 	
 	//3rd checkbox
 	public WebElement getBecomeProUser3rdCheckbox(){
-		
 		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[3]", "Become Pro User - 3rd checkbox");
 	}
 	
 	public String getBecomeProUser3rdCheckboxText(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[@src='/spaces/files/check3.db67d31e.svg']/parent::*)[3]");
 	}
 	
 	public WebElement getBecomeProUser3rdCheckboxLink(){
-		 
 		return getElementByLinkText("HTML Video Tutorial", "Become Pro User - HTML Video Tutorial");
 	}
 	
 	public WebElement getBecomeProUserLearnMoreButton(){
-		
 		return getButtonElementById("proFromDefault", "Learn More");
 	}
 	//endregion
