@@ -649,27 +649,22 @@ public class HomePageMainContent extends BasePage{
 
 	//region Web Templates section
 	public void scrollToWebTemplatesSection(){
-		
 		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", "Web Templates section"));
 	}
 	
 	public WebElement getWebTemplatesHeader(){
-		
 		return getElementByXpath("(//*[text()='Web Templates'])[2]");
 	}
 	
 	public String getWebTemplatesSubheader(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[text()='Web Templates'])[2]/following-sibling::*[2]");
 	}
 	
 	public WebElement getWebTemplatesSubheaderFreeText(){
-
 		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*[2]/descendant::strong[text()='free']", "free");
 	}
 	
 	public WebElement getWebTemplatesSampleImage(){
-		
 		String xpathExpression = "(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[@src='w3css_templates.jpg']";
 		
 		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
@@ -678,7 +673,6 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWebTemplatesBrowseTemplatesButton(){
-
 		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", "Browse Templates");
 	}
 	//endregion
