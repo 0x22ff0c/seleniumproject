@@ -11,38 +11,27 @@ public class HomePageFooter extends BasePage{
 	public HomePageFooter(WebDriver driver){
 		super(driver);
 	}
-	
-	//Remove
-	public WebElement getFooter(){
-		return getElementByTagName("footer", FooterEnum.FOOTER_SECTION.toString());
-	}
-	
-	//Retain
+
 	public void scrollToFooterSection(){
 		control.scrollToElement(getElementByTagName("footer", FooterEnum.FOOTER_SECTION.toString()));
 	}
 
-	//Retain
 	public WebElement getQuizzesButton(){
 		return getButtonElement(FooterEnum.QUIZZES_BUTTON.toString());
 	}
-	
-	//Retain
+
 	public WebElement getExcercisesButton(){
 		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString());
 	}
-	
-	//Add "Certificates" for the button name
+
 	public WebElement getCertificatesButton(){
-		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString());
+		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString(), "Certificates");
 	}
-	
-	//Add "Upgrade" for the button name
+
 	public WebElement getUpgradeButton(){
-		return getButtonElement(FooterEnum.UPGRADE_BUTTON.toString());
+		return getButtonElement(FooterEnum.UPGRADE_BUTTON.toString(), "Upgrade");
 	}
-	
-	//Change to getButtonElement that accepts By object
+
 	public WebElement getSpacesButton(){
 		return getElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", FooterEnum.SPACES_BUTTON.toString());
 	}
