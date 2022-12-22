@@ -16,7 +16,7 @@ public class HomePageMainContent extends BasePage{
 		super(driver);
 	}
 
-	//region Main Content
+	//region Main Content section
 	public WebElement getMainContent(){
 		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION.toString());
 	}
@@ -381,76 +381,62 @@ public class HomePageMainContent extends BasePage{
 	}
 	//endregion
 
-	//region Code editor window
+	//region Code editor window section
 	public WebElement getCodeEditorDotButton(int dotButtonNumber){
-
 		return getElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("Code editor dot button - %s", dotButtonNumber));
 	}
 	
 	public String getCodeEditorUrlValue(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::input");
 	}
 	
 	public WebElement getCodeEditorFrontendActive(){
-		
 		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
 	}
 	
 	public int getCodeEditorFrontendActiveDisplayCount(){
-		
 		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
 	}
 	
 	private WebElement getCodeEditorFrontEndNotActive(){
-		
 		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", "Frontend inactive button");
 	}
 	
 	public void clickFrontendButton(){
-		
 		control.clickButton(getCodeEditorFrontEndNotActive());
 	}
 
 	public WebElement getCodeEditorBackEndActive(){
-		
 		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
 	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
-		
 		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", "Backend inactive button");
 	}
 	
 	public int getCodeEditorBackEndActiveDisplayCount(){
-		
 		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
 	}
 	
 	public void clickBackEndButton(){
-		
 		control.clickButton(getCodeEditorBackendNotActive());
 		
 		control.waitForElmentToBeDisplayedInPage(By.xpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']"));
 	}
 
 	public WebElement getCodeEditorFrontendGIF(){
-		
 		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", "Frontend GIF");
 	}
 
 	public WebElement getCodeEditorBackendGIF(){
-		
 		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", "Backend GIF");
 	}
 	
 	public WebElement getCodeEditorTryFrontend(){
-		
 		return getElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", "Frontend editor button");
 	}
 	
 	public WebElement getCodeEditorTryBackend(){
-		
 		return getElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", "Backend editor button");
 	}
 	//endregion
