@@ -627,27 +627,22 @@ public class HomePageMainContent extends BasePage{
 
 	//region Exercises and Quizzes section
 	public void scrollToExercisesQuizzesSection(){
-		
 		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", "Exercises and Quizzes section"));
 	}
 	
 	public WebElement getExercisesAndQuizzesHeader(){
-		
 		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", "Exercises and Quizzes header");
 	}
 	
 	public String getExercisesAndQuizzesSubheader(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[text()='Exercises and Quizzes']/following-sibling::*)[1]");
 	}
 	
 	public WebElement getExercisesAndQuizzesExercisesButton(){
-		
 		return getElementByXpath("(//*[text()='Exercises'])[2]/parent::*", "Exercises");
 	}
 	
 	public WebElement getExercisesAndQuizzesQuizzesButton(){
-		
 		return getElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", "Quizzes");
 	}
 	//endregion
