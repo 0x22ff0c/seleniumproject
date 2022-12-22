@@ -259,46 +259,38 @@ public class HomePageMainContent extends BasePage{
 
 	//region SQL section
 	public String getSQLHeaderContent(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]");
 	}
 	
 	public String getSQLSubheaderContent(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'turquoise')]/descendant::h1)[1]/following-sibling::*[1]");
 	}
 	
 	public WebElement getSQLLearnSQLButton(){
-		
 		return getLearnButtonElement(MainContentEnum.LEARN_SQL.toString());
 	} 
 	
 	public WebElement getSQLReferenceButton(){
-		
 		return getReferenceButton(MainContentEnum.SQL_REFERENCE.toString());
 	}
 	
 	public WebElement getSQLGetCertifiedButton(){
-		
 		return getButtonElement(MainContentEnum.SQL_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
 	}
 	
 	public String getSQLCodeExampleHeader(){
-		
 		String sqlCodeExampleHeader = "(//*[text()='%s'])/parent::*/following-sibling::*/descendant::*[2]";
 		
 		return getTextOfElementUsingXpathLocator(String.format(sqlCodeExampleHeader, MainContentEnum.SQL.name()));
 	}
 	
 	public WebElement getSQLSampleCodeSection(){
-		
 		String sqlSampleCodeXpathExpression = "//*[text()='%s']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
 		
 		return getElementByXpath(String.format(sqlSampleCodeXpathExpression, MainContentEnum.SQL.name()), MainContentEnum.SQL_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getSQLTryItYourselfButton(){
-		
 		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.SQL_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	//endregion
