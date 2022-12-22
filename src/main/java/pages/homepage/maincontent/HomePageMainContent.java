@@ -303,7 +303,6 @@ public class HomePageMainContent extends BasePage{
 
 	//region PHP section
 	public String getPHPSubheader(){
-		
 		return getSubheaderValue(MainContentEnum.PHP.name());
 	}
 	//endregion
