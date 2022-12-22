@@ -51,7 +51,7 @@ public class WebdriverManager {
 	}
 	
 	private void getFirefoxDriver(){
-		
+
 		WebDriverManager.firefoxdriver().setup();
 
 		FirefoxOptions options = new FirefoxOptions();
