@@ -18,40 +18,34 @@ public class HomePageMainContent extends BasePage{
 
 	//region Main Content
 	public WebElement getMainContent(){
-		
 		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION.toString());
 	}
 	
 	private void scrollToSection(String nameOfTheSection){
-		
 		String sectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
 		
 		control.scrollToElement(getElementByXpath(String.format(sectionXpathExpression, nameOfTheSection), nameOfTheSection + " section"));
 	}
 	
 	public WebElement getHeaderElement(String nameOfTheSection){
-	
 		String headerXpathExpression = "//*[text()='%s']";
 		
 		return getElementByXpath(String.format(headerXpathExpression, nameOfTheSection), nameOfTheSection + " header");
 	}
 	
 	private String getSubheaderValue(String nameOfTheSection){
-		
 		String subheaderXpathExpression = "//*[text()='%s']/following-sibling::*/descendant::*";
 		
 		return getTextOfElementUsingXpathLocator(String.format(subheaderXpathExpression, nameOfTheSection));
 	}
 	
 	public WebElement getLearnButtonElement(String nameOfTheButton){
-		
 		String learnButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
 		
 		return getElementByXpath(String.format(learnButtonXpathExpression, nameOfTheButton), nameOfTheButton + " button");
 	}
 	
 	private WebElement getReferenceButton(String nameOfTheButton){
-	
 		String referenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
 		
 		return getElementByXpath(String.format(referenceButtonXpathExpression, nameOfTheButton), 
@@ -59,14 +53,12 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	private WebElement getTutorialButton(String nameOfTheButton){
-		
 		String tutorialButtonExpathExpression = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
 		
 		return getElementByXpath(MessageFormat.format(tutorialButtonExpathExpression, nameOfTheButton), nameOfTheButton + " button");
 	}
 
 	public WebElement getSubheaderTextInMainContent(){
-		
 		String learnToCodeSubheaderXpathExpression = "//*[text()=\"%s\"]";
 		
 		return getElementByXpath(String.format(learnToCodeSubheaderXpathExpression, MainContentEnum.LEARN_TO_CODE_SUB_HEADER.toString()), 
@@ -74,32 +66,26 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getSearchbarField(){
-		
 		return getElementById("search2", MainContentEnum.SEARCH_FIELD.toString());
 	}
 	
 	public String getSearchbarfieldPlaceholder(){
-		
 		return getPlaceholderTextOfField(getSearchbarField());
 	}
 	
 	public WebElement getSearchbarButton(){
-		
 		return getElementById("learntocode_searchbtn", MainContentEnum.SEARCH_FIELD_BUTTON.toString() + " button");	
 	}
 	
 	public WebElement getWhereToBeginLink(){
-		
 		return getElementByLinkText(MainContentEnum.NOT_SURE_WHERE_TO_BEGIN_LINK.toString());
 	}
 	
 	public void scrollToWhereToBeginLink(){
-		
 		control.scrollToElement(getWhereToBeginLink());
 	}
 	
 	public void clickWhereToBeginLink(){
-		
 		control.clickButton(getWhereToBeginLink());
 	}
 
