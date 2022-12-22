@@ -309,35 +309,30 @@ public class HomePageMainContent extends BasePage{
 
 	//region jQuery section
 	public String getjQuerySubheader(){
-		
 		return getSubheaderValue(MainContentEnum.JQUERY.toString());
 	}
 	//endregion
 
 	//region Java section
 	public String getJavaSubheader(){
-
 		return getSubheaderValue(MainContentEnum.JAVA.toString());
 	}
 	//endregion
 
 	//region C++ section
 	public String getCplusplusSubheader(){
-		
 		return getSubheaderValue(MainContentEnum.CPLUSPLUS.toString());
 	}
 	//endregion
 
 	//region W3.CSS section
 	public String getW3CSSSubheader(){
-		
 		return getSubheaderValue(MainContentEnum.W3CSS.toString());
 	}
 	//endregion
 
 	//region Bootstrap section
 	public String getBootstrapSubheader(){
-		
 		return getSubheaderValue(MainContentEnum.BOOTSTRAP.toString());
 	}
 	//endregion
