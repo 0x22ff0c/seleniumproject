@@ -35,7 +35,7 @@ public class TestHomePageFooter {
 		
 		baseTest.verifyElementIsDisplayed(homePageFooter.getQuizzesButton());
 		
-		baseTest.verifyElementIsDisplayed(homePageFooter.getExcercisesButton());
+		baseTest.verifyElementIsDisplayed(homePageFooter.getExercisesButton());
 		
 		baseTest.verifyElementIsDisplayed(homePageFooter.getCertificatesButton());
 		

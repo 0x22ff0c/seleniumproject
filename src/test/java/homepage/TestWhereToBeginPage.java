@@ -228,7 +228,7 @@ public class TestWhereToBeginPage {
 		
 		baseTest.verifyElementIsDisplayed(footerSection.getQuizzesButton());
 		
-		baseTest.verifyElementIsDisplayed(footerSection.getExcercisesButton());
+		baseTest.verifyElementIsDisplayed(footerSection.getExercisesButton());
 		
 		baseTest.verifyElementIsDisplayed(footerSection.getCertificatesButton());
 		

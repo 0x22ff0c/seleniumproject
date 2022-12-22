@@ -30,7 +30,6 @@ public class BasePage {
 	}
 	
 	public void switchToDefaultContent(){
-		
 		LogUtility.logInfo("Switching back to default content...");
 		
 		driver.switchTo().defaultContent();
@@ -39,7 +38,6 @@ public class BasePage {
 	}
 		
 	protected void switchToIframe(WebElement element){
-		
 		LogUtility.logInfo(String.format("Swithcing to frame: %s...", nameOfElement));
 		
 		driver.switchTo().frame(element);
@@ -49,45 +47,33 @@ public class BasePage {
 	}
 	
 	protected WebElement getElementById(String id, String nameOfElement){
-		
 		return getElement(By.id(id), nameOfElement);
-		
 	}
 	
 	protected WebElement getElementByClass(String className, String nameOfElement){
-		
 		return getElement(By.className(className), nameOfElement);
-		
 	}
 
 	protected WebElement getElementByXpath(String xpath, String nameOfElement){
-
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
 		
 		return getElement(By.xpath(xpath), nameOfElement);
-
 	}
 	
 	protected int getElementByXpathCount(String xpath, String nameOfElement){
-		
 		this.nameOfElement = nameOfElement;
 		
 		return driver.findElements(By.xpath(xpath)).size();
-		
 	}
 	
 	protected WebElement getElementByXpath(String xpath){
-		
 		return getElement(By.xpath(xpath));
-		
 	}
 	
 	protected WebElement getElementByTagName(String tagName, String nameOfElement){
-		
 		return getElement(By.tagName(tagName), nameOfElement);
-	
 	}
 	
 	protected WebElement getElementByLinkText(String linkText){
@@ -97,13 +83,10 @@ public class BasePage {
 	}
 	
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
-	
 		return getElement(By.linkText(linkText), nameOfElement + " link");
-	
 	}
 	
 	private WebElement getElement(By byElement){
-		
 		element = null; 
 		
 		try {
@@ -118,7 +101,6 @@ public class BasePage {
 	}
 	
 	private WebElement getElement(By byElement, String nameOfElement){
-
 		this.nameOfElement = nameOfElement;
 
 		element = null;
@@ -142,29 +124,22 @@ public class BasePage {
 	} 
 
 	public WebElement getButtonElement(String nameOfTheButton){
-
 		return getElementByXpath(String.format("//*[@title='%s']", nameOfTheButton), setNameOfTheButton(nameOfTheButton));
-		
 	}
 	
 	public WebElement getButtonElementById(String idOfElement, String nameOfTheButton){
-		
 		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
-		
 	}
 	
 	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
-		
 		element = getButtonElement(titleOfTheButton);
 		
 		this.nameOfElement = setNameOfTheButton(actualNameOfTheButton);
 		
 		return element;
-		
 	}
 	
 	protected String getTextOfElement(WebElement element){
-		
 		String textOfElement = "";
 		
 		if(element != null){
@@ -179,7 +154,6 @@ public class BasePage {
 	}
 	
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
-		
 		element = getElementByXpath(xpathExpression);
 		
 		String contentValue = element.getText().replace("\n", " ");
@@ -191,11 +165,9 @@ public class BasePage {
 		}
 		
 		return contentValue;
-		
 	}
 
 	protected String getPlaceholderTextOfField(WebElement element){
-		
 		String placeholderText = "";
 		
 		if(element != null){
@@ -207,7 +179,5 @@ public class BasePage {
 		}
 		
 		return placeholderText;
-		
 	}
-	
 }
