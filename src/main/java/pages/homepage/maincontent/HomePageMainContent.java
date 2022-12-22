@@ -93,32 +93,26 @@ public class HomePageMainContent extends BasePage{
 
 	//region HTML section
 	public void scrollToHtmlSection(){
-		
 		scrollToSection(MainContentEnum.HTML.name());
 	}
 	
 	public String getHtmlHeaderContent(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-green')]/descendant::h1)[1]");
 	}
 	
 	public String getHtmlSubheaderContent(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'light-green')]/descendant::h1/following-sibling::*)[1]");
 	}
 	
 	public WebElement getHtmlLearnHtmlButton(){
-		
 		return getLearnButtonElement(MainContentEnum.LEARN_HTML.toString());
 	}
 	
 	public WebElement getHtmlVideoTutorialButton(){
-		
 		return getButtonElement("HTML video tutorial", MainContentEnum.VIDEO_TUTORIAL.toString());
 	}
 	
 	public WebElement getHtmlReferenceButton(){
-		
 		return getReferenceButton(MainContentEnum.HTML_REFERENCE.toString());
 	}
 	
@@ -128,21 +122,18 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public String getHtmlCodeExampleHeader(){
-		
 		String htmlCodeExampleHeaderXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[2]";
 		
 		return getTextOfElementUsingXpathLocator(String.format(htmlCodeExampleHeaderXpathExpression, MainContentEnum.HTML.name()));
 	}
 	
 	public WebElement getHtmlSampleCodeSection(){
-		
 		String htmlSampleCodeXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
 		
 		return getElementByXpath(String.format(htmlSampleCodeXpathExpression, MainContentEnum.HTML.name()), MainContentEnum.HTML_SAMPLE_CODE_SECTION.toString());
 	}
 	
 	public WebElement getHtmlTryItYourselfButton(){
-		
 		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", MainContentEnum.HTML_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	//endregion
