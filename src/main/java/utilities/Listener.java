@@ -35,7 +35,7 @@ public class Listener implements ITestListener {
 		
 		driverManager = new WebdriverManager();
 		
-		driverManager.driverManager("Firefox");
+		driverManager.driverManager("Chrome");
 		
 		driverManager.manageWindow();
 		
