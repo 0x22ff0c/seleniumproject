@@ -679,32 +679,26 @@ public class HomePageMainContent extends BasePage{
 
 	//region Certification section
 	public void scrollToCertificationSection(){
-		
 		control.scrollToElement(getElementById("getdiploma", "Certification section"));
 	}
 	
 	public WebElement getCertificationHeader(){
-		
 		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", "Kickstart your career header");
 	}
 	
 	public String getCertificationSubheader(){
-		
 		return getTextOfElementUsingXpathLocator("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[1]");
 	}
 	
 	public WebElement getCertificationGetStartedButton(){
-		
 		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", "Get started");
 	}
 	
 	public WebElement getCertificationArrow(){
-
 		return getElementById("w3_cert_arrow", "Arrow pointing to certification badge");
 	}
 	
 	public WebElement getCertificationBadge(){
-		
 		return getElementById("w3_cert_badge", "Certification badge");
 	}
 	//endregion
