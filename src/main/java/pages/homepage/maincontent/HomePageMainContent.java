@@ -705,54 +705,44 @@ public class HomePageMainContent extends BasePage{
 
 	//region How To section
 	public void scrollToHowToSection(){
-		
 		control.scrollToElement(getElementById("howto_padding", "How To Section"));
 	}
 	
 	public WebElement getHowToSectionHeader(){
-		
 		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']");
 	}
 	
 	public String getHowToSectionSubheader(){
-
 		return getTextOfElementUsingXpathLocator("//*[@id='howto_padding']/descendant::*[2]");
 	}
 	
 	public String getHowToSection2ndSubheader(){
-		
 		return getTextOfElementUsingXpathLocator("//*[@id='howto_padding']/descendant::*[3]");
 	}
 	
 	public WebElement getHowToSectionSampleWindowDotButton(int dotButtonNumber){
-		
 		return getElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[2]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("How To Section Window dot button - %s", dotButtonNumber));
 	}
 	
 	public String getHowToSectionSampleWindowUrlValue(){
-		
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'codeeditorbr-container')])[2]/descendant::input");
 	}
 	
 	int slideNumber = 1;
 	
 	public void scrollToHowToSectionSliderContainer(){
-		
 		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", "How To Section window"));
 	}
 	
 	public WebElement getHowToSectionSampleWindowPreviousButton(){
-		
 		return getElementByXpath("//*[@class='prev']", "How To Section Sample Window - Previous");
 	}
 	
 	public void switchToHowToSliderFrame(){
-		
 		switchToIframe(getElementById("howto_iframe", "How To Section - Slider"));
 	}
 	
 	private void incrementSlideNumber(){
-		
 		slideNumber++;
 		
 		if(slideNumber == 4){
@@ -761,7 +751,6 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	private void decrementSlideNumber(){
-		
 		slideNumber--;
 		
 		if(slideNumber == 0){
@@ -770,55 +759,46 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public void clickPreviousButton(){
-		
 		control.clickButton(getHowToSectionSampleWindowPreviousButton());
 		
 		decrementSlideNumber();
 	}
 	
 	public void clickNextButton(){
-		
 		control.clickButton(getHowToSectionSampleWindowNextButton());
 		
 		incrementSlideNumber();
 	}
 	
 	private int getArrayIndex(int slideNumber){
-		
 		return slideNumber - 1;
 	}
 	
 	public WebElement getHowToSectionSampleWindowNextButton(){
-		
 		return getElementByClass("next", "How To Section Sample Window - Next");
 	}
 	
 	public WebElement getHowToSectionSampleWindowCounter(){
-		
 		return getElementByXpath(String.format("(//*[@class='numbertext'])[%s]", slideNumber), String.format("How to slider: %s / 3", slideNumber));
 	}
 	
 	public WebElement getHowToSectionSampleWindowCaptionText(){
-		
 		String[] captionsArray = {"Caption Text", "Caption Two", "Caption Three"};
 
 		return getElementByXpath(String.format("(//*[@class='text'])[%s]", slideNumber), String.format("Slider caption: %s", captionsArray[getArrayIndex(slideNumber)]));
 	}
 	
 	public WebElement getHowToSectionSampleWindowImage(){
-
 		String[] filesImagesArray = {"img_nature_wide.jpg", "img_snow_wide.jpg", "img_mountains_wide.jpg"};
 
 		return getElementByXpath(String.format("//*[@src='%s']",filesImagesArray[getArrayIndex(slideNumber)]), String.format("Slider image: %s", slideNumber));		
 	}
 	
 	public WebElement getHowtoSectionActiveDot(){
-		
 		return getElementByXpath(String.format("//*[contains(@class, 'dot active') and @onclick='currentSlide(%s)']", slideNumber), String.format("How To Section - Active Dot: %s", slideNumber));
 	}
 	
 	public WebElement getHowToLearnButton(){
-	
 		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", "Learn How To");
 	}
 	//endregion
