@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -49,7 +50,7 @@ public class WebdriverManager {
 		driver = new ChromeDriver(options);
 
 	}
-	
+
 	private void getFirefoxDriver(){
 
 		WebDriverManager.firefoxdriver().setup();
@@ -81,7 +82,7 @@ public class WebdriverManager {
 		case "Firefox":
 			getFirefoxDriver();
 			break;
-			
+
 		default:
 			getChromeDriver();
 			break;
