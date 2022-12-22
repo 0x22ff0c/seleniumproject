@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class WebdriverManager {
 	
@@ -52,8 +53,12 @@ public class WebdriverManager {
 	private void getFirefoxDriver(){
 		
 		WebDriverManager.firefoxdriver().setup();
-		
-		driver = new FirefoxDriver();
+
+		FirefoxOptions options = new FirefoxOptions();
+		options.setHeadless(true);
+		options.addArguments("--width=1920");
+		options.addArguments("--height=1080");
+		driver = new FirefoxDriver(options);
 		
 	}
 	
