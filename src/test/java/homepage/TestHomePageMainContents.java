@@ -478,7 +478,9 @@ public class TestHomePageMainContents {
 		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesHeader());
 		
 		baseTest.verifyTextIsTheSame(homePage.getWebTemplatesSubheader(), "Browse our selection of free responsive HTML Templates");
-		
+
+		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getWebTemplatesSubheaderFreeText());
+
 		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesSampleImage());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getWebTemplatesBrowseTemplatesButton());
