@@ -536,7 +536,9 @@ public class TestHomePageMainContents {
 		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSampleWindowUrlValue(), "www.w3schools.com/howto/");
 		
 		homePage.switchToHowToSliderFrame();
-		
+
+		homePage.scrollToHowToSectionSliderContainer();
+
 		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowPreviousButton());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowNextButton());
