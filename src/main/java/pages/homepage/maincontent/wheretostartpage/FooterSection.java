@@ -9,7 +9,6 @@ public class FooterSection extends HomePageFooter{
 
 	public FooterSection(WebDriver driver) {
 		super(driver);
-		
 	}
 
 	public WebElement getFooterHomeButton(){
@@ -18,15 +17,10 @@ public class FooterSection extends HomePageFooter{
 
 	@Override
 	public WebElement getSpacesButton(){
-		
 		return getButtonElement("Get Your Own Website With W3schools Spaces", "Spaces");
-		
 	}
 	
 	public WebElement getFooterShopButton(){
-
 		return getElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", "W3Schools Shop button");
 	}
-	
-
 }
