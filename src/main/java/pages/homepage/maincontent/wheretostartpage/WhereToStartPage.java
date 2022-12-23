@@ -178,7 +178,7 @@ public class WhereToStartPage extends BasePage{
 	}
 	//endregion
 
-	//Hello Developer
+	//region Hello Developer section
 	public void scrollToHelloDeveloperSection(){
 		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[4]/parent::*/parent::*",
 				setNameSection(WhereToStartMainEnum.HELLO_DEVELOPER.toString())));
@@ -227,8 +227,9 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getGitLink(){
 		return getElementByLinkText(WhereToStartMainEnum.GIT.toString());
 	}
-	
-	//What about back-end section
+	//endregion
+
+	//region What about back-end section
 	public void scrollToBackEndSection(){
 		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*",
 				setNameSection(WhereToStartMainEnum.WHAT_ABOUT_BACK_END_SECTION.toString())));
@@ -271,4 +272,5 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getBackEndHomePageLink(){
 		return getElementByLinkText(WhereToStartMainEnum.HOME_PAGE_LINK.toString());
 	}
+	//endregion
 }
