@@ -8,7 +8,6 @@ import pages.BasePage;
 
 public class HomePageHeader extends BasePage{
 
-	//Header
 	public HomePageHeader(WebDriver driver){
 		super(driver);
 	}
@@ -17,7 +16,7 @@ public class HomePageHeader extends BasePage{
 		return getElementByXpath("//*[@title='Home']/parent::*", HeaderEnum.HOME_PAGE_HEADER.toString());		
 	}
 
-	//Header - menu items
+	//region Menu Items section
 	protected WebElement getHeaderCaretButton(String title){
 		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down", title));
 	}
@@ -93,4 +92,5 @@ public class HomePageHeader extends BasePage{
 	public WebElement getHomeLogo(){
 		return getButtonElement("Home", HeaderEnum.HOME_LOGO.toString());
 	}
+	//endregion
 }
