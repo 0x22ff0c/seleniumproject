@@ -352,7 +352,9 @@ public class TestHomePageMainContents {
 		baseTest.verifyTextIsTheSame(homePage.getMyLearningSubheader(), "Track your progress with the free \"My Learning\" program here at W3Schools.");
 		
 		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getMyLearningFreeStrongText());
-		
+
+		baseTest.verifyTextIsTheSame(homePage.getMyLearning2ndSubheader(), "Log in to your account, and start earning points!");
+
 		homePage.scrollToMyLearningSampleScreenshot();
 		
 		baseTest.verifyElementIsDisplayed(homePage.getMyLearningSampleScreenshot());
@@ -476,7 +478,9 @@ public class TestHomePageMainContents {
 		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesHeader());
 		
 		baseTest.verifyTextIsTheSame(homePage.getWebTemplatesSubheader(), "Browse our selection of free responsive HTML Templates");
-		
+
+		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getWebTemplatesSubheaderFreeText());
+
 		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesSampleImage());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getWebTemplatesBrowseTemplatesButton());
@@ -532,7 +536,9 @@ public class TestHomePageMainContents {
 		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSampleWindowUrlValue(), "www.w3schools.com/howto/");
 		
 		homePage.switchToHowToSliderFrame();
-		
+
+		homePage.scrollToHowToSectionSliderContainer();
+
 		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowPreviousButton());
 		
 		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowNextButton());
