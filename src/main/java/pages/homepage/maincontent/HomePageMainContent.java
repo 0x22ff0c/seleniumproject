@@ -129,10 +129,6 @@ public class HomePageMainContent extends BasePage{
 	//endregion
 
 	//region CSS section
-	public void scrollToCSSSection(){
-		scrollToSection(MainContentEnum.CSS.name());
-	}
-	
 	public String getCssHeaderContent(){
 		return getTextOfElementUsingXpathLocator("(//*[contains(@class, 'yellow')]/descendant::h1)[1]");
 	}
