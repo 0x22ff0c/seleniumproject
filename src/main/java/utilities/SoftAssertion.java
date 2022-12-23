@@ -15,20 +15,17 @@ public class SoftAssertion extends SoftAssert{
 	  private static final String DEFAULT_SOFT_ASSERT_MESSAGE = "Meh";
 
 	  private void printExpectedAndActual(IAssert<?> a){
-	
 		  Map<String, String> values = new HashMap<String, String>();
 		  
 		  values.put("Expected", a.getExpected().toString());
 		  values.put("Actual", a.getActual().toString());
 		  
 		  printValues(values);
-		  
 	  }
 	  
 	  String message;
 	  
 	  private void printValues(Map<String, String> values){
-		  
 		  for(Map.Entry<String, String> entryMap : values.entrySet()){
 			  
 			  String value = entryMap.getValue();
@@ -39,14 +36,11 @@ public class SoftAssertion extends SoftAssert{
 				  
 				  LogUtility.logError(message);
 			  }
-
 		  }
-		  
 	  }
 
 	  @Override
 	  protected void doAssert(IAssert<?> a) {
-		  
 		  LogUtility.logInfo("Verify: " + a.getMessage());
 		  
 		  onBeforeAssert(a);
@@ -66,8 +60,8 @@ public class SoftAssertion extends SoftAssert{
 	    
 		  } finally {
 			  onAfterAssert(a);
-			  }
 		  }
+	  }
 
 	  @Override
 	  public void assertAll() {
@@ -89,6 +83,6 @@ public class SoftAssertion extends SoftAssert{
 				  sb.append("\n\t");
 				  sb.append(getErrorDetails(error));
 			  }throw new AssertionError(sb.toString());
-			  }
 		  }
+	  }
 }

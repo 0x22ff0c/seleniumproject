@@ -20,7 +20,6 @@ public class Control{
 	BaseTest baseTest;
 	BasePage basePage;
 	String nameOfElement;
-	Logger logger = LogManager.getLogger();
 	WebDriverWait wait;
 	
 	public Control(WebDriver driver, BasePage basePage){
@@ -34,25 +33,18 @@ public class Control{
 	}
 
 	public void waitForElmentToBeDisplayedInPage(By locator){
-		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		
 	}
 	
 	private void logBeforeAction(String message){
-		
 		LogUtility.logInfo(message + "...");
-	
 	}
 	
 	private void logAfterAction(String message){
-	
 		LogUtility.logInfo(message + ".");
-	
 	}
 	
 	public void clickButton(WebElement element){
-	
 		nameOfElement = basePage.getElementName();
 		
 		logBeforeAction(String.format("Clicking element: %s", nameOfElement));
@@ -60,31 +52,25 @@ public class Control{
 		element.click();
 
 		logAfterAction( String.format("Clicked element: %s", nameOfElement));
-		
 	}
 	
 	public void navigateBackToPreviousPage(){
-		
 		logBeforeAction("Navigating back");
 		
 		driver.navigate().back();
 		
 		logAfterAction("Navigated back to previous page");
-		
 	}
 	
 	public void typeToField(WebElement fieldElement, String valueToFillInTheField){
-		
 		logBeforeAction(String.format("Filling-in field with value: %s", valueToFillInTheField));
 		
 		fieldElement.sendKeys(valueToFillInTheField);
 		
 		logAfterAction(String.format("Filled-in field with value: %s", valueToFillInTheField));
-		
 	}
 		
 	public void scrollToElement(WebElement element){
-		
 		nameOfElement = basePage.getElementName();
 		
 		logBeforeAction(String.format("Scrolling to element: %s", nameOfElement));
@@ -92,7 +78,5 @@ public class Control{
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
 		
 		logBeforeAction(String.format("Scrolled to element: %s.", nameOfElement));
-		
 	}
-	
 }

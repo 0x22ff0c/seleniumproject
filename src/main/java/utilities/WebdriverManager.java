@@ -18,9 +18,7 @@ public class WebdriverManager {
 	private WebDriver driver = null;
 
 	public void navigateToWebsite(String url){
-		
 		driver.get(url);
-	
 	}
 
 	public WebDriver getDriver(){
@@ -28,17 +26,14 @@ public class WebdriverManager {
 	}
 	
 	public void quitSession(){
-
 		LogUtility.logInfo("Terminating the driver...");
 		
 		driver.quit();
 
 		LogUtility.logInfo("Terminated the driver.");
-		
 	}
 
 	private void getChromeDriver(){
-		
 		WebDriverManager.chromedriver().setup();
 		
 		System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -48,11 +43,9 @@ public class WebdriverManager {
 		options.addArguments("--headless");
 		options.addArguments("window-size=1920, 1080");
 		driver = new ChromeDriver(options);
-
 	}
 
 	private void getFirefoxDriver(){
-
 		WebDriverManager.firefoxdriver().setup();
 
 		FirefoxOptions options = new FirefoxOptions();
@@ -60,19 +53,15 @@ public class WebdriverManager {
 		options.addArguments("--width=1920");
 		options.addArguments("--height=1080");
 		driver = new FirefoxDriver(options);
-		
 	}
 	
 	public void manageWindow(){
-		
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-		
 	}
 	
 	public void driverManager(String browserToUse){
-		
 		switch (browserToUse) {
 		
 		case "Chrome":
@@ -88,7 +77,5 @@ public class WebdriverManager {
 			break;
 			
 		}
-
 	}
-
 }
