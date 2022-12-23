@@ -62,7 +62,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	private static final String REFERENCES_NAV_ID = "nav_references";
 	private static final String EXERCISES_NAV_ID = "nav_exercises";
 
-	//region Tutorials menu
+	//region Tutorials menu section
 	@Override
 	public WebElement getTutorialsCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
@@ -89,7 +89,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	//endregion
 
-	//References menu
+	//region References menu section
 	@Override
 	public WebElement getReferencesCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
@@ -114,6 +114,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	public void clickReferencesCloseButton(){
 		control.clickButton(getReferencesCloseButton());
 	}
+	//endregion
 	
 	//Exercises menu
 	@Override
