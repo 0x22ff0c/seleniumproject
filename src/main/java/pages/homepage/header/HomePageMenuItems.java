@@ -33,7 +33,6 @@ public class HomePageMenuItems extends HomePageHeader{
 	String categoryName = "";
 	
 	private WebElement getCategoryName(String idValue, String categoryName){
-		
 		String xpathExpression = menuItemInContainer;
 		
 		this.categoryName = categoryName;
@@ -48,7 +47,6 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getCategoryItem(String categoryItem){
-		
 		String xpathExpression = "//*[text()='%s']/following-sibling::*[text()='%s']";
 		
 		if(categoryName.equals("Data Analytics") || categoryName.equals("XML Tutorials")){
@@ -66,7 +64,6 @@ public class HomePageMenuItems extends HomePageHeader{
 	
 	
 	//Tutorials menu
-	
 	@Override
 	public WebElement getTutorialsCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
@@ -93,7 +90,6 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	//References menu
-	
 	@Override
 	public WebElement getReferencesCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
@@ -120,7 +116,6 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	//Exercises menu
-	
 	@Override
 	public WebElement getExercisesCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
@@ -133,14 +128,11 @@ public class HomePageMenuItems extends HomePageHeader{
 	private String exerciseButtonLocator = "//*[@id='%s']/descendant::*[contains(@class, '%s') and text()='%s']";
 	
 	public WebElement getExercisesYellowButtons(String buttonName){
-		
 		return getElementByXpath(String.format(exerciseButtonLocator, EXERCISES_NAV_ID, "yellow", buttonName), buttonName);
 	}
 	
 	public WebElement getExerciseMenuButton(String buttonName){
-		
 		return getElementByXpath(String.format(exerciseButtonLocator, EXERCISES_NAV_ID, "button", buttonName), buttonName);
-		
 	}
 	
 	public WebElement getExercisesMenuHeader(){
@@ -154,5 +146,4 @@ public class HomePageMenuItems extends HomePageHeader{
 	public void clickExercisesCloseButton(){
 		control.clickButton(getExercisesCloseButton());
 	}
-	
 }
