@@ -26,7 +26,7 @@ public class WhereToStartPage extends BasePage{
 	}
 	//endregion
 
-	//Learn HTML section
+	//region Learn HTML section
 	public WebElement getHtmlLeftButton(){
 		String htmlLinkXpathExpression = "//*[contains(@class, 'yellow')]/descendant::*[text()='%s']";
 		
@@ -53,6 +53,7 @@ public class WhereToStartPage extends BasePage{
 		return getElementByXpath(String.format(learnHtmlButtonXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()), 
 				WhereToStartMainEnum.LEARN_HTML_BUTTON.toString());
 	}
+	//endregion
 	
 	//CSS section
 	public void scrollToCSSsection(){
