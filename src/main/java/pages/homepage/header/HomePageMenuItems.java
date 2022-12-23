@@ -33,7 +33,6 @@ public class HomePageMenuItems extends HomePageHeader{
 	String categoryName = "";
 	
 	private WebElement getCategoryName(String idValue, String categoryName){
-		
 		String xpathExpression = menuItemInContainer;
 		
 		this.categoryName = categoryName;
@@ -48,7 +47,6 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getCategoryItem(String categoryItem){
-		
 		String xpathExpression = "//*[text()='%s']/following-sibling::*[text()='%s']";
 		
 		if(categoryName.equals("Data Analytics") || categoryName.equals("XML Tutorials")){
@@ -63,10 +61,8 @@ public class HomePageMenuItems extends HomePageHeader{
 	private static final String TUTORIAL_NAV_ID = "nav_tutorials";
 	private static final String REFERENCES_NAV_ID = "nav_references";
 	private static final String EXERCISES_NAV_ID = "nav_exercises";
-	
-	
-	//Tutorials menu
-	
+
+	//region Tutorials menu section
 	@Override
 	public WebElement getTutorialsCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
@@ -91,9 +87,9 @@ public class HomePageMenuItems extends HomePageHeader{
 	public void clickTutorialsCloseButton(){
 		control.clickButton(getTutorialsCloseButton());
 	}
-	
-	//References menu
-	
+	//endregion
+
+	//region References menu section
 	@Override
 	public WebElement getReferencesCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
@@ -118,9 +114,9 @@ public class HomePageMenuItems extends HomePageHeader{
 	public void clickReferencesCloseButton(){
 		control.clickButton(getReferencesCloseButton());
 	}
-	
-	//Exercises menu
-	
+	//endregion
+
+	//region Exercises menu section
 	@Override
 	public WebElement getExercisesCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
@@ -133,14 +129,11 @@ public class HomePageMenuItems extends HomePageHeader{
 	private String exerciseButtonLocator = "//*[@id='%s']/descendant::*[contains(@class, '%s') and text()='%s']";
 	
 	public WebElement getExercisesYellowButtons(String buttonName){
-		
 		return getElementByXpath(String.format(exerciseButtonLocator, EXERCISES_NAV_ID, "yellow", buttonName), buttonName);
 	}
 	
 	public WebElement getExerciseMenuButton(String buttonName){
-		
 		return getElementByXpath(String.format(exerciseButtonLocator, EXERCISES_NAV_ID, "button", buttonName), buttonName);
-		
 	}
 	
 	public WebElement getExercisesMenuHeader(){
@@ -154,5 +147,5 @@ public class HomePageMenuItems extends HomePageHeader{
 	public void clickExercisesCloseButton(){
 		control.clickButton(getExercisesCloseButton());
 	}
-	
+	//endregion
 }
