@@ -9,6 +9,10 @@ import java.util.Properties;
 
 public class Config {
 
+    public Config(){
+        loadPropertiesFile();
+    }
+
     Properties properties = new Properties();
 
     private void loadPropertiesFile(){
@@ -22,12 +26,14 @@ public class Config {
     }
 
     public String getBrowserValue(){
-        loadPropertiesFile();
         return properties.getProperty("browser");
     }
 
     public String getWebsiteUrlValue(){
-        loadPropertiesFile();
         return properties.getProperty("websiteurl");
+    }
+
+    public String getTestExecutionMode(){
+        return properties.getProperty("testexecutionmode");
     }
 }
