@@ -29,12 +29,14 @@ public class Listener implements ITestListener {
 	@Override
 	public void onStart(ITestContext contextStart) {
 		driverManager = new WebdriverManager();
-		
-		driverManager.driverManager("Chrome");
+
+		Config config = new Config();
+
+		driverManager.driverManager(config.getBrowserValue());
 		
 		driverManager.manageWindow();
 		
-		driverManager.navigateToWebsite("https://www.w3schools.com/");
+		driverManager.navigateToWebsite(config.getWebsiteUrlValue());
 
 		driver = driverManager.getDriver();
 	}
