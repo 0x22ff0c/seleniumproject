@@ -22,5 +22,4 @@ public class LogUtility {
 	public static void logWarn(String message){
 		LOGGER.warn(message);
 	}
-	
 }
