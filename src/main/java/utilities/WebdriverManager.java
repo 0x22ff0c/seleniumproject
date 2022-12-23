@@ -16,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 public class WebdriverManager {
 	
 	private WebDriver driver = null;
+	private Config config = new Config();
 
 	public void navigateToWebsite(String url){
 		driver.get(url);
@@ -33,16 +34,36 @@ public class WebdriverManager {
 		LogUtility.logInfo("Terminated the driver.");
 	}
 
+	private WebDriver getChromeDriverInstance(){
+
+		driver = null;
+
+		String executionMode = config.getTestExecutionMode();
+
+		switch (executionMode){
+			case "headless":
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless");
+				options.addArguments("window-size=1920, 1080");
+				driver = new ChromeDriver(options);
+				break;
+			case "window":
+				driver = new ChromeDriver();
+				manageWindow();
+				break;
+
+		}
+
+		return driver;
+	}
+
 	private void getChromeDriver(){
 		WebDriverManager.chromedriver().setup();
 		
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
-		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		options.addArguments("window-size=1920, 1080");
-		driver = new ChromeDriver(options);
+
+		driver = getChromeDriverInstance();
 	}
 
 	private void getFirefoxDriver(){
@@ -55,10 +76,10 @@ public class WebdriverManager {
 		driver = new FirefoxDriver(options);
 	}
 	
-	public void manageWindow(){
+	private void manageWindow(){
 		driver.manage().window().maximize();
 		
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(config.getLoadTimeOutInSecondsValue()));
 	}
 	
 	public void driverManager(String browserToUse){
