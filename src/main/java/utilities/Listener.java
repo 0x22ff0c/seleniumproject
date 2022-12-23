@@ -33,9 +33,7 @@ public class Listener implements ITestListener {
 		Config config = new Config();
 
 		driverManager.driverManager(config.getBrowserValue());
-		
-		driverManager.manageWindow();
-		
+
 		driverManager.navigateToWebsite(config.getWebsiteUrlValue());
 
 		driver = driverManager.getDriver();
