@@ -12,7 +12,7 @@ public class WhereToStartPage extends BasePage{
 		super(driver);
 	}
 
-	//"Where To Start" section
+	//region Where To Start section
 	public String getWhereToStartHeaderContent(){
 		String whereToStartHeaderXpathExpression = "//*[@class='textsmallerscreens' and text()='%s']";
 		
@@ -24,6 +24,7 @@ public class WhereToStartPage extends BasePage{
 		
 		return getTextOfElementUsingXpathLocator(String.format(whereToStartSubheaderXpathExpression, WhereToStartMainEnum.WHERE_TO_START.toString()));
 	}
+	//endregion
 
 	//Learn HTML section
 	public WebElement getHtmlLeftButton(){
