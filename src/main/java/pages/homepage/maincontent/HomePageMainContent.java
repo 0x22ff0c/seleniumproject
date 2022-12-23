@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.BasePage;
 
-import java.text.MessageFormat;
-
 public class HomePageMainContent extends BasePage{
 	
 	public HomePageMainContent(WebDriver driver) {
@@ -48,12 +46,6 @@ public class HomePageMainContent extends BasePage{
 		
 		return getElementByXpath(String.format(referenceButtonXpathExpression, nameOfTheButton), 
 				nameOfTheButton + " button");
-	}
-	
-	private WebElement getTutorialButton(String nameOfTheButton){
-		String tutorialButtonExpathExpression = "//*[text()=''{0}'']/following-sibling::*[contains(@class, ''tut-button'') and text()=''Learn {0}'']";
-		
-		return getElementByXpath(MessageFormat.format(tutorialButtonExpathExpression, nameOfTheButton), nameOfTheButton + " button");
 	}
 
 	public WebElement getSubheaderTextInMainContent(){
