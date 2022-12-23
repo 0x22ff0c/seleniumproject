@@ -36,4 +36,8 @@ public class Config {
     public String getTestExecutionMode(){
         return properties.getProperty("testexecutionmode");
     }
+
+    public int getLoadTimeOutInSecondsValue(){
+        return Integer.parseInt(properties.getProperty("loadtimeoutinseconds"));
+    }
 }
