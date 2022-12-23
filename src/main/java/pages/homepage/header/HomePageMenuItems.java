@@ -115,8 +115,8 @@ public class HomePageMenuItems extends HomePageHeader{
 		control.clickButton(getReferencesCloseButton());
 	}
 	//endregion
-	
-	//Exercises menu
+
+	//region Exercises menu section
 	@Override
 	public WebElement getExercisesCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
@@ -147,4 +147,5 @@ public class HomePageMenuItems extends HomePageHeader{
 	public void clickExercisesCloseButton(){
 		control.clickButton(getExercisesCloseButton());
 	}
+	//endregion
 }
