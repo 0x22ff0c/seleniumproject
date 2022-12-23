@@ -1,14 +1,12 @@
 package pages.homepage.maincontent;
 
-import java.text.MessageFormat;
-
+import enums.homepage.maincontent.MainContentEnum;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import enums.homepage.maincontent.MainContentEnum;
-import org.testng.reporters.jq.Main;
 import pages.BasePage;
+
+import java.text.MessageFormat;
 
 public class HomePageMainContent extends BasePage{
 	
