@@ -61,9 +61,8 @@ public class HomePageMenuItems extends HomePageHeader{
 	private static final String TUTORIAL_NAV_ID = "nav_tutorials";
 	private static final String REFERENCES_NAV_ID = "nav_references";
 	private static final String EXERCISES_NAV_ID = "nav_exercises";
-	
-	
-	//Tutorials menu
+
+	//region Tutorials menu
 	@Override
 	public WebElement getTutorialsCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
@@ -88,7 +87,8 @@ public class HomePageMenuItems extends HomePageHeader{
 	public void clickTutorialsCloseButton(){
 		control.clickButton(getTutorialsCloseButton());
 	}
-	
+	//endregion
+
 	//References menu
 	@Override
 	public WebElement getReferencesCaretButton(){
