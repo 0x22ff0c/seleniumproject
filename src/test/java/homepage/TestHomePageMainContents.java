@@ -352,7 +352,9 @@ public class TestHomePageMainContents {
 		baseTest.verifyTextIsTheSame(homePage.getMyLearningSubheader(), "Track your progress with the free \"My Learning\" program here at W3Schools.");
 		
 		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getMyLearningFreeStrongText());
-		
+
+		baseTest.verifyTextIsTheSame(homePage.getMyLearning2ndSubheader(), "Log in to your account, and start earning points!");
+
 		homePage.scrollToMyLearningSampleScreenshot();
 		
 		baseTest.verifyElementIsDisplayed(homePage.getMyLearningSampleScreenshot());
