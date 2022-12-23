@@ -152,8 +152,8 @@ public class WhereToStartPage extends BasePage{
 		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[3]");
 	}
 	//endregion
-	
-	//W3Schools Spaces
+
+	//region W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
 		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[3]/parent::*/parent::*", WhereToStartMainEnum.W3SCHOOLS_SPACES_SECTION.toString()));
 	}
@@ -176,7 +176,8 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getHowItWorksImage(){
 		return getElementByXpath("//*[@src='how-spaces-works3.png']", String.format("\"%s\" image", WhereToStartMainEnum.HOW_IT_WORKS.toString()));
 	}
-	
+	//endregion
+
 	//Hello Developer
 	public void scrollToHelloDeveloperSection(){
 		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[4]/parent::*/parent::*",
