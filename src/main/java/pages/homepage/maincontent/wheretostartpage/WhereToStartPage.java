@@ -85,8 +85,8 @@ public class WhereToStartPage extends BasePage{
 		return getElementByXpath(String.format(cssLearnCSSButtonXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
 	}
 	//endregion
-	
-	//JavaScript section
+
+	//region JavaScript section
 	public void scrollToJavaScriptSection(){
 		String javaScriptSectionXpathExpression = "(//*[@title='%s']/parent::*/parent::*)[1]";
 		
@@ -120,6 +120,7 @@ public class WhereToStartPage extends BasePage{
 	private String setNameSection(String sectioName){
 		return String.format("\"%s\" section", sectioName);
 	}
+	//endregion
 	
 	//What's next? section
 	public void scrollToWhatsNextSection(){
