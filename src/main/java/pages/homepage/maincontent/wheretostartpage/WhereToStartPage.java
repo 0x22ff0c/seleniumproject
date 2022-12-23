@@ -121,8 +121,8 @@ public class WhereToStartPage extends BasePage{
 		return String.format("\"%s\" section", sectioName);
 	}
 	//endregion
-	
-	//What's next? section
+
+	//region What's next? section
 	public void scrollToWhatsNextSection(){
 		String whatsNextSectionXpathExpression = "//*[text()=\"%s\"]/parent::*/parent::*";
 		
@@ -151,6 +151,7 @@ public class WhereToStartPage extends BasePage{
 	public String getWhatsNext3rdSubHeader(){
 		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[2]/following-sibling::*)[3]");
 	}
+	//endregion
 	
 	//W3Schools Spaces
 	public void scrollToW3SchoolsSpacesSection(){
