@@ -138,21 +138,7 @@ public class BasePage {
 		
 		return element;
 	}
-	
-	protected String getTextOfElement(WebElement element){
-		String textOfElement = "";
-		
-		if(element != null){
-			textOfElement = element.getText();
-		}else {
-			
-			LogUtility.logWarn("Unable to locate the element. Text is empty.");
-			
-		}
-		
-		return textOfElement;
-	}
-	
+
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
 		element = getElementByXpath(xpathExpression);
 		
