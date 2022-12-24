@@ -66,7 +66,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getCSSLeftButton(){
 		String cssLeftButtonXpathExpression = "//*[contains(@class, 'pink')]/descendant::*[text()='%s']";
 		
-		return getElementByXpath(String.format(cssLeftButtonXpathExpression, WhereToStartMainEnum.CSS.name()), WhereToStartMainEnum.CSS.name());
+		return getButtonElementByXpath(String.format(cssLeftButtonXpathExpression, WhereToStartMainEnum.CSS.name()), WhereToStartMainEnum.CSS.name());
 	}
 	
 	public String getCSS2ndStep(){
@@ -82,7 +82,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getLearnCSSButton(){
 		String cssLearnCSSButtonXpathExpression = "//*[@title='%s' and contains(@class, 'button')]";
 		
-		return getElementByXpath(String.format(cssLearnCSSButtonXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
+		return getButtonElementByXpath(String.format(cssLearnCSSButtonXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
 	}
 	//endregion
 
