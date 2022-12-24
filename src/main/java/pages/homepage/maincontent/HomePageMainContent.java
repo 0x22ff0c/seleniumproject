@@ -705,7 +705,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowDotButton(int dotButtonNumber){
-		return getElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[2]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("How To Section Window dot button - %s", dotButtonNumber));
+		return getButtonElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[2]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("How To Section Window dot - %s", dotButtonNumber));
 	}
 	
 	public String getHowToSectionSampleWindowUrlValue(){
@@ -719,7 +719,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowPreviousButton(){
-		return getElementByXpath("//*[@class='prev']", "How To Section Sample Window - Previous");
+		return getElementByClass("prev", "How To Section Sample Window - Previous button");
 	}
 	
 	public void switchToHowToSliderFrame(){
@@ -759,7 +759,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowNextButton(){
-		return getElementByClass("next", "How To Section Sample Window - Next");
+		return getElementByClass("next", "How To Section Sample Window - Next button");
 	}
 	
 	public WebElement getHowToSectionSampleWindowCounter(){
@@ -783,7 +783,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToLearnButton(){
-		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", "Learn How To");
+		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", "Learn How To");
 	}
 	//endregion
 }
