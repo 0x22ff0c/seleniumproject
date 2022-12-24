@@ -89,9 +89,7 @@ public class BasePage {
 		try {
 			element = driver.findElement(byElement);
 		} catch (NoSuchElementException noSuchElementException) {
-			
 			LogUtility.logError(ExceptionUtils.getStackTrace(noSuchElementException));
-		
 		}
 		
 		return element;
@@ -103,13 +101,9 @@ public class BasePage {
 		element = null;
 		
 		try {
-			
 			element = driver.findElement(byElement);
-			
 		} catch (NoSuchElementException noSuchElementException){
-
 			LogUtility.logError(ExceptionUtils.getStackTrace(noSuchElementException));
-			
 		}
 	
 		return element;
@@ -129,9 +123,7 @@ public class BasePage {
 	
 	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
 		element = getButtonElement(titleOfTheButton);
-		
 		this.nameOfElement = setNameOfTheButton(actualNameOfTheButton);
-		
 		return element;
 	}
 
@@ -141,9 +133,7 @@ public class BasePage {
 		String contentValue = element.getText().replace("\n", " ");
 		
 		if(contentValue.isEmpty()){
-			
 			contentValue = element.getAttribute("value").replace("\n", " ");
-			
 		}
 		
 		return contentValue;
@@ -155,9 +145,7 @@ public class BasePage {
 		if(element != null){
 			placeholderText = element.getAttribute("placeholder");
 		}else {
-			
 			LogUtility.logWarn("Unable to locate the element. Inner text is empty.");
-			
 		}
 		
 		return placeholderText;
