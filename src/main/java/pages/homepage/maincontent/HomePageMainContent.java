@@ -162,7 +162,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCSSTryItYourselfButton(){
-		return getElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.CSS_TRY_IT_YOURSELF_BUTTON.toString() + " button");
+		return getButtonElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.CSS_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	//endregion
 
