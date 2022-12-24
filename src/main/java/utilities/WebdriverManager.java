@@ -100,16 +100,13 @@ public class WebdriverManager {
 	}
 	
 	public void driverManager(String browserToUse){
-		switch (browserToUse) {
-		
-		case "Chrome":
-			getChromeDriver();
-			break;
-			
-		case "Firefox":
-			getFirefoxDriver();
-			break;
 
+		if(browserToUse.equals("Chrome")){
+			getChromeDriver();
+		}
+
+		if(browserToUse.equals("Firefox")) {
+			getFirefoxDriver();
 		}
 	}
 }
