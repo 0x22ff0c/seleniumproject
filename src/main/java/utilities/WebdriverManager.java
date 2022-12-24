@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 public class WebdriverManager {
 	
 	private WebDriver driver = null;
-	private Config config = new Config();
+	private final Config config = new Config();
 
 	public void navigateToWebsite(String url){
 		driver.get(url);
@@ -38,17 +38,17 @@ public class WebdriverManager {
 
 		String executionMode = config.getTestExecutionMode();
 
-		switch (executionMode){
-			case "headless":
-				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless");
-				options.addArguments("window-size=1920, 1080");
-				driver = new ChromeDriver(options);
-				break;
-			case "window":
-				driver = new ChromeDriver();
-				manageWindow();
-				break;
+		if(executionMode.equals("headless")){
+
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920, 1080");
+			driver = new ChromeDriver(options);
+
+		}else if(executionMode.equals("window")){
+
+			driver = new ChromeDriver();
+			manageWindow();
 
 		}
 
