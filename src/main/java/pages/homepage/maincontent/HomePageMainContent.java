@@ -276,7 +276,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getSQLTryItYourselfButton(){
-		return getElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.SQL_TRY_IT_YOURSELF_BUTTON.toString() + " button");
+		return getButtonElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.SQL_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
 	//endregion
 
