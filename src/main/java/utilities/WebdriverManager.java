@@ -1,17 +1,15 @@
 package utilities;
 
-import java.time.Duration;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.firefox.FirefoxOptions;
+
+import java.time.Duration;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class WebdriverManager {
 	
@@ -66,14 +64,33 @@ public class WebdriverManager {
 		driver = getChromeDriverInstance();
 	}
 
+	private WebDriver getFirefoxDriverInstance() {
+		driver = null;
+
+		String executionMode = config.getTestExecutionMode();
+
+		switch (executionMode){
+			case "headless":
+				FirefoxOptions options = new FirefoxOptions();
+				options.setHeadless(true);
+				options.addArguments("--width=1920");
+				options.addArguments("--height=1080");
+				driver = new FirefoxDriver(options);
+				break;
+
+			case "Window":
+				driver = new FirefoxDriver();
+				manageWindow();
+				break;
+		}
+
+		return driver;
+	}
+
 	private void getFirefoxDriver(){
 		WebDriverManager.firefoxdriver().setup();
 
-		FirefoxOptions options = new FirefoxOptions();
-		options.setHeadless(true);
-		options.addArguments("--width=1920");
-		options.addArguments("--height=1080");
-		driver = new FirefoxDriver(options);
+		driver = getFirefoxDriverInstance();
 	}
 	
 	private void manageWindow(){
@@ -93,10 +110,6 @@ public class WebdriverManager {
 			getFirefoxDriver();
 			break;
 
-		default:
-			getChromeDriver();
-			break;
-			
 		}
 	}
 }
