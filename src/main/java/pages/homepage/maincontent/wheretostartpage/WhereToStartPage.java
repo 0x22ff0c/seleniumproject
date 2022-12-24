@@ -169,7 +169,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getGetStartedForFreeButton(){
 		String getStartedButtonXpathExpression = "//*[contains(@class, 'button') and text()='%s']";
 		
-		return getElementByXpath(String.format(getStartedButtonXpathExpression, WhereToStartMainEnum.GET_STARTED_BUTTON.toString()),
+		return getButtonElementByXpath(String.format(getStartedButtonXpathExpression, WhereToStartMainEnum.GET_STARTED_BUTTON.toString()),
 				String.format("\"%s\" button", WhereToStartMainEnum.GET_STARTED_BUTTON.toString()));
 	}
 	
