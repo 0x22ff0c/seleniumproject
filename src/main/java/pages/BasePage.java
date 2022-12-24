@@ -67,7 +67,7 @@ public class BasePage {
 		return driver.findElements(By.xpath(xpath)).size();
 	}
 	
-	protected WebElement getElementByXpath(String xpath){
+	private WebElement getElementByXpath(String xpath){
 		return getElement(By.xpath(xpath));
 	}
 	
