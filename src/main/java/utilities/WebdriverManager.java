@@ -1,22 +1,20 @@
 package utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
 import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.firefox.FirefoxOptions;
-
 public class WebdriverManager {
 	
 	private WebDriver driver = null;
-	private Config config = new Config();
+	private final Config config = new Config();
 
 	public void navigateToWebsite(String url){
 		driver.get(url);
@@ -40,17 +38,17 @@ public class WebdriverManager {
 
 		String executionMode = config.getTestExecutionMode();
 
-		switch (executionMode){
-			case "headless":
-				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless");
-				options.addArguments("window-size=1920, 1080");
-				driver = new ChromeDriver(options);
-				break;
-			case "window":
-				driver = new ChromeDriver();
-				manageWindow();
-				break;
+		if(executionMode.equals("headless")){
+
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920, 1080");
+			driver = new ChromeDriver(options);
+
+		}else if(executionMode.equals("window")){
+
+			driver = new ChromeDriver();
+			manageWindow();
 
 		}
 
@@ -66,14 +64,33 @@ public class WebdriverManager {
 		driver = getChromeDriverInstance();
 	}
 
+	private WebDriver getFirefoxDriverInstance() {
+		driver = null;
+
+		String executionMode = config.getTestExecutionMode();
+
+		if(executionMode.equals("headless")) {
+
+			FirefoxOptions options = new FirefoxOptions();
+			options.setHeadless(true);
+			options.addArguments("--width=1920");
+			options.addArguments("--height=1080");
+			driver = new FirefoxDriver(options);
+
+		}else if(executionMode.equals("window")){
+
+			driver = new FirefoxDriver();
+			manageWindow();
+
+		}
+
+		return driver;
+	}
+
 	private void getFirefoxDriver(){
 		WebDriverManager.firefoxdriver().setup();
 
-		FirefoxOptions options = new FirefoxOptions();
-		options.setHeadless(true);
-		options.addArguments("--width=1920");
-		options.addArguments("--height=1080");
-		driver = new FirefoxDriver(options);
+		driver = getFirefoxDriverInstance();
 	}
 	
 	private void manageWindow(){
@@ -83,20 +100,13 @@ public class WebdriverManager {
 	}
 	
 	public void driverManager(String browserToUse){
-		switch (browserToUse) {
-		
-		case "Chrome":
-			getChromeDriver();
-			break;
-			
-		case "Firefox":
-			getFirefoxDriver();
-			break;
 
-		default:
+		if(browserToUse.equals("Chrome")){
 			getChromeDriver();
-			break;
-			
+		}
+
+		if(browserToUse.equals("Firefox")) {
+			getFirefoxDriver();
 		}
 	}
 }

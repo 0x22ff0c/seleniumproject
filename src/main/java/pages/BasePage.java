@@ -38,12 +38,11 @@ public class BasePage {
 	}
 		
 	protected void switchToIframe(WebElement element){
-		LogUtility.logInfo(String.format("Swithcing to frame: %s...", nameOfElement));
+		LogUtility.logInfo(String.format("Switching to frame: %s...", nameOfElement));
 		
 		driver.switchTo().frame(element);
 		
 		LogUtility.logInfo(String.format("Switched to frame: %s.", nameOfElement));
-		
 	}
 	
 	protected WebElement getElementById(String id, String nameOfElement){
@@ -67,19 +66,13 @@ public class BasePage {
 		
 		return driver.findElements(By.xpath(xpath)).size();
 	}
-	
-	protected WebElement getElementByXpath(String xpath){
-		return getElement(By.xpath(xpath));
-	}
-	
+
 	protected WebElement getElementByTagName(String tagName, String nameOfElement){
 		return getElement(By.tagName(tagName), nameOfElement);
 	}
 	
 	protected WebElement getElementByLinkText(String linkText){
-		
 		return getElement(By.linkText(linkText), linkText + " link");
-	
 	}
 	
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
@@ -92,9 +85,7 @@ public class BasePage {
 		try {
 			element = driver.findElement(byElement);
 		} catch (NoSuchElementException noSuchElementException) {
-			
 			LogUtility.logError(ExceptionUtils.getStackTrace(noSuchElementException));
-		
 		}
 		
 		return element;
@@ -106,48 +97,43 @@ public class BasePage {
 		element = null;
 		
 		try {
-			
 			element = driver.findElement(byElement);
-			
 		} catch (NoSuchElementException noSuchElementException){
-
 			LogUtility.logError(ExceptionUtils.getStackTrace(noSuchElementException));
-			
 		}
 	
 		return element;
-		
 	}
 
 	private String setNameOfTheButton(String nameOfTheButtonElement){
 		return nameOfTheButtonElement + " button";
 	} 
 
-	public WebElement getButtonElement(String nameOfTheButton){
-		return getElementByXpath(String.format("//*[@title='%s']", nameOfTheButton), setNameOfTheButton(nameOfTheButton));
+	public WebElement getButtonElement(String titleOfTheButton){
+		return getElementByXpath(String.format("//*[@title='%s']", titleOfTheButton), setNameOfTheButton(titleOfTheButton));
 	}
-	
-	public WebElement getButtonElementById(String idOfElement, String nameOfTheButton){
-		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
-	}
-	
+
 	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
 		element = getButtonElement(titleOfTheButton);
-		
 		this.nameOfElement = setNameOfTheButton(actualNameOfTheButton);
-		
 		return element;
 	}
 
+	public WebElement getButtonElementById(String idOfElement, String nameOfTheButton){
+		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
+	}
+
+	public WebElement getButtonElementByXpath(String xpathExpression, String nameOfTheButton){
+		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
+	}
+
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
-		element = getElementByXpath(xpathExpression);
+		element = getElement(By.xpath(xpathExpression));
 		
 		String contentValue = element.getText().replace("\n", " ");
 		
 		if(contentValue.isEmpty()){
-			
 			contentValue = element.getAttribute("value").replace("\n", " ");
-			
 		}
 		
 		return contentValue;
@@ -159,9 +145,7 @@ public class BasePage {
 		if(element != null){
 			placeholderText = element.getAttribute("placeholder");
 		}else {
-			
 			LogUtility.logWarn("Unable to locate the element. Inner text is empty.");
-			
 		}
 		
 		return placeholderText;

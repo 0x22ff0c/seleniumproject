@@ -581,7 +581,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getColorPickerImage(){
-		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']");
+		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']", "Color picker image");
 	}
 	//endregion
 
@@ -639,7 +639,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWebTemplatesHeader(){
-		return getElementByXpath("(//*[text()='Web Templates'])[2]");
+		return getElementByXpath("(//*[text()='Web Templates'])[2]", "Web Templates header");
 	}
 	
 	public String getWebTemplatesSubheader(){
@@ -695,7 +695,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionHeader(){
-		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']");
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", "How To Section header");
 	}
 	
 	public String getHowToSectionSubheader(){
