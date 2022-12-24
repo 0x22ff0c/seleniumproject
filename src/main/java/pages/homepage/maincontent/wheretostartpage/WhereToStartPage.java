@@ -30,7 +30,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getHtmlLeftButton(){
 		String htmlLinkXpathExpression = "//*[contains(@class, 'yellow')]/descendant::*[text()='%s']";
 		
-		return getElementByXpath(String.format(htmlLinkXpathExpression, WhereToStartMainEnum.HTML.name()), WhereToStartMainEnum.HTML.name());
+		return getButtonElementByXpath(String.format(htmlLinkXpathExpression, WhereToStartMainEnum.HTML.name()), WhereToStartMainEnum.HTML.name());
 	}
 	
 	public String getHtml1stStep(){
@@ -50,7 +50,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getLearnHtmlButton(){
 		String learnHtmlButtonXpathExpression = "//*[@title='%s' and contains(@class, 'button')]";
 		
-		return getElementByXpath(String.format(learnHtmlButtonXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()), 
+		return getButtonElementByXpath(String.format(learnHtmlButtonXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()),
 				WhereToStartMainEnum.LEARN_HTML_BUTTON.toString());
 	}
 	//endregion
