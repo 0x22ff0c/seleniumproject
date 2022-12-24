@@ -97,7 +97,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getJSLeftButton(){
 		String jsLeftButtonXpathExpression = "//*[contains(@class, 'turquoise')]/descendant::*[text()='%s']";
 		
-		return getElementByXpath(String.format(jsLeftButtonXpathExpression, WhereToStartMainEnum.JAVASCRIPT.toString()), 
+		return getButtonElementByXpath(String.format(jsLeftButtonXpathExpression, WhereToStartMainEnum.JAVASCRIPT.toString()),
 				WhereToStartMainEnum.JAVASCRIPT.toString());
 	}
 	
@@ -114,7 +114,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getLearnJSButton(){
 		String learnJSButtonXpathExpression = "//*[@title='%s' and text()='Learn JavaScript']";
 		
-		return getElementByXpath(String.format(learnJSButtonXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
+		return getButtonElementByXpath(String.format(learnJSButtonXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
 	}
 	
 	private String setNameSection(String sectioName){
