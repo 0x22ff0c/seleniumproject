@@ -33,7 +33,7 @@ public class HomePageFooter extends BasePage{
 	}
 
 	public WebElement getSpacesButton(){
-		return getElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", FooterEnum.SPACES_BUTTON.toString());
+		return getButtonElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", FooterEnum.SPACES_BUTTON.toString());
 	}
 
 	public WebElement getSupportButton(){
