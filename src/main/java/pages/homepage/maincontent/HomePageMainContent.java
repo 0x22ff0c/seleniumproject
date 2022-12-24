@@ -605,7 +605,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeGamePlayGameButton(){
-		return getElementByXpath("//*[text()='Play Game']", "Play Game");
+		return getButtonElementByXpath("//*[text()='Play Game']", "Play Game");
 	}
 	//endregion
 
