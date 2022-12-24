@@ -657,7 +657,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWebTemplatesBrowseTemplatesButton(){
-		return getElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", "Browse Templates");
+		return getButtonElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", "Browse Templates");
 	}
 	//endregion
 
