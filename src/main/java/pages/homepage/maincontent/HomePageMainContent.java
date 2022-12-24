@@ -623,11 +623,11 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getExercisesAndQuizzesExercisesButton(){
-		return getElementByXpath("(//*[text()='Exercises'])[2]/parent::*", "Exercises");
+		return getButtonElementByXpath("(//*[text()='Exercises'])[2]/parent::*", "Exercises");
 	}
 	
 	public WebElement getExercisesAndQuizzesQuizzesButton(){
-		return getElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", "Quizzes");
+		return getButtonElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", "Quizzes");
 	}
 	//endregion
 
