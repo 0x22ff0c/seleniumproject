@@ -12,7 +12,7 @@ public class FooterSection extends HomePageFooter{
 	}
 
 	public WebElement getFooterHomeButton(){
-		return getElementByXpath("//footer/*[@title='Home']", "Home button");
+		return getButtonElementByXpath("//footer/*[@title='Home']", "Home");
 	}
 
 	@Override
@@ -21,6 +21,6 @@ public class FooterSection extends HomePageFooter{
 	}
 	
 	public WebElement getFooterShopButton(){
-		return getElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", "W3Schools Shop button");
+		return getButtonElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", "W3Schools Shop");
 	}
 }
