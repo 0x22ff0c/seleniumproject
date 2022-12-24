@@ -466,8 +466,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getW3schoolsSpacesGetStartedForFreeButton(){
-		
-		return getElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started for Free']", "W3Schools Spaces - Get Started for Free");
+		return getButtonElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started for Free']", "W3Schools Spaces - Get Started for Free");
 	}
 	//endregion
 
