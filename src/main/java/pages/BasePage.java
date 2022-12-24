@@ -66,11 +66,7 @@ public class BasePage {
 		
 		return driver.findElements(By.xpath(xpath)).size();
 	}
-	
-	private WebElement getElementByXpath(String xpath){
-		return getElement(By.xpath(xpath));
-	}
-	
+
 	protected WebElement getElementByTagName(String tagName, String nameOfElement){
 		return getElement(By.tagName(tagName), nameOfElement);
 	}
@@ -127,8 +123,12 @@ public class BasePage {
 		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
 	}
 
+	public WebElement getButtonElementByXpath(String xpathExpression, String nameOfTheButton){
+		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
+	}
+
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
-		element = getElementByXpath(xpathExpression);
+		element = getElement(By.xpath(xpathExpression));
 		
 		String contentValue = element.getText().replace("\n", " ");
 		
