@@ -38,12 +38,11 @@ public class BasePage {
 	}
 		
 	protected void switchToIframe(WebElement element){
-		LogUtility.logInfo(String.format("Swithcing to frame: %s...", nameOfElement));
+		LogUtility.logInfo(String.format("Switching to frame: %s...", nameOfElement));
 		
 		driver.switchTo().frame(element);
 		
 		LogUtility.logInfo(String.format("Switched to frame: %s.", nameOfElement));
-		
 	}
 	
 	protected WebElement getElementById(String id, String nameOfElement){
