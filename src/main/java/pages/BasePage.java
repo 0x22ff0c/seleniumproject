@@ -113,7 +113,6 @@ public class BasePage {
 		}
 	
 		return element;
-		
 	}
 
 	private String setNameOfTheButton(String nameOfTheButtonElement){
