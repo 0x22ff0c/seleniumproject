@@ -69,19 +69,19 @@ public class WebdriverManager {
 
 		String executionMode = config.getTestExecutionMode();
 
-		switch (executionMode){
-			case "headless":
-				FirefoxOptions options = new FirefoxOptions();
-				options.setHeadless(true);
-				options.addArguments("--width=1920");
-				options.addArguments("--height=1080");
-				driver = new FirefoxDriver(options);
-				break;
+		if(executionMode.equals("headless")) {
 
-			case "Window":
-				driver = new FirefoxDriver();
-				manageWindow();
-				break;
+			FirefoxOptions options = new FirefoxOptions();
+			options.setHeadless(true);
+			options.addArguments("--width=1920");
+			options.addArguments("--height=1080");
+			driver = new FirefoxDriver(options);
+
+		}else if(executionMode.equals("window")){
+
+			driver = new FirefoxDriver();
+			manageWindow();
+
 		}
 
 		return driver;
