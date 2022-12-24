@@ -30,7 +30,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getHtmlLeftButton(){
 		String htmlLinkXpathExpression = "//*[contains(@class, 'yellow')]/descendant::*[text()='%s']";
 		
-		return getElementByXpath(String.format(htmlLinkXpathExpression, WhereToStartMainEnum.HTML.name()), WhereToStartMainEnum.HTML.name());
+		return getButtonElementByXpath(String.format(htmlLinkXpathExpression, WhereToStartMainEnum.HTML.name()), WhereToStartMainEnum.HTML.name());
 	}
 	
 	public String getHtml1stStep(){
@@ -50,7 +50,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getLearnHtmlButton(){
 		String learnHtmlButtonXpathExpression = "//*[@title='%s' and contains(@class, 'button')]";
 		
-		return getElementByXpath(String.format(learnHtmlButtonXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()), 
+		return getButtonElementByXpath(String.format(learnHtmlButtonXpathExpression, WhereToStartMainEnum.GO_TO_HTML_TUTORIAL.toString()),
 				WhereToStartMainEnum.LEARN_HTML_BUTTON.toString());
 	}
 	//endregion
@@ -66,7 +66,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getCSSLeftButton(){
 		String cssLeftButtonXpathExpression = "//*[contains(@class, 'pink')]/descendant::*[text()='%s']";
 		
-		return getElementByXpath(String.format(cssLeftButtonXpathExpression, WhereToStartMainEnum.CSS.name()), WhereToStartMainEnum.CSS.name());
+		return getButtonElementByXpath(String.format(cssLeftButtonXpathExpression, WhereToStartMainEnum.CSS.name()), WhereToStartMainEnum.CSS.name());
 	}
 	
 	public String getCSS2ndStep(){
@@ -82,7 +82,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getLearnCSSButton(){
 		String cssLearnCSSButtonXpathExpression = "//*[@title='%s' and contains(@class, 'button')]";
 		
-		return getElementByXpath(String.format(cssLearnCSSButtonXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
+		return getButtonElementByXpath(String.format(cssLearnCSSButtonXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_CSS_BUTTON.toString());
 	}
 	//endregion
 
@@ -97,7 +97,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getJSLeftButton(){
 		String jsLeftButtonXpathExpression = "//*[contains(@class, 'turquoise')]/descendant::*[text()='%s']";
 		
-		return getElementByXpath(String.format(jsLeftButtonXpathExpression, WhereToStartMainEnum.JAVASCRIPT.toString()), 
+		return getButtonElementByXpath(String.format(jsLeftButtonXpathExpression, WhereToStartMainEnum.JAVASCRIPT.toString()),
 				WhereToStartMainEnum.JAVASCRIPT.toString());
 	}
 	
@@ -114,7 +114,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getLearnJSButton(){
 		String learnJSButtonXpathExpression = "//*[@title='%s' and text()='Learn JavaScript']";
 		
-		return getElementByXpath(String.format(learnJSButtonXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
+		return getButtonElementByXpath(String.format(learnJSButtonXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
 	}
 	
 	private String setNameSection(String sectioName){
@@ -169,7 +169,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getGetStartedForFreeButton(){
 		String getStartedButtonXpathExpression = "//*[contains(@class, 'button') and text()='%s']";
 		
-		return getElementByXpath(String.format(getStartedButtonXpathExpression, WhereToStartMainEnum.GET_STARTED_BUTTON.toString()),
+		return getButtonElementByXpath(String.format(getStartedButtonXpathExpression, WhereToStartMainEnum.GET_STARTED_BUTTON.toString()),
 				String.format("\"%s\" button", WhereToStartMainEnum.GET_STARTED_BUTTON.toString()));
 	}
 	
