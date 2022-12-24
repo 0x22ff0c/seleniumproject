@@ -74,7 +74,7 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getUpgradeButton(){
-		return getElementByXpath(String.format("//*[@title='Courses']/following-sibling::*[contains(@title,'%s')]", HeaderEnum.UPGRADE_BUTTON.toString()), HeaderEnum.UPGRADE_BUTTON.toString());
+		return getButtonElementByXpath(String.format("//*[@title='Courses']/following-sibling::*[contains(@title,'%s')]", HeaderEnum.UPGRADE_BUTTON.toString()), HeaderEnum.UPGRADE_BUTTON.toString());
 	}
 	
 	public WebElement getCertifiedButton(){
@@ -82,7 +82,7 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getFreeWebsiteButton(){
-		return getElementByXpath("//*[@title='Courses']/preceding-sibling::*[contains(@title, 'Get Your Own Website')]", HeaderEnum.FREE_WEBSITE_BUTTON.toString());
+		return getButtonElementByXpath("//*[@title='Courses']/preceding-sibling::*[contains(@title, 'Get Your Own Website')]", HeaderEnum.FREE_WEBSITE_BUTTON.toString());
 	}
 	
 	public WebElement getLoginButton(){
