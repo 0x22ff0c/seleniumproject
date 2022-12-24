@@ -38,14 +38,13 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getLearnButtonElement(String nameOfTheButton){
 		String learnButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
 		
-		return getElementByXpath(String.format(learnButtonXpathExpression, nameOfTheButton), nameOfTheButton + " button");
+		return getButtonElementByXpath(String.format(learnButtonXpathExpression, nameOfTheButton), nameOfTheButton);
 	}
 	
 	private WebElement getReferenceButton(String nameOfTheButton){
 		String referenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
 		
-		return getElementByXpath(String.format(referenceButtonXpathExpression, nameOfTheButton), 
-				nameOfTheButton + " button");
+		return getButtonElementByXpath(String.format(referenceButtonXpathExpression, nameOfTheButton), nameOfTheButton);
 	}
 
 	public WebElement getSubheaderTextInMainContent(){
