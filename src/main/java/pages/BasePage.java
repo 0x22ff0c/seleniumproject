@@ -101,17 +101,16 @@ public class BasePage {
 	}
 
 	//region get Link element
-	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link"};
+	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link";}
 
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
-		return getElement(By.linkText(linkText), nameOfElement + " link");
+		return getElement(By.linkText(linkText), setNameOfTheLink(nameOfElement));
 	}
 
-	protected WebElement getLinkElementByXpath(String xpathExpression, String linkName){
-		return getElementByXpath(xpathExpression, linkName + " link");
+	protected WebElement getLinkElementByXpath(String xpathExpression, String nameOfElement){
+		return getElementByXpath(xpathExpression, setNameOfTheLink(nameOfElement));
 	}
 	//endregion
-
 
 	//region get Button element
 	private String setNameOfTheButton(String nameOfTheButtonElement){
