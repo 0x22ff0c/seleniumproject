@@ -108,6 +108,11 @@ public class BasePage {
 		return element;
 	}
 
+	//region get Link element
+
+	//endregion
+
+
 	//region get Button element
 	private String setNameOfTheButton(String nameOfTheButtonElement){
 		return nameOfTheButtonElement + " button";
