@@ -52,7 +52,7 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	private WebElement getIconLink(String linkName){
-		return getElementByXpath(String.format("//i/parent::*[@title='%s']", linkName), linkName + " link");
+		return getLinkElementByXpath(String.format("//i/parent::*[@title='%s']", linkName), linkName + " link");
 	}
 	
 	public WebElement getFacebookIconLink(){
