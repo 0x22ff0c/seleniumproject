@@ -73,11 +73,7 @@ public class BasePage {
 	protected WebElement getElementByLinkText(String linkText){
 		return getElement(By.linkText(linkText), linkText + " link");
 	}
-	
-	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
-		return getElement(By.linkText(linkText), nameOfElement + " link");
-	}
-	
+
 	private WebElement getElement(By byElement){
 		element = null; 
 		
@@ -104,6 +100,19 @@ public class BasePage {
 		return element;
 	}
 
+	//region get Link element
+	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link";}
+
+	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
+		return getElement(By.linkText(linkText), setNameOfTheLink(nameOfElement));
+	}
+
+	protected WebElement getLinkElementByXpath(String xpathExpression, String nameOfElement){
+		return getElementByXpath(xpathExpression, setNameOfTheLink(nameOfElement));
+	}
+	//endregion
+
+	//region get Button element
 	private String setNameOfTheButton(String nameOfTheButtonElement){
 		return nameOfTheButtonElement + " button";
 	} 
@@ -125,6 +134,7 @@ public class BasePage {
 	public WebElement getButtonElementByXpath(String xpathExpression, String nameOfTheButton){
 		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
 	}
+	//endregion
 
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
 		element = getElement(By.xpath(xpathExpression));
