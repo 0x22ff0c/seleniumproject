@@ -100,7 +100,7 @@ public class BasePage {
 	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link";}
 
 	protected WebElement getElementByLinkText(String linkText){
-		return getElement(By.linkText(linkText), linkText + " link");
+		return getElement(By.linkText(linkText), setNameOfTheLink(linkText));
 	}
 
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
