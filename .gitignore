@@ -7,4 +7,5 @@ allure-results/
 driver/*
 !driver/donotdelete.txt
 .idea/
+/logs
 
