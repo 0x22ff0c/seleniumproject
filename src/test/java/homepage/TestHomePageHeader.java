@@ -1,13 +1,12 @@
 package homepage;
 
+import enums.homepage.header.ExerciseHeaderEnum;
+import enums.homepage.header.ReferenceHeaderEnum;
+import enums.homepage.header.TutorialsHeaderEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import enums.homepage.header.ExerciseHeaderEnum;
-import enums.homepage.header.ReferenceHeaderEnum;
-import enums.homepage.header.TutorialsHeaderEnum;
 import pages.homepage.header.HomePageHeader;
 import pages.homepage.header.HomePageMenuItems;
 import tests.BaseTest;
