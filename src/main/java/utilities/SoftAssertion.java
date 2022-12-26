@@ -1,12 +1,12 @@
 package utilities;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.testng.asserts.IAssert;
 import org.testng.asserts.SoftAssert;
 import org.testng.collections.Maps;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SoftAssertion extends SoftAssert{
 	
