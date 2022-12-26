@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="baseDir">logs</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="fileLogger" filePattern="${baseDir}/$${date:yyyy-MM-dd}/%d{MM-dd-yyyy hhmmssaa}.log">
+            <PatternLayout pattern="[%-5p] %d{MM-dd-yyyy HH:mm:ss aa} %m%n"/>
+            <Policies>
+                <OnStartupTriggeringPolicy minSize="0"/>
+            </Policies>
+        </RollingFile>
+        <Console name="consoleLogger" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5p] %d{MM-dd-yyyy HH:mm:ss aa} %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="consoleLogger"/>
+            <AppenderRef ref="fileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
