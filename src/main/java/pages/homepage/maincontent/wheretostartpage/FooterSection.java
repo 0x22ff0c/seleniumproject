@@ -2,7 +2,6 @@ package pages.homepage.maincontent.wheretostartpage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import pages.homepage.HomePageFooter;
 
 public class FooterSection extends HomePageFooter{
