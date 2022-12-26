@@ -1,9 +1,8 @@
 package pages.homepage.header;
 
+import enums.homepage.header.HeaderEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import enums.homepage.header.HeaderEnum;
 import pages.BasePage;
 
 public class HomePageHeader extends BasePage{

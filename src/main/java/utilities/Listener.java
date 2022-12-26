@@ -1,12 +1,12 @@
 package utilities;
 
-import java.lang.reflect.Method;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
 
 public class Listener implements ITestListener {
 	

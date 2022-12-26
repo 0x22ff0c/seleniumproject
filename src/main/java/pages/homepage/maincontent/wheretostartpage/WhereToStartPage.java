@@ -1,9 +1,8 @@
 package pages.homepage.maincontent.wheretostartpage;
 
+import enums.wheretostartpage.WhereToStartMainEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import enums.wheretostartpage.WhereToStartMainEnum;
 import pages.BasePage;
 
 public class WhereToStartPage extends BasePage{

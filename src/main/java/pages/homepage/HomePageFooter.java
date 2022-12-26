@@ -1,9 +1,8 @@
 package pages.homepage;
 
+import enums.footer.FooterEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import enums.footer.FooterEnum;
 import pages.BasePage;
 
 public class HomePageFooter extends BasePage{

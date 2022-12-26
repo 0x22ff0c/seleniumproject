@@ -1,7 +1,6 @@
 package tests;
 
 import org.openqa.selenium.WebElement;
-
 import pages.BasePage;
 import utilities.SoftAssertion;
 
