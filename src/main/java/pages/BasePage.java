@@ -108,6 +108,7 @@ public class BasePage {
 		return element;
 	}
 
+	//region get Button element
 	private String setNameOfTheButton(String nameOfTheButtonElement){
 		return nameOfTheButtonElement + " button";
 	} 
@@ -129,6 +130,7 @@ public class BasePage {
 	public WebElement getButtonElementByXpath(String xpathExpression, String nameOfTheButton){
 		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
 	}
+	//endregion
 
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
 		element = getElement(By.xpath(xpathExpression));
