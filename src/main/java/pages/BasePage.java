@@ -69,10 +69,6 @@ public class BasePage {
 	protected WebElement getElementByTagName(String tagName, String nameOfElement){
 		return getElement(By.tagName(tagName), nameOfElement);
 	}
-	
-	protected WebElement getElementByLinkText(String linkText){
-		return getElement(By.linkText(linkText), linkText + " link");
-	}
 
 	private WebElement getElement(By byElement){
 		element = null; 
@@ -102,6 +98,10 @@ public class BasePage {
 
 	//region get Link element
 	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link";}
+
+	protected WebElement getElementByLinkText(String linkText){
+		return getElement(By.linkText(linkText), setNameOfTheLink(linkText));
+	}
 
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
 		return getElement(By.linkText(linkText), setNameOfTheLink(nameOfElement));
