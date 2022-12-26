@@ -73,15 +73,7 @@ public class BasePage {
 	protected WebElement getElementByLinkText(String linkText){
 		return getElement(By.linkText(linkText), linkText + " link");
 	}
-	
-	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
-		return getElement(By.linkText(linkText), nameOfElement + " link");
-	}
 
-	protected WebElement getLinkElementByXpath(String xpathExpression, String linkName){
-		return getElementByXpath(xpathExpression, linkName + " link");
-	}
-	
 	private WebElement getElement(By byElement){
 		element = null; 
 		
@@ -109,7 +101,15 @@ public class BasePage {
 	}
 
 	//region get Link element
+	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link"};
 
+	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
+		return getElement(By.linkText(linkText), nameOfElement + " link");
+	}
+
+	protected WebElement getLinkElementByXpath(String xpathExpression, String linkName){
+		return getElementByXpath(xpathExpression, linkName + " link");
+	}
 	//endregion
 
 
