@@ -77,6 +77,10 @@ public class BasePage {
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
 		return getElement(By.linkText(linkText), nameOfElement + " link");
 	}
+
+	protected WebElement getLinkElementByXpath(String xpathExpression, String linkName){
+		return getElementByXpath(xpathExpression, linkName + " link");
+	}
 	
 	private WebElement getElement(By byElement){
 		element = null; 
