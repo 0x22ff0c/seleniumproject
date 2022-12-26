@@ -3,7 +3,6 @@ package homepage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import pages.homepage.HomePageFooter;
 import tests.BaseTest;
 import utilities.Control;
