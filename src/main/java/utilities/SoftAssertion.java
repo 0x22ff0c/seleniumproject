@@ -1,6 +1,7 @@
 package utilities;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.testng.asserts.IAssert;
 import org.testng.asserts.SoftAssert;
@@ -14,10 +15,9 @@ public class SoftAssertion extends SoftAssert{
 	
 	  // LinkedHashMap to preserve the order
 	  private final Map<AssertionError, IAssert<?>> mErrors = Maps.newLinkedHashMap();
-	  private static final String DEFAULT_SOFT_ASSERT_MESSAGE = "Meh";
+	  private static final String DEFAULT_SOFT_ASSERT_MESSAGE = "";
 
 	  ExtentTest extentTest = ExtentTestManager.getTest();
-	  ExtentTest extentTestNode = null;
 
 	  private void printExpectedAndActual(IAssert<?> a){
 		  Map<String, String> values = new HashMap<String, String>();
@@ -39,8 +39,6 @@ public class SoftAssertion extends SoftAssert{
 				  
 				  message = String.format("%s : %s", entryMap.getKey(), entryMap.getValue());
 
-				  extentTestNode.fail(String.format("%s : %s", entryMap.getKey(), entryMap.getValue()));
-
 				  LogUtility.logError(message);
 			  }
 		  }
@@ -50,8 +48,6 @@ public class SoftAssertion extends SoftAssert{
 	  protected void doAssert(IAssert<?> a) {
 		  LogUtility.logInfo("Verify: " + a.getMessage());
 
-		  extentTestNode = extentTest.createNode("Verify: " + a.getMessage());
-
 		  onBeforeAssert(a);
 		  
 		  try {
@@ -59,8 +55,7 @@ public class SoftAssertion extends SoftAssert{
 			  onAssertSuccess(a);
 		      
 			  LogUtility.logInfo("Result: Passed");
-
-			  extentTestNode.pass(a.getMessage());
+			  extentTest.log(Status.PASS, a.getMessage());
 
 		  } catch (AssertionError ex) {
 			  onAssertFailure(a, ex);
