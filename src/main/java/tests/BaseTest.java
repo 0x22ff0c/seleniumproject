@@ -2,6 +2,7 @@ package tests;
 
 import org.openqa.selenium.WebElement;
 import pages.BasePage;
+import utilities.LogUtility;
 import utilities.SoftAssertion;
 
 public class BaseTest {
@@ -65,7 +66,7 @@ public class BaseTest {
 		String nameOfElement = basePage.getElementName();
 		
 		softAssertion.assertTrue(textLabeledAsStrong.isDisplayed(), String.format("\"%s\" text labeled as strong.", nameOfElement));
-		
+
 	}
 	
 	private boolean exceptionHandler(WebElement element){
@@ -73,16 +74,16 @@ public class BaseTest {
 		boolean defaultValue = false;
 		
 		if(element == null){
-			
-			System.out.println("Unable to locate element therefore element is not displayed.");
-			
+
+			LogUtility.logError("Unable to locate element therefore element is not displayed.");
+
 		}else {
 			
 			defaultValue = element.isDisplayed();
 		}
 		
 		return defaultValue;
-		
+
 	}
-	
+
 }
