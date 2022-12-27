@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
-import tests.BaseTest;
 import utilities.reports.ExtentTestManager;
 
 import java.time.Duration;
@@ -16,7 +15,6 @@ import java.time.Duration;
 public class Control{
 	
 	WebDriver driver;
-	BaseTest baseTest;
 	BasePage basePage;
 	String nameOfElement;
 	WebDriverWait wait;
@@ -26,12 +24,8 @@ public class Control{
 		this.basePage = basePage;
 		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	}
-	
-	public Control(WebDriver driver){
-		this.driver = driver;
-	}
 
-	public void waitForElmentToBeDisplayedInPage(By locator){
+	public void waitForElementToBeDisplayedInPage(By locator){
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	
