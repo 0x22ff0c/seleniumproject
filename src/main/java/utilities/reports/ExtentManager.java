@@ -12,6 +12,8 @@ import java.util.Date;
 
 public class ExtentManager {
 
+    private ExtentManager(){}
+
     private static String getOperatingSystem(){
         Capabilities capabilities = ((RemoteWebDriver) Listener.getDriver()).getCapabilities();
         return capabilities.getPlatformName().toString();
@@ -58,7 +60,7 @@ public class ExtentManager {
         extentReports.setSystemInfo("Browser version", getBrowserVersion());
     }
 
-    public synchronized static ExtentReports generateReportFile(){
+    public static synchronized ExtentReports generateReportFile(){
         ExtentSparkReporter reporter = new ExtentSparkReporter(setReportFilePath());
 
         extentReports.attachReporter(reporter);
