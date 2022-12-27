@@ -1,6 +1,5 @@
 package utilities;
 
-import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -10,6 +9,8 @@ import utilities.reports.ExtentManager;
 import utilities.reports.ExtentTestManager;
 
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Listener implements ITestListener {
 	
@@ -17,9 +18,21 @@ public class Listener implements ITestListener {
 	static WebDriver driver = null;
 	String testName;
 	String message;
-	
+
 	public static WebDriver getDriver(){
 		return driver;
+	}
+
+	static String generatedDate = "";
+
+	private void generateDate(){
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH-mm-ss-aa");
+		Date currentDate = new Date();
+		generatedDate = dateFormat.format(currentDate);
+	}
+
+	public String getGeneratedDate(){
+		return generatedDate;
 	}
 
 	@Override
@@ -29,11 +42,12 @@ public class Listener implements ITestListener {
 		LogUtility.logInfo("End of testing session.");
 
 		ExtentManager.generateReport();
-
 	}
 	
 	@Override
 	public void onStart(ITestContext contextStart) {
+		generateDate();
+
 		driverManager = new WebdriverManager();
 
 		Config config = new Config();
@@ -48,13 +62,12 @@ public class Listener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		LogUtility.logInfo(String.format("TEST RESULT %s: PASSED %n", testName));
-		ExtentTestManager.getTest().log(Status.PASS, testName);
+
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
 		LogUtility.logError(String.format("TEST RESULT %s: FAILED %n", testName));
-		ExtentTestManager.getTest().log(Status.FAIL, testName);
 	}
 	
 	@Override
@@ -66,7 +79,7 @@ public class Listener implements ITestListener {
 		message = String.format("STARTING TEST: %s", testName);
 		
 		LogUtility.logInfo(message);
-		ExtentTestManager.startTest(testName);
+		ExtentTestManager.startTest(test.testName());
 	}
 
 	@Override

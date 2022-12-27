@@ -4,7 +4,7 @@
         <Property name="baseDir">logs</Property>
     </Properties>
     <Appenders>
-        <RollingFile name="fileLogger" filePattern="${baseDir}/$${date:yyyy-MM-dd}/%d{MM-dd-yyyy hhmmssaa}.log">
+        <RollingFile name="fileLogger" filePattern="${baseDir}/${date:yyyy-MM-dd}/reports_%d{hh-mm-aa}/%d{MM-dd-yyyy hh-mm-ss-aa}.log">
             <PatternLayout pattern="[%-5p] %d{MM-dd-yyyy HH:mm:ss aa} %m%n"/>
             <Policies>
                 <OnStartupTriggeringPolicy minSize="0"/>

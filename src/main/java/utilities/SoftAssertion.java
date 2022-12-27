@@ -1,9 +1,12 @@
 package utilities;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.testng.asserts.IAssert;
 import org.testng.asserts.SoftAssert;
 import org.testng.collections.Maps;
+import utilities.reports.ExtentTestManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,14 +15,16 @@ public class SoftAssertion extends SoftAssert{
 	
 	  // LinkedHashMap to preserve the order
 	  private final Map<AssertionError, IAssert<?>> mErrors = Maps.newLinkedHashMap();
-	  private static final String DEFAULT_SOFT_ASSERT_MESSAGE = "Meh";
+	  private static final String DEFAULT_SOFT_ASSERT_MESSAGE = "";
+
+	  ExtentTest extentTest = ExtentTestManager.getTest();
 
 	  private void printExpectedAndActual(IAssert<?> a){
 		  Map<String, String> values = new HashMap<String, String>();
 		  
 		  values.put("Expected", a.getExpected().toString());
 		  values.put("Actual", a.getActual().toString());
-		  
+
 		  printValues(values);
 	  }
 	  
@@ -33,7 +38,7 @@ public class SoftAssertion extends SoftAssert{
 			  if(value != null && !value.equals("true") && !value.equals("false")){
 				  
 				  message = String.format("%s : %s", entryMap.getKey(), entryMap.getValue());
-				  
+
 				  LogUtility.logError(message);
 			  }
 		  }
@@ -42,7 +47,7 @@ public class SoftAssertion extends SoftAssert{
 	  @Override
 	  protected void doAssert(IAssert<?> a) {
 		  LogUtility.logInfo("Verify: " + a.getMessage());
-		  
+
 		  onBeforeAssert(a);
 		  
 		  try {
@@ -50,12 +55,14 @@ public class SoftAssertion extends SoftAssert{
 			  onAssertSuccess(a);
 		      
 			  LogUtility.logInfo("Result: Passed");
-		     
+			  extentTest.log(Status.PASS, a.getMessage());
+
 		  } catch (AssertionError ex) {
 			  onAssertFailure(a, ex);
 			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
 			  LogUtility.logError("Result: Failed");
 			  printExpectedAndActual(a);
+
 			  mErrors.put(ex, a);
 	    
 		  } finally {
