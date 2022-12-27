@@ -1,9 +1,11 @@
 package utilities;
 
+import com.aventstack.extentreports.ExtentTest;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.testng.asserts.IAssert;
 import org.testng.asserts.SoftAssert;
 import org.testng.collections.Maps;
+import utilities.reports.ExtentTestManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,12 +16,15 @@ public class SoftAssertion extends SoftAssert{
 	  private final Map<AssertionError, IAssert<?>> mErrors = Maps.newLinkedHashMap();
 	  private static final String DEFAULT_SOFT_ASSERT_MESSAGE = "Meh";
 
+	  ExtentTest extentTest = ExtentTestManager.getTest();
+	  ExtentTest extentTestNode = null;
+
 	  private void printExpectedAndActual(IAssert<?> a){
 		  Map<String, String> values = new HashMap<String, String>();
 		  
 		  values.put("Expected", a.getExpected().toString());
 		  values.put("Actual", a.getActual().toString());
-		  
+
 		  printValues(values);
 	  }
 	  
@@ -33,7 +38,9 @@ public class SoftAssertion extends SoftAssert{
 			  if(value != null && !value.equals("true") && !value.equals("false")){
 				  
 				  message = String.format("%s : %s", entryMap.getKey(), entryMap.getValue());
-				  
+
+				  extentTestNode.fail(String.format("%s : %s", entryMap.getKey(), entryMap.getValue()));
+
 				  LogUtility.logError(message);
 			  }
 		  }
@@ -42,7 +49,9 @@ public class SoftAssertion extends SoftAssert{
 	  @Override
 	  protected void doAssert(IAssert<?> a) {
 		  LogUtility.logInfo("Verify: " + a.getMessage());
-		  
+
+		  extentTestNode = extentTest.createNode("Verify: " + a.getMessage());
+
 		  onBeforeAssert(a);
 		  
 		  try {
@@ -50,12 +59,15 @@ public class SoftAssertion extends SoftAssert{
 			  onAssertSuccess(a);
 		      
 			  LogUtility.logInfo("Result: Passed");
-		     
+
+			  extentTestNode.pass(a.getMessage());
+
 		  } catch (AssertionError ex) {
 			  onAssertFailure(a, ex);
 			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
 			  LogUtility.logError("Result: Failed");
 			  printExpectedAndActual(a);
+
 			  mErrors.put(ex, a);
 	    
 		  } finally {
