@@ -1,6 +1,5 @@
 package utilities;
 
-import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -10,6 +9,8 @@ import utilities.reports.ExtentManager;
 import utilities.reports.ExtentTestManager;
 
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Listener implements ITestListener {
 	
@@ -18,10 +19,20 @@ public class Listener implements ITestListener {
 	String testName;
 	String message;
 
-	static ExtentTest extentTest = null;
-
 	public static WebDriver getDriver(){
 		return driver;
+	}
+
+	static String generatedDate = "";
+
+	private void generateDate(){
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH-mm-ss-aa");
+		Date currentDate = new Date();
+		generatedDate = dateFormat.format(currentDate);
+	}
+
+	public String getGeneratedDate(){
+		return generatedDate;
 	}
 
 	@Override
@@ -35,6 +46,8 @@ public class Listener implements ITestListener {
 	
 	@Override
 	public void onStart(ITestContext contextStart) {
+		generateDate();
+
 		driverManager = new WebdriverManager();
 
 		Config config = new Config();
