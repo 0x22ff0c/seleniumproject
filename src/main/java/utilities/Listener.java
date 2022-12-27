@@ -1,6 +1,6 @@
 package utilities;
 
-import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -17,7 +17,9 @@ public class Listener implements ITestListener {
 	static WebDriver driver = null;
 	String testName;
 	String message;
-	
+
+	static ExtentTest extentTest = null;
+
 	public static WebDriver getDriver(){
 		return driver;
 	}
@@ -29,7 +31,6 @@ public class Listener implements ITestListener {
 		LogUtility.logInfo("End of testing session.");
 
 		ExtentManager.generateReport();
-
 	}
 	
 	@Override
@@ -48,13 +49,12 @@ public class Listener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		LogUtility.logInfo(String.format("TEST RESULT %s: PASSED %n", testName));
-		ExtentTestManager.getTest().log(Status.PASS, testName);
+
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
 		LogUtility.logError(String.format("TEST RESULT %s: FAILED %n", testName));
-		ExtentTestManager.getTest().log(Status.FAIL, testName);
 	}
 	
 	@Override
@@ -66,7 +66,7 @@ public class Listener implements ITestListener {
 		message = String.format("STARTING TEST: %s", testName);
 		
 		LogUtility.logInfo(message);
-		ExtentTestManager.startTest(testName);
+		ExtentTestManager.startTest(test.testName());
 	}
 
 	@Override
