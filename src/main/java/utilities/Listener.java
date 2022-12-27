@@ -30,7 +30,7 @@ public class Listener implements ITestListener {
 	Date currentDate = new Date();
 
 	private void generateDate(){
-		SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH-mm-ss-aa");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy hh-mm-ss-aa");
 		generatedDate = dateFormat.format(currentDate);
 	}
 

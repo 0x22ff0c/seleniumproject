@@ -45,18 +45,25 @@ public class ExtentManager {
         return String.format("reports_%s", listener.getGeneratedTime());
     }
 
-    public synchronized static ExtentReports generateReportFile(){
+    private static String setReportFilePath(){
+
         final String userDirectory = System.getProperty("user.dir");
 
-        String reportFileNamePath = String.format("%s/logs/%s/%s/%s", userDirectory, setReportDestinationFolder(), setReportsFolderName(),generateReportFileName());
+        return String.format("%s/logs/%s/%s/%s", userDirectory, setReportDestinationFolder(), setReportsFolderName(),generateReportFileName());
+    }
 
-        ExtentSparkReporter reporter = new ExtentSparkReporter(reportFileNamePath);
-        reporter.config().setReportName("Sample report name");
-
-        extentReports.attachReporter(reporter);
+    private static void setSystemInformation(){
         extentReports.setSystemInfo("OS", getOperatingSystem());
         extentReports.setSystemInfo("Browser name", getBrowserName());
         extentReports.setSystemInfo("Browser version", getBrowserVersion());
+    }
+
+    public synchronized static ExtentReports generateReportFile(){
+        ExtentSparkReporter reporter = new ExtentSparkReporter(setReportFilePath());
+
+        extentReports.attachReporter(reporter);
+
+        setSystemInformation();
 
         return extentReports;
     }
