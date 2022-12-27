@@ -25,14 +25,26 @@ public class Listener implements ITestListener {
 
 	static String generatedDate = "";
 
+	static String generatedTime = "";
+
+	Date currentDate = new Date();
+
 	private void generateDate(){
 		SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH-mm-ss-aa");
-		Date currentDate = new Date();
 		generatedDate = dateFormat.format(currentDate);
+	}
+
+	private void generateTime(){
+		SimpleDateFormat dateFormat = new SimpleDateFormat("hh-mm-aa");
+		generatedTime = dateFormat.format(currentDate);
 	}
 
 	public String getGeneratedDate(){
 		return generatedDate;
+	}
+
+	public String getGeneratedTime(){
+		return generatedTime;
 	}
 
 	@Override
@@ -46,7 +58,10 @@ public class Listener implements ITestListener {
 	
 	@Override
 	public void onStart(ITestContext contextStart) {
+
 		generateDate();
+
+		generateTime();
 
 		driverManager = new WebdriverManager();
 

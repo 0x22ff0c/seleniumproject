@@ -37,13 +37,18 @@ public class ExtentManager {
     private static String setReportDestinationFolder(){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date currentDate = new Date();
-        return String.format("logs/%s/reports", dateFormat.format(currentDate));
+        return dateFormat.format(currentDate);
+    }
+
+    private static String setReportsFolderName(){
+        Listener listener = new Listener();
+        return String.format("reports_%s", listener.getGeneratedTime());
     }
 
     public synchronized static ExtentReports generateReportFile(){
         final String userDirectory = System.getProperty("user.dir");
 
-        String reportFileNamePath = String.format("%s/%s/%s", userDirectory, setReportDestinationFolder(), generateReportFileName());
+        String reportFileNamePath = String.format("%s/logs/%s/%s/%s", userDirectory, setReportDestinationFolder(), setReportsFolderName(),generateReportFileName());
 
         ExtentSparkReporter reporter = new ExtentSparkReporter(reportFileNamePath);
         reporter.config().setReportName("Sample report name");
