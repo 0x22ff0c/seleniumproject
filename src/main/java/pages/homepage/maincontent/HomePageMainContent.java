@@ -406,7 +406,7 @@ public class HomePageMainContent extends BasePage{
 	public void clickBackEndButton(){
 		control.clickButton(getCodeEditorBackendNotActive());
 		
-		control.waitForElmentToBeDisplayedInPage(By.xpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']"));
+		control.waitForElementToBeDisplayedInPage(By.xpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']"));
 	}
 
 	public WebElement getCodeEditorFrontendGIF(){
@@ -446,7 +446,7 @@ public class HomePageMainContent extends BasePage{
 		
 		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='/pro/picture_spaces_ide.png']";
 		
-		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
 		return getElementByXpath(xpathExpression, "W3Schools Spaces sample screenshot");
 	}
@@ -460,7 +460,7 @@ public class HomePageMainContent extends BasePage{
 		
 		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='how-spaces-works3.png']";
 		
-		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
 		return getElementByXpath(xpathExpression, "W3Schools Spaces how it works image");
 	}
@@ -498,7 +498,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getMyLearningSampleScreenshot(){
-		control.waitForElmentToBeDisplayedInPage(By.id(myLearningSampleScreenshotId));
+		control.waitForElementToBeDisplayedInPage(By.id(myLearningSampleScreenshotId));
 		
 		return getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot");
 	}
@@ -599,7 +599,7 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getCodeGameImageOfLynx(){
 		String xpathExpression = "//*[text()='Code Game']/following-sibling::*/descendant::*[@src='/images/w3lynx_200.png']";
 		
-		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
 		return getElementByXpath(xpathExpression, "Image of Lynx");
 	}
@@ -651,7 +651,7 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getWebTemplatesSampleImage(){
 		String xpathExpression = "(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[@src='w3css_templates.jpg']";
 		
-		control.waitForElmentToBeDisplayedInPage(By.xpath(xpathExpression));
+		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
 		return getElementByXpath(xpathExpression, "Web Templates sample images");
 	}
