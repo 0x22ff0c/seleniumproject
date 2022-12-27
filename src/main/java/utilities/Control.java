@@ -1,5 +1,6 @@
 package utilities;
 
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
 import tests.BaseTest;
+import utilities.reports.ExtentTestManager;
 
 import java.time.Duration;
 
@@ -69,11 +71,13 @@ public class Control{
 		
 	public void scrollToElement(WebElement element){
 		nameOfElement = basePage.getElementName();
-		
+
+		ExtentTestManager.getTest().log(Status.INFO, String.format("Scrolling to element: %s", nameOfElement));
 		logBeforeAction(String.format("Scrolling to element: %s", nameOfElement));
 
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
-		
+
+		ExtentTestManager.getTest().log(Status.INFO, String.format("Scrolled to element: %s.", nameOfElement));
 		logBeforeAction(String.format("Scrolled to element: %s.", nameOfElement));
 	}
 }
