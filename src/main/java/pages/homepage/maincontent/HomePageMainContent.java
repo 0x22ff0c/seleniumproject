@@ -61,7 +61,8 @@ public class HomePageMainContent extends BasePage{
 	public String getSearchbarfieldPlaceholder(){
 		return getPlaceholderTextOfField(getSearchbarField());
 	}
-	
+
+	//TODO: change to get button element
 	public WebElement getSearchbarButton(){
 		return getElementById("learntocode_searchbtn", MainContentEnum.SEARCH_FIELD_BUTTON.toString() + " button");	
 	}
@@ -121,7 +122,8 @@ public class HomePageMainContent extends BasePage{
 		
 		return getButtonElementByXpath(String.format(htmlSampleCodeXpathExpression, MainContentEnum.HTML.name()), MainContentEnum.HTML_SAMPLE_CODE_SECTION.toString());
 	}
-	
+
+	//TODO: change to get button element
 	public WebElement getHtmlTryItYourselfButton(){
 		return getElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", MainContentEnum.HTML_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
@@ -160,7 +162,8 @@ public class HomePageMainContent extends BasePage{
 		
 		return getElementByXpath(String.format(sampleCodeSectionXpathExpression, MainContentEnum.CSS.name()), MainContentEnum.CSS_SAMPLE_CODE_SECTION.toString());
 	}
-	
+
+	//TODO change to get element button
 	public WebElement getCSSTryItYourselfButton(){
 		return getButtonElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.CSS_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
@@ -236,7 +239,8 @@ public class HomePageMainContent extends BasePage{
 		
 		return getElementByXpath(String.format(pythonSampleCodeSection, MainContentEnum.PYTHON.toString()), MainContentEnum.PYTHON_SAMPLE_CODE_SECTION.toString());
 	}
-	
+
+	//TODO: change to get button element
 	public WebElement getPythonTryItYourselfButton(){
 		return getButtonElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.PYTHON_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
@@ -274,7 +278,8 @@ public class HomePageMainContent extends BasePage{
 		
 		return getElementByXpath(String.format(sqlSampleCodeXpathExpression, MainContentEnum.SQL.name()), MainContentEnum.SQL_SAMPLE_CODE_SECTION.toString());
 	}
-	
+
+	//TODO: change to get button element
 	public WebElement getSQLTryItYourselfButton(){
 		return getButtonElementByXpath("//*[text()='SQL Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.SQL_TRY_IT_YOURSELF_BUTTON.toString() + " button");
 	}
