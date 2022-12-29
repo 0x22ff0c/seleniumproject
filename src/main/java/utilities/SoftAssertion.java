@@ -20,7 +20,7 @@ public class SoftAssertion extends SoftAssert{
 	  ExtentTest extentTest = ExtentTestManager.getTest();
 
 	  private void printExpectedAndActual(IAssert<?> a){
-		  Map<String, String> values = new HashMap<String, String>();
+		  Map<String, String> values = new HashMap<>();
 		  
 		  values.put("Expected", a.getExpected().toString());
 		  values.put("Actual", a.getActual().toString());

@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class BasePage {
 
-	protected WebDriver driver = null;
+	protected WebDriver driver;
 	WebElement element = null;
 	private String nameOfElement = "";
 	protected Control control;
@@ -137,14 +137,24 @@ public class BasePage {
 	//endregion
 
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
-		element = getElement(By.xpath(xpathExpression));
-		
-		String contentValue = element.getText().replace("\n", " ");
-		
-		if(contentValue.isEmpty()){
-			contentValue = element.getAttribute("value").replace("\n", " ");
+
+		String contentValue = "";
+
+		try {
+			element = getElement(By.xpath(xpathExpression));
+
+			contentValue = element.getText().replace("\n", " ");
+
+			if(contentValue.isEmpty()){
+				contentValue = element.getAttribute("value").replace("\n", " ");
+			}
+
+		}catch (NullPointerException nullPointerException){
+			LogUtility.logError(ExceptionUtils.getStackTrace(nullPointerException));
+			LogUtility.logError("Element is null therefore the text is empty.");
+
 		}
-		
+
 		return contentValue;
 	}
 
