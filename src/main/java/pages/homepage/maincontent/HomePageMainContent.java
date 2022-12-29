@@ -399,7 +399,7 @@ public class HomePageMainContent extends BasePage{
 	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
-		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", "Backend inactive button");
+		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", MainContentEnum.BACK_END_INACTIVE_BUTTON.toString());
 	}
 
 	public void clickBackEndButton(){
