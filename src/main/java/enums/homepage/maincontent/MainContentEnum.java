@@ -96,7 +96,9 @@ public enum MainContentEnum {
 
 	FRONT_END_ACTIVE_BUTTON("Frontend active"),
 
-	FRONT_END_INACTIVE_BUTTON("Frontend inactive");
+	FRONT_END_INACTIVE_BUTTON("Frontend inactive"),
+
+	BACK_END_ACTIVE_BUTTON("Backend active");
 
 	MainContentEnum(){}
 	
