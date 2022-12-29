@@ -375,7 +375,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeEditorFrontendActive(){
-		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
+		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON.toString());
 	}
 	
 	public int getCodeEditorFrontendActiveDisplayCount(){
