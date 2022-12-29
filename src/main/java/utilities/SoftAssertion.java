@@ -44,23 +44,8 @@ public class SoftAssertion extends SoftAssert{
 		  }
 	  }
 
-	private void printValuesFailed(IAssert<?> a, String statement){
 
-		String expectedValue = a.getExpected().toString();
-		String actualValue = a.getActual().toString();
-
-		if(expectedValue !=null && !expectedValue.equals("true") && !expectedValue.equals("false")
-				&& actualValue != null && !actualValue.equals("true") && !actualValue.equals("false")){
-
-			extentTest.log(Status.FAIL, String.format("%s <br/>" +
-					"Expected : %s <br/> Actual : %s", statement, expectedValue, actualValue));
-		}else{
-			extentTest.log(Status.FAIL, statement);
-
-		}
-	}
-
-	  private void printValuesPass(IAssert<?> a, String statement){
+	  private void printValues(IAssert<?> a, Status status, String statement){
 
 		  String expectedValue = a.getExpected().toString();
 		  String actualValue = a.getActual().toString();
@@ -68,10 +53,10 @@ public class SoftAssertion extends SoftAssert{
 		  if(expectedValue !=null && !expectedValue.equals("true") && !expectedValue.equals("false")
 		  && actualValue != null && !actualValue.equals("true") && !actualValue.equals("false")){
 
-			  extentTest.log(Status.PASS, String.format("%s <br/>" +
+			  extentTest.log(status, String.format("%s <br/>" +
 					  "Expected : %s <br/> Actual : %s", statement, expectedValue, actualValue));
 		  }else{
-			  extentTest.log(Status.PASS, statement);
+			  extentTest.log(status, statement);
 
 		  }
 	  }
@@ -92,14 +77,14 @@ public class SoftAssertion extends SoftAssert{
 			  onAssertSuccess(a);
 		      
 			  LogUtility.logInfo("Result: Passed");
-			  printValuesPass(a, statement);
+			  printValues(a, Status.PASS, statement);
 
 		  } catch (AssertionError ex) {
 			  onAssertFailure(a, ex);
 			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
 			  LogUtility.logError("Result: Failed");
 			  printValues(getExpectedAndActualValuesMap(a));
-			  printValuesFailed(a, statement);
+			  printValues(a, Status.FAIL, statement);
 
 			  mErrors.put(ex, a);
 	    
