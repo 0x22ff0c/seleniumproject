@@ -98,6 +98,8 @@ public enum MainContentEnum {
 
 	FRONT_END_INACTIVE_BUTTON("Frontend inactive"),
 
+	FRONT_END_GIF("Frontend GIF"),
+
 	BACK_END_ACTIVE_BUTTON("Backend active"),
 
 	BACK_END_INACTIVE_BUTTON("Backend inactive");
