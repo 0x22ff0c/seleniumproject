@@ -106,7 +106,9 @@ public enum MainContentEnum {
 
 	BACK_END_INACTIVE_BUTTON("Backend inactive"),
 
-	BACK_END_GIF("Backend GIF");
+	BACK_END_GIF("Backend GIF"),
+
+	BACK_END_EDITOR_BUTTON("Backend editor");
 
 	MainContentEnum(){}
 	
