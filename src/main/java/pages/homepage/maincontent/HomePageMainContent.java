@@ -367,7 +367,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code editor window section
 	public WebElement getCodeEditorDotButton(int dotButtonNumber){
-		return getElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("Code editor dot button - %s", dotButtonNumber));
+		return getButtonElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("Code editor dot [%s]", dotButtonNumber));
 	}
 	
 	public String getCodeEditorUrlValue(){
