@@ -391,7 +391,7 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorBackEndActive(){
-		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
+		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
 	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
