@@ -383,7 +383,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	private WebElement getCodeEditorFrontEndNotActive(){
-		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", "Frontend inactive button");
+		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", MainContentEnum.FRONT_END_INACTIVE_BUTTON.toString());
 	}
 	
 	public void clickFrontendButton(){
