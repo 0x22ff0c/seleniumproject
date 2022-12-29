@@ -92,7 +92,9 @@ public enum MainContentEnum {
 	
 	BOOTSTRAP("Bootstrap"),
 
-	CODE_EDITOR_SECTION("Code Editor section");
+	CODE_EDITOR_SECTION("Code Editor section"),
+
+	FRONT_END_ACTIVE_BUTTON("Frontend active");
 
 	MainContentEnum(){}
 	
