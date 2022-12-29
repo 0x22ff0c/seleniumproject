@@ -46,7 +46,10 @@ public class SoftAssertion extends SoftAssert{
 
 	  @Override
 	  protected void doAssert(IAssert<?> a) {
-		  LogUtility.logInfo("Verify: " + a.getMessage());
+
+		  String verificationStatement = "Verify " + a.getMessage();
+
+		  LogUtility.logInfo(verificationStatement);
 
 		  onBeforeAssert(a);
 		  
@@ -55,7 +58,7 @@ public class SoftAssertion extends SoftAssert{
 			  onAssertSuccess(a);
 		      
 			  LogUtility.logInfo("Result: Passed");
-			  extentTest.log(Status.PASS, a.getMessage());
+			  extentTest.log(Status.PASS, String.format("Test Step: %s <br/> Expected result: %s", verificationStatement, a.getMessage()));
 
 		  } catch (AssertionError ex) {
 			  onAssertFailure(a, ex);
