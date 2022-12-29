@@ -443,7 +443,7 @@ public class HomePageMainContent extends BasePage{
 	
 	public WebElement getW3SchoolsSpacesSampleScreenshot(){
 		
-		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='/pro/picture_spaces_ide.png']";
+		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='/pro/pic_spaces_ide.png']";
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
@@ -464,8 +464,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath(xpathExpression, "W3Schools Spaces how it works image");
 	}
 	
-	public WebElement getW3schoolsSpacesGetStartedForFreeButton(){
-		return getButtonElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started for Free']", "W3Schools Spaces - Get Started for Free");
+	public WebElement getW3schoolsSpacesGetStartedNowButton(){
+		return getButtonElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started Now']", "W3Schools Spaces - Get Started Now");
 	}
 	//endregion
 
