@@ -421,7 +421,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeEditorTryBackend(){
-		return getElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", "Backend editor button");
+		return getButtonElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", MainContentEnum.BACK_END_EDITOR_BUTTON.toString());
 	}
 	//endregion
 
