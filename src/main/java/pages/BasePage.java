@@ -134,6 +134,10 @@ public class BasePage {
 	public WebElement getButtonElementByXpath(String xpathExpression, String nameOfTheButton){
 		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
 	}
+
+	public int getButtonElementCountByXpath(String xpathExpression, String nameOfTheButton){
+		return getElementByXpathCount(xpathExpression, setNameOfTheButton(nameOfTheButton));
+	}
 	//endregion
 
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
