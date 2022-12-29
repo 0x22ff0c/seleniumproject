@@ -393,15 +393,15 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getCodeEditorBackEndActive(){
 		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
 	}
+
+	public int getCodeEditorBackEndActiveDisplayCount(){
+		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
+	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
 		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", "Backend inactive button");
 	}
-	
-	public int getCodeEditorBackEndActiveDisplayCount(){
-		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
-	}
-	
+
 	public void clickBackEndButton(){
 		control.clickButton(getCodeEditorBackendNotActive());
 		
