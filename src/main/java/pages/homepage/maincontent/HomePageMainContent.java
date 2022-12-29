@@ -236,9 +236,8 @@ public class HomePageMainContent extends BasePage{
 		return getElementByXpath(String.format(pythonSampleCodeSection, MainContentEnum.PYTHON.toString()), MainContentEnum.PYTHON_SAMPLE_CODE_SECTION.toString());
 	}
 
-	//TODO: change to get button element
 	public WebElement getPythonTryItYourselfButton(){
-		return getButtonElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.PYTHON_TRY_IT_YOURSELF_BUTTON.toString() + " button");
+		return getButtonElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.PYTHON_TRY_IT_YOURSELF_BUTTON.toString());
 	}
 	//endregion
 
