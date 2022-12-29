@@ -77,7 +77,9 @@ public enum MainContentEnum {
 	SQL_SAMPLE_CODE_SECTION("SQL Sample code"),
 	
 	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
-	
+
+	OTHER_TUTORIALS_SECTION("Other tutorials section"),
+
 	PHP,
 	
 	JQUERY("jQuery"),
