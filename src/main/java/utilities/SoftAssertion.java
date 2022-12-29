@@ -19,15 +19,15 @@ public class SoftAssertion extends SoftAssert{
 
 	  ExtentTest extentTest = ExtentTestManager.getTest();
 
-	  private void printExpectedAndActual(IAssert<?> a){
+	  private Map<String, String> getExpectedAndActualValuesMap(IAssert<?> a){
 		  Map<String, String> values = new HashMap<>();
-		  
+
 		  values.put("Expected", a.getExpected().toString());
 		  values.put("Actual", a.getActual().toString());
 
-		  printValues(values);
+		  return values;
 	  }
-	  
+
 	  String message;
 	  
 	  private void printValues(Map<String, String> values){
@@ -41,6 +41,22 @@ public class SoftAssertion extends SoftAssert{
 
 				  LogUtility.logError(message);
 			  }
+		  }
+	  }
+
+	  private void printValuesPass(IAssert<?> a, String statement){
+
+		  String expectedValue = a.getExpected().toString();
+		  String actualValue = a.getActual().toString();
+
+		  if(expectedValue !=null && !expectedValue.equals("true") && !expectedValue.equals("false")
+		  && actualValue != null && !actualValue.equals("true") && !actualValue.equals("false")){
+
+			  extentTest.log(Status.PASS, String.format("%s <br/>" +
+					  "Expected : %s <br/> Actual : %s", statement, expectedValue, actualValue));
+		  }else{
+			  extentTest.log(Status.PASS, statement);
+
 		  }
 	  }
 
@@ -58,13 +74,14 @@ public class SoftAssertion extends SoftAssert{
 			  onAssertSuccess(a);
 		      
 			  LogUtility.logInfo("Result: Passed");
-			  extentTest.log(Status.PASS, String.format("Test Step: %s <br/> Expected result: %s", verificationStatement, a.getMessage()));
+			  String statement = String.format("Test Step: Verify %s <br/> Expected result: %s", a.getMessage(), a.getMessage());
+			  printValuesPass(a, statement);
 
 		  } catch (AssertionError ex) {
 			  onAssertFailure(a, ex);
 			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
 			  LogUtility.logError("Result: Failed");
-			  printExpectedAndActual(a);
+			  printValues(getExpectedAndActualValuesMap(a));
 
 			  mErrors.put(ex, a);
 	    
