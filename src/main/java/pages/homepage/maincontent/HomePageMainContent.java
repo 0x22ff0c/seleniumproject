@@ -417,7 +417,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeEditorTryFrontend(){
-		return getElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", "Frontend editor button");
+		return getButtonElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", MainContentEnum.FRONT_END_EDITOR_BUTTON.toString());
 	}
 	
 	public WebElement getCodeEditorTryBackend(){
