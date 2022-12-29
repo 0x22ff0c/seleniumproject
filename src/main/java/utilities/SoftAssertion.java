@@ -44,7 +44,6 @@ public class SoftAssertion extends SoftAssert{
 		  }
 	  }
 
-
 	  private void printValues(IAssert<?> a, Status status, String statement){
 
 		  String expectedValue = a.getExpected().toString();
@@ -56,8 +55,8 @@ public class SoftAssertion extends SoftAssert{
 			  extentTest.log(status, String.format("%s <br/>" +
 					  "Expected : %s <br/> Actual : %s", statement, expectedValue, actualValue));
 		  }else{
-			  extentTest.log(status, statement);
 
+			  extentTest.log(status, statement);
 		  }
 	  }
 
