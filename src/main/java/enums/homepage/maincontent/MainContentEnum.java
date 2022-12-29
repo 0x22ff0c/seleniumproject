@@ -100,6 +100,8 @@ public enum MainContentEnum {
 
 	FRONT_END_GIF("Frontend GIF"),
 
+	FRONT_END_EDITOR_BUTTON("Frontend editor"),
+
 	BACK_END_ACTIVE_BUTTON("Backend active"),
 
 	BACK_END_INACTIVE_BUTTON("Backend inactive"),
