@@ -32,6 +32,8 @@ public class TestHomePageMainContents {
 
 		baseTest.verifyElementIsDisplayed(homePage.getMainContent());
 
+		baseTest.verifyElementIsDisplayed(homePage.getHeaderElement(MainContentEnum.LEARN_TO_CODE_HEADER.toString()));
+
 		baseTest.verifyElementIsDisplayed(homePage.getSubheaderTextInMainContent());
 
 		baseTest.verifyElementIsDisplayed(homePage.getSearchbarField());
