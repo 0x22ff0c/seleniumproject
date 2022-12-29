@@ -395,7 +395,7 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public int getCodeEditorBackEndActiveDisplayCount(){
-		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
+		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
 	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
