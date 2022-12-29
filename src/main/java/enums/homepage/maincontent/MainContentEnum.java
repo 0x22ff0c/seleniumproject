@@ -90,8 +90,10 @@ public enum MainContentEnum {
 	
 	W3CSS("W3.CSS"),
 	
-	BOOTSTRAP("Bootstrap");
-	
+	BOOTSTRAP("Bootstrap"),
+
+	CODE_EDITOR_SECTION("Code Editor section");
+
 	MainContentEnum(){}
 	
 	private String elementName; 
