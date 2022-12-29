@@ -62,9 +62,8 @@ public class HomePageMainContent extends BasePage{
 		return getPlaceholderTextOfField(getSearchbarField());
 	}
 
-	//TODO: change to get button element
 	public WebElement getSearchbarButton(){
-		return getElementById("learntocode_searchbtn", MainContentEnum.SEARCH_FIELD_BUTTON.toString() + " button");	
+		return getButtonElementById("learntocode_searchbtn", MainContentEnum.SEARCH_FIELD_BUTTON.toString());
 	}
 	
 	public WebElement getWhereToBeginLink(){
