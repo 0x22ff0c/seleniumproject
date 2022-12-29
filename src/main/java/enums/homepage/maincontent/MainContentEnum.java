@@ -94,7 +94,9 @@ public enum MainContentEnum {
 
 	CODE_EDITOR_SECTION("Code Editor section"),
 
-	FRONT_END_ACTIVE_BUTTON("Frontend active");
+	FRONT_END_ACTIVE_BUTTON("Frontend active"),
+
+	FRONT_END_INACTIVE_BUTTON("Frontend inactive");
 
 	MainContentEnum(){}
 	
