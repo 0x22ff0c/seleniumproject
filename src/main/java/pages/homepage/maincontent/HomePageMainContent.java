@@ -281,7 +281,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Other tutorials section
 	public void scrollToOtherTutorialsSection(){
-		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", "Other tutorials section"));
+		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", MainContentEnum.OTHER_TUTORIALS_SECTION.toString()));
 	}
 	//endregion
 
@@ -353,7 +353,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code editor section
 	public void scrollToCodeEditorSection(){
-		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", "Code Editor section"));
+		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", MainContentEnum.CODE_EDITOR_SECTION.toString()));
 	}
 	
 	public String getCodeEditorHeader(){
@@ -367,7 +367,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code editor window section
 	public WebElement getCodeEditorDotButton(int dotButtonNumber){
-		return getElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("Code editor dot button - %s", dotButtonNumber));
+		return getButtonElementByXpath(String.format("((//*[contains(@class, 'codeeditorbr-container')])[1]/descendant::*[contains(@class, 'dot')])[%s]", dotButtonNumber), String.format("Code editor dot [%s]", dotButtonNumber));
 	}
 	
 	public String getCodeEditorUrlValue(){
@@ -375,15 +375,15 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeEditorFrontendActive(){
-		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
+		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON.toString());
 	}
 	
 	public int getCodeEditorFrontendActiveDisplayCount(){
-		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Frontend']", "Frontend active button");
+		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON.toString());
 	}
 	
 	private WebElement getCodeEditorFrontEndNotActive(){
-		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", "Frontend inactive button");
+		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", MainContentEnum.FRONT_END_INACTIVE_BUTTON.toString());
 	}
 	
 	public void clickFrontendButton(){
@@ -391,17 +391,17 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorBackEndActive(){
-		return getElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
+		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
+	}
+
+	public int getCodeEditorBackEndActiveDisplayCount(){
+		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
 	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
-		return getElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", "Backend inactive button");
+		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", MainContentEnum.BACK_END_INACTIVE_BUTTON.toString());
 	}
-	
-	public int getCodeEditorBackEndActiveDisplayCount(){
-		return getElementByXpathCount("//*[contains(@class, 'ws-grey') and text()='Backend']", "Backend active button");
-	}
-	
+
 	public void clickBackEndButton(){
 		control.clickButton(getCodeEditorBackendNotActive());
 		
@@ -409,19 +409,19 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorFrontendGIF(){
-		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", "Frontend GIF");
+		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", MainContentEnum.FRONT_END_GIF.toString());
 	}
 
 	public WebElement getCodeEditorBackendGIF(){
-		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", "Backend GIF");
+		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", MainContentEnum.BACK_END_GIF.toString());
 	}
 	
 	public WebElement getCodeEditorTryFrontend(){
-		return getElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", "Frontend editor button");
+		return getButtonElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", MainContentEnum.FRONT_END_EDITOR_BUTTON.toString());
 	}
 	
 	public WebElement getCodeEditorTryBackend(){
-		return getElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", "Backend editor button");
+		return getButtonElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", MainContentEnum.BACK_END_EDITOR_BUTTON.toString());
 	}
 	//endregion
 

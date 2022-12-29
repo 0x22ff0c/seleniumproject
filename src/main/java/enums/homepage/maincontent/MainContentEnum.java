@@ -77,7 +77,9 @@ public enum MainContentEnum {
 	SQL_SAMPLE_CODE_SECTION("SQL Sample code"),
 	
 	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
-	
+
+	OTHER_TUTORIALS_SECTION("Other tutorials section"),
+
 	PHP,
 	
 	JQUERY("jQuery"),
@@ -88,8 +90,26 @@ public enum MainContentEnum {
 	
 	W3CSS("W3.CSS"),
 	
-	BOOTSTRAP("Bootstrap");
-	
+	BOOTSTRAP("Bootstrap"),
+
+	CODE_EDITOR_SECTION("Code Editor section"),
+
+	FRONT_END_ACTIVE_BUTTON("Frontend active"),
+
+	FRONT_END_INACTIVE_BUTTON("Frontend inactive"),
+
+	FRONT_END_GIF("Frontend GIF"),
+
+	FRONT_END_EDITOR_BUTTON("Frontend editor"),
+
+	BACK_END_ACTIVE_BUTTON("Backend active"),
+
+	BACK_END_INACTIVE_BUTTON("Backend inactive"),
+
+	BACK_END_GIF("Backend GIF"),
+
+	BACK_END_EDITOR_BUTTON("Backend editor");
+
 	MainContentEnum(){}
 	
 	private String elementName; 
