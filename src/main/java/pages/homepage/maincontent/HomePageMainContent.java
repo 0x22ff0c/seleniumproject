@@ -409,7 +409,7 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorFrontendGIF(){
-		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", "Frontend GIF");
+		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", MainContentEnum.FRONT_END_GIF.toString());
 	}
 
 	public WebElement getCodeEditorBackendGIF(){
