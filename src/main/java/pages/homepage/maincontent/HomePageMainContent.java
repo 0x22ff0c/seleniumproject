@@ -353,7 +353,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code editor section
 	public void scrollToCodeEditorSection(){
-		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", "Code Editor section"));
+		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", MainContentEnum.CODE_EDITOR_SECTION.toString()));
 	}
 	
 	public String getCodeEditorHeader(){
