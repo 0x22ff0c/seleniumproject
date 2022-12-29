@@ -44,6 +44,22 @@ public class SoftAssertion extends SoftAssert{
 		  }
 	  }
 
+	private void printValuesFailed(IAssert<?> a, String statement){
+
+		String expectedValue = a.getExpected().toString();
+		String actualValue = a.getActual().toString();
+
+		if(expectedValue !=null && !expectedValue.equals("true") && !expectedValue.equals("false")
+				&& actualValue != null && !actualValue.equals("true") && !actualValue.equals("false")){
+
+			extentTest.log(Status.FAIL, String.format("%s <br/>" +
+					"Expected : %s <br/> Actual : %s", statement, expectedValue, actualValue));
+		}else{
+			extentTest.log(Status.FAIL, statement);
+
+		}
+	}
+
 	  private void printValuesPass(IAssert<?> a, String statement){
 
 		  String expectedValue = a.getExpected().toString();
@@ -68,13 +84,14 @@ public class SoftAssertion extends SoftAssert{
 		  LogUtility.logInfo(verificationStatement);
 
 		  onBeforeAssert(a);
-		  
+
+		  String statement = String.format("Test Step: Verify %s <br/> Expected result: %s", a.getMessage(), a.getMessage());
+
 		  try {
 			  a.doAssert();
 			  onAssertSuccess(a);
 		      
 			  LogUtility.logInfo("Result: Passed");
-			  String statement = String.format("Test Step: Verify %s <br/> Expected result: %s", a.getMessage(), a.getMessage());
 			  printValuesPass(a, statement);
 
 		  } catch (AssertionError ex) {
@@ -82,6 +99,7 @@ public class SoftAssertion extends SoftAssert{
 			  LogUtility.logError(ExceptionUtils.getStackTrace(ex));
 			  LogUtility.logError("Result: Failed");
 			  printValues(getExpectedAndActualValuesMap(a));
+			  printValuesFailed(a, statement);
 
 			  mErrors.put(ex, a);
 	    
