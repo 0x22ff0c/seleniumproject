@@ -471,7 +471,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region My Learning section
 	public void scrollToMyLearningSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning section"));
+		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_SECTION.toString()));
 	}
 	
 	public WebElement getMyLearningHeader(){
