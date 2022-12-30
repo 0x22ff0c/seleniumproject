@@ -14,7 +14,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Main Content section
 	public WebElement getMainContent(){
-		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION.toString());
+		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION);
 	}
 	
 	private void scrollToSection(String nameOfTheSection){
@@ -55,7 +55,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getSearchbarField(){
-		return getElementById("search2", MainContentEnum.SEARCH_FIELD.toString());
+		return getElementById("search2", MainContentEnum.SEARCH_FIELD);
 	}
 	
 	public String getSearchbarfieldPlaceholder(){
@@ -493,13 +493,13 @@ public class HomePageMainContent extends BasePage{
 	String myLearningSampleScreenshotId = "img_mylearning";
 	
 	public void scrollToMyLearningSampleScreenshot(){
-		control.scrollToElement(getElementById(myLearningSampleScreenshotId, MainContentEnum.MY_LEARNING_SAMPLE_SCREENSHOT.toString()));
+		control.scrollToElement(getElementById(myLearningSampleScreenshotId, MainContentEnum.MY_LEARNING_SAMPLE_SCREENSHOT));
 	}
 	
 	public WebElement getMyLearningSampleScreenshot(){
 		control.waitForElementToBeDisplayedInPage(By.id(myLearningSampleScreenshotId));
 		
-		return getElementById(myLearningSampleScreenshotId, MainContentEnum.MY_LEARNING_SAMPLE_SCREENSHOT.toString());
+		return getElementById(myLearningSampleScreenshotId, MainContentEnum.MY_LEARNING_SAMPLE_SCREENSHOT);
 	}
 	
 	public WebElement getMyLearningSignupButton(){
