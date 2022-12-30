@@ -118,7 +118,9 @@ public enum MainContentEnum {
 
 	W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON("W3Schools Spaces - Get Started Now"),
 
-	MY_LEARNING_SECTION("My Learning section");
+	MY_LEARNING_SECTION("My Learning section"),
+
+	MY_LEARNING_HEADER("My Learning header");
 
 	MainContentEnum(){}
 	
