@@ -134,7 +134,9 @@ public enum MainContentEnum {
 
 	BECOME_A_PRO_USER_2ND_CHECKBOX("Become Pro User - 2nd checkbox"),
 
-	BECOME_A_PRO_USER_2ND_CHECKBOX_LINK("Become Pro User - Spaces");
+	BECOME_A_PRO_USER_2ND_CHECKBOX_LINK("Become Pro User - Spaces"),
+
+	BECOME_A_PRO_USER_3RD_CHECKBOX("Become Pro User - 3rd checkbox");
 
 	MainContentEnum(){}
 	
