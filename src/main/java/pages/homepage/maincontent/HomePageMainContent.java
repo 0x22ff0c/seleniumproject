@@ -556,7 +556,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getBecomeProUser3rdCheckboxLink(){
-		return getElementByLinkText("HTML Video Tutorial", "Become Pro User - HTML Video Tutorial");
+		return getElementByLinkText("HTML Video Tutorial", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK.toString());
 	}
 	
 	public WebElement getBecomeProUserLearnMoreButton(){
