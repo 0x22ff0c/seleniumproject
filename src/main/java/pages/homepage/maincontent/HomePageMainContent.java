@@ -428,12 +428,12 @@ public class HomePageMainContent extends BasePage{
 	//region W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
 		
-		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", "W3Schools Spaces"));
+		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", MainContentEnum.W3SCHOOLS_SPACES.toString()));
 	}
 	
 	public WebElement getW3SchoolsSpacesHeader(){
 		
-		return getElementByXpath("//*[text()='W3Schools Spaces']", "W3Schools Spaces");
+		return getElementByXpath("//*[text()='W3Schools Spaces']", MainContentEnum.W3SCHOOLS_SPACES.toString());
 	}
 	
 	public String getW3SchoolsSpacesSubheader(){
