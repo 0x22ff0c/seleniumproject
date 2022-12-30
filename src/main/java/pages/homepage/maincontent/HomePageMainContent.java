@@ -428,12 +428,12 @@ public class HomePageMainContent extends BasePage{
 	//region W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
 		
-		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", "W3Schools Spaces"));
+		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", MainContentEnum.W3SCHOOLS_SPACES.toString()));
 	}
 	
 	public WebElement getW3SchoolsSpacesHeader(){
 		
-		return getElementByXpath("//*[text()='W3Schools Spaces']", "W3Schools Spaces");
+		return getElementByXpath("//*[text()='W3Schools Spaces']", MainContentEnum.W3SCHOOLS_SPACES.toString());
 	}
 	
 	public String getW3SchoolsSpacesSubheader(){
@@ -447,7 +447,7 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, "W3Schools Spaces sample screenshot");
+		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_SCREENSHOT.toString());
 	}
 	
 	public void scrollToW3SchoolsSpacesScreenshotsSection(){
@@ -461,21 +461,21 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, "W3Schools Spaces how it works image");
+		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_HOW_IT_WORKS_IMAGE.toString());
 	}
 	
 	public WebElement getW3schoolsSpacesGetStartedNowButton(){
-		return getButtonElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started Now']", "W3Schools Spaces - Get Started Now");
+		return getButtonElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started Now']", MainContentEnum.W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON.toString());
 	}
 	//endregion
 
 	//region My Learning section
 	public void scrollToMyLearningSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning section"));
+		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_SECTION.toString()));
 	}
 	
 	public WebElement getMyLearningHeader(){
-		return getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning header");
+		return getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_HEADER.toString());
 	}
 	
 	public String getMyLearningSubheader(){
@@ -493,17 +493,17 @@ public class HomePageMainContent extends BasePage{
 	String myLearningSampleScreenshotId = "img_mylearning";
 	
 	public void scrollToMyLearningSampleScreenshot(){
-		control.scrollToElement(getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot"));
+		control.scrollToElement(getElementById(myLearningSampleScreenshotId, MainContentEnum.MY_LEARNING_SAMPLE_SCREENSHOT.toString()));
 	}
 	
 	public WebElement getMyLearningSampleScreenshot(){
 		control.waitForElementToBeDisplayedInPage(By.id(myLearningSampleScreenshotId));
 		
-		return getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot");
+		return getElementById(myLearningSampleScreenshotId, MainContentEnum.MY_LEARNING_SAMPLE_SCREENSHOT.toString());
 	}
 	
 	public WebElement getMyLearningSignupButton(){
-		return getButtonElementById("myLearningFromDefault", "Sign Up for Free");
+		return getButtonElementById("myLearningFromDefault", MainContentEnum.MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON.toString());
 	}
 	//endregion
 

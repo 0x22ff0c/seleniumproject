@@ -108,7 +108,23 @@ public enum MainContentEnum {
 
 	BACK_END_GIF("Backend GIF"),
 
-	BACK_END_EDITOR_BUTTON("Backend editor");
+	BACK_END_EDITOR_BUTTON("Backend editor"),
+
+	W3SCHOOLS_SPACES("W3Schools Spaces"),
+
+	W3SCHOOLS_SPACES_SCREENSHOT("W3Schools Spaces sample screenshot"),
+
+	W3SCHOOLS_SPACES_HOW_IT_WORKS_IMAGE("W3Schools Spaces how it works image"),
+
+	W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON("W3Schools Spaces - Get Started Now"),
+
+	MY_LEARNING_SECTION("My Learning section"),
+
+	MY_LEARNING_HEADER("My Learning header"),
+
+	MY_LEARNING_SAMPLE_SCREENSHOT("My Learning sample screenshot"),
+
+	MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON("Sign Up for Free");
 
 	MainContentEnum(){}
 	
