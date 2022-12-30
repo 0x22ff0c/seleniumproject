@@ -513,7 +513,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getBecomeProUserHeader(){
-		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User header");
+		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", MainContentEnum.BECOME_A_PRO_USER_HEADER.toString());
 	}
 	
 	public String getBecomeProUserSubheader(){
