@@ -447,7 +447,7 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, "W3Schools Spaces sample screenshot");
+		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_SCREENSHOT.toString());
 	}
 	
 	public void scrollToW3SchoolsSpacesScreenshotsSection(){
