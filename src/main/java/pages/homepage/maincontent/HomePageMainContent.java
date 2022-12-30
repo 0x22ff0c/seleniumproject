@@ -503,7 +503,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getMyLearningSignupButton(){
-		return getButtonElementById("myLearningFromDefault", "Sign Up for Free");
+		return getButtonElementById("myLearningFromDefault", MainContentEnum.MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON.toString());
 	}
 	//endregion
 
