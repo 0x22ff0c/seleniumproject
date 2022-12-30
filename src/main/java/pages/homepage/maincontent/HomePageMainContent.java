@@ -522,7 +522,7 @@ public class HomePageMainContent extends BasePage{
 	
 	//1st checkbox
 	public WebElement getBecomeProUser1stCheckbox(){
-		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[1]", "Become Pro User - 1st checkbox");
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[1]", MainContentEnum.BECOME_A_PRO_USER_1ST_CHECKBOX.toString());
 	}
 	
 	public String getBecomeProUser1stCheckboxText(){
