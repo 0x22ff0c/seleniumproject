@@ -138,7 +138,9 @@ public enum MainContentEnum {
 
 	BECOME_A_PRO_USER_3RD_CHECKBOX("Become Pro User - 3rd checkbox"),
 
-	BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK("Become Pro User - HTML Video Tutorial");
+	BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK("Become Pro User - HTML Video Tutorial"),
+
+	BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK("Learn More");
 
 	MainContentEnum(){}
 	
