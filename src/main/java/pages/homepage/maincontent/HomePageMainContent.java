@@ -461,7 +461,7 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, "W3Schools Spaces how it works image");
+		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_HOW_IT_WORKS_IMAGE.toString());
 	}
 	
 	public WebElement getW3schoolsSpacesGetStartedNowButton(){
