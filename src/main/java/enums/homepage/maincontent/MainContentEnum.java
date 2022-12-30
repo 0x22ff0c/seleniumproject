@@ -126,7 +126,9 @@ public enum MainContentEnum {
 
 	MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON("Sign Up for Free"),
 
-	BECOME_A_PRO_USER_SECTION("Become a Pro User section");
+	BECOME_A_PRO_USER_SECTION("Become a PRO User section"),
+
+	BECOME_A_PRO_USER_HEADER("Become a PRO User header");
 
 	MainContentEnum(){}
 	
