@@ -110,7 +110,9 @@ public enum MainContentEnum {
 
 	BACK_END_EDITOR_BUTTON("Backend editor"),
 
-	W3SCHOOLS_SPACES("W3Schools Spaces");
+	W3SCHOOLS_SPACES("W3Schools Spaces"),
+
+	W3SCHOOLS_SPACES_SCREENSHOT("W3Schools Spaces sample screenshot");
 
 	MainContentEnum(){}
 	
