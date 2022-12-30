@@ -543,7 +543,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getBecomeProUser2ndCheckboxLink(){
-		return getElementByLinkText("Spaces", "Become Pro User - Spaces");
+		return getElementByLinkText("Spaces", MainContentEnum.BECOME_A_PRO_USER_2ND_CHECKBOX_LINK.toString());
 	}
 	
 	//3rd checkbox
