@@ -475,7 +475,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getMyLearningHeader(){
-		return getElementByXpath("//*[text()='My Learning']/parent::*", "My Learning header");
+		return getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_HEADER.toString());
 	}
 	
 	public String getMyLearningSubheader(){
