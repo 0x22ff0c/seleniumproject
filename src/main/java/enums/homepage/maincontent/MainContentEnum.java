@@ -108,7 +108,9 @@ public enum MainContentEnum {
 
 	BACK_END_GIF("Backend GIF"),
 
-	BACK_END_EDITOR_BUTTON("Backend editor");
+	BACK_END_EDITOR_BUTTON("Backend editor"),
+
+	W3SCHOOLS_SPACES("W3Schools Spaces");
 
 	MainContentEnum(){}
 	
