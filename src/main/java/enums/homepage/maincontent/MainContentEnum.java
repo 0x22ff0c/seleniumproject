@@ -120,7 +120,9 @@ public enum MainContentEnum {
 
 	MY_LEARNING_SECTION("My Learning section"),
 
-	MY_LEARNING_HEADER("My Learning header");
+	MY_LEARNING_HEADER("My Learning header"),
+
+	MY_LEARNING_SAMPLE_SCREENSHOT("My Learning sample screenshot");
 
 	MainContentEnum(){}
 	
