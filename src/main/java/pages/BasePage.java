@@ -47,6 +47,10 @@ public class BasePage {
 	protected WebElement getElementById(String id, String nameOfElement){
 		return getElement(By.id(id), nameOfElement);
 	}
+
+	protected WebElement getElementById(String id, Object nameOfElement){
+		return getElementById(id, nameOfElement.toString());
+	}
 	
 	protected WebElement getElementByClass(String className, String nameOfElement){
 		return getElement(By.className(className), nameOfElement);
@@ -64,10 +68,6 @@ public class BasePage {
 		this.nameOfElement = nameOfElement;
 		
 		return driver.findElements(By.xpath(xpath)).size();
-	}
-
-	protected WebElement getElementByTagName(String tagName, String nameOfElement){
-		return getElement(By.tagName(tagName), nameOfElement);
 	}
 
 	private WebElement getElement(By byElement){
@@ -94,6 +94,10 @@ public class BasePage {
 		}
 	
 		return element;
+	}
+
+	private WebElement getElement(By byElement, Object nameOfElement){
+		return getElement(byElement, nameOfElement.toString());
 	}
 
 	//region get Link element
