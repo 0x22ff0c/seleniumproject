@@ -509,7 +509,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Become a Pro user section
 	public void scrollToBecomeProUserSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User section"));
+		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", MainContentEnum.BECOME_A_PRO_USER_SECTION.toString()));
 	}
 	
 	public WebElement getBecomeProUserHeader(){
