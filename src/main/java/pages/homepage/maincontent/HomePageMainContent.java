@@ -493,13 +493,13 @@ public class HomePageMainContent extends BasePage{
 	String myLearningSampleScreenshotId = "img_mylearning";
 	
 	public void scrollToMyLearningSampleScreenshot(){
-		control.scrollToElement(getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot"));
+		control.scrollToElement(getElementById(myLearningSampleScreenshotId, MainContentEnum.MY_LEARNING_SAMPLE_SCREENSHOT.toString()));
 	}
 	
 	public WebElement getMyLearningSampleScreenshot(){
 		control.waitForElementToBeDisplayedInPage(By.id(myLearningSampleScreenshotId));
 		
-		return getElementById(myLearningSampleScreenshotId, "My Learning sample screenshot");
+		return getElementById(myLearningSampleScreenshotId, MainContentEnum.MY_LEARNING_SAMPLE_SCREENSHOT.toString());
 	}
 	
 	public WebElement getMyLearningSignupButton(){
