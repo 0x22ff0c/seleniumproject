@@ -124,7 +124,23 @@ public enum MainContentEnum {
 
 	MY_LEARNING_SAMPLE_SCREENSHOT("My Learning sample screenshot"),
 
-	MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON("Sign Up for Free");
+	MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON("Sign Up for Free"),
+
+	BECOME_A_PRO_USER_SECTION("Become a PRO User section"),
+
+	BECOME_A_PRO_USER_HEADER("Become a PRO User header"),
+
+	BECOME_A_PRO_USER_1ST_CHECKBOX("Become Pro User - 1st checkbox"),
+
+	BECOME_A_PRO_USER_2ND_CHECKBOX("Become Pro User - 2nd checkbox"),
+
+	BECOME_A_PRO_USER_2ND_CHECKBOX_LINK("Become Pro User - Spaces"),
+
+	BECOME_A_PRO_USER_3RD_CHECKBOX("Become Pro User - 3rd checkbox"),
+
+	BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK("Become Pro User - HTML Video Tutorial"),
+
+	BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK("Learn More");
 
 	MainContentEnum(){}
 	

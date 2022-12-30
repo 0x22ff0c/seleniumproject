@@ -509,11 +509,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region Become a Pro user section
 	public void scrollToBecomeProUserSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User section"));
+		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", MainContentEnum.BECOME_A_PRO_USER_SECTION.toString()));
 	}
 	
 	public WebElement getBecomeProUserHeader(){
-		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", "Become a Pro User header");
+		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", MainContentEnum.BECOME_A_PRO_USER_HEADER.toString());
 	}
 	
 	public String getBecomeProUserSubheader(){
@@ -522,7 +522,7 @@ public class HomePageMainContent extends BasePage{
 	
 	//1st checkbox
 	public WebElement getBecomeProUser1stCheckbox(){
-		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[1]", "Become Pro User - 1st checkbox");
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[1]", MainContentEnum.BECOME_A_PRO_USER_1ST_CHECKBOX.toString());
 	}
 	
 	public String getBecomeProUser1stCheckboxText(){
@@ -535,7 +535,7 @@ public class HomePageMainContent extends BasePage{
 	
 	//2nd checkbox
 	public WebElement getBecomeProUser2ndCheckbox(){
-		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[2]", "Become Pro User - 2nd checkbox");
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[2]", MainContentEnum.BECOME_A_PRO_USER_2ND_CHECKBOX.toString());
 	}
 	
 	public String getBecomeProUser2ndCheckboxText(){
@@ -543,12 +543,12 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getBecomeProUser2ndCheckboxLink(){
-		return getElementByLinkText("Spaces", "Become Pro User - Spaces");
+		return getElementByLinkText("Spaces", MainContentEnum.BECOME_A_PRO_USER_2ND_CHECKBOX_LINK.toString());
 	}
 	
 	//3rd checkbox
 	public WebElement getBecomeProUser3rdCheckbox(){
-		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[3]", "Become Pro User - 3rd checkbox");
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[3]", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX.toString());
 	}
 	
 	public String getBecomeProUser3rdCheckboxText(){
@@ -556,11 +556,11 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getBecomeProUser3rdCheckboxLink(){
-		return getElementByLinkText("HTML Video Tutorial", "Become Pro User - HTML Video Tutorial");
+		return getElementByLinkText("HTML Video Tutorial", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK.toString());
 	}
 	
 	public WebElement getBecomeProUserLearnMoreButton(){
-		return getButtonElementById("proFromDefault", "Learn More");
+		return getButtonElementById("proFromDefault", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK.toString());
 	}
 	//endregion
 
