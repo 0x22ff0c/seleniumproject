@@ -122,7 +122,9 @@ public enum MainContentEnum {
 
 	MY_LEARNING_HEADER("My Learning header"),
 
-	MY_LEARNING_SAMPLE_SCREENSHOT("My Learning sample screenshot");
+	MY_LEARNING_SAMPLE_SCREENSHOT("My Learning sample screenshot"),
+
+	MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON("Sign Up for Free");
 
 	MainContentEnum(){}
 	
