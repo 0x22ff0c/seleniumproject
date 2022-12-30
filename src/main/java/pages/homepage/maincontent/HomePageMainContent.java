@@ -560,7 +560,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getBecomeProUserLearnMoreButton(){
-		return getButtonElementById("proFromDefault", "Learn More");
+		return getButtonElementById("proFromDefault", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK.toString());
 	}
 	//endregion
 
