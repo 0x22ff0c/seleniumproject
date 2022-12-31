@@ -172,7 +172,9 @@ public enum MainContentEnum {
 
 	CODE_GAME_SECTION("Code Game section"),
 
-	CODE_GAME_HEADER("Code Game header");
+	CODE_GAME_HEADER("Code Game header"),
+
+	CODE_GAME_IMAGE_OF_LYNX("Image of Lynx");
 
 	MainContentEnum(){}
 	
