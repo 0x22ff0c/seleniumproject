@@ -600,7 +600,7 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, "Image of Lynx");
+		return getElementByXpath(xpathExpression, MainContentEnum.CODE_GAME_IMAGE_OF_LYNX.toString());
 	}
 	
 	public WebElement getCodeGamePlayGameButton(){
