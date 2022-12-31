@@ -566,11 +566,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region Color Picker section
 	public void scrollToColorPickerSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", "Color Picker section"));
+		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", MainContentEnum.COLOR_PICKER_SECTION.toString()));
 	}
 	
 	public WebElement getColorPickerHeader(){
-		return getElementByXpath("//*[text()='Color Picker']", "Color Picker header");
+		return getElementByXpath("//*[text()='Color Picker']", MainContentEnum.COLOR_PICKER_HEADER.toString());
 	}
 	
 	public String getColorPickerSubheader(){
@@ -578,7 +578,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getColorPickerImage(){
-		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']", "Color picker image");
+		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']", MainContentEnum.COLOR_PICKER_IMAGE.toString());
 	}
 	//endregion
 

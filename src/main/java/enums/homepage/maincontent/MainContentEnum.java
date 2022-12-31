@@ -140,7 +140,15 @@ public enum MainContentEnum {
 
 	BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK("Become Pro User - HTML Video Tutorial"),
 
-	BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK("Learn More");
+	BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK("Learn More"),
+
+	//region Color picker section
+	COLOR_PICKER_SECTION("Color Picker section"),
+
+	COLOR_PICKER_HEADER("Color Picker header"),
+
+	COLOR_PICKER_IMAGE("Color picker image");
+	//endregion
 
 	MainContentEnum(){}
 	
