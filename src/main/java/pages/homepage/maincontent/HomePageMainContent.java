@@ -578,7 +578,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getColorPickerImage(){
-		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']", "Color picker image");
+		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']", MainContentEnum.COLOR_PICKER_IMAGE.toString());
 	}
 	//endregion
 
