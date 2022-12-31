@@ -142,7 +142,9 @@ public enum MainContentEnum {
 
 	BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK("Learn More"),
 
-	COLOR_PICKER_SECTION("Color Picker section");
+	COLOR_PICKER_SECTION("Color Picker section"),
+
+	COLOR_PICKER_HEADER("Color Picker header");
 
 	MainContentEnum(){}
 	
