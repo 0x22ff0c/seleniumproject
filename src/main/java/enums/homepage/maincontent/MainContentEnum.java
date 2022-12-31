@@ -126,6 +126,7 @@ public enum MainContentEnum {
 
 	MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON("Sign Up for Free"),
 
+	//region Become a PRO user section
 	BECOME_A_PRO_USER_SECTION("Become a PRO User section"),
 
 	BECOME_A_PRO_USER_HEADER("Become a PRO User header"),
@@ -141,6 +142,7 @@ public enum MainContentEnum {
 	BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK("Become Pro User - HTML Video Tutorial"),
 
 	BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK("Learn More"),
+	//endregion
 
 	//region Color picker section
 	COLOR_PICKER_SECTION("Color Picker section"),
