@@ -174,7 +174,9 @@ public enum MainContentEnum {
 
 	CODE_GAME_HEADER("Code Game header"),
 
-	CODE_GAME_IMAGE_OF_LYNX("Image of Lynx");
+	CODE_GAME_IMAGE_OF_LYNX("Image of Lynx"),
+
+	CODE_GAME_PLAY_GAME_BUTTON("Play Game");
 
 	MainContentEnum(){}
 	
