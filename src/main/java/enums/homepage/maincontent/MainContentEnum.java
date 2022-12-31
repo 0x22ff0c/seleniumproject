@@ -65,7 +65,8 @@ public enum MainContentEnum {
 	PYTHON_SAMPLE_CODE_SECTION("Python Sample code"),
 	
 	PYTHON_TRY_IT_YOURSELF_BUTTON("Python Try It Yourself"),
-	
+
+	//region Learn SQL section
 	SQL,
 	
 	LEARN_SQL("Learn SQL"),
@@ -77,6 +78,7 @@ public enum MainContentEnum {
 	SQL_SAMPLE_CODE_SECTION("SQL Sample code"),
 	
 	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
+	//endregion
 
 	OTHER_TUTORIALS_SECTION("Other tutorials section"),
 
