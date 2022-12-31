@@ -13,7 +13,8 @@ public enum MainContentEnum {
 	SEARCH_FIELD_BUTTON("Search field"),
 	
 	NOT_SURE_WHERE_TO_BEGIN_LINK("Not Sure Where To Begin?"),
-	
+
+	//region Learn HTML section
 	HTML,
 	
 	LEARN_HTML("Learn HTML"),
@@ -29,6 +30,7 @@ public enum MainContentEnum {
 	HTML_ADD_CERTIFICATION_ID("Add HTML Certification"),
 
 	GET_CERTIFIED("Get Certified"),
+	//endregion
 
 	//region Learn CSS section
 	CSS,
