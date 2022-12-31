@@ -13,7 +13,8 @@ public enum MainContentEnum {
 	SEARCH_FIELD_BUTTON("Search field"),
 	
 	NOT_SURE_WHERE_TO_BEGIN_LINK("Not Sure Where To Begin?"),
-	
+
+	//region Learn HTML section
 	HTML,
 	
 	LEARN_HTML("Learn HTML"),
@@ -29,7 +30,9 @@ public enum MainContentEnum {
 	HTML_ADD_CERTIFICATION_ID("Add HTML Certification"),
 
 	GET_CERTIFIED("Get Certified"),
-	
+	//endregion
+
+	//region Learn CSS section
 	CSS,
 	
 	LEARN_CSS("Learn CSS"),
@@ -41,7 +44,9 @@ public enum MainContentEnum {
 	CSS_SAMPLE_CODE_SECTION("CSS Sample code"),
 	
 	CSS_TRY_IT_YOURSELF_BUTTON("CSS Try It Yourself"),
-	
+	//endregion
+
+	//region Learn JavaScript section
 	JAVASCRIPT("JavaScript"),
 	
 	LEARN_JAVASCRIPT("Learn JavaScript"),
@@ -53,7 +58,9 @@ public enum MainContentEnum {
 	JAVASCRIPT_SAMPLE_CODE_SECTION("JavaScript Sample code"),
 	
 	JAVASCRIPT_TRY_IT_YOURSELF_BUTTON("JavaScript Try It Yourself"),
-	
+	//endregion
+
+	//region Learn Python section
 	PYTHON("Python"),
 	
 	LEARN_PYTHON("Learn Python"),
@@ -65,7 +72,9 @@ public enum MainContentEnum {
 	PYTHON_SAMPLE_CODE_SECTION("Python Sample code"),
 	
 	PYTHON_TRY_IT_YOURSELF_BUTTON("Python Try It Yourself"),
-	
+	//endregion
+
+	//region Learn SQL section
 	SQL,
 	
 	LEARN_SQL("Learn SQL"),
@@ -77,7 +86,9 @@ public enum MainContentEnum {
 	SQL_SAMPLE_CODE_SECTION("SQL Sample code"),
 	
 	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
+	//endregion
 
+	//region Other Tutorials section
 	OTHER_TUTORIALS_SECTION("Other tutorials section"),
 
 	PHP,
@@ -91,7 +102,9 @@ public enum MainContentEnum {
 	W3CSS("W3.CSS"),
 	
 	BOOTSTRAP("Bootstrap"),
+	//endregion
 
+	//region Code Editor section
 	CODE_EDITOR_SECTION("Code Editor section"),
 
 	FRONT_END_ACTIVE_BUTTON("Frontend active"),
@@ -109,7 +122,9 @@ public enum MainContentEnum {
 	BACK_END_GIF("Backend GIF"),
 
 	BACK_END_EDITOR_BUTTON("Backend editor"),
+	//endregion
 
+	//region W3Schools Spaces section
 	W3SCHOOLS_SPACES("W3Schools Spaces"),
 
 	W3SCHOOLS_SPACES_SCREENSHOT("W3Schools Spaces sample screenshot"),
@@ -117,7 +132,9 @@ public enum MainContentEnum {
 	W3SCHOOLS_SPACES_HOW_IT_WORKS_IMAGE("W3Schools Spaces how it works image"),
 
 	W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON("W3Schools Spaces - Get Started Now"),
+	//endregion
 
+	//region My Learning section
 	MY_LEARNING_SECTION("My Learning section"),
 
 	MY_LEARNING_HEADER("My Learning header"),
@@ -125,7 +142,9 @@ public enum MainContentEnum {
 	MY_LEARNING_SAMPLE_SCREENSHOT("My Learning sample screenshot"),
 
 	MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON("Sign Up for Free"),
+	//endregion
 
+	//region Become a PRO user section
 	BECOME_A_PRO_USER_SECTION("Become a PRO User section"),
 
 	BECOME_A_PRO_USER_HEADER("Become a PRO User header"),
@@ -141,6 +160,7 @@ public enum MainContentEnum {
 	BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK("Become Pro User - HTML Video Tutorial"),
 
 	BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK("Learn More"),
+	//endregion
 
 	//region Color picker section
 	COLOR_PICKER_SECTION("Color Picker section"),
