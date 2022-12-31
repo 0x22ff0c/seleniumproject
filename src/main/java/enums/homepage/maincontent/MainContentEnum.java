@@ -80,6 +80,7 @@ public enum MainContentEnum {
 	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
 	//endregion
 
+	//region Other Tutorials section
 	OTHER_TUTORIALS_SECTION("Other tutorials section"),
 
 	PHP,
@@ -93,6 +94,7 @@ public enum MainContentEnum {
 	W3CSS("W3.CSS"),
 	
 	BOOTSTRAP("Bootstrap"),
+	//endregion
 
 	//region Code Editor section
 	CODE_EDITOR_SECTION("Code Editor section"),
