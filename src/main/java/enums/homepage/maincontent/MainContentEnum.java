@@ -29,7 +29,8 @@ public enum MainContentEnum {
 	HTML_ADD_CERTIFICATION_ID("Add HTML Certification"),
 
 	GET_CERTIFIED("Get Certified"),
-	
+
+	//region Learn CSS section
 	CSS,
 	
 	LEARN_CSS("Learn CSS"),
@@ -41,6 +42,7 @@ public enum MainContentEnum {
 	CSS_SAMPLE_CODE_SECTION("CSS Sample code"),
 	
 	CSS_TRY_IT_YOURSELF_BUTTON("CSS Try It Yourself"),
+	//endregion
 
 	//region Learn JavaScript section
 	JAVASCRIPT("JavaScript"),
