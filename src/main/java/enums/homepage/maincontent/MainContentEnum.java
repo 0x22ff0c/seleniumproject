@@ -144,8 +144,9 @@ public enum MainContentEnum {
 
 	COLOR_PICKER_SECTION("Color Picker section"),
 
-	COLOR_PICKER_HEADER("Color Picker header");
+	COLOR_PICKER_HEADER("Color Picker header"),
 
+	COLOR_PICKER_IMAGE("Color picker image");
 	MainContentEnum(){}
 	
 	private String elementName; 
