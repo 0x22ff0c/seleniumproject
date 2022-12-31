@@ -110,6 +110,7 @@ public enum MainContentEnum {
 
 	BACK_END_EDITOR_BUTTON("Backend editor"),
 
+	//region W3Schools Spaces section
 	W3SCHOOLS_SPACES("W3Schools Spaces"),
 
 	W3SCHOOLS_SPACES_SCREENSHOT("W3Schools Spaces sample screenshot"),
@@ -117,6 +118,7 @@ public enum MainContentEnum {
 	W3SCHOOLS_SPACES_HOW_IT_WORKS_IMAGE("W3Schools Spaces how it works image"),
 
 	W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON("W3Schools Spaces - Get Started Now"),
+	//endregion
 
 	//region My Learning section
 	MY_LEARNING_SECTION("My Learning section"),
