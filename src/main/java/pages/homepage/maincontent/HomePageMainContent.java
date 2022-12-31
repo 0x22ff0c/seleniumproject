@@ -570,7 +570,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getColorPickerHeader(){
-		return getElementByXpath("//*[text()='Color Picker']", "Color Picker header");
+		return getElementByXpath("//*[text()='Color Picker']", MainContentEnum.COLOR_PICKER_HEADER.toString());
 	}
 	
 	public String getColorPickerSubheader(){
