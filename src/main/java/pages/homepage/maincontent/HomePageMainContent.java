@@ -584,7 +584,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code Game section
 	public void scrollToCodeGameSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", "Code Game section"));
+		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", MainContentEnum.CODE_GAME_SECTION.toString()));
 	}
 	
 	public WebElement getCodeGameHeader(){
