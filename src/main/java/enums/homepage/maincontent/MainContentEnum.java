@@ -41,7 +41,7 @@ public enum MainContentEnum {
 	CSS_SAMPLE_CODE_SECTION("CSS Sample code"),
 	
 	CSS_TRY_IT_YOURSELF_BUTTON("CSS Try It Yourself"),
-	
+
 	JAVASCRIPT("JavaScript"),
 	
 	LEARN_JAVASCRIPT("Learn JavaScript"),
@@ -53,7 +53,8 @@ public enum MainContentEnum {
 	JAVASCRIPT_SAMPLE_CODE_SECTION("JavaScript Sample code"),
 	
 	JAVASCRIPT_TRY_IT_YOURSELF_BUTTON("JavaScript Try It Yourself"),
-	
+
+	//region Learn Python section
 	PYTHON("Python"),
 	
 	LEARN_PYTHON("Learn Python"),
@@ -65,6 +66,7 @@ public enum MainContentEnum {
 	PYTHON_SAMPLE_CODE_SECTION("Python Sample code"),
 	
 	PYTHON_TRY_IT_YOURSELF_BUTTON("Python Try It Yourself"),
+	//endregion
 
 	//region Learn SQL section
 	SQL,
