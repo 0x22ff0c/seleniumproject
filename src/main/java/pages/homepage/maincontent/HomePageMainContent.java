@@ -588,7 +588,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeGameHeader(){
-		return getElementByXpath("//*[text()='Code Game']", "Code Game header");
+		return getElementByXpath("//*[text()='Code Game']", MainContentEnum.CODE_GAME_HEADER.toString());
 	}
 	
 	public String getCodeGameSubheader(){
