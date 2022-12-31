@@ -92,6 +92,7 @@ public enum MainContentEnum {
 	
 	BOOTSTRAP("Bootstrap"),
 
+	//region Code Editor section
 	CODE_EDITOR_SECTION("Code Editor section"),
 
 	FRONT_END_ACTIVE_BUTTON("Frontend active"),
@@ -109,6 +110,7 @@ public enum MainContentEnum {
 	BACK_END_GIF("Backend GIF"),
 
 	BACK_END_EDITOR_BUTTON("Backend editor"),
+	//endregion
 
 	//region W3Schools Spaces section
 	W3SCHOOLS_SPACES("W3Schools Spaces"),
