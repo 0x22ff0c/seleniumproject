@@ -167,8 +167,10 @@ public enum MainContentEnum {
 
 	COLOR_PICKER_HEADER("Color Picker header"),
 
-	COLOR_PICKER_IMAGE("Color picker image");
+	COLOR_PICKER_IMAGE("Color picker image"),
 	//endregion
+
+	CODE_GAME_SECTION("Code Game section");
 
 	MainContentEnum(){}
 	
