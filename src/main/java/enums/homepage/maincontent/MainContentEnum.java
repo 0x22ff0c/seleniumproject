@@ -118,6 +118,7 @@ public enum MainContentEnum {
 
 	W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON("W3Schools Spaces - Get Started Now"),
 
+	//region My Learning section
 	MY_LEARNING_SECTION("My Learning section"),
 
 	MY_LEARNING_HEADER("My Learning header"),
@@ -125,6 +126,7 @@ public enum MainContentEnum {
 	MY_LEARNING_SAMPLE_SCREENSHOT("My Learning sample screenshot"),
 
 	MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON("Sign Up for Free"),
+	//endregion
 
 	//region Become a PRO user section
 	BECOME_A_PRO_USER_SECTION("Become a PRO User section"),
