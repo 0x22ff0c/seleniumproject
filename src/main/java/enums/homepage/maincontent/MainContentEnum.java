@@ -180,6 +180,7 @@ public enum MainContentEnum {
 	CODE_GAME_PLAY_GAME_BUTTON("Play Game"),
 	//endregion
 
+	//region Exercises and Quizzes section
 	EXERCISES_AND_QUIZZES_SECTION("Exercises and Quizzes section"),
 
 	EXERCISES_AND_QUIZZES_HEADER("Exercises and Quizzes header"),
@@ -187,6 +188,7 @@ public enum MainContentEnum {
 	EXERCISES_BUTTON("Exercises"),
 
 	QUIZZES_BUTTON("Quizzes");
+	//endregion
 
 	MainContentEnum(){}
 	
