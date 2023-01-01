@@ -692,7 +692,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionHeader(){
-		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", "How To Section header");
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", MainContentEnum.HOW_TO_HEADER.toString());
 	}
 	
 	public String getHowToSectionSubheader(){
