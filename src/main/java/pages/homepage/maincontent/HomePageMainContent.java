@@ -674,7 +674,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCertificationGetStartedButton(){
-		return getButtonElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", "Get started");
+		return getButtonElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", MainContentEnum.CERTIFICATION_GET_STARTED_BUTTON.toString());
 	}
 	
 	public WebElement getCertificationArrow(){
