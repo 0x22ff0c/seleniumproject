@@ -209,8 +209,10 @@ public enum MainContentEnum {
 
 	CERTIFICATION_ARROW("Arrow pointing to certification badge"),
 
-	CERTIFICATION_BADGE("Certification badge");
+	CERTIFICATION_BADGE("Certification badge"),
 	//endregion
+
+	HOW_TO_SECTION("How To Section");
 
 	MainContentEnum(){}
 	
