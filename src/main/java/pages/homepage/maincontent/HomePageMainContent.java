@@ -718,7 +718,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowPreviousButton(){
-		return getElementByClass("prev", "How To Section Sample Window - Previous button");
+		return getElementByClass("prev", MainContentEnum.HOW_TO_WINDOW_PREVIOUS_BUTTON.toString());
 	}
 	
 	public void switchToHowToSliderFrame(){
