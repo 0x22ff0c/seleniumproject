@@ -662,7 +662,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Certification section
 	public void scrollToCertificationSection(){
-		control.scrollToElement(getElementById("getdiploma", "Certification section"));
+		control.scrollToElement(getElementById("getdiploma", MainContentEnum.CERTIFICATION_SECTION.toString()));
 	}
 	
 	public WebElement getCertificationHeader(){
