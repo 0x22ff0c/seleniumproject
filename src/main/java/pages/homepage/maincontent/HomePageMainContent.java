@@ -626,7 +626,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getExercisesAndQuizzesQuizzesButton(){
-		return getButtonElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", "Quizzes");
+		return getButtonElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", MainContentEnum.QUIZZES_BUTTON.toString());
 	}
 	//endregion
 
