@@ -204,7 +204,9 @@ public enum MainContentEnum {
 
 	KICKSTART_YOUR_CAREER_HEADER("Kickstart your career header"),
 
-	CERTIFICATION_GET_STARTED_BUTTON("Get started");
+	CERTIFICATION_GET_STARTED_BUTTON("Get started"),
+
+	CERTIFICATION_ARROW("Arrow pointing to certification badge");
 
 	MainContentEnum(){}
 	
