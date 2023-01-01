@@ -167,7 +167,49 @@ public enum MainContentEnum {
 
 	COLOR_PICKER_HEADER("Color Picker header"),
 
-	COLOR_PICKER_IMAGE("Color picker image");
+	COLOR_PICKER_IMAGE("Color picker image"),
+	//endregion
+
+	//region Code Game section
+	CODE_GAME_SECTION("Code Game section"),
+
+	CODE_GAME_HEADER("Code Game header"),
+
+	CODE_GAME_IMAGE_OF_LYNX("Image of Lynx"),
+
+	CODE_GAME_PLAY_GAME_BUTTON("Play Game"),
+	//endregion
+
+	//region Exercises and Quizzes section
+	EXERCISES_AND_QUIZZES_SECTION("Exercises and Quizzes section"),
+
+	EXERCISES_AND_QUIZZES_HEADER("Exercises and Quizzes header"),
+
+	EXERCISES_BUTTON("Exercises"),
+
+	QUIZZES_BUTTON("Quizzes"),
+	//endregion
+
+	//region Web Templates section
+	WEB_TEMPLATES_SECTION("Web Templates section"),
+
+	WEB_TEMPLATES_HEADER("Web Templates header"),
+
+	WEB_TEMPLATES_SAMPLE_IMAGES("Web Templates sample images"),
+
+	BROWSE_TEMPLATES_BUTTON("Browse Templates"),
+	//endregion
+
+	//region Certification section
+	CERTIFICATION_SECTION("Certification section"),
+
+	KICKSTART_YOUR_CAREER_HEADER("Kickstart your career header"),
+
+	CERTIFICATION_GET_STARTED_BUTTON("Get started"),
+
+	CERTIFICATION_ARROW("Arrow pointing to certification badge"),
+
+	CERTIFICATION_BADGE("Certification badge");
 	//endregion
 
 	MainContentEnum(){}
