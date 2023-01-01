@@ -782,7 +782,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToLearnButton(){
-		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", "Learn How To");
+		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", MainContentEnum.LEARN_HOW_TO_BUTTON.toString());
 	}
 	//endregion
 }
