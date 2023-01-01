@@ -206,7 +206,9 @@ public enum MainContentEnum {
 
 	CERTIFICATION_GET_STARTED_BUTTON("Get started"),
 
-	CERTIFICATION_ARROW("Arrow pointing to certification badge");
+	CERTIFICATION_ARROW("Arrow pointing to certification badge"),
+
+	CERTIFICATION_BADGE("Certification badge");
 
 	MainContentEnum(){}
 	
