@@ -177,8 +177,10 @@ public enum MainContentEnum {
 
 	CODE_GAME_IMAGE_OF_LYNX("Image of Lynx"),
 
-	CODE_GAME_PLAY_GAME_BUTTON("Play Game");
+	CODE_GAME_PLAY_GAME_BUTTON("Play Game"),
 	//endregion
+
+	EXERCISES_AND_QUIZZES_SECTION("Exercises and Quizzes section");
 
 	MainContentEnum(){}
 	
