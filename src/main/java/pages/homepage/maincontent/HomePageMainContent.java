@@ -758,7 +758,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowNextButton(){
-		return getElementByClass("next", "How To Section Sample Window - Next button");
+		return getElementByClass("next", MainContentEnum.HOW_TO_WINDOW_NEXT_BUTTON.toString());
 	}
 	
 	public WebElement getHowToSectionSampleWindowCounter(){
