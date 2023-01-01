@@ -216,7 +216,9 @@ public enum MainContentEnum {
 
 	HOW_TO_HEADER("How To Section header"),
 
-	HOW_TO_WINDOW("How To Section window");
+	HOW_TO_WINDOW("How To Section window"),
+
+	HOW_TO_WINDOW_PREVIOUS_BUTTON("How To Section Sample Window - Previous");
 
 	MainContentEnum(){}
 	
