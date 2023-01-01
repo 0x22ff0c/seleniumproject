@@ -688,11 +688,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region How To section
 	public void scrollToHowToSection(){
-		control.scrollToElement(getElementById("howto_padding", "How To Section"));
+		control.scrollToElement(getElementById("howto_padding", MainContentEnum.HOW_TO_SECTION.toString()));
 	}
 	
 	public WebElement getHowToSectionHeader(){
-		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", "How To Section header");
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", MainContentEnum.HOW_TO_HEADER.toString());
 	}
 	
 	public String getHowToSectionSubheader(){
@@ -714,15 +714,15 @@ public class HomePageMainContent extends BasePage{
 	int slideNumber = 1;
 	
 	public void scrollToHowToSectionSliderContainer(){
-		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", "How To Section window"));
+		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", MainContentEnum.HOW_TO_WINDOW.toString()));
 	}
 	
 	public WebElement getHowToSectionSampleWindowPreviousButton(){
-		return getElementByClass("prev", "How To Section Sample Window - Previous button");
+		return getElementByClass("prev", MainContentEnum.HOW_TO_WINDOW_PREVIOUS_BUTTON.toString());
 	}
 	
 	public void switchToHowToSliderFrame(){
-		switchToIframe(getElementById("howto_iframe", "How To Section - Slider"));
+		switchToIframe(getElementById("howto_iframe", MainContentEnum.HOW_TO_WINDOW_SLIDER.toString()));
 	}
 	
 	private void incrementSlideNumber(){
@@ -758,7 +758,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowNextButton(){
-		return getElementByClass("next", "How To Section Sample Window - Next button");
+		return getElementByClass("next", MainContentEnum.HOW_TO_WINDOW_NEXT_BUTTON.toString());
 	}
 	
 	public WebElement getHowToSectionSampleWindowCounter(){
@@ -782,7 +782,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToLearnButton(){
-		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", "Learn How To");
+		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", MainContentEnum.LEARN_HOW_TO_BUTTON.toString());
 	}
 	//endregion
 }

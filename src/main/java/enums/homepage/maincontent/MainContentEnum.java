@@ -209,7 +209,23 @@ public enum MainContentEnum {
 
 	CERTIFICATION_ARROW("Arrow pointing to certification badge"),
 
-	CERTIFICATION_BADGE("Certification badge");
+	CERTIFICATION_BADGE("Certification badge"),
+	//endregion
+
+	//region How To section
+	HOW_TO_SECTION("How To Section"),
+
+	HOW_TO_HEADER("How To Section header"),
+
+	HOW_TO_WINDOW("How To Section window"),
+
+	HOW_TO_WINDOW_PREVIOUS_BUTTON("How To Section Sample Window - Previous button"),
+
+	HOW_TO_WINDOW_NEXT_BUTTON("How To Section Sample Window - Next button"),
+
+	HOW_TO_WINDOW_SLIDER("How To Section - Slider"),
+
+	LEARN_HOW_TO_BUTTON("Learn How To");
 	//endregion
 
 	MainContentEnum(){}
