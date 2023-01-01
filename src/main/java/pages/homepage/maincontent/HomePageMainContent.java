@@ -678,7 +678,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCertificationArrow(){
-		return getElementById("w3_cert_arrow", "Arrow pointing to certification badge");
+		return getElementById("w3_cert_arrow", MainContentEnum.CERTIFICATION_ARROW.toString());
 	}
 	
 	public WebElement getCertificationBadge(){
