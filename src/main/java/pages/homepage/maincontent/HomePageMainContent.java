@@ -636,7 +636,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getWebTemplatesHeader(){
-		return getElementByXpath("(//*[text()='Web Templates'])[2]", "Web Templates header");
+		return getElementByXpath("(//*[text()='Web Templates'])[2]", MainContentEnum.WEB_TEMPLATES_HEADER.toString());
 	}
 	
 	public String getWebTemplatesSubheader(){
