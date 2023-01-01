@@ -722,7 +722,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public void switchToHowToSliderFrame(){
-		switchToIframe(getElementById("howto_iframe", "How To Section - Slider"));
+		switchToIframe(getElementById("howto_iframe", MainContentEnum.HOW_TO_WINDOW_SLIDER.toString()));
 	}
 	
 	private void incrementSlideNumber(){
