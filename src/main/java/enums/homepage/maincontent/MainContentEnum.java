@@ -182,7 +182,9 @@ public enum MainContentEnum {
 
 	EXERCISES_AND_QUIZZES_SECTION("Exercises and Quizzes section"),
 
-	EXERCISES_AND_QUIZZES_HEADER("Exercises and Quizzes header");
+	EXERCISES_AND_QUIZZES_HEADER("Exercises and Quizzes header"),
+
+	EXERCISES_BUTTON("Exercises");
 
 	MainContentEnum(){}
 	
