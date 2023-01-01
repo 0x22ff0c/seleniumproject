@@ -202,7 +202,9 @@ public enum MainContentEnum {
 
 	CERTIFICATION_SECTION("Certification section"),
 
-	KICKSTART_YOUR_CAREER_HEADER("Kickstart your career header");
+	KICKSTART_YOUR_CAREER_HEADER("Kickstart your career header"),
+
+	CERTIFICATION_GET_STARTED_BUTTON("Get started");
 
 	MainContentEnum(){}
 	
