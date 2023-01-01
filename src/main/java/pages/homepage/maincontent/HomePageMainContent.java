@@ -610,7 +610,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Exercises and Quizzes section
 	public void scrollToExercisesQuizzesSection(){
-		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", "Exercises and Quizzes section"));
+		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", MainContentEnum.EXERCISES_AND_QUIZZES_SECTION.toString()));
 	}
 	
 	public WebElement getExercisesAndQuizzesHeader(){
