@@ -200,7 +200,9 @@ public enum MainContentEnum {
 	BROWSE_TEMPLATES_BUTTON("Browse Templates"),
 	//endregion
 
-	CERTIFICATION_SECTION("Certification section");
+	CERTIFICATION_SECTION("Certification section"),
+
+	KICKSTART_YOUR_CAREER_HEADER("Kickstart your career header");
 
 	MainContentEnum(){}
 	
