@@ -714,7 +714,7 @@ public class HomePageMainContent extends BasePage{
 	int slideNumber = 1;
 	
 	public void scrollToHowToSectionSliderContainer(){
-		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", "How To Section window"));
+		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", MainContentEnum.HOW_TO_WINDOW.toString()));
 	}
 	
 	public WebElement getHowToSectionSampleWindowPreviousButton(){
