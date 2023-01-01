@@ -652,7 +652,7 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, "Web Templates sample images");
+		return getElementByXpath(xpathExpression, MainContentEnum.WEB_TEMPLATES_SAMPLE_IMAGES.toString());
 	}
 	
 	public WebElement getWebTemplatesBrowseTemplatesButton(){
