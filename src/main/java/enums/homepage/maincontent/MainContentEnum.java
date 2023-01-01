@@ -187,8 +187,10 @@ public enum MainContentEnum {
 
 	EXERCISES_BUTTON("Exercises"),
 
-	QUIZZES_BUTTON("Quizzes");
+	QUIZZES_BUTTON("Quizzes"),
 	//endregion
+
+	WEB_TEMPLATES_SECTION("Web Templates section");
 
 	MainContentEnum(){}
 	
