@@ -682,7 +682,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCertificationBadge(){
-		return getElementById("w3_cert_badge", "Certification badge");
+		return getElementById("w3_cert_badge", MainContentEnum.CERTIFICATION_BADGE.toString());
 	}
 	//endregion
 
