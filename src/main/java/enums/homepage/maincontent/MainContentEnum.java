@@ -220,6 +220,8 @@ public enum MainContentEnum {
 
 	HOW_TO_WINDOW_PREVIOUS_BUTTON("How To Section Sample Window - Previous button"),
 
+	HOW_TO_WINDOW_NEXT_BUTTON("How To Section Sample Window - Next button"),
+
 	HOW_TO_WINDOW_SLIDER("How To Section - Slider");
 
 	MainContentEnum(){}
