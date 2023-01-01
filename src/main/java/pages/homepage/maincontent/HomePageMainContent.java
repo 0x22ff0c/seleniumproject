@@ -666,7 +666,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCertificationHeader(){
-		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", "Kickstart your career header");
+		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", MainContentEnum.KICKSTART_YOUR_CAREER_HEADER.toString());
 	}
 	
 	public String getCertificationSubheader(){
