@@ -197,8 +197,10 @@ public enum MainContentEnum {
 
 	WEB_TEMPLATES_SAMPLE_IMAGES("Web Templates sample images"),
 
-	BROWSE_TEMPLATES_BUTTON("Browse Templates");
+	BROWSE_TEMPLATES_BUTTON("Browse Templates"),
 	//endregion
+
+	CERTIFICATION_SECTION("Certification section");
 
 	MainContentEnum(){}
 	
