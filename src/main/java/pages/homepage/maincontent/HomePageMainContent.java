@@ -614,7 +614,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getExercisesAndQuizzesHeader(){
-		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", "Exercises and Quizzes header");
+		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", MainContentEnum.EXERCISES_AND_QUIZZES_HEADER.toString());
 	}
 	
 	public String getExercisesAndQuizzesSubheader(){
