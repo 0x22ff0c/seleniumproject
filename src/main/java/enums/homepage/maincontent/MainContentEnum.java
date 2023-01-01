@@ -170,6 +170,7 @@ public enum MainContentEnum {
 	COLOR_PICKER_IMAGE("Color picker image"),
 	//endregion
 
+	//region Code Game section
 	CODE_GAME_SECTION("Code Game section"),
 
 	CODE_GAME_HEADER("Code Game header"),
@@ -177,6 +178,7 @@ public enum MainContentEnum {
 	CODE_GAME_IMAGE_OF_LYNX("Image of Lynx"),
 
 	CODE_GAME_PLAY_GAME_BUTTON("Play Game");
+	//endregion
 
 	MainContentEnum(){}
 	
