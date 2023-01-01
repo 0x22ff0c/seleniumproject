@@ -200,6 +200,7 @@ public enum MainContentEnum {
 	BROWSE_TEMPLATES_BUTTON("Browse Templates"),
 	//endregion
 
+	//region Certification section
 	CERTIFICATION_SECTION("Certification section"),
 
 	KICKSTART_YOUR_CAREER_HEADER("Kickstart your career header"),
@@ -209,6 +210,7 @@ public enum MainContentEnum {
 	CERTIFICATION_ARROW("Arrow pointing to certification badge"),
 
 	CERTIFICATION_BADGE("Certification badge");
+	//endregion
 
 	MainContentEnum(){}
 	
