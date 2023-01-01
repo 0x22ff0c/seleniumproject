@@ -688,7 +688,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region How To section
 	public void scrollToHowToSection(){
-		control.scrollToElement(getElementById("howto_padding", "How To Section"));
+		control.scrollToElement(getElementById("howto_padding", MainContentEnum.HOW_TO_SECTION.toString()));
 	}
 	
 	public WebElement getHowToSectionHeader(){
