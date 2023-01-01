@@ -212,6 +212,7 @@ public enum MainContentEnum {
 	CERTIFICATION_BADGE("Certification badge"),
 	//endregion
 
+	//region How To section
 	HOW_TO_SECTION("How To Section"),
 
 	HOW_TO_HEADER("How To Section header"),
@@ -225,6 +226,7 @@ public enum MainContentEnum {
 	HOW_TO_WINDOW_SLIDER("How To Section - Slider"),
 
 	LEARN_HOW_TO_BUTTON("Learn How To");
+	//endregion
 
 	MainContentEnum(){}
 	
