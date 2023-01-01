@@ -192,7 +192,9 @@ public enum MainContentEnum {
 
 	WEB_TEMPLATES_SECTION("Web Templates section"),
 
-	WEB_TEMPLATES_HEADER("Web Templates header");
+	WEB_TEMPLATES_HEADER("Web Templates header"),
+
+	WEB_TEMPLATES_SAMPLE_IMAGES("Web Templates sample images");
 
 	MainContentEnum(){}
 	
