@@ -212,7 +212,9 @@ public enum MainContentEnum {
 	CERTIFICATION_BADGE("Certification badge"),
 	//endregion
 
-	HOW_TO_SECTION("How To Section");
+	HOW_TO_SECTION("How To Section"),
+
+	HOW_TO_HEADER("How To Section header");
 
 	MainContentEnum(){}
 	
