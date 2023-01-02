@@ -82,6 +82,12 @@ public class BasePage {
 		return driver.findElements(By.xpath(xpath)).size();
 	}
 
+	protected int getElementByXpathCount(String xpathExpression, Object nameOfElement){
+		this.nameOfElement = nameOfElement.toString();
+
+		return driver.findElements(By.xpath(xpathExpression)).size();
+	}
+
 	private WebElement getElement(By byElement){
 		element = null; 
 		
