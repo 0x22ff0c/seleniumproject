@@ -175,6 +175,10 @@ public class BasePage {
 		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
 	}
 
+	public WebElement getButtonElementByXpath(String xpathExpression, Object nameOfTheButton){
+		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
+	}
+
 	public int getButtonElementCountByXpath(String xpathExpression, String nameOfTheButton){
 		return getElementByXpathCount(xpathExpression, setNameOfTheButton(nameOfTheButton));
 	}
