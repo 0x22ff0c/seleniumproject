@@ -182,6 +182,11 @@ public class BasePage {
 	public int getButtonElementCountByXpath(String xpathExpression, String nameOfTheButton){
 		return getElementByXpathCount(xpathExpression, setNameOfTheButton(nameOfTheButton));
 	}
+
+	public int getButtonElementCountByXpath(String xpathExpression, Object nameOfTheButton){
+		return getButtonElementCountByXpath(xpathExpression, nameOfElement);
+	}
+
 	//endregion
 
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
