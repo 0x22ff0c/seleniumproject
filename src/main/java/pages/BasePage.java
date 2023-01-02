@@ -63,6 +63,14 @@ public class BasePage {
 		
 		return getElement(By.xpath(xpath), nameOfElement);
 	}
+
+	protected  WebElement getElementByXpath(String xpath, Object nameOfElement){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+
+		return getElement(By.xpath(xpath), nameOfElement);
+	}
 	
 	protected int getElementByXpathCount(String xpath, String nameOfElement){
 		this.nameOfElement = nameOfElement;
