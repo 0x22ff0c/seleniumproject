@@ -126,7 +126,7 @@ public class WhereToStartPage extends BasePage{
 		String whatsNextSectionXpathExpression = "//*[text()=\"%s\"]/parent::*/parent::*";
 		
 		control.scrollToElement(getElementByXpath(String.format(whatsNextSectionXpathExpression, WhereToStartMainEnum.WHATS_NEXT_SECTION.toString()), 
-				setNameSection(WhereToStartMainEnum.WHATS_NEXT_SECTION.toString())));
+				setNameSection(WhereToStartMainEnum.WHATS_NEXT_SECTION)));
 	}
 	
 	public String getWhatsNextHeader(){
@@ -180,7 +180,7 @@ public class WhereToStartPage extends BasePage{
 	//region Hello Developer section
 	public void scrollToHelloDeveloperSection(){
 		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[4]/parent::*/parent::*",
-				setNameSection(WhereToStartMainEnum.HELLO_DEVELOPER.toString())));
+				setNameSection(WhereToStartMainEnum.HELLO_DEVELOPER)));
 	}
 	
 	public String getHelloDeveloperHeaderValue(){
@@ -231,7 +231,7 @@ public class WhereToStartPage extends BasePage{
 	//region What about back-end section
 	public void scrollToBackEndSection(){
 		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[5]/parent::*/parent::*",
-				setNameSection(WhereToStartMainEnum.WHAT_ABOUT_BACK_END_SECTION.toString())));
+				setNameSection(WhereToStartMainEnum.WHAT_ABOUT_BACK_END_SECTION)));
 	}
 	
 	public String getBackEndHeader(){
