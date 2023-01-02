@@ -157,6 +157,12 @@ public class BasePage {
 		return element;
 	}
 
+	public WebElement getButtonElement(String titleOfTheButton, Object actualNameOfTheButton){
+		element = getButtonElement(titleOfTheButton);
+		this.nameOfElement = setNameOfTheButton(actualNameOfTheButton);
+		return element;
+	}
+
 	public WebElement getButtonElementById(String idOfElement, String nameOfTheButton){
 		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
 	}
