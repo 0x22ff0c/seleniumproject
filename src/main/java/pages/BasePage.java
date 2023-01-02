@@ -122,11 +122,15 @@ public class BasePage {
 	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link";}
 
 	private String setNameOfTheLink(Object nameOfTheLinkElement){
-		return nameOfTheLinkElement.toString() + " link";
+		return nameOfTheLinkElement + " link";
 	}
 
 	protected WebElement getElementByLinkText(String linkText){
 		return getElement(By.linkText(linkText), setNameOfTheLink(linkText));
+	}
+
+	protected  WebElement getElementByLinkText(Object linkText){
+		return getElement(By.linkText(linkText.toString()), setNameOfTheLink(linkText));
 	}
 
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
