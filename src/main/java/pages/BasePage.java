@@ -137,7 +137,11 @@ public class BasePage {
 	//region get Button element
 	private String setNameOfTheButton(String nameOfTheButtonElement){
 		return nameOfTheButtonElement + " button";
-	} 
+	}
+
+	private String setNameOfTheButton(Object nameOfTheButtonElement){
+		return nameOfTheButtonElement.toString() + " button";
+	}
 
 	public WebElement getButtonElement(String titleOfTheButton){
 		return getElementByXpath(String.format("//*[@title='%s']", titleOfTheButton), setNameOfTheButton(titleOfTheButton));
