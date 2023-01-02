@@ -718,7 +718,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowPreviousButton(){
-		return getElementByClass("prev", MainContentEnum.HOW_TO_WINDOW_PREVIOUS_BUTTON.toString());
+		return getElementByClass("prev", MainContentEnum.HOW_TO_WINDOW_PREVIOUS_BUTTON);
 	}
 	
 	public void switchToHowToSliderFrame(){
@@ -758,7 +758,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToSectionSampleWindowNextButton(){
-		return getElementByClass("next", MainContentEnum.HOW_TO_WINDOW_NEXT_BUTTON.toString());
+		return getElementByClass("next", MainContentEnum.HOW_TO_WINDOW_NEXT_BUTTON);
 	}
 	
 	public WebElement getHowToSectionSampleWindowCounter(){

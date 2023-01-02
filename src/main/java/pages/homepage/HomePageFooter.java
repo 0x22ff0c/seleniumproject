@@ -12,15 +12,15 @@ public class HomePageFooter extends BasePage{
 	}
 
 	public void scrollToFooterSection(){
-		control.scrollToElement(getElementByTagName("footer", FooterEnum.FOOTER_SECTION.toString()));
+		control.scrollToElement(getElementByTagName("footer", FooterEnum.FOOTER_SECTION));
 	}
 
 	public WebElement getQuizzesButton(){
-		return getButtonElement(FooterEnum.QUIZZES_BUTTON.toString());
+		return getButtonElement(FooterEnum.QUIZZES_BUTTON);
 	}
 
 	public WebElement getExercisesButton(){
-		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString());
+		return getButtonElement(FooterEnum.EXERCISES_BUTTON);
 	}
 
 	public WebElement getCertificatesButton(){
@@ -32,23 +32,23 @@ public class HomePageFooter extends BasePage{
 	}
 
 	public WebElement getSpacesButton(){
-		return getButtonElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", FooterEnum.SPACES_BUTTON.toString());
+		return getButtonElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", FooterEnum.SPACES_BUTTON);
 	}
 
 	public WebElement getSupportButton(){
-		return getButtonElement(FooterEnum.SUPPORT_BUTTON.toString());
+		return getButtonElement(FooterEnum.SUPPORT_BUTTON);
 	}
 
 	public WebElement getNewsLetterButton(){
-		return getButtonElement(FooterEnum.NEWSLETTER_BUTTON.toString());
+		return getButtonElement(FooterEnum.NEWSLETTER_BUTTON);
 	}
 	
 	public WebElement getForumLink(){
-		return getElementByLinkText(FooterEnum.FORUM.name());
+		return getElementByLinkText(FooterEnum.FORUM);
 	}
 	
 	public WebElement getAboutLink(){
-		return getElementByLinkText(FooterEnum.ABOUT.name());
+		return getElementByLinkText(FooterEnum.ABOUT);
 	}
 	
 	private WebElement getIconLink(String linkName){
@@ -72,7 +72,7 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getLinkOnFacebookButton(){
-		return getButtonElement("Like W3Schools on Facebook", FooterEnum.FACEBOOK_LIKE_BUTTON.toString());
+		return getButtonElement("Like W3Schools on Facebook", FooterEnum.FACEBOOK_LIKE_BUTTON);
 	}
 	
 	public String getFooterText(){
@@ -80,11 +80,11 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getTermsOfUseLink(){
-		return getElementByLinkText(FooterEnum.TERMS_OF_USE_LINK.toString());
+		return getElementByLinkText(FooterEnum.TERMS_OF_USE_LINK);
 	}
 	
 	public WebElement getCookieAndPrivacyPolicyLink(){
-		return getElementByLinkText(FooterEnum.COOKIE_AND_PRIVACY_POLICY_LINK.toString());
+		return getElementByLinkText(FooterEnum.COOKIE_AND_PRIVACY_POLICY_LINK);
 	}
 	
 	public WebElement getCopyrightLink(){

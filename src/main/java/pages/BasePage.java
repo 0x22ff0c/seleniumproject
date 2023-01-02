@@ -51,9 +51,13 @@ public class BasePage {
 	protected WebElement getElementById(String id, Object nameOfElement){
 		return getElementById(id, nameOfElement.toString());
 	}
-	
-	protected WebElement getElementByClass(String className, String nameOfElement){
-		return getElement(By.className(className), nameOfElement);
+
+	protected  WebElement getElementByClass(String className, Object nameOfElment){
+		return getElement(By.className(className), nameOfElment);
+	}
+
+	protected  WebElement getElementByTagName(String tagName, Object nameOfElement){
+		return getElement(By.id(tagName), nameOfElement);
 	}
 
 	protected WebElement getElementByXpath(String xpath, String nameOfElement){
@@ -63,11 +67,25 @@ public class BasePage {
 		
 		return getElement(By.xpath(xpath), nameOfElement);
 	}
+
+	protected  WebElement getElementByXpath(String xpath, Object nameOfElement){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+
+		return getElement(By.xpath(xpath), nameOfElement);
+	}
 	
 	protected int getElementByXpathCount(String xpath, String nameOfElement){
 		this.nameOfElement = nameOfElement;
 		
 		return driver.findElements(By.xpath(xpath)).size();
+	}
+
+	protected int getElementByXpathCount(String xpathExpression, Object nameOfElement){
+		this.nameOfElement = nameOfElement.toString();
+
+		return driver.findElements(By.xpath(xpathExpression)).size();
 	}
 
 	private WebElement getElement(By byElement){
@@ -103,8 +121,16 @@ public class BasePage {
 	//region get Link element
 	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link";}
 
+	private String setNameOfTheLink(Object nameOfTheLinkElement){
+		return nameOfTheLinkElement + " link";
+	}
+
 	protected WebElement getElementByLinkText(String linkText){
 		return getElement(By.linkText(linkText), setNameOfTheLink(linkText));
+	}
+
+	protected  WebElement getElementByLinkText(Object linkText){
+		return getElement(By.linkText(linkText.toString()), setNameOfTheLink(linkText));
 	}
 
 	protected WebElement getElementByLinkText(String linkText, String nameOfElement){
@@ -119,9 +145,17 @@ public class BasePage {
 	//region get Button element
 	private String setNameOfTheButton(String nameOfTheButtonElement){
 		return nameOfTheButtonElement + " button";
-	} 
+	}
+
+	private String setNameOfTheButton(Object nameOfTheButtonElement){
+		return nameOfTheButtonElement.toString() + " button";
+	}
 
 	public WebElement getButtonElement(String titleOfTheButton){
+		return getElementByXpath(String.format("//*[@title='%s']", titleOfTheButton), setNameOfTheButton(titleOfTheButton));
+	}
+
+	public WebElement getButtonElement(Object titleOfTheButton){
 		return getElementByXpath(String.format("//*[@title='%s']", titleOfTheButton), setNameOfTheButton(titleOfTheButton));
 	}
 
@@ -131,7 +165,17 @@ public class BasePage {
 		return element;
 	}
 
+	public WebElement getButtonElement(String titleOfTheButton, Object actualNameOfTheButton){
+		element = getButtonElement(titleOfTheButton);
+		this.nameOfElement = setNameOfTheButton(actualNameOfTheButton);
+		return element;
+	}
+
 	public WebElement getButtonElementById(String idOfElement, String nameOfTheButton){
+		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
+	}
+
+	public WebElement getButtonElementById(String idOfElement, Object nameOfTheButton){
 		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
 	}
 
@@ -139,9 +183,18 @@ public class BasePage {
 		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
 	}
 
+	public WebElement getButtonElementByXpath(String xpathExpression, Object nameOfTheButton){
+		return getElementByXpath(xpathExpression, setNameOfTheButton(nameOfTheButton));
+	}
+
 	public int getButtonElementCountByXpath(String xpathExpression, String nameOfTheButton){
 		return getElementByXpathCount(xpathExpression, setNameOfTheButton(nameOfTheButton));
 	}
+
+	public int getButtonElementCountByXpath(String xpathExpression, Object nameOfTheButton){
+		return getButtonElementCountByXpath(xpathExpression, nameOfElement);
+	}
+
 	//endregion
 
 	protected String getTextOfElementUsingXpathLocator(String xpathExpression){
