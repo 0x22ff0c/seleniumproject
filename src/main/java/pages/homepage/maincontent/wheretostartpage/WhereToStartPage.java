@@ -116,8 +116,8 @@ public class WhereToStartPage extends BasePage{
 		return getButtonElementByXpath(String.format(learnJSButtonXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), WhereToStartMainEnum.LEARN_JAVASCRIPT_BUTTON.toString());
 	}
 	
-	private String setNameSection(String sectioName){
-		return String.format("\"%s\" section", sectioName);
+	private String setNameSection(Object nameOfTheSection){
+		return String.format("\"%s\" section", nameOfTheSection);
 	}
 	//endregion
 
