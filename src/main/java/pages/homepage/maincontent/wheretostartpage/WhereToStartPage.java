@@ -125,7 +125,7 @@ public class WhereToStartPage extends BasePage{
 	public void scrollToWhatsNextSection(){
 		String whatsNextSectionXpathExpression = "//*[text()=\"%s\"]/parent::*/parent::*";
 		
-		control.scrollToElement(getElementByXpath(String.format(whatsNextSectionXpathExpression, WhereToStartMainEnum.WHATS_NEXT_SECTION.toString()), 
+		control.scrollToElement(getElementByXpath(String.format(whatsNextSectionXpathExpression, WhereToStartMainEnum.WHATS_NEXT_SECTION),
 				setNameSection(WhereToStartMainEnum.WHATS_NEXT_SECTION)));
 	}
 	
@@ -144,7 +144,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getWhatsNext2ndSubheaderNextStep(){
 		String whatsNext2ndSubheaderNextStepXpathExpression = "(//*[@class='textsmallerscreens'])[2]/following-sibling::*[2]/descendant::b[text()='%s']";
 		
-		return getElementByXpath(String.format(whatsNext2ndSubheaderNextStepXpathExpression, WhereToStartMainEnum.NEXT_STEP.toString()), WhereToStartMainEnum.NEXT_STEP.toString());
+		return getElementByXpath(String.format(whatsNext2ndSubheaderNextStepXpathExpression, WhereToStartMainEnum.NEXT_STEP), WhereToStartMainEnum.NEXT_STEP);
 	}
 	
 	public String getWhatsNext3rdSubHeader(){
@@ -154,7 +154,7 @@ public class WhereToStartPage extends BasePage{
 
 	//region W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
-		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[3]/parent::*/parent::*", WhereToStartMainEnum.W3SCHOOLS_SPACES_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("(//*[@class='textsmallerscreens'])[3]/parent::*/parent::*", WhereToStartMainEnum.W3SCHOOLS_SPACES_SECTION));
 	}
 	
 	public String getW3SchoolsSpacesHeader(){
@@ -173,7 +173,7 @@ public class WhereToStartPage extends BasePage{
 	}
 	
 	public WebElement getHowItWorksImage(){
-		return getElementByXpath("//*[@src='how-spaces-works3.png']", String.format("\"%s\" image", WhereToStartMainEnum.HOW_IT_WORKS.toString()));
+		return getElementByXpath("//*[@src='how-spaces-works3.png']", String.format("\"%s\" image", WhereToStartMainEnum.HOW_IT_WORKS));
 	}
 	//endregion
 
@@ -194,7 +194,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getHelloDeveloperSubheaderFrontEndDevelopers(){
 		String frontEndDevelopersSubheaderXpathExpresssion = "((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[1]/descendant::strong[text()='%s']";
 		
-		return getElementByXpath(String.format(frontEndDevelopersSubheaderXpathExpresssion, WhereToStartMainEnum.FRONT_END_DEVELOPERS.toString()), WhereToStartMainEnum.FRONT_END_DEVELOPERS.toString());
+		return getElementByXpath(String.format(frontEndDevelopersSubheaderXpathExpresssion, WhereToStartMainEnum.FRONT_END_DEVELOPERS), WhereToStartMainEnum.FRONT_END_DEVELOPERS);
 	}
 	
 	public String getHelloDeveloper2ndSubheaderContent(){
@@ -204,7 +204,7 @@ public class WhereToStartPage extends BasePage{
 	public WebElement getHelloDeveloper2ndSubheaderTip(){
 		String tipXpathExpression = "((//*[@class='textsmallerscreens'])[4]/following-sibling::*)[2]/descendant::strong[text()='%s']";
 		
-		return getElementByXpath(String.format(tipXpathExpression, WhereToStartMainEnum.TIP.toString()), WhereToStartMainEnum.TIP.toString());
+		return getElementByXpath(String.format(tipXpathExpression, WhereToStartMainEnum.TIP), WhereToStartMainEnum.TIP);
 	}
 	
 	public WebElement getBootstrapLink(){
