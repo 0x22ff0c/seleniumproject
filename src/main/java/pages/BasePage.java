@@ -148,7 +148,7 @@ public class BasePage {
 	}
 
 	public WebElement getButtonElement(Object titleOfTheButton){
-		return getElementByXpath(String.format("//*[@title='%s']", titleOfTheButton), titleOfTheButton);
+		return getElementByXpath(String.format("//*[@title='%s']", titleOfTheButton), setNameOfTheButton(titleOfTheButton));
 	}
 
 	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
@@ -164,6 +164,10 @@ public class BasePage {
 	}
 
 	public WebElement getButtonElementById(String idOfElement, String nameOfTheButton){
+		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
+	}
+
+	public WebElement getButtonElementById(String idOfElement, Object nameOfTheButton){
 		return getElementById(idOfElement, setNameOfTheButton(nameOfTheButton));
 	}
 
