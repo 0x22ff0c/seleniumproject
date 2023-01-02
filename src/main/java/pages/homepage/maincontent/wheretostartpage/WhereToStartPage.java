@@ -59,7 +59,7 @@ public class WhereToStartPage extends BasePage{
 		String cssSectionXpathExpression = "(//*[@title='%s']/parent::*)[2]";
 		
 		control.scrollToElement(getElementByXpath(String.format(cssSectionXpathExpression, WhereToStartMainEnum.GO_TO_CSS_TUTORIAL.toString()), 
-				WhereToStartMainEnum.LEARN_CSS_SECTION.toString()));
+				WhereToStartMainEnum.LEARN_CSS_SECTION));
 	}
 	
 	public WebElement getCSSLeftButton(){
@@ -90,7 +90,7 @@ public class WhereToStartPage extends BasePage{
 		String javaScriptSectionXpathExpression = "(//*[@title='%s']/parent::*/parent::*)[1]";
 		
 		control.scrollToElement(getElementByXpath(String.format(javaScriptSectionXpathExpression, WhereToStartMainEnum.GO_TO_JAVASCRIPT_TUTORIAL.toString()), 
-				WhereToStartMainEnum.LEARN_JAVASCRIPT_SECTION.toString()));
+				WhereToStartMainEnum.LEARN_JAVASCRIPT_SECTION));
 	}
 	
 	public WebElement getJSLeftButton(){
