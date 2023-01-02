@@ -56,6 +56,10 @@ public class BasePage {
 		return getElement(By.className(className), nameOfElment);
 	}
 
+	protected  WebElement getElementByTagName(String tagName, Object nameOfElement){
+		return getElement(By.id(tagName), nameOfElement);
+	}
+
 	protected WebElement getElementByXpath(String xpath, String nameOfElement){
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		
