@@ -147,6 +147,10 @@ public class BasePage {
 		return getElementByXpath(String.format("//*[@title='%s']", titleOfTheButton), setNameOfTheButton(titleOfTheButton));
 	}
 
+	public WebElement getButtonElement(Object titleOfTheButton){
+		return getElementByXpath(String.format("//*[@title='%s']", titleOfTheButton), titleOfTheButton);
+	}
+
 	public WebElement getButtonElement(String titleOfTheButton, String actualNameOfTheButton){
 		element = getButtonElement(titleOfTheButton);
 		this.nameOfElement = setNameOfTheButton(actualNameOfTheButton);
