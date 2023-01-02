@@ -121,6 +121,10 @@ public class BasePage {
 	//region get Link element
 	private String setNameOfTheLink(String nameOfTheLinkElement){ return nameOfTheLinkElement + " link";}
 
+	private String setNameOfTheLink(Object nameOfTheLinkElement){
+		return nameOfTheLinkElement.toString() + " link";
+	}
+
 	protected WebElement getElementByLinkText(String linkText){
 		return getElement(By.linkText(linkText), setNameOfTheLink(linkText));
 	}
