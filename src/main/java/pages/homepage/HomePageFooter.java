@@ -24,11 +24,11 @@ public class HomePageFooter extends BasePage{
 	}
 
 	public WebElement getCertificatesButton(){
-		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString(), "Certificates");
+		return getButtonElement("Courses and Certificates", FooterEnum.CERTIFICATES_BUTTON);
 	}
 
 	public WebElement getUpgradeButton(){
-		return getButtonElement(FooterEnum.UPGRADE_BUTTON.toString(), "Upgrade");
+		return getButtonElement("Upgrade to Improve Your Learning Experiences", FooterEnum.UPGRADE_BUTTON);
 	}
 
 	public WebElement getSpacesButton(){
@@ -50,25 +50,25 @@ public class HomePageFooter extends BasePage{
 	public WebElement getAboutLink(){
 		return getElementByLinkText(FooterEnum.ABOUT);
 	}
-	
-	private WebElement getIconLink(String linkName){
-		return getLinkElementByXpath(String.format("//i/parent::*[@title='%s']", linkName), linkName + " link");
+
+	private WebElement getIconLink(Object nameOfTheLink){
+		return getLinkElementByXpath(String.format("//i/parent::*[@title='%s']", nameOfTheLink), nameOfTheLink);
 	}
 	
 	public WebElement getFacebookIconLink(){
-		return getIconLink(FooterEnum.FACEBOOK_ICON_LINK.toString());
+		return getIconLink(FooterEnum.FACEBOOK_ICON_LINK);
 	}
 	
 	public WebElement getInstagramIconLink(){
-		return getIconLink(FooterEnum.INSTAGRAM_ICON_LINK.toString());
+		return getIconLink(FooterEnum.INSTAGRAM_ICON_LINK);
 	}
 	
 	public WebElement getLinkedInLink(){
-		return getIconLink(FooterEnum.LINKEDIN_ICON_LINK.toString());
+		return getIconLink(FooterEnum.LINKEDIN_ICON_LINK);
 	}
 	
 	public WebElement getDiscordLink(){
-		return getIconLink(FooterEnum.DISCORD_ICON_LINK.toString());
+		return getIconLink(FooterEnum.DISCORD_ICON_LINK);
 	}
 	
 	public WebElement getLinkOnFacebookButton(){
