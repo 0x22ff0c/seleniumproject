@@ -24,11 +24,11 @@ public class HomePageFooter extends BasePage{
 	}
 
 	public WebElement getCertificatesButton(){
-		return getButtonElement(FooterEnum.EXERCISES_BUTTON.toString(), "Certificates");
+		return getButtonElement("Courses and Certificates", FooterEnum.CERTIFICATES_BUTTON);
 	}
 
 	public WebElement getUpgradeButton(){
-		return getButtonElement(FooterEnum.UPGRADE_BUTTON.toString(), "Upgrade");
+		return getButtonElement("Upgrade to Improve Your Learning Experiences", FooterEnum.UPGRADE_BUTTON);
 	}
 
 	public WebElement getSpacesButton(){
