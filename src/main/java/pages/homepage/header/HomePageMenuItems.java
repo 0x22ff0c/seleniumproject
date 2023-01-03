@@ -64,7 +64,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	//region Tutorials menu section
 	@Override
 	public WebElement getTutorialsCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON);
 	}
 	
 	public WebElement getTutorialsMenuContainer(){
@@ -91,7 +91,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	//region References menu section
 	@Override
 	public WebElement getReferencesCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON);
 	}
 	
 	public WebElement getReferencesMenuContainer(){
@@ -118,7 +118,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	//region Exercises menu section
 	@Override
 	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON);
 	}
 	
 	public WebElement getExercisesMenuButton(){
