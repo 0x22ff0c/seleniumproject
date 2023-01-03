@@ -140,6 +140,10 @@ public class BasePage {
 	protected WebElement getLinkElementByXpath(String xpathExpression, String nameOfElement){
 		return getElementByXpath(xpathExpression, setNameOfTheLink(nameOfElement));
 	}
+
+	protected WebElement getLinkElementByXpath(String xpathExpression, Object nameOfElement){
+		return getElementByXpath(xpathExpression, setNameOfTheLink(nameOfElement));
+	}
 	//endregion
 
 	//region get Button element
