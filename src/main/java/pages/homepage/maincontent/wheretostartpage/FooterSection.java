@@ -1,5 +1,6 @@
 package pages.homepage.maincontent.wheretostartpage;
 
+import enums.wheretostartpage.WhereToStartMainEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.homepage.HomePageFooter;
@@ -11,7 +12,7 @@ public class FooterSection extends HomePageFooter{
 	}
 
 	public WebElement getFooterHomeButton(){
-		return getButtonElementByXpath("//footer/*[@title='Home']", "Home");
+		return getButtonElementByXpath("//footer/*[@title='Home']", WhereToStartMainEnum.FOOTER_HOME_BUTTON);
 	}
 
 	@Override
