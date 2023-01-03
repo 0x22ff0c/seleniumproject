@@ -60,7 +60,13 @@ public enum WhereToStartMainEnum {
 	
 	SQL,
 	
-	HOME_PAGE_LINK("Homepage");
+	HOME_PAGE_LINK("Homepage"),
+
+	//region Footer section
+
+	FOOTER_HOME_BUTTON("Home");
+
+	//endregion
 	
 	private WhereToStartMainEnum(){
 		
