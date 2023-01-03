@@ -9,10 +9,10 @@ public class HomePageMenuItems extends HomePageHeader{
 	public HomePageMenuItems(WebDriver driver) {
 		super(driver);
 	}
-	
+
 	@Override
-	protected WebElement getHeaderCaretButton(String title){
-		return getElementByXpath(String.format("//*[@title='%s']/descendant::*[contains(@class, 'caret-up') and contains(@style, 'inline')]", title), String.format("%s caret up", title));
+	protected WebElement getHeaderCaretButton(Object nameOfTheCareButton){
+		return getElementByXpath(String.format("//*[@title='%s']/descendant::*[contains(@class, 'caret-up') and contains(@style, 'inline')]", nameOfTheCareButton), String.format("%s caret up", nameOfTheCareButton));
 	}
 	
 	private WebElement getHeaderMenuCloseButton(String idValue, String elementName){
