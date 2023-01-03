@@ -21,6 +21,6 @@ public class FooterSection extends HomePageFooter{
 	}
 	
 	public WebElement getFooterShopButton(){
-		return getButtonElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", "W3Schools Shop");
+		return getButtonElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", WhereToStartMainEnum.FOOTER_W3SCHOOLS_SHOP_BUTTON);
 	}
 }
