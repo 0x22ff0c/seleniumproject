@@ -17,7 +17,7 @@ public class FooterSection extends HomePageFooter{
 
 	@Override
 	public WebElement getSpacesButton(){
-		return getButtonElement("Get Your Own Website With W3schools Spaces", "Spaces");
+		return getButtonElement("Get Your Own Website With W3schools Spaces", WhereToStartMainEnum.FOOTER_SPACES_BUTTON);
 	}
 	
 	public WebElement getFooterShopButton(){
