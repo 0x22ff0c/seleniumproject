@@ -8,9 +8,9 @@ public enum FooterEnum {
 	
 	EXERCISES_BUTTON("Exercises"),
 	
-	CERTIFICATES_BUTTON("Courses and Certificates"),
+	CERTIFICATES_BUTTON("Certificates"),
 	
-	UPGRADE_BUTTON("Upgrade to Improve Your Learning Experiences"),
+	UPGRADE_BUTTON("Upgrade"),
 	
 	SPACES_BUTTON("Spaces"),
 	
