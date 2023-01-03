@@ -16,10 +16,6 @@ public class HomePageHeader extends BasePage{
 	}
 
 	//region Menu Items section
-	protected WebElement getHeaderCaretButton(String title){
-		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down", title));
-	}
-
 	protected  WebElement getHeaderCaretButton(Object nameOfTheCaretButton){
 		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", nameOfTheCaretButton), String.format("%s caret down", nameOfTheCaretButton));
 	}
