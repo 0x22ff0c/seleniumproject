@@ -66,7 +66,9 @@ public enum WhereToStartMainEnum {
 
 	FOOTER_HOME_BUTTON("Home"),
 
-	FOOTER_SPACES_BUTTON("Spaces");
+	FOOTER_SPACES_BUTTON("Spaces"),
+
+	FOOTER_W3SCHOOLS_SHOP_BUTTON("W3Schools Shop");
 
 	//endregion
 	
