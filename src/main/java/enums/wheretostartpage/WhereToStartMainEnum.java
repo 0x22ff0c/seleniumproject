@@ -64,7 +64,9 @@ public enum WhereToStartMainEnum {
 
 	//region Footer section
 
-	FOOTER_HOME_BUTTON("Home");
+	FOOTER_HOME_BUTTON("Home"),
+
+	FOOTER_SPACES_BUTTON("Spaces");
 
 	//endregion
 	
