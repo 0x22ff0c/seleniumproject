@@ -9,10 +9,10 @@ public class HomePageMenuItems extends HomePageHeader{
 	public HomePageMenuItems(WebDriver driver) {
 		super(driver);
 	}
-	
+
 	@Override
-	protected WebElement getHeaderCaretButton(String title){
-		return getElementByXpath(String.format("//*[@title='%s']/descendant::*[contains(@class, 'caret-up') and contains(@style, 'inline')]", title), String.format("%s caret up", title));
+	protected WebElement getHeaderCaretButton(Object nameOfTheCareButton){
+		return getElementByXpath(String.format("//*[@title='%s']/descendant::*[contains(@class, 'caret-up') and contains(@style, 'inline')]", nameOfTheCareButton), String.format("%s caret up", nameOfTheCareButton));
 	}
 	
 	private WebElement getHeaderMenuCloseButton(String idValue, String elementName){
@@ -64,7 +64,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	//region Tutorials menu section
 	@Override
 	public WebElement getTutorialsCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON);
 	}
 	
 	public WebElement getTutorialsMenuContainer(){
@@ -91,7 +91,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	//region References menu section
 	@Override
 	public WebElement getReferencesCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON);
 	}
 	
 	public WebElement getReferencesMenuContainer(){
@@ -118,7 +118,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	//region Exercises menu section
 	@Override
 	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON);
 	}
 	
 	public WebElement getExercisesMenuButton(){

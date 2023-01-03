@@ -34,16 +34,5 @@ public enum ExerciseHeaderEnum {
 	public String[] getLinksArray(){
 		return linksArray;
 	}
-	
-	private String buttonLabel;
-	
-	private ExerciseHeaderEnum(String buttonLabel){
-		this.buttonLabel = buttonLabel;
-	}
-	
-	@Override
-	public String toString(){
-		return buttonLabel;
-	}
-	
+
 }
