@@ -1,5 +1,6 @@
 package pages.homepage.maincontent.wheretostartpage;
 
+import enums.wheretostartpage.WhereToStartMainEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.homepage.HomePageFooter;
@@ -11,15 +12,15 @@ public class FooterSection extends HomePageFooter{
 	}
 
 	public WebElement getFooterHomeButton(){
-		return getButtonElementByXpath("//footer/*[@title='Home']", "Home");
+		return getButtonElementByXpath("//footer/*[@title='Home']", WhereToStartMainEnum.FOOTER_HOME_BUTTON);
 	}
 
 	@Override
 	public WebElement getSpacesButton(){
-		return getButtonElement("Get Your Own Website With W3schools Spaces", "Spaces");
+		return getButtonElement("Get Your Own Website With W3schools Spaces", WhereToStartMainEnum.FOOTER_SPACES_BUTTON);
 	}
 	
 	public WebElement getFooterShopButton(){
-		return getButtonElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", "W3Schools Shop");
+		return getButtonElementByXpath("//footer/descendant::*[text()='W3SCHOOLS SHOP']", WhereToStartMainEnum.FOOTER_W3SCHOOLS_SHOP_BUTTON);
 	}
 }

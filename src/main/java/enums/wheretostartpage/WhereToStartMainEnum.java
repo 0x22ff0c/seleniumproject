@@ -60,7 +60,17 @@ public enum WhereToStartMainEnum {
 	
 	SQL,
 	
-	HOME_PAGE_LINK("Homepage");
+	HOME_PAGE_LINK("Homepage"),
+
+	//region Footer section
+
+	FOOTER_HOME_BUTTON("Home"),
+
+	FOOTER_SPACES_BUTTON("Spaces"),
+
+	FOOTER_W3SCHOOLS_SHOP_BUTTON("W3Schools Shop");
+
+	//endregion
 	
 	private WhereToStartMainEnum(){
 		
