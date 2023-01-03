@@ -20,6 +20,10 @@ public class HomePageHeader extends BasePage{
 		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", title), String.format("%s caret down", title));
 	}
 
+	protected  WebElement getHeaderCaretButton(Object nameOfTheCaretButton){
+		return getElementByXpath(String.format("//*[contains(@class, 'caret-down')]/parent::*[@title='%s']", nameOfTheCaretButton), String.format("%s caret down", nameOfTheCaretButton));
+	}
+
 	public WebElement getTutorialsButton(){
 		return getButtonElement(HeaderEnum.TUTORIALS_MENU_BUTTON);
 	}
@@ -29,7 +33,7 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getTutorialsCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.TUTORIALS_MENU_BUTTON);
 	}
 	
 	public WebElement getReferencesButton(){
@@ -41,7 +45,7 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getReferencesCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.REFERENCE_MENU_BUTTON);
 	}
 
 	public WebElement getExercisesButton(){
@@ -53,7 +57,7 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getExercisesCaretButton(){
-		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON.toString());
+		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON);
 	}
 	
 	public WebElement getVideosButton(){
