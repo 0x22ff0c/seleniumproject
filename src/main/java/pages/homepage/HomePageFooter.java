@@ -88,6 +88,6 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getCopyrightLink(){
-		return getElementByLinkText(FooterEnum.COPYRIGHT_LINK.toString(), "Copyright");
+		return getElementByLinkText("Copyright" , FooterEnum.COPYRIGHT_LINK);
 	}
 }
