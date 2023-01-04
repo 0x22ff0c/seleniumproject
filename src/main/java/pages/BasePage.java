@@ -137,6 +137,10 @@ public class BasePage {
 		return getElement(By.linkText(linkText), setNameOfTheLink(nameOfElement));
 	}
 
+	protected  WebElement getElementByLinkText(Object linkText, Object nameOfElement){
+		return getElement(By.linkText(linkText.toString()), nameOfElement);
+	}
+
 	protected WebElement getLinkElementByXpath(String xpathExpression, String nameOfElement){
 		return getElementByXpath(xpathExpression, setNameOfTheLink(nameOfElement));
 	}
