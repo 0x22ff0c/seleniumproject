@@ -82,11 +82,11 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getTermsOfUseLink(){
-		return getElementByLinkText(FooterEnum.TERMS_OF_USE_LINK);
+		return getElementByLinkText("terms of use", FooterEnum.TERMS_OF_USE_LINK);
 	}
 	
 	public WebElement getCookieAndPrivacyPolicyLink(){
-		return getElementByLinkText(FooterEnum.COOKIE_AND_PRIVACY_POLICY_LINK);
+		return getElementByLinkText("cookie and privacy policy", FooterEnum.COOKIE_AND_PRIVACY_POLICY_LINK);
 	}
 
 	public String getYear(){
