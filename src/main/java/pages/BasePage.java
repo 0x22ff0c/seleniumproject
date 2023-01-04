@@ -57,7 +57,7 @@ public class BasePage {
 	}
 
 	protected  WebElement getElementByTagName(String tagName, Object nameOfElement){
-		return getElement(By.id(tagName), nameOfElement);
+		return getElement(By.tagName(tagName), nameOfElement);
 	}
 
 	protected WebElement getElementByXpath(String xpath, String nameOfElement){
@@ -137,8 +137,8 @@ public class BasePage {
 		return getElement(By.linkText(linkText), setNameOfTheLink(nameOfElement));
 	}
 
-	protected WebElement getLinkElementByXpath(String xpathExpression, String nameOfElement){
-		return getElementByXpath(xpathExpression, setNameOfTheLink(nameOfElement));
+	protected  WebElement getElementByLinkText(String linkText, Object nameOfElement){
+		return getElement(By.linkText(linkText), nameOfElement);
 	}
 
 	protected WebElement getLinkElementByXpath(String xpathExpression, Object nameOfElement){

@@ -1,35 +1,26 @@
 package homepage;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.homepage.HomePageFooter;
 import tests.BaseTest;
-import utilities.Control;
 import utilities.Listener;
 
 public class TestHomePageFooter {
 
 	HomePageFooter homePageFooter;
-	
-	Control control;
-	
+
 	BaseTest baseTest;
 
-	@BeforeClass
-	private void setup(){
+	@Test(testName = "Verify Home page footer buttons", priority = 1)
+	private void verifyFooterButtons(){
 
 		WebDriver driver = Listener.getDriver();
 
 		homePageFooter = new HomePageFooter(driver);
-		
+
 		homePageFooter.scrollToFooterSection();
-		
-	}
-	
-	@Test(testName = "Verify Home page footer buttons", priority = 1)
-	private void verifyFooterButtons(){
-		
+
 		baseTest = new BaseTest(homePageFooter);
 		
 		baseTest.verifyElementIsDisplayed(homePageFooter.getQuizzesButton());
@@ -87,8 +78,8 @@ public class TestHomePageFooter {
 		
 		baseTest = new BaseTest(homePageFooter);
 		
-		baseTest.verifyTextIsTheSame(homePageFooter.getFooterText(),"W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. "
-				+ "Copyright 1999-2022 by Refsnes Data. All Rights Reserved.");
+		baseTest.verifyTextIsTheSame(homePageFooter.getFooterText(),String.format("W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. "
+				+ "Copyright 1999-%s by Refsnes Data. All Rights Reserved.", homePageFooter.getYear()));
 	
 		baseTest.verifyElementIsDisplayed(homePageFooter.getTermsOfUseLink());
 		
