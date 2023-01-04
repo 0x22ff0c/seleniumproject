@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.BasePage;
 
+import java.util.Calendar;
+
 public class HomePageFooter extends BasePage{
 
 	public HomePageFooter(WebDriver driver){
@@ -44,11 +46,11 @@ public class HomePageFooter extends BasePage{
 	}
 	
 	public WebElement getForumLink(){
-		return getElementByLinkText(FooterEnum.FORUM);
+		return getElementByLinkText(FooterEnum.FORUM.name());
 	}
 	
 	public WebElement getAboutLink(){
-		return getElementByLinkText(FooterEnum.ABOUT);
+		return getElementByLinkText(FooterEnum.ABOUT.name());
 	}
 
 	private WebElement getIconLink(Object nameOfTheLink){
@@ -86,8 +88,13 @@ public class HomePageFooter extends BasePage{
 	public WebElement getCookieAndPrivacyPolicyLink(){
 		return getElementByLinkText(FooterEnum.COOKIE_AND_PRIVACY_POLICY_LINK);
 	}
-	
+
+	public String getYear(){
+		Calendar calendar = Calendar.getInstance();
+		return  String.valueOf(calendar.get(Calendar.YEAR));
+	}
+
 	public WebElement getCopyrightLink(){
-		return getElementByLinkText("Copyright" , FooterEnum.COPYRIGHT_LINK);
+		return getElementByLinkText("Copyright 1999-" + getYear() , FooterEnum.COPYRIGHT_LINK);
 	}
 }
