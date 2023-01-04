@@ -1,35 +1,26 @@
 package homepage;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.homepage.HomePageFooter;
 import tests.BaseTest;
-import utilities.Control;
 import utilities.Listener;
 
 public class TestHomePageFooter {
 
 	HomePageFooter homePageFooter;
-	
-	Control control;
-	
+
 	BaseTest baseTest;
 
-	@BeforeClass
-	private void setup(){
+	@Test(testName = "Verify Home page footer buttons", priority = 1)
+	private void verifyFooterButtons(){
 
 		WebDriver driver = Listener.getDriver();
 
 		homePageFooter = new HomePageFooter(driver);
-		
+
 		homePageFooter.scrollToFooterSection();
-		
-	}
-	
-	@Test(testName = "Verify Home page footer buttons", priority = 1)
-	private void verifyFooterButtons(){
-		
+
 		baseTest = new BaseTest(homePageFooter);
 		
 		baseTest.verifyElementIsDisplayed(homePageFooter.getQuizzesButton());
