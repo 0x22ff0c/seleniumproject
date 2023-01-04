@@ -36,7 +36,7 @@ public enum FooterEnum {
 	
 	COOKIE_AND_PRIVACY_POLICY_LINK("cookie and privacy policy"),
 	
-	COPYRIGHT_LINK("Copyright 1999-2022");
+	COPYRIGHT_LINK("Copyright");
 	
 	private FooterEnum(){
 		
