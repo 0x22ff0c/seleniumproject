@@ -32,9 +32,9 @@ public enum FooterEnum {
 	
 	FACEBOOK_LIKE_BUTTON("Like W3Schools on Facebook"),
 	
-	TERMS_OF_USE_LINK("terms of use"),
+	TERMS_OF_USE_LINK("Terms of use"),
 	
-	COOKIE_AND_PRIVACY_POLICY_LINK("cookie and privacy policy"),
+	COOKIE_AND_PRIVACY_POLICY_LINK("Cookie and Privacy policy"),
 	
 	COPYRIGHT_LINK("Copyright");
 	
