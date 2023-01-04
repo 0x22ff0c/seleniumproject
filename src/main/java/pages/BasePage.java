@@ -57,7 +57,7 @@ public class BasePage {
 	}
 
 	protected  WebElement getElementByTagName(String tagName, Object nameOfElement){
-		return getElement(By.id(tagName), nameOfElement);
+		return getElement(By.tagName(tagName), nameOfElement);
 	}
 
 	protected WebElement getElementByXpath(String xpath, String nameOfElement){
