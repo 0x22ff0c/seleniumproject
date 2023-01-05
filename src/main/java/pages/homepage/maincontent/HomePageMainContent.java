@@ -100,7 +100,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region HTML section
 	public void scrollToHtmlSection(){
-		control.scrollToElement(getElementByXpath(String.format("//h1[text()='%s']/parent::*/parent::*/parent::*", MainContentEnum.HTML), MainContentEnum.HTML + " section"));
+		control.scrollToElement(getElementByXpath(String.format("//h1[text()='%s']/parent::*/parent::*/parent::*", MainContentEnum.HTML.name()), MainContentEnum.HTML + " section"));
 	}
 	
 	public String getHtmlHeaderContent(){
@@ -112,20 +112,20 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHtmlLearnHtmlButton(){
-		return getLearnButtonElement(MainContentEnum.LEARN_HTML.toString());
+		return getLearnButtonElement(MainContentEnum.LEARN_HTML);
 	}
 	
 	public WebElement getHtmlVideoTutorialButton(){
-		return getButtonElement("HTML video tutorial", MainContentEnum.VIDEO_TUTORIAL.toString());
+		return getButtonElement("HTML video tutorial", MainContentEnum.VIDEO_TUTORIAL);
 	}
 	
 	public WebElement getHtmlReferenceButton(){
-		return getReferenceButton(MainContentEnum.HTML_REFERENCE.toString());
+		return getReferenceButton(MainContentEnum.HTML_REFERENCE);
 	}
 	
 	public WebElement getHtmlGetCertifiedButton(){
 		
-		return getButtonElement(MainContentEnum.HTML_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement(MainContentEnum.HTML_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED);
 	}
 	
 	public String getHtmlCodeExampleHeader(){
@@ -137,11 +137,11 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getHtmlSampleCodeSection(){
 		String htmlSampleCodeXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
 		
-		return getButtonElementByXpath(String.format(htmlSampleCodeXpathExpression, MainContentEnum.HTML.name()), MainContentEnum.HTML_SAMPLE_CODE_SECTION.toString());
+		return getButtonElementByXpath(String.format(htmlSampleCodeXpathExpression, MainContentEnum.HTML.name()), MainContentEnum.HTML_SAMPLE_CODE_SECTION);
 	}
 
 	public WebElement getHtmlTryItYourselfButton(){
-		return getButtonElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", MainContentEnum.HTML_TRY_IT_YOURSELF_BUTTON.toString());
+		return getButtonElementByXpath("(//*[text()='HTML Example:']/following-sibling::*[text()='Try it Yourself'])[1]", MainContentEnum.HTML_TRY_IT_YOURSELF_BUTTON);
 	}
 	//endregion
 
