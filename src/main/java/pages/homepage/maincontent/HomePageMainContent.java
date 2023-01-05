@@ -17,12 +17,6 @@ public class HomePageMainContent extends BasePage{
 		return getElementById("main", MainContentEnum.MAIN_CONTENT_SECTION);
 	}
 	
-	private void scrollToSection(String nameOfTheSection){
-		String sectionXpathExpression = "//h1[text()='%s']/parent::*/parent::*/parent::*";
-		
-		control.scrollToElement(getElementByXpath(String.format(sectionXpathExpression, nameOfTheSection), nameOfTheSection + " section"));
-	}
-	
 	public WebElement getHeaderElement(String nameOfTheSection){
 		String headerXpathExpression = "//*[text()='%s']";
 		
@@ -82,7 +76,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region HTML section
 	public void scrollToHtmlSection(){
-		scrollToSection(MainContentEnum.HTML.name());
+		control.scrollToElement(getElementByXpath(String.format("//h1[text()='%s']/parent::*/parent::*/parent::*", MainContentEnum.HTML), MainContentEnum.HTML + " section"));
 	}
 	
 	public String getHtmlHeaderContent(){
