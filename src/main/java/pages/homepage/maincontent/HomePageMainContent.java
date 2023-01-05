@@ -22,10 +22,22 @@ public class HomePageMainContent extends BasePage{
 		
 		return getElementByXpath(String.format(headerXpathExpression, nameOfTheSection), nameOfTheSection + " header");
 	}
+
+	public WebElement getHeaderElement(Object nameOfTheSection){
+		String headerXpathExpression = "//*[text()='%s']";
+
+		return getElementByXpath(String.format(headerXpathExpression, nameOfTheSection), nameOfTheSection + " header");
+	}
 	
 	private String getSubheaderValue(String nameOfTheSection){
 		String subheaderXpathExpression = "//*[text()='%s']/following-sibling::*/descendant::*";
 		
+		return getTextOfElementUsingXpathLocator(String.format(subheaderXpathExpression, nameOfTheSection));
+	}
+
+	private String getSubheaderValue(Object nameOfTheSection){
+		String subheaderXpathExpression = "//*[text()='%s']/following-sibling::*/descendant::*";
+
 		return getTextOfElementUsingXpathLocator(String.format(subheaderXpathExpression, nameOfTheSection));
 	}
 	
@@ -34,10 +46,22 @@ public class HomePageMainContent extends BasePage{
 		
 		return getButtonElementByXpath(String.format(learnButtonXpathExpression, nameOfTheButton), nameOfTheButton);
 	}
+
+	public WebElement getLearnButtonElement(Object nameOfTheButton){
+		String learnButtonXpathExpression = "//*[contains(@class, 'tut-button') and contains(text(), '%s')]";
+
+		return getButtonElementByXpath(String.format(learnButtonXpathExpression, nameOfTheButton), nameOfTheButton);
+	}
 	
 	private WebElement getReferenceButton(String nameOfTheButton){
 		String referenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
 		
+		return getButtonElementByXpath(String.format(referenceButtonXpathExpression, nameOfTheButton), nameOfTheButton);
+	}
+
+	private WebElement getReferenceButton(Object nameOfTheButton){
+		String referenceButtonXpathExpression = "//*[contains(@class, 'ref-button') and contains(text(), '%s')]";
+
 		return getButtonElementByXpath(String.format(referenceButtonXpathExpression, nameOfTheButton), nameOfTheButton);
 	}
 
