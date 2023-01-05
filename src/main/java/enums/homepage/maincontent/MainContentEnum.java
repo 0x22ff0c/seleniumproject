@@ -63,8 +63,6 @@ public enum MainContentEnum {
 	
 	PYTHON_REFERENCE("Python Reference"),
 
-	PYTHON_ADD_CERTIFICATION_ID("Add Python Certification"),
-
 	PYTHON_SAMPLE_CODE_SECTION("Python Sample code"),
 	
 	PYTHON_TRY_IT_YOURSELF_BUTTON("Python Try It Yourself"),
