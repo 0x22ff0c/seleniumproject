@@ -193,31 +193,31 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getJavaScriptLearnJavaScriptButton(){
-		return getLearnButtonElement(MainContentEnum.LEARN_JAVASCRIPT.toString());
+		return getLearnButtonElement(MainContentEnum.LEARN_JAVASCRIPT);
 	} 
 	
 	public WebElement getJavaScriptReferenceButton(){
-		return getReferenceButton(MainContentEnum.JAVASCRIPT_REFERENCE.toString());
+		return getReferenceButton(MainContentEnum.JAVASCRIPT_REFERENCE);
 	}
 	
 	public WebElement getJavaScriptGetCertifiedButton(){
-		return getButtonElement(MainContentEnum.JAVASCRIPT_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement("Add JavaScript Certification", MainContentEnum.GET_CERTIFIED);
 	}
 	
 	public String getJavaScriptCodeExampleHeader(){
 		String javaScriptCodeHeaderXpathExpression = "(//*[text()='%s'])[3]/parent::*/following-sibling::*/descendant::*[2]";
 		
-		return getTextOfElementUsingXpathLocator(String.format(javaScriptCodeHeaderXpathExpression, MainContentEnum.JAVASCRIPT.toString()));
+		return getTextOfElementUsingXpathLocator(String.format(javaScriptCodeHeaderXpathExpression, MainContentEnum.JAVASCRIPT));
 	}
 	
 	public WebElement getJavaScriptSampleCodeSection(){
 		String javaScriptSampleCodeSectionXpathExpression = "(//*[text()='%s'])[3]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
 		
-		return getElementByXpath(String.format(javaScriptSampleCodeSectionXpathExpression, MainContentEnum.JAVASCRIPT.toString()), MainContentEnum.JAVASCRIPT_SAMPLE_CODE_SECTION.toString());
+		return getElementByXpath(String.format(javaScriptSampleCodeSectionXpathExpression, MainContentEnum.JAVASCRIPT), MainContentEnum.JAVASCRIPT_SAMPLE_CODE_SECTION);
 	}
 	
 	public WebElement getJavaScriptTryItYourselfButton(){
-		return getButtonElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.JAVASCRIPT_TRY_IT_YOURSELF_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='JavaScript Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.JAVASCRIPT_TRY_IT_YOURSELF_BUTTON);
 	}
 	//endregion
 
