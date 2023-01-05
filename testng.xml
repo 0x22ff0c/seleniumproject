@@ -7,8 +7,8 @@
 	<test name="Test" group-by-instances="true">
 		<classes>
 <!--			<class name="homepage.TestHomePageHeader"></class>-->
-<!--			<class name="homepage.TestHomePageMainContents"></class>-->
-			<class name="homepage.TestHomePageFooter"></class>
+			<class name="homepage.TestHomePageMainContents"></class>
+<!--			<class name="homepage.TestHomePageFooter"></class>-->
 <!--			<class name="homepage.TestWhereToBeginPage"></class>-->
 		</classes>
 	</test>
