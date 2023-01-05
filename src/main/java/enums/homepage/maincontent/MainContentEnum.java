@@ -39,8 +39,6 @@ public enum MainContentEnum {
 	
 	CSS_REFERENCE("CSS Reference"),
 
-	CSS_ADD_CERTIFICATION_ID("Add CSS Certification"),
-
 	CSS_SAMPLE_CODE_SECTION("CSS Sample code"),
 	
 	CSS_TRY_IT_YOURSELF_BUTTON("CSS Try It Yourself"),
