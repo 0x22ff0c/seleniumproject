@@ -50,8 +50,8 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getSubheaderTextInMainContent(){
 		String learnToCodeSubheaderXpathExpression = "//*[text()=\"%s\"]";
 		
-		return getElementByXpath(String.format(learnToCodeSubheaderXpathExpression, MainContentEnum.LEARN_TO_CODE_SUB_HEADER.toString()), 
-				MainContentEnum.LEARN_TO_CODE_SUB_HEADER.toString() + " subheader");
+		return getElementByXpath(String.format(learnToCodeSubheaderXpathExpression, MainContentEnum.LEARN_TO_CODE_SUB_HEADER),
+				MainContentEnum.LEARN_TO_CODE_SUB_HEADER + " subheader");
 	}
 	
 	public WebElement getSearchbarField(){
@@ -63,11 +63,11 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getSearchbarButton(){
-		return getButtonElementById("learntocode_searchbtn", MainContentEnum.SEARCH_FIELD_BUTTON.toString());
+		return getButtonElementById("learntocode_searchbtn", MainContentEnum.SEARCH_FIELD_BUTTON);
 	}
 	
 	public WebElement getWhereToBeginLink(){
-		return getElementByLinkText(MainContentEnum.NOT_SURE_WHERE_TO_BEGIN_LINK.toString());
+		return getElementByLinkText(MainContentEnum.NOT_SURE_WHERE_TO_BEGIN_LINK);
 	}
 	
 	public void scrollToWhereToBeginLink(){
