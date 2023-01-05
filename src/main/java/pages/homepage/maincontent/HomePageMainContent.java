@@ -156,15 +156,15 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCSSLearnCSSButton(){
-		return getLearnButtonElement(MainContentEnum.LEARN_CSS.toString());
+		return getLearnButtonElement(MainContentEnum.LEARN_CSS);
 	} 
 	
 	public WebElement getCSSReferenceButton(){
-		return getReferenceButton(MainContentEnum.CSS_REFERENCE.toString());
+		return getReferenceButton(MainContentEnum.CSS_REFERENCE);
 	}
 	
 	public WebElement getCSSGetCertifiedButton(){
-		return getButtonElement(MainContentEnum.CSS_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement("Add CSS Certification", MainContentEnum.GET_CERTIFIED);
 	}
 	
 	public String getCSSCodeExampleHeader(){
@@ -176,10 +176,10 @@ public class HomePageMainContent extends BasePage{
 	public WebElement getCSSSampleCodeSection(){
 		String sampleCodeSectionXpathExpression = "(//*[text()='%s'])[2]/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
 		
-		return getElementByXpath(String.format(sampleCodeSectionXpathExpression, MainContentEnum.CSS.name()), MainContentEnum.CSS_SAMPLE_CODE_SECTION.toString());
+		return getElementByXpath(String.format(sampleCodeSectionXpathExpression, MainContentEnum.CSS.name()), MainContentEnum.CSS_SAMPLE_CODE_SECTION);
 	}
 	public WebElement getCSSTryItYourselfButton(){
-		return getButtonElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.CSS_TRY_IT_YOURSELF_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='CSS Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.CSS_TRY_IT_YOURSELF_BUTTON);
 	}
 	//endregion
 
