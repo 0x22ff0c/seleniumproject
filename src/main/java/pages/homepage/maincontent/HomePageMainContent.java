@@ -231,31 +231,31 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getPythonLearnPythonButton(){
-		return getLearnButtonElement(MainContentEnum.LEARN_PYTHON.toString());
+		return getLearnButtonElement(MainContentEnum.LEARN_PYTHON);
 	} 
 	
 	public WebElement getPythonReferenceButton(){
-		return getReferenceButton(MainContentEnum.PYTHON_REFERENCE.toString());
+		return getReferenceButton(MainContentEnum.PYTHON_REFERENCE);
 	}
 	
 	public WebElement getPythonGetCertifiedButton(){
-		return getButtonElement(MainContentEnum.PYTHON_ADD_CERTIFICATION_ID.toString(), MainContentEnum.GET_CERTIFIED.toString());
+		return getButtonElement("Add Python Certification", MainContentEnum.GET_CERTIFIED);
 	}	
 	
 	public String getPythonCodeExampleHeader(){
 		String pythonCodeHeaderXpathExpression = "(//*[text()='%s'])/parent::*/following-sibling::*/descendant::*[2]";
 		
-		return getTextOfElementUsingXpathLocator(String.format(pythonCodeHeaderXpathExpression, MainContentEnum.PYTHON.toString()));
+		return getTextOfElementUsingXpathLocator(String.format(pythonCodeHeaderXpathExpression, MainContentEnum.PYTHON));
 	}
 	
 	public WebElement getPythonSampleCodeSection(){
 		String pythonSampleCodeSection = "//*[text()='%s']/parent::*/following-sibling::*/descendant::*[contains(@class, 'code')]";
 		
-		return getElementByXpath(String.format(pythonSampleCodeSection, MainContentEnum.PYTHON.toString()), MainContentEnum.PYTHON_SAMPLE_CODE_SECTION.toString());
+		return getElementByXpath(String.format(pythonSampleCodeSection, MainContentEnum.PYTHON), MainContentEnum.PYTHON_SAMPLE_CODE_SECTION);
 	}
 
 	public WebElement getPythonTryItYourselfButton(){
-		return getButtonElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.PYTHON_TRY_IT_YOURSELF_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='Python Example:']/following-sibling::*[text()='Try it Yourself']", MainContentEnum.PYTHON_TRY_IT_YOURSELF_BUTTON);
 	}
 	//endregion
 
