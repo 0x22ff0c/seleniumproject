@@ -51,8 +51,6 @@ public enum MainContentEnum {
 	
 	JAVASCRIPT_REFERENCE("JavaScript Reference"),
 
-	JAVASCRIPT_ADD_CERTIFICATION_ID("Add JavaScript Certification"),
-
 	JAVASCRIPT_SAMPLE_CODE_SECTION("JavaScript Sample code"),
 	
 	JAVASCRIPT_TRY_IT_YOURSELF_BUTTON("JavaScript Try It Yourself"),
