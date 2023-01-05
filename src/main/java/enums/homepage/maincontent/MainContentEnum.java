@@ -75,8 +75,6 @@ public enum MainContentEnum {
 	
 	SQL_REFERENCE("SQL Reference"),
 
-	SQL_ADD_CERTIFICATION_ID("Add SQL Certification"),
-
 	SQL_SAMPLE_CODE_SECTION("SQL Sample code"),
 	
 	SQL_TRY_IT_YOURSELF_BUTTON("SQL Try It Yourself"),
