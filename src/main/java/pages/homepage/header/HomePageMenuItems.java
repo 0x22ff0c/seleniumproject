@@ -121,7 +121,7 @@ public class HomePageMenuItems extends HomePageHeader{
 		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON);
 	}
 	
-	public WebElement getExercisesMenuButton(){
+	public WebElement getExercisesMenuContainer(){
 		return getMenuContainer(EXERCISES_NAV_ID, HeaderEnum.EXERCISES_MENU_BUTTON);
 	}
 	
