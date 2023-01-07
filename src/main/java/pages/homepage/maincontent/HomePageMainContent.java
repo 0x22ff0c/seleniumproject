@@ -299,7 +299,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Other tutorials section
 	public void scrollToOtherTutorialsSection(){
-		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", MainContentEnum.OTHER_TUTORIALS_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", MainContentEnum.OTHER_TUTORIALS_SECTION));
 	}
 	//endregion
 
@@ -311,31 +311,31 @@ public class HomePageMainContent extends BasePage{
 
 	//region jQuery section
 	public String getjQuerySubheader(){
-		return getSubheaderValue(MainContentEnum.JQUERY.toString());
+		return getSubheaderValue(MainContentEnum.JQUERY);
 	}
 	//endregion
 
 	//region Java section
 	public String getJavaSubheader(){
-		return getSubheaderValue(MainContentEnum.JAVA.toString());
+		return getSubheaderValue(MainContentEnum.JAVA);
 	}
 	//endregion
 
 	//region C++ section
 	public String getCplusplusSubheader(){
-		return getSubheaderValue(MainContentEnum.CPLUSPLUS.toString());
+		return getSubheaderValue(MainContentEnum.CPLUSPLUS);
 	}
 	//endregion
 
 	//region W3.CSS section
 	public String getW3CSSSubheader(){
-		return getSubheaderValue(MainContentEnum.W3CSS.toString());
+		return getSubheaderValue(MainContentEnum.W3CSS);
 	}
 	//endregion
 
 	//region Bootstrap section
 	public String getBootstrapSubheader(){
-		return getSubheaderValue(MainContentEnum.BOOTSTRAP.toString());
+		return getSubheaderValue(MainContentEnum.BOOTSTRAP);
 	}
 	//endregion
 
