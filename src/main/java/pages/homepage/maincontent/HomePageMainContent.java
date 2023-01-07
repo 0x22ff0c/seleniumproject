@@ -628,11 +628,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region Exercises and Quizzes section
 	public void scrollToExercisesQuizzesSection(){
-		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", MainContentEnum.EXERCISES_AND_QUIZZES_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", MainContentEnum.EXERCISES_AND_QUIZZES_SECTION));
 	}
 	
 	public WebElement getExercisesAndQuizzesHeader(){
-		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", MainContentEnum.EXERCISES_AND_QUIZZES_HEADER.toString());
+		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", MainContentEnum.EXERCISES_AND_QUIZZES_HEADER);
 	}
 	
 	public String getExercisesAndQuizzesSubheader(){
@@ -640,11 +640,11 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getExercisesAndQuizzesExercisesButton(){
-		return getButtonElementByXpath("(//*[text()='Exercises'])[2]/parent::*", MainContentEnum.EXERCISES_BUTTON.toString());
+		return getButtonElementByXpath("(//*[text()='Exercises'])[2]/parent::*", MainContentEnum.EXERCISES_BUTTON);
 	}
 	
 	public WebElement getExercisesAndQuizzesQuizzesButton(){
-		return getButtonElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", MainContentEnum.QUIZZES_BUTTON.toString());
+		return getButtonElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", MainContentEnum.QUIZZES_BUTTON);
 	}
 	//endregion
 
