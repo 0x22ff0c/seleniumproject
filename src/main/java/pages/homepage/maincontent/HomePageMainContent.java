@@ -371,7 +371,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code editor section
 	public void scrollToCodeEditorSection(){
-		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", MainContentEnum.CODE_EDITOR_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", MainContentEnum.CODE_EDITOR_SECTION));
 	}
 	
 	public String getCodeEditorHeader(){
@@ -393,15 +393,15 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeEditorFrontendActive(){
-		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON);
 	}
 	
 	public int getCodeEditorFrontendActiveDisplayCount(){
-		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON.toString());
+		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON);
 	}
 	
 	private WebElement getCodeEditorFrontEndNotActive(){
-		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", MainContentEnum.FRONT_END_INACTIVE_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", MainContentEnum.FRONT_END_INACTIVE_BUTTON);
 	}
 	
 	public void clickFrontendButton(){
@@ -409,15 +409,15 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorBackEndActive(){
-		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON);
 	}
 
 	public int getCodeEditorBackEndActiveDisplayCount(){
-		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
+		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON);
 	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
-		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", MainContentEnum.BACK_END_INACTIVE_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", MainContentEnum.BACK_END_INACTIVE_BUTTON);
 	}
 
 	public void clickBackEndButton(){
@@ -427,19 +427,19 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorFrontendGIF(){
-		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", MainContentEnum.FRONT_END_GIF.toString());
+		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", MainContentEnum.FRONT_END_GIF);
 	}
 
 	public WebElement getCodeEditorBackendGIF(){
-		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", MainContentEnum.BACK_END_GIF.toString());
+		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", MainContentEnum.BACK_END_GIF);
 	}
 	
 	public WebElement getCodeEditorTryFrontend(){
-		return getButtonElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", MainContentEnum.FRONT_END_EDITOR_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", MainContentEnum.FRONT_END_EDITOR_BUTTON);
 	}
 	
 	public WebElement getCodeEditorTryBackend(){
-		return getButtonElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", MainContentEnum.BACK_END_EDITOR_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", MainContentEnum.BACK_END_EDITOR_BUTTON);
 	}
 	//endregion
 
