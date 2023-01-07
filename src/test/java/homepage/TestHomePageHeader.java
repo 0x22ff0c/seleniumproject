@@ -178,7 +178,9 @@ public class TestHomePageHeader {
 		baseTest = new BaseTest(homePageMenuItems);
 		
 		homePageMenuItems.clickExercisesButton();
-		
+
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesMenuContainer());
+
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCaretButton());
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesMenuHeader());
