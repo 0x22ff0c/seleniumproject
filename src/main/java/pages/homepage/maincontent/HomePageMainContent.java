@@ -489,11 +489,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region My Learning section
 	public void scrollToMyLearningSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_SECTION));
 	}
 	
 	public WebElement getMyLearningHeader(){
-		return getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_HEADER.toString());
+		return getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_HEADER);
 	}
 	
 	public String getMyLearningSubheader(){
@@ -521,7 +521,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getMyLearningSignupButton(){
-		return getButtonElementById("myLearningFromDefault", MainContentEnum.MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON.toString());
+		return getButtonElementById("myLearningFromDefault", MainContentEnum.MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON);
 	}
 	//endregion
 
