@@ -18,9 +18,9 @@ public class HomePageMenuItems extends HomePageHeader{
 	private WebElement getHeaderMenuCloseButton(String idValue, String elementName){
 		return getElementByXpath(String.format("//*[@id='%s']/descendant::*[text()='×']", idValue), String.format("%s close button", elementName));
 	}
-	
-	private WebElement getMenuContainer(String idValue, String elementName){
-		return getElementByXpath(String.format("//*[@id='%s' and contains(@style, 'display: block')]", idValue), String.format("%s menu container", elementName));
+
+	private WebElement getMenuContainer(String idValue, Object nameOfTheElement){
+		return getElementByXpath(String.format("//*[@id='%s' and contains(@style, 'display: block')]", idValue), String.format("%s menu container", nameOfTheElement));
 	}
 
 	private String menuItemInContainer = "//*[@id='%s' and contains(@style, 'display: block')]/descendant::*[text()='%s']";
@@ -68,7 +68,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getTutorialsMenuContainer(){
-		return getMenuContainer(TUTORIAL_NAV_ID, HeaderEnum.TUTORIALS_MENU_BUTTON.toString());
+		return getMenuContainer(TUTORIAL_NAV_ID, HeaderEnum.TUTORIALS_MENU_BUTTON);
 	}
 	
 	public WebElement getTutorialsMenuHeader(){
@@ -95,7 +95,7 @@ public class HomePageMenuItems extends HomePageHeader{
 	}
 	
 	public WebElement getReferencesMenuContainer(){
-		return getMenuContainer(REFERENCES_NAV_ID, HeaderEnum.REFERENCE_MENU_BUTTON.toString());
+		return getMenuContainer(REFERENCES_NAV_ID, HeaderEnum.REFERENCE_MENU_BUTTON);
 	}
 	
 	public WebElement getReferencesMenuHeader(){
@@ -121,8 +121,8 @@ public class HomePageMenuItems extends HomePageHeader{
 		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON);
 	}
 	
-	public WebElement getExercisesMenuButton(){
-		return getMenuContainer(EXERCISES_NAV_ID, HeaderEnum.EXERCISES_MENU_BUTTON.toString());
+	public WebElement getExercisesMenuContainer(){
+		return getMenuContainer(EXERCISES_NAV_ID, HeaderEnum.EXERCISES_MENU_BUTTON);
 	}
 	
 	private String exerciseButtonLocator = "//*[@id='%s']/descendant::*[contains(@class, '%s') and text()='%s']";

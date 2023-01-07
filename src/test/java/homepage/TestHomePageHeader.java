@@ -170,7 +170,7 @@ public class TestHomePageHeader {
 		
 	}
 	
-	@Test(testName = "Verify exercise header menu items", priority =  4)
+	@Test(testName = "Verify Exercise header menu items", priority =  4)
 	private void testExerciseMenuItems(){
 
 		homePageMenuItems = new HomePageMenuItems(driver);
@@ -178,7 +178,9 @@ public class TestHomePageHeader {
 		baseTest = new BaseTest(homePageMenuItems);
 		
 		homePageMenuItems.clickExercisesButton();
-		
+
+		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesMenuContainer());
+
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesCaretButton());
 		
 		baseTest.verifyElementIsDisplayed(homePageMenuItems.getExercisesMenuHeader());
