@@ -299,7 +299,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Other tutorials section
 	public void scrollToOtherTutorialsSection(){
-		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", MainContentEnum.OTHER_TUTORIALS_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("(//*[contains(@class, 'ws-black')])[3]", MainContentEnum.OTHER_TUTORIALS_SECTION));
 	}
 	//endregion
 
@@ -311,31 +311,31 @@ public class HomePageMainContent extends BasePage{
 
 	//region jQuery section
 	public String getjQuerySubheader(){
-		return getSubheaderValue(MainContentEnum.JQUERY.toString());
+		return getSubheaderValue(MainContentEnum.JQUERY);
 	}
 	//endregion
 
 	//region Java section
 	public String getJavaSubheader(){
-		return getSubheaderValue(MainContentEnum.JAVA.toString());
+		return getSubheaderValue(MainContentEnum.JAVA);
 	}
 	//endregion
 
 	//region C++ section
 	public String getCplusplusSubheader(){
-		return getSubheaderValue(MainContentEnum.CPLUSPLUS.toString());
+		return getSubheaderValue(MainContentEnum.CPLUSPLUS);
 	}
 	//endregion
 
 	//region W3.CSS section
 	public String getW3CSSSubheader(){
-		return getSubheaderValue(MainContentEnum.W3CSS.toString());
+		return getSubheaderValue(MainContentEnum.W3CSS);
 	}
 	//endregion
 
 	//region Bootstrap section
 	public String getBootstrapSubheader(){
-		return getSubheaderValue(MainContentEnum.BOOTSTRAP.toString());
+		return getSubheaderValue(MainContentEnum.BOOTSTRAP);
 	}
 	//endregion
 
@@ -371,7 +371,7 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code editor section
 	public void scrollToCodeEditorSection(){
-		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", MainContentEnum.CODE_EDITOR_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("//*[@class='codeeditorbr-container']", MainContentEnum.CODE_EDITOR_SECTION));
 	}
 	
 	public String getCodeEditorHeader(){
@@ -393,15 +393,15 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCodeEditorFrontendActive(){
-		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON);
 	}
 	
 	public int getCodeEditorFrontendActiveDisplayCount(){
-		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON.toString());
+		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Frontend']", MainContentEnum.FRONT_END_ACTIVE_BUTTON);
 	}
 	
 	private WebElement getCodeEditorFrontEndNotActive(){
-		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", MainContentEnum.FRONT_END_INACTIVE_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Frontend']", MainContentEnum.FRONT_END_INACTIVE_BUTTON);
 	}
 	
 	public void clickFrontendButton(){
@@ -409,15 +409,15 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorBackEndActive(){
-		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON);
 	}
 
 	public int getCodeEditorBackEndActiveDisplayCount(){
-		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON.toString());
+		return getButtonElementCountByXpath("//*[contains(@class, 'ws-grey') and text()='Backend']", MainContentEnum.BACK_END_ACTIVE_BUTTON);
 	}
 		
 	private WebElement getCodeEditorBackendNotActive(){
-		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", MainContentEnum.BACK_END_INACTIVE_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'codeeditorbr-tablink') and text()='Backend']", MainContentEnum.BACK_END_INACTIVE_BUTTON);
 	}
 
 	public void clickBackEndButton(){
@@ -427,31 +427,31 @@ public class HomePageMainContent extends BasePage{
 	}
 
 	public WebElement getCodeEditorFrontendGIF(){
-		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", MainContentEnum.FRONT_END_GIF.toString());
+		return getElementByXpath("//*[@id='Frontend']/descendant::*[@src='codeeditor.gif']", MainContentEnum.FRONT_END_GIF);
 	}
 
 	public WebElement getCodeEditorBackendGIF(){
-		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", MainContentEnum.BACK_END_GIF.toString());
+		return getElementByXpath("//*[@id='Backend']/descendant::*[@src='/tryit/best2.gif']", MainContentEnum.BACK_END_GIF);
 	}
 	
 	public WebElement getCodeEditorTryFrontend(){
-		return getButtonElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", MainContentEnum.FRONT_END_EDITOR_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='Try Frontend Editor (HTML/CSS/JS)']", MainContentEnum.FRONT_END_EDITOR_BUTTON);
 	}
 	
 	public WebElement getCodeEditorTryBackend(){
-		return getButtonElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", MainContentEnum.BACK_END_EDITOR_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='Try Backend Editor (Python/PHP/Java/C..)']", MainContentEnum.BACK_END_EDITOR_BUTTON);
 	}
 	//endregion
 
 	//region W3Schools Spaces section
 	public void scrollToW3SchoolsSpacesSection(){
 		
-		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", MainContentEnum.W3SCHOOLS_SPACES.toString()));
+		control.scrollToElement(getElementByXpath("//*[text()='W3Schools Spaces']/parent::*", MainContentEnum.W3SCHOOLS_SPACES));
 	}
 	
 	public WebElement getW3SchoolsSpacesHeader(){
 		
-		return getElementByXpath("//*[text()='W3Schools Spaces']", MainContentEnum.W3SCHOOLS_SPACES.toString());
+		return getElementByXpath("//*[text()='W3Schools Spaces']", MainContentEnum.W3SCHOOLS_SPACES);
 	}
 	
 	public String getW3SchoolsSpacesSubheader(){
@@ -465,7 +465,7 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_SCREENSHOT.toString());
+		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_SCREENSHOT);
 	}
 	
 	public void scrollToW3SchoolsSpacesScreenshotsSection(){
@@ -479,21 +479,21 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_HOW_IT_WORKS_IMAGE.toString());
+		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_HOW_IT_WORKS_IMAGE);
 	}
 	
 	public WebElement getW3schoolsSpacesGetStartedNowButton(){
-		return getButtonElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started Now']", MainContentEnum.W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON.toString());
+		return getButtonElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started Now']", MainContentEnum.W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON);
 	}
 	//endregion
 
 	//region My Learning section
 	public void scrollToMyLearningSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_SECTION));
 	}
 	
 	public WebElement getMyLearningHeader(){
-		return getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_HEADER.toString());
+		return getElementByXpath("//*[text()='My Learning']/parent::*", MainContentEnum.MY_LEARNING_HEADER);
 	}
 	
 	public String getMyLearningSubheader(){
@@ -521,17 +521,17 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getMyLearningSignupButton(){
-		return getButtonElementById("myLearningFromDefault", MainContentEnum.MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON.toString());
+		return getButtonElementById("myLearningFromDefault", MainContentEnum.MY_LEARNING_SIGN_UP_FOR_FREE_BUTTON);
 	}
 	//endregion
 
 	//region Become a Pro user section
 	public void scrollToBecomeProUserSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", MainContentEnum.BECOME_A_PRO_USER_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("//*[text()='Become a PRO User']/parent::*", MainContentEnum.BECOME_A_PRO_USER_SECTION));
 	}
 	
 	public WebElement getBecomeProUserHeader(){
-		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", MainContentEnum.BECOME_A_PRO_USER_HEADER.toString());
+		return getElementByXpath("//*[text()='Become a PRO User']/parent::*", MainContentEnum.BECOME_A_PRO_USER_HEADER);
 	}
 	
 	public String getBecomeProUserSubheader(){
@@ -540,7 +540,7 @@ public class HomePageMainContent extends BasePage{
 	
 	//1st checkbox
 	public WebElement getBecomeProUser1stCheckbox(){
-		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[1]", MainContentEnum.BECOME_A_PRO_USER_1ST_CHECKBOX.toString());
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[1]", MainContentEnum.BECOME_A_PRO_USER_1ST_CHECKBOX);
 	}
 	
 	public String getBecomeProUser1stCheckboxText(){
@@ -553,7 +553,7 @@ public class HomePageMainContent extends BasePage{
 	
 	//2nd checkbox
 	public WebElement getBecomeProUser2ndCheckbox(){
-		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[2]", MainContentEnum.BECOME_A_PRO_USER_2ND_CHECKBOX.toString());
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[2]", MainContentEnum.BECOME_A_PRO_USER_2ND_CHECKBOX);
 	}
 	
 	public String getBecomeProUser2ndCheckboxText(){
@@ -561,12 +561,12 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getBecomeProUser2ndCheckboxLink(){
-		return getElementByLinkText("Spaces", MainContentEnum.BECOME_A_PRO_USER_2ND_CHECKBOX_LINK.toString());
+		return getElementByLinkText("Spaces", MainContentEnum.BECOME_A_PRO_USER_2ND_CHECKBOX_LINK);
 	}
 	
 	//3rd checkbox
 	public WebElement getBecomeProUser3rdCheckbox(){
-		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[3]", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX.toString());
+		return getElementByXpath("(//*[@src='/spaces/files/check3.db67d31e.svg'])[3]", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX);
 	}
 	
 	public String getBecomeProUser3rdCheckboxText(){
@@ -574,21 +574,21 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getBecomeProUser3rdCheckboxLink(){
-		return getElementByLinkText("HTML Video Tutorial", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK.toString());
+		return getElementByLinkText("HTML Video Tutorial", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX_HTML_VIDEO_LINK);
 	}
 	
 	public WebElement getBecomeProUserLearnMoreButton(){
-		return getButtonElementById("proFromDefault", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK.toString());
+		return getButtonElementById("proFromDefault", MainContentEnum.BECOME_A_PRO_USER_3RD_CHECKBOX_LEARN_MORE_LINK);
 	}
 	//endregion
 
 	//region Color Picker section
 	public void scrollToColorPickerSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", MainContentEnum.COLOR_PICKER_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("//*[text()='Color Picker']/parent::*", MainContentEnum.COLOR_PICKER_SECTION));
 	}
 	
 	public WebElement getColorPickerHeader(){
-		return getElementByXpath("//*[text()='Color Picker']", MainContentEnum.COLOR_PICKER_HEADER.toString());
+		return getElementByXpath("//*[text()='Color Picker']", MainContentEnum.COLOR_PICKER_HEADER);
 	}
 	
 	public String getColorPickerSubheader(){
@@ -596,17 +596,17 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getColorPickerImage(){
-		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']", MainContentEnum.COLOR_PICKER_IMAGE.toString());
+		return getElementByXpath("//*[text()='Color Picker']/following-sibling::*[2]/*[@src='/images/colorpicker.png']", MainContentEnum.COLOR_PICKER_IMAGE);
 	}
 	//endregion
 
 	//region Code Game section
 	public void scrollToCodeGameSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", MainContentEnum.CODE_GAME_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", MainContentEnum.CODE_GAME_SECTION));
 	}
 	
 	public WebElement getCodeGameHeader(){
-		return getElementByXpath("//*[text()='Code Game']", MainContentEnum.CODE_GAME_HEADER.toString());
+		return getElementByXpath("//*[text()='Code Game']", MainContentEnum.CODE_GAME_HEADER);
 	}
 	
 	public String getCodeGameSubheader(){
@@ -618,21 +618,21 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, MainContentEnum.CODE_GAME_IMAGE_OF_LYNX.toString());
+		return getElementByXpath(xpathExpression, MainContentEnum.CODE_GAME_IMAGE_OF_LYNX);
 	}
 	
 	public WebElement getCodeGamePlayGameButton(){
-		return getButtonElementByXpath("//*[text()='Play Game']", MainContentEnum.CODE_GAME_PLAY_GAME_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='Play Game']", MainContentEnum.CODE_GAME_PLAY_GAME_BUTTON);
 	}
 	//endregion
 
 	//region Exercises and Quizzes section
 	public void scrollToExercisesQuizzesSection(){
-		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", MainContentEnum.EXERCISES_AND_QUIZZES_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("(//*[text()='Exercises and Quizzes']/parent::*)[2]", MainContentEnum.EXERCISES_AND_QUIZZES_SECTION));
 	}
 	
 	public WebElement getExercisesAndQuizzesHeader(){
-		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", MainContentEnum.EXERCISES_AND_QUIZZES_HEADER.toString());
+		return getElementByXpath("(//*[text()='Exercises and Quizzes'])[2]", MainContentEnum.EXERCISES_AND_QUIZZES_HEADER);
 	}
 	
 	public String getExercisesAndQuizzesSubheader(){
@@ -640,21 +640,21 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getExercisesAndQuizzesExercisesButton(){
-		return getButtonElementByXpath("(//*[text()='Exercises'])[2]/parent::*", MainContentEnum.EXERCISES_BUTTON.toString());
+		return getButtonElementByXpath("(//*[text()='Exercises'])[2]/parent::*", MainContentEnum.EXERCISES_BUTTON);
 	}
 	
 	public WebElement getExercisesAndQuizzesQuizzesButton(){
-		return getButtonElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", MainContentEnum.QUIZZES_BUTTON.toString());
+		return getButtonElementByXpath("(//*[text()='Quizzes'])[2]/parent::*", MainContentEnum.QUIZZES_BUTTON);
 	}
 	//endregion
 
 	//region Web Templates section
 	public void scrollToWebTemplatesSection(){
-		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", MainContentEnum.WEB_TEMPLATES_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", MainContentEnum.WEB_TEMPLATES_SECTION));
 	}
 	
 	public WebElement getWebTemplatesHeader(){
-		return getElementByXpath("(//*[text()='Web Templates'])[2]", MainContentEnum.WEB_TEMPLATES_HEADER.toString());
+		return getElementByXpath("(//*[text()='Web Templates'])[2]", MainContentEnum.WEB_TEMPLATES_HEADER);
 	}
 	
 	public String getWebTemplatesSubheader(){
@@ -670,21 +670,21 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, MainContentEnum.WEB_TEMPLATES_SAMPLE_IMAGES.toString());
+		return getElementByXpath(xpathExpression, MainContentEnum.WEB_TEMPLATES_SAMPLE_IMAGES);
 	}
 	
 	public WebElement getWebTemplatesBrowseTemplatesButton(){
-		return getButtonElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", MainContentEnum.BROWSE_TEMPLATES_BUTTON.toString());
+		return getButtonElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", MainContentEnum.BROWSE_TEMPLATES_BUTTON);
 	}
 	//endregion
 
 	//region Certification section
 	public void scrollToCertificationSection(){
-		control.scrollToElement(getElementById("getdiploma", MainContentEnum.CERTIFICATION_SECTION.toString()));
+		control.scrollToElement(getElementById("getdiploma", MainContentEnum.CERTIFICATION_SECTION));
 	}
 	
 	public WebElement getCertificationHeader(){
-		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", MainContentEnum.KICKSTART_YOUR_CAREER_HEADER.toString());
+		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", MainContentEnum.KICKSTART_YOUR_CAREER_HEADER);
 	}
 	
 	public String getCertificationSubheader(){
@@ -692,25 +692,25 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCertificationGetStartedButton(){
-		return getButtonElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", MainContentEnum.CERTIFICATION_GET_STARTED_BUTTON.toString());
+		return getButtonElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", MainContentEnum.CERTIFICATION_GET_STARTED_BUTTON);
 	}
 	
 	public WebElement getCertificationArrow(){
-		return getElementById("w3_cert_arrow", MainContentEnum.CERTIFICATION_ARROW.toString());
+		return getElementById("w3_cert_arrow", MainContentEnum.CERTIFICATION_ARROW);
 	}
 	
 	public WebElement getCertificationBadge(){
-		return getElementById("w3_cert_badge", MainContentEnum.CERTIFICATION_BADGE.toString());
+		return getElementById("w3_cert_badge", MainContentEnum.CERTIFICATION_BADGE);
 	}
 	//endregion
 
 	//region How To section
 	public void scrollToHowToSection(){
-		control.scrollToElement(getElementById("howto_padding", MainContentEnum.HOW_TO_SECTION.toString()));
+		control.scrollToElement(getElementById("howto_padding", MainContentEnum.HOW_TO_SECTION));
 	}
 	
 	public WebElement getHowToSectionHeader(){
-		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", MainContentEnum.HOW_TO_HEADER.toString());
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", MainContentEnum.HOW_TO_HEADER);
 	}
 	
 	public String getHowToSectionSubheader(){
@@ -732,7 +732,7 @@ public class HomePageMainContent extends BasePage{
 	int slideNumber = 1;
 	
 	public void scrollToHowToSectionSliderContainer(){
-		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", MainContentEnum.HOW_TO_WINDOW.toString()));
+		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", MainContentEnum.HOW_TO_WINDOW));
 	}
 	
 	public WebElement getHowToSectionSampleWindowPreviousButton(){
@@ -800,7 +800,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToLearnButton(){
-		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", MainContentEnum.LEARN_HOW_TO_BUTTON.toString());
+		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", MainContentEnum.LEARN_HOW_TO_BUTTON);
 	}
 	//endregion
 }
