@@ -680,11 +680,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region Certification section
 	public void scrollToCertificationSection(){
-		control.scrollToElement(getElementById("getdiploma", MainContentEnum.CERTIFICATION_SECTION.toString()));
+		control.scrollToElement(getElementById("getdiploma", MainContentEnum.CERTIFICATION_SECTION));
 	}
 	
 	public WebElement getCertificationHeader(){
-		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", MainContentEnum.KICKSTART_YOUR_CAREER_HEADER.toString());
+		return getElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']", MainContentEnum.KICKSTART_YOUR_CAREER_HEADER);
 	}
 	
 	public String getCertificationSubheader(){
@@ -692,15 +692,15 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getCertificationGetStartedButton(){
-		return getButtonElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", MainContentEnum.CERTIFICATION_GET_STARTED_BUTTON.toString());
+		return getButtonElementByXpath("//*[@id='getdiploma']/descendant::*[text()='Kickstart your career']/following-sibling::*[text()='Get started']", MainContentEnum.CERTIFICATION_GET_STARTED_BUTTON);
 	}
 	
 	public WebElement getCertificationArrow(){
-		return getElementById("w3_cert_arrow", MainContentEnum.CERTIFICATION_ARROW.toString());
+		return getElementById("w3_cert_arrow", MainContentEnum.CERTIFICATION_ARROW);
 	}
 	
 	public WebElement getCertificationBadge(){
-		return getElementById("w3_cert_badge", MainContentEnum.CERTIFICATION_BADGE.toString());
+		return getElementById("w3_cert_badge", MainContentEnum.CERTIFICATION_BADGE);
 	}
 	//endregion
 
