@@ -650,11 +650,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region Web Templates section
 	public void scrollToWebTemplatesSection(){
-		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", MainContentEnum.WEB_TEMPLATES_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("(//*[text()='Web Templates'])[2]/parent::*", MainContentEnum.WEB_TEMPLATES_SECTION));
 	}
 	
 	public WebElement getWebTemplatesHeader(){
-		return getElementByXpath("(//*[text()='Web Templates'])[2]", MainContentEnum.WEB_TEMPLATES_HEADER.toString());
+		return getElementByXpath("(//*[text()='Web Templates'])[2]", MainContentEnum.WEB_TEMPLATES_HEADER);
 	}
 	
 	public String getWebTemplatesSubheader(){
@@ -670,11 +670,11 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, MainContentEnum.WEB_TEMPLATES_SAMPLE_IMAGES.toString());
+		return getElementByXpath(xpathExpression, MainContentEnum.WEB_TEMPLATES_SAMPLE_IMAGES);
 	}
 	
 	public WebElement getWebTemplatesBrowseTemplatesButton(){
-		return getButtonElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", MainContentEnum.BROWSE_TEMPLATES_BUTTON.toString());
+		return getButtonElementByXpath("(//*[text()='Web Templates'])[2]/following-sibling::*/descendant::*[text()='Browse Templates']", MainContentEnum.BROWSE_TEMPLATES_BUTTON);
 	}
 	//endregion
 
