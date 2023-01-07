@@ -602,11 +602,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region Code Game section
 	public void scrollToCodeGameSection(){
-		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", MainContentEnum.CODE_GAME_SECTION.toString()));
+		control.scrollToElement(getElementByXpath("//*[text()='Code Game']/parent::*", MainContentEnum.CODE_GAME_SECTION));
 	}
 	
 	public WebElement getCodeGameHeader(){
-		return getElementByXpath("//*[text()='Code Game']", MainContentEnum.CODE_GAME_HEADER.toString());
+		return getElementByXpath("//*[text()='Code Game']", MainContentEnum.CODE_GAME_HEADER);
 	}
 	
 	public String getCodeGameSubheader(){
@@ -618,11 +618,11 @@ public class HomePageMainContent extends BasePage{
 		
 		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
 		
-		return getElementByXpath(xpathExpression, MainContentEnum.CODE_GAME_IMAGE_OF_LYNX.toString());
+		return getElementByXpath(xpathExpression, MainContentEnum.CODE_GAME_IMAGE_OF_LYNX);
 	}
 	
 	public WebElement getCodeGamePlayGameButton(){
-		return getButtonElementByXpath("//*[text()='Play Game']", MainContentEnum.CODE_GAME_PLAY_GAME_BUTTON.toString());
+		return getButtonElementByXpath("//*[text()='Play Game']", MainContentEnum.CODE_GAME_PLAY_GAME_BUTTON);
 	}
 	//endregion
 
