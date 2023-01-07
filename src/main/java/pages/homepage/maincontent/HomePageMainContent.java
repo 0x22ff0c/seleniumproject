@@ -706,11 +706,11 @@ public class HomePageMainContent extends BasePage{
 
 	//region How To section
 	public void scrollToHowToSection(){
-		control.scrollToElement(getElementById("howto_padding", MainContentEnum.HOW_TO_SECTION.toString()));
+		control.scrollToElement(getElementById("howto_padding", MainContentEnum.HOW_TO_SECTION));
 	}
 	
 	public WebElement getHowToSectionHeader(){
-		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", MainContentEnum.HOW_TO_HEADER.toString());
+		return getElementByXpath("//*[@id='howto_padding']/descendant::*[text()='How To Section']", MainContentEnum.HOW_TO_HEADER);
 	}
 	
 	public String getHowToSectionSubheader(){
@@ -732,7 +732,7 @@ public class HomePageMainContent extends BasePage{
 	int slideNumber = 1;
 	
 	public void scrollToHowToSectionSliderContainer(){
-		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", MainContentEnum.HOW_TO_WINDOW.toString()));
+		control.scrollToElement(getElementByXpath("(//*[@class='codeeditorbr-container'])[2]", MainContentEnum.HOW_TO_WINDOW));
 	}
 	
 	public WebElement getHowToSectionSampleWindowPreviousButton(){
@@ -800,7 +800,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getHowToLearnButton(){
-		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", MainContentEnum.LEARN_HOW_TO_BUTTON.toString());
+		return getButtonElementByXpath("//*[@id='howto_padding']/descendant::*[text()='Learn How To']", MainContentEnum.LEARN_HOW_TO_BUTTON);
 	}
 	//endregion
 }
