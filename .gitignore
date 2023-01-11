@@ -9,3 +9,4 @@ driver/*
 .idea/
 /logs
 /reports
+key.json
