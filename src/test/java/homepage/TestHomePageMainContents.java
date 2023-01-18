@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A4");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A7");
 
 	}
 
@@ -94,33 +94,33 @@ public class TestHomePageMainContents {
 
 		baseTest.assertAll();
 	}
-//
-//	@Test(testName = "Verify Learn CSS section", priority = 3)
-//	private void testLearnCSSSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCssHeaderContent(), "CSS");
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCssSubheaderContent(), "The language for styling web pages");
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getCSSLearnCSSButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getCSSReferenceButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getCSSGetCertifiedButton());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCSSCodeExampleHeader(), "CSS Example:");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCSSSampleCodeSection());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getCSSTryItYourselfButton());
-//
-//		baseTest.assertAll();
-//	}
-//
+
+	@Test(testName = "Verify Learn CSS section", priority = 3)
+	private void testLearnCSSSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		baseTest.verifyTextIsTheSame(homePage.getCssHeaderContent(), getTestData());
+
+		baseTest.verifyTextIsTheSame(homePage.getCssSubheaderContent(), getTestData());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSLearnCSSButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSReferenceButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSGetCertifiedButton());
+
+		baseTest.verifyTextIsTheSame(homePage.getCSSCodeExampleHeader(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCSSSampleCodeSection());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getCSSTryItYourselfButton());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName = "Verify Learn JavaScript section", priority = 4)
 //	private void testLearnJavaScriptSection(){
 //
