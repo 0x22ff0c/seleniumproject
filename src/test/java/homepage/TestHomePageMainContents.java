@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A16");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A22");
 
 	}
 
@@ -199,70 +199,70 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	private void verifyOtherTutorialButtons(String nameOfTutorial){
-//
-//		homePage.scrollToButton(nameOfTutorial);
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getOtherTutorialButton(nameOfTutorial));
-//
-//	}
-//
-//	private void verifyElementsInSections(String nameOfTheSection){
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getHeaderElement(nameOfTheSection));
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getLearnButtonElement(nameOfTheSection));
-//	}
-//
-//	@Test(testName = "Verify Other tutorials section", priority =  7)
-//
-//	private void testOtherTutorialsSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToOtherTutorialsSection();
-//
-//		verifyElementsInSections(MainContentEnum.PHP.name());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getPHPSubheader(), "A web server programming language");
-//
-//		verifyElementsInSections(MainContentEnum.JQUERY.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), "A JS library for developing web pages");
-//
-//		verifyElementsInSections(MainContentEnum.JAVA.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getJavaSubheader(), "A programming language");
-//
-//		verifyElementsInSections(MainContentEnum.CPLUSPLUS.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), "A programming language");
-//
-//		verifyElementsInSections(MainContentEnum.W3CSS.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), "A CSS framework for faster and better responsive web pages");
-//
-//		verifyElementsInSections(MainContentEnum.BOOTSTRAP.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), "A CSS framework for designing better web pages");
-//
-//		//Other buttons
-//		//Missing buttons -
-//		String[] buttonNames = {"C", "C#", "R", "Kotlin", "Node.js", "React", "JSON", "AngularJS", "MySQL",
-//				"XML", "Sass", "Icons", "Responsive Web Design","Graphics", "SVG", "Canvas", "Raspberry Pi", "Cyber Security",
-//				"Colors", "Git", "Python Matplotlib", "Python NumPy", "Python Pandas", "Python SciPy", "ASP", "Accessibility", "AppML",
-//				"Go", "TypeScript", "Django", "MongoDB", "Statistics", "Data Science", "Typing Speed", "Excel",
-//				"Google Sheets", "Machine Learning", "Artificial Intelligence"};
-//
-//		for(String nameOfTutorial : buttonNames){
-//
-//			verifyOtherTutorialButtons(nameOfTutorial);
-//		}
-//
-//		baseTest.assertAll();
-//	}
+	private void verifyOtherTutorialButtons(String nameOfTutorial){
+
+		homePage.scrollToButton(nameOfTutorial);
+
+		baseTest.verifyButtonIsDisplayed(homePage.getOtherTutorialButton(nameOfTutorial));
+
+	}
+
+	private void verifyElementsInSections(String nameOfTheSection){
+
+		baseTest.verifyElementIsDisplayed(homePage.getHeaderElement(nameOfTheSection));
+
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnButtonElement(nameOfTheSection));
+	}
+
+	@Test(testName = "Verify Other tutorials section", priority =  7)
+
+	private void testOtherTutorialsSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToOtherTutorialsSection();
+
+		verifyElementsInSections(MainContentEnum.PHP.name());
+
+		baseTest.verifyTextIsTheSame(homePage.getPHPSubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.JQUERY.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.JAVA.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getJavaSubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.CPLUSPLUS.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.W3CSS.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.BOOTSTRAP.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), getTestData());
+
+		//Other buttons
+		//Missing buttons -
+		String[] buttonNames = {"C", "C#", "R", "Kotlin", "Node.js", "React", "JSON", "AngularJS", "MySQL",
+				"XML", "Sass", "Icons", "Responsive Web Design","Graphics", "SVG", "Canvas", "Raspberry Pi", "Cyber Security",
+				"Colors", "Git", "Python Matplotlib", "Python NumPy", "Python Pandas", "Python SciPy", "ASP", "Accessibility", "AppML",
+				"Go", "TypeScript", "Django", "MongoDB", "Statistics", "Data Science", "Typing Speed", "Excel",
+				"Google Sheets", "Machine Learning", "Artificial Intelligence"};
+
+		for(String nameOfTutorial : buttonNames){
+
+			verifyOtherTutorialButtons(nameOfTutorial);
+		}
+
+		baseTest.assertAll();
+	}
 //	@Test(testName = "Verify Code Editor section", priority = 8)
 //	private void testCodeEditorSection(){
 //
