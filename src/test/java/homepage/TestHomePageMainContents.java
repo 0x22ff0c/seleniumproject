@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A10");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A13");
 
 	}
 
@@ -147,32 +147,32 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName =  "Verify Learn Python section", priority = 5)
-//	private void testLearnPythonSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		baseTest.verifyTextIsTheSame(homePage.getPythonHeaderContent(), "Python");
-//
-//		baseTest.verifyTextIsTheSame(homePage.getPythonSubheaderContent(), "A popular programming language");
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getPythonLearnPythonButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getPythonReferenceButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getPythonGetCertifiedButton());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getPythonCodeExampleHeader(), "Python Example:");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getPythonSampleCodeSection());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getPythonTryItYourselfButton());
-//
-//		baseTest.assertAll();
-//	}
-//
+	@Test(testName =  "Verify Learn Python section", priority = 5)
+	private void testLearnPythonSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		baseTest.verifyTextIsTheSame(homePage.getPythonHeaderContent(), getTestData());
+
+		baseTest.verifyTextIsTheSame(homePage.getPythonSubheaderContent(), getTestData());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonLearnPythonButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonReferenceButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonGetCertifiedButton());
+
+		baseTest.verifyTextIsTheSame(homePage.getPythonCodeExampleHeader(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getPythonSampleCodeSection());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getPythonTryItYourselfButton());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName = "Verify Learn SQL section", priority = 6)
 //	private void testLearnSQLSection(){
 //
