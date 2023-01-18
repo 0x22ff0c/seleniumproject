@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A7");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A10");
 
 	}
 
@@ -121,32 +121,32 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName = "Verify Learn JavaScript section", priority = 4)
-//	private void testLearnJavaScriptSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		baseTest.verifyTextIsTheSame(homePage.getJavaScriptHeaderContent(), "JavaScript");
-//
-//		baseTest.verifyTextIsTheSame(homePage.getJavaScriptSubheaderContent(), "The language for programming web pages");
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptLearnJavaScriptButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptReferenceButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptGetCertifiedButton());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getJavaScriptCodeExampleHeader(), "JavaScript Example:");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getJavaScriptSampleCodeSection());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getJavaScriptTryItYourselfButton());
-//
-//		baseTest.assertAll();
-//	}
-//
+	@Test(testName = "Verify Learn JavaScript section", priority = 4)
+	private void testLearnJavaScriptSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptHeaderContent(), getTestData());
+
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptSubheaderContent(), getTestData());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptLearnJavaScriptButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptReferenceButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getJavaScriptGetCertifiedButton());
+
+		baseTest.verifyTextIsTheSame(homePage.getJavaScriptCodeExampleHeader(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getJavaScriptSampleCodeSection());
+
+		baseTest.verifyElementIsDisplayed(homePage.getJavaScriptTryItYourselfButton());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName =  "Verify Learn Python section", priority = 5)
 //	private void testLearnPythonSection(){
 //
