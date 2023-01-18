@@ -13,6 +13,7 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.ValueRange;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import java.io.*;
 import java.security.GeneralSecurityException;
@@ -25,48 +26,86 @@ public class GoogleSheets {
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
     private static final String TOKENS_DIRECTORY_PATH = "tokens";
 
+    /**
+     * Global instance of the scopes required by this quickstart. If modifying these
+     * scopes, delete your previously saved tokens/ folder.
+     */
     private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
-    private static final String CREDENTIALS_FILE_PATH = "/seleniumproject/key.json";
+    private static final String CREDENTIALS_FILE_PATH = "src/main/resources/key.json";
 
     /**
-     * Creates an authorized credential project.
+     * Creates an authorized Credential object.
      *
-     * @param HTTP_TRANSPORT The network HTTP transport
-     * @return An authorized Credential project
-     * @throws IOException if the credentials.json file cannot be found
+     * @param HTTP_TRANSPORT The network HTTP Transport.
+     * @return An authorized Credential object.
+     * @throws IOException If the credentials.json file cannot be found.
      */
     private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT) throws IOException {
-        //Load client secrets
-        InputStream inputStream  = GoogleSheets.class.getResourceAsStream(CREDENTIALS_FILE_PATH);
-        if(inputStream == null){
-            throw new FileNotFoundException("Resource not found: " + CREDENTIALS_FILE_PATH);
+
+        Credential credential = null;
+
+        // Load client secrets.
+
+        try (InputStream inputStream = new FileInputStream(CREDENTIALS_FILE_PATH)){
+
+            GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(inputStream));
+
+            // Build flow and trigger user authorization request.
+            GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT, JSON_FACTORY,
+                    clientSecrets, SCOPES)
+                    .setDataStoreFactory(new FileDataStoreFactory(new java.io.File(TOKENS_DIRECTORY_PATH)))
+                    .setAccessType("offline").build();
+            LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
+
+            credential = new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
+
+        }catch (FileNotFoundException fileNotFoundException){
+            LogUtility.logError(ExceptionUtils.getStackTrace(fileNotFoundException));
         }
 
-        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(inputStream));
 
-        //Build flow and trigger user authorization request.
-        GoogleAuthorizationCodeFlow codeFlow = new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES).setDataStoreFactory(
-                new FileDataStoreFactory(new File(TOKENS_DIRECTORY_PATH))).setAccessType("offline").build();
-
-        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
-
-        return new AuthorizationCodeInstalledApp(codeFlow, receiver).authorize("user");
+        return credential;
     }
 
+    /**
+     * Prints the names and majors of students in a sample spreadsheet:
+     * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+     */
     public static List<List<Object>> getData(String range) throws IOException, GeneralSecurityException {
+        // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-        final  String spreadsheetId = "sample";
+        final String spreadsheetId = "1ZcYMDig8D1w1MF12Bs_17ES8HpM5c26LqfrQJKvtRiE";
 
-        Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT)).setApplicationName(APPLICATION_NAME).build();
-
+        Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+                .setApplicationName(APPLICATION_NAME).build();
         ValueRange response = service.spreadsheets().values().get(spreadsheetId, range).execute();
         List<List<Object>> values = response.getValues();
-        if(values == null || values.isEmpty()){
-            LogUtility.logError("No data found.");
+        if (values == null || values.isEmpty()) {
+            System.out.println("No data found.");
             return null;
-        }else{
+        } else {
             return values;
         }
+    }
+
+
+    public static List<List<Object>> getTestData(String range) {
+
+        List<List<Object>> testData = null;
+
+        try {
+            testData = getData(range);
+        } catch (IOException ioException) {
+            LogUtility.logError(ExceptionUtils.getStackTrace(ioException));
+        } catch (GeneralSecurityException generalSecurityException) {
+            LogUtility.logError(ExceptionUtils.getStackTrace(generalSecurityException));
+        }
+
+        for(int index = 0; index < testData.size(); index++){
+            LogUtility.logInfo(testData.get(index).toString());
+        }
+
+        return testData;
     }
 
 }
