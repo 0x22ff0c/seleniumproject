@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A13");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A16");
 
 	}
 
@@ -173,32 +173,32 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName = "Verify Learn SQL section", priority = 6)
-//	private void testLearnSQLSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		baseTest.verifyTextIsTheSame(homePage.getSQLHeaderContent(), "SQL");
-//
-//		baseTest.verifyTextIsTheSame(homePage.getSQLSubheaderContent(), "A language for accessing databases");
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getSQLLearnSQLButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getSQLReferenceButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getSQLGetCertifiedButton());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getSQLCodeExampleHeader(), "SQL Example:");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getSQLSampleCodeSection());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getSQLTryItYourselfButton());
-//
-//		baseTest.assertAll();
-//	}
-//
+	@Test(testName = "Verify Learn SQL section", priority = 6)
+	private void testLearnSQLSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		baseTest.verifyTextIsTheSame(homePage.getSQLHeaderContent(), getTestData());
+
+		baseTest.verifyTextIsTheSame(homePage.getSQLSubheaderContent(), getTestData());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLLearnSQLButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLReferenceButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLGetCertifiedButton());
+
+		baseTest.verifyTextIsTheSame(homePage.getSQLCodeExampleHeader(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getSQLSampleCodeSection());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLTryItYourselfButton());
+
+		baseTest.assertAll();
+	}
+
 //	private void verifyOtherTutorialButtons(String nameOfTutorial){
 //
 //		homePage.scrollToButton(nameOfTutorial);
