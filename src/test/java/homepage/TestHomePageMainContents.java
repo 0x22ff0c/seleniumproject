@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A26");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A28");
 
 	}
 
@@ -344,32 +344,32 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName = "Verify My Learning section", priority = 10)
-//	private void testMyLearningSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToMyLearningSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getMyLearningHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getMyLearningSubheader(), "Track your progress with the free \"My Learning\" program here at W3Schools.");
-//
-//		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getMyLearningFreeStrongText());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getMyLearning2ndSubheader(), "Log in to your account, and start earning points!");
-//
-//		homePage.scrollToMyLearningSampleScreenshot();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getMyLearningSampleScreenshot());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getMyLearningSignupButton());
-//
-//		baseTest.assertAll();
-//	}
-//
+	@Test(testName = "Verify My Learning section", priority = 10)
+	private void testMyLearningSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToMyLearningSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getMyLearningHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getMyLearningSubheader(), getTestData());
+
+		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getMyLearningFreeStrongText());
+
+		baseTest.verifyTextIsTheSame(homePage.getMyLearning2ndSubheader(), getTestData());
+
+		homePage.scrollToMyLearningSampleScreenshot();
+
+		baseTest.verifyElementIsDisplayed(homePage.getMyLearningSampleScreenshot());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getMyLearningSignupButton());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName = "Verify Become a Pro User section", priority = 11)
 //	private void testBecomeProUserSection(){
 //
