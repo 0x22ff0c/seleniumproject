@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A25");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A26");
 
 	}
 
@@ -320,30 +320,30 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
-//	private void testW3SchoolsSpacesSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToW3SchoolsSpacesSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getW3SchoolsSpacesSubheader(), "Build your own website with W3Schools Spaces.");
-//
-//		homePage.scrollToW3SchoolsSpacesScreenshotsSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesSampleScreenshot());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHowItWorksImage());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getW3schoolsSpacesGetStartedNowButton());
-//
-//		baseTest.assertAll();
-//	}
-//
+	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
+	private void testW3SchoolsSpacesSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToW3SchoolsSpacesSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getW3SchoolsSpacesSubheader(), getTestData());
+
+		homePage.scrollToW3SchoolsSpacesScreenshotsSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesSampleScreenshot());
+
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHowItWorksImage());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getW3schoolsSpacesGetStartedNowButton());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName = "Verify My Learning section", priority = 10)
 //	private void testMyLearningSection(){
 //
