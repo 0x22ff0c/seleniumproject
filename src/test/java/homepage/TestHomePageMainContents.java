@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A13");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A32");
 
 	}
 
@@ -173,241 +173,242 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName = "Verify Learn SQL section", priority = 6)
-//	private void testLearnSQLSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		baseTest.verifyTextIsTheSame(homePage.getSQLHeaderContent(), "SQL");
-//
-//		baseTest.verifyTextIsTheSame(homePage.getSQLSubheaderContent(), "A language for accessing databases");
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getSQLLearnSQLButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getSQLReferenceButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getSQLGetCertifiedButton());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getSQLCodeExampleHeader(), "SQL Example:");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getSQLSampleCodeSection());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getSQLTryItYourselfButton());
-//
-//		baseTest.assertAll();
-//	}
-//
-//	private void verifyOtherTutorialButtons(String nameOfTutorial){
-//
-//		homePage.scrollToButton(nameOfTutorial);
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getOtherTutorialButton(nameOfTutorial));
-//
-//	}
-//
-//	private void verifyElementsInSections(String nameOfTheSection){
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getHeaderElement(nameOfTheSection));
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getLearnButtonElement(nameOfTheSection));
-//	}
-//
-//	@Test(testName = "Verify Other tutorials section", priority =  7)
-//
-//	private void testOtherTutorialsSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToOtherTutorialsSection();
-//
-//		verifyElementsInSections(MainContentEnum.PHP.name());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getPHPSubheader(), "A web server programming language");
-//
-//		verifyElementsInSections(MainContentEnum.JQUERY.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), "A JS library for developing web pages");
-//
-//		verifyElementsInSections(MainContentEnum.JAVA.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getJavaSubheader(), "A programming language");
-//
-//		verifyElementsInSections(MainContentEnum.CPLUSPLUS.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), "A programming language");
-//
-//		verifyElementsInSections(MainContentEnum.W3CSS.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), "A CSS framework for faster and better responsive web pages");
-//
-//		verifyElementsInSections(MainContentEnum.BOOTSTRAP.toString());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), "A CSS framework for designing better web pages");
-//
-//		//Other buttons
-//		//Missing buttons -
-//		String[] buttonNames = {"C", "C#", "R", "Kotlin", "Node.js", "React", "JSON", "AngularJS", "MySQL",
-//				"XML", "Sass", "Icons", "Responsive Web Design","Graphics", "SVG", "Canvas", "Raspberry Pi", "Cyber Security",
-//				"Colors", "Git", "Python Matplotlib", "Python NumPy", "Python Pandas", "Python SciPy", "ASP", "Accessibility", "AppML",
-//				"Go", "TypeScript", "Django", "MongoDB", "Statistics", "Data Science", "Typing Speed", "Excel",
-//				"Google Sheets", "Machine Learning", "Artificial Intelligence"};
-//
-//		for(String nameOfTutorial : buttonNames){
-//
-//			verifyOtherTutorialButtons(nameOfTutorial);
-//		}
-//
-//		baseTest.assertAll();
-//	}
-//	@Test(testName = "Verify Code Editor section", priority = 8)
-//	private void testCodeEditorSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToCodeEditorSection();
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCodeEditorHeader(), "Code Editor");
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCodeEditorSubheader(), "With our online code editor, you can edit code and view the result in your browser");
-//
-//		for(int dotNumber = 1; dotNumber <= 3; dotNumber++){
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getCodeEditorDotButton(dotNumber));
-//
-//		}
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCodeEditorUrlValue(), "www.w3schools.com/tryit/");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
-//
-//		homePage.clickBackEndButton();
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendActiveDisplayCount());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackEndActive());
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendGIF());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackendGIF());
-//
-//		homePage.clickFrontendButton();
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryFrontend());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryBackend());
-//
-//		baseTest.assertAll();
-//	}
-//
-//	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
-//	private void testW3SchoolsSpacesSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToW3SchoolsSpacesSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getW3SchoolsSpacesSubheader(), "Build your own website with W3Schools Spaces.");
-//
-//		homePage.scrollToW3SchoolsSpacesScreenshotsSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesSampleScreenshot());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHowItWorksImage());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getW3schoolsSpacesGetStartedNowButton());
-//
-//		baseTest.assertAll();
-//	}
-//
-//	@Test(testName = "Verify My Learning section", priority = 10)
-//	private void testMyLearningSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToMyLearningSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getMyLearningHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getMyLearningSubheader(), "Track your progress with the free \"My Learning\" program here at W3Schools.");
-//
-//		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getMyLearningFreeStrongText());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getMyLearning2ndSubheader(), "Log in to your account, and start earning points!");
-//
-//		homePage.scrollToMyLearningSampleScreenshot();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getMyLearningSampleScreenshot());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getMyLearningSignupButton());
-//
-//		baseTest.assertAll();
-//	}
-//
-//	@Test(testName = "Verify Become a Pro User section", priority = 11)
-//	private void testBecomeProUserSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToBecomeProUserSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUserHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBecomeProUserSubheader(), "And unlock powerful features:");
-//
-//		// 1st checkbox
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckbox());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser1stCheckboxText(), "Browse W3Schools without ads");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckboxStrongText());
-//
-//		//2nd checkbox
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckbox());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser2ndCheckboxText(), "Website hosting (Includes Spaces PRO)");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckboxLink());
-//
-//		//3rd checkbox
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckbox());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser3rdCheckboxText(), "Access to our HTML Video Tutorial");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckboxLink());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getBecomeProUserLearnMoreButton());
-//
-//		baseTest.assertAll();
-//	}
-//
+	@Test(testName = "Verify Learn SQL section", priority = 6)
+	private void testLearnSQLSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		baseTest.verifyTextIsTheSame(homePage.getSQLHeaderContent(), getTestData());
+
+		baseTest.verifyTextIsTheSame(homePage.getSQLSubheaderContent(), getTestData());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLLearnSQLButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLReferenceButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLGetCertifiedButton());
+
+		baseTest.verifyTextIsTheSame(homePage.getSQLCodeExampleHeader(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getSQLSampleCodeSection());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getSQLTryItYourselfButton());
+
+		baseTest.assertAll();
+	}
+
+	private void verifyOtherTutorialButtons(String nameOfTutorial){
+
+		homePage.scrollToButton(nameOfTutorial);
+
+		baseTest.verifyButtonIsDisplayed(homePage.getOtherTutorialButton(nameOfTutorial));
+
+	}
+
+	private void verifyElementsInSections(String nameOfTheSection){
+
+		baseTest.verifyElementIsDisplayed(homePage.getHeaderElement(nameOfTheSection));
+
+		baseTest.verifyButtonIsDisplayed(homePage.getLearnButtonElement(nameOfTheSection));
+	}
+
+	@Test(testName = "Verify Other tutorials section", priority =  7)
+
+	private void testOtherTutorialsSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToOtherTutorialsSection();
+
+		verifyElementsInSections(MainContentEnum.PHP.name());
+
+		baseTest.verifyTextIsTheSame(homePage.getPHPSubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.JQUERY.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getjQuerySubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.JAVA.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getJavaSubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.CPLUSPLUS.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getCplusplusSubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.W3CSS.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getW3CSSSubheader(), getTestData());
+
+		verifyElementsInSections(MainContentEnum.BOOTSTRAP.toString());
+
+		baseTest.verifyTextIsTheSame(homePage.getBootstrapSubheader(), getTestData());
+
+		//Other buttons
+		//Missing buttons -
+		String[] buttonNames = {"C", "C#", "R", "Kotlin", "Node.js", "React", "JSON", "AngularJS", "MySQL",
+				"XML", "Sass", "Icons", "Responsive Web Design","Graphics", "SVG", "Canvas", "Raspberry Pi", "Cyber Security",
+				"Colors", "Git", "Python Matplotlib", "Python NumPy", "Python Pandas", "Python SciPy", "ASP", "Accessibility", "AppML",
+				"Go", "TypeScript", "Django", "MongoDB", "Statistics", "Data Science", "Typing Speed", "Excel",
+				"Google Sheets", "Machine Learning", "Artificial Intelligence"};
+
+		for(String nameOfTutorial : buttonNames){
+
+			verifyOtherTutorialButtons(nameOfTutorial);
+		}
+
+		baseTest.assertAll();
+	}
+
+	@Test(testName = "Verify Code Editor section", priority = 8)
+	private void testCodeEditorSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToCodeEditorSection();
+
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorHeader(), getTestData());
+
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorSubheader(), getTestData());
+
+		for(int dotNumber = 1; dotNumber <= 3; dotNumber++){
+
+			baseTest.verifyElementIsDisplayed(homePage.getCodeEditorDotButton(dotNumber));
+
+		}
+
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorUrlValue(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
+
+		homePage.clickBackEndButton();
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendActiveDisplayCount());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackEndActive());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendGIF());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackendGIF());
+
+		homePage.clickFrontendButton();
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryFrontend());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryBackend());
+
+		baseTest.assertAll();
+	}
+
+	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
+	private void testW3SchoolsSpacesSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToW3SchoolsSpacesSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getW3SchoolsSpacesSubheader(), getTestData());
+
+		homePage.scrollToW3SchoolsSpacesScreenshotsSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesSampleScreenshot());
+
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHowItWorksImage());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getW3schoolsSpacesGetStartedNowButton());
+
+		baseTest.assertAll();
+	}
+
+	@Test(testName = "Verify My Learning section", priority = 10)
+	private void testMyLearningSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToMyLearningSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getMyLearningHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getMyLearningSubheader(), getTestData());
+
+		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getMyLearningFreeStrongText());
+
+		baseTest.verifyTextIsTheSame(homePage.getMyLearning2ndSubheader(), getTestData());
+
+		homePage.scrollToMyLearningSampleScreenshot();
+
+		baseTest.verifyElementIsDisplayed(homePage.getMyLearningSampleScreenshot());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getMyLearningSignupButton());
+
+		baseTest.assertAll();
+	}
+
+	@Test(testName = "Verify Become a Pro User section", priority = 11)
+	private void testBecomeProUserSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToBecomeProUserSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUserHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUserSubheader(), getTestData());
+
+		// 1st checkbox
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckbox());
+
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser1stCheckboxText(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckboxStrongText());
+
+		//2nd checkbox
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckbox());
+
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser2ndCheckboxText(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckboxLink());
+
+		//3rd checkbox
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckbox());
+
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser3rdCheckboxText(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckboxLink());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getBecomeProUserLearnMoreButton());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName = "Verify Color Picker section", priority = 12)
 //	private void testColorPickerSection(){
 //
