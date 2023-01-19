@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A22");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A25");
 
 	}
 
@@ -263,62 +263,63 @@ public class TestHomePageMainContents {
 
 		baseTest.assertAll();
 	}
-//	@Test(testName = "Verify Code Editor section", priority = 8)
-//	private void testCodeEditorSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToCodeEditorSection();
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCodeEditorHeader(), "Code Editor");
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCodeEditorSubheader(), "With our online code editor, you can edit code and view the result in your browser");
-//
-//		for(int dotNumber = 1; dotNumber <= 3; dotNumber++){
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getCodeEditorDotButton(dotNumber));
-//
-//		}
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCodeEditorUrlValue(), "www.w3schools.com/tryit/");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
-//
-//		homePage.clickBackEndButton();
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendActiveDisplayCount());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackEndActive());
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendGIF());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackendGIF());
-//
-//		homePage.clickFrontendButton();
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
-//
-//		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryFrontend());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryBackend());
-//
-//		baseTest.assertAll();
-//	}
-//
+
+	@Test(testName = "Verify Code Editor section", priority = 8)
+	private void testCodeEditorSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToCodeEditorSection();
+
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorHeader(), getTestData());
+
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorSubheader(), getTestData());
+
+		for(int dotNumber = 1; dotNumber <= 3; dotNumber++){
+
+			baseTest.verifyElementIsDisplayed(homePage.getCodeEditorDotButton(dotNumber));
+
+		}
+
+		baseTest.verifyTextIsTheSame(homePage.getCodeEditorUrlValue(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
+
+		homePage.clickBackEndButton();
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendActiveDisplayCount());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackEndActive());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorFrontendGIF());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorBackendGIF());
+
+		homePage.clickFrontendButton();
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackEndActiveDisplayCount());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendActive());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorFrontendGIF());
+
+		baseTest.verifyElementIsNotDisplayed(homePage.getCodeEditorBackendGIF());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryFrontend());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeEditorTryBackend());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName = "Verify W3Schools Spaces section", priority = 9)
 //	private void testW3SchoolsSpacesSection(){
 //
