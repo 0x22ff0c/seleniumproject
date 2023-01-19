@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A28");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A32");
 
 	}
 
@@ -370,45 +370,45 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName = "Verify Become a Pro User section", priority = 11)
-//	private void testBecomeProUserSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToBecomeProUserSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUserHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBecomeProUserSubheader(), "And unlock powerful features:");
-//
-//		// 1st checkbox
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckbox());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser1stCheckboxText(), "Browse W3Schools without ads");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckboxStrongText());
-//
-//		//2nd checkbox
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckbox());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser2ndCheckboxText(), "Website hosting (Includes Spaces PRO)");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckboxLink());
-//
-//		//3rd checkbox
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckbox());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser3rdCheckboxText(), "Access to our HTML Video Tutorial");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckboxLink());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getBecomeProUserLearnMoreButton());
-//
-//		baseTest.assertAll();
-//	}
-//
+	@Test(testName = "Verify Become a Pro User section", priority = 11)
+	private void testBecomeProUserSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToBecomeProUserSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUserHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUserSubheader(), getTestData());
+
+		// 1st checkbox
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckbox());
+
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser1stCheckboxText(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser1stCheckboxStrongText());
+
+		//2nd checkbox
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckbox());
+
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser2ndCheckboxText(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser2ndCheckboxLink());
+
+		//3rd checkbox
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckbox());
+
+		baseTest.verifyTextIsTheSame(homePage.getBecomeProUser3rdCheckboxText(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getBecomeProUser3rdCheckboxLink());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getBecomeProUserLearnMoreButton());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName = "Verify Color Picker section", priority = 12)
 //	private void testColorPickerSection(){
 //
