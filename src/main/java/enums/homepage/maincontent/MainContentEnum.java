@@ -123,6 +123,8 @@ public enum MainContentEnum {
 
 	W3SCHOOLS_SPACES_HOW_IT_WORKS_IMAGE("W3Schools Spaces how it works image"),
 
+	W3SCHOOLS_DEMO_GIF("W3Schools Spaces DEMO GIF"),
+
 	W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON("W3Schools Spaces - Get Started Now"),
 	//endregion
 
