@@ -10,7 +10,7 @@ public enum HeaderEnum {
 	
 	EXERCISES_MENU_BUTTON("Exercises"),
 	
-	VIDEO_TUTORIALS_BUTTON("Video Tutorials"),
+	SIGN_UP_BUTTON("Sign-up"),
 		
 	TOGGLE_DARK_CODE("Toggle Dark Code"),
 	
