@@ -32,8 +32,10 @@ public enum WhereToStartMainEnum {
 	
 	W3SCHOOLS_SPACES_SECTION("\"W3Schools Spaces\" section"),
 	
-	GET_STARTED_BUTTON("Get Started for Free"),
-	
+	GET_STARTED_BUTTON("Learn More"),
+
+	W3SCHOOLS_SPACES_DEMO_GIF("Spaces demo GIF"),
+
 	HOW_IT_WORKS("How it works"),
 	
 	HELLO_DEVELOPER("Hello Developer!"),
