@@ -30,11 +30,11 @@ public class HomePageFooter extends BasePage{
 	}
 
 	public WebElement getUpgradeButton(){
-		return getButtonElement("Upgrade to Improve Your Learning Experiences", FooterEnum.UPGRADE_BUTTON);
+		return getButtonElementByXpath("(//*[@title='Upgrade to Improve Your Learning Experiences'])[2]", FooterEnum.UPGRADE_BUTTON);
 	}
 
 	public WebElement getSpacesButton(){
-		return getButtonElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[3]", FooterEnum.SPACES_BUTTON);
+		return getButtonElementByXpath("(//*[@title='Get Your Own Website With W3schools Spaces'])[2]", FooterEnum.SPACES_BUTTON);
 	}
 
 	public WebElement getSupportButton(){
