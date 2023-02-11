@@ -55,13 +55,14 @@ public class HomePageHeader extends BasePage{
 	public WebElement getExercisesCaretButton(){
 		return getHeaderCaretButton(HeaderEnum.EXERCISES_MENU_BUTTON);
 	}
-	
-	public WebElement getVideosButton(){
-		return getButtonElement(HeaderEnum.VIDEO_TUTORIALS_BUTTON);
+
+	public WebElement getSignUpButton(){
+
+		return getButtonElementById("signupbtn_topnav", HeaderEnum.SIGN_UP_BUTTON);
 	}
-	
+
 	public WebElement getThemeToggle(){
-		return getElementByXpath(String.format("//*[@xxtitle='%s']", HeaderEnum.TOGGLE_DARK_CODE), HeaderEnum.TOGGLE_DARK_CODE);
+		return getElementByXpath("//*[@id='darkmodemenu']/preceding-sibling::*[1]", HeaderEnum.TOGGLE_DARK_CODE);
 	}
 	
 	public WebElement getTranslateButton(){
@@ -73,7 +74,7 @@ public class HomePageHeader extends BasePage{
 	}
 	
 	public WebElement getUpgradeButton(){
-		return getButtonElementByXpath(String.format("//*[@title='Courses']/following-sibling::*[contains(@title,'%s')]", HeaderEnum.UPGRADE_BUTTON), HeaderEnum.UPGRADE_BUTTON);
+		return getButtonElementByXpath(String.format("//*[@title='Go Pro to Improve Your Learning Experiences']", HeaderEnum.UPGRADE_BUTTON), HeaderEnum.UPGRADE_BUTTON);
 	}
 	
 	public WebElement getCertifiedButton(){
