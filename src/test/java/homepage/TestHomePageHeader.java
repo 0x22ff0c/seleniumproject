@@ -50,7 +50,7 @@ public class TestHomePageHeader {
 
 		baseTest.verifyButtonIsDisplayed(homePageHeader.getExercisesCaretButton());
 	
-		baseTest.verifyButtonIsDisplayed(homePageHeader.getVideosButton());
+		baseTest.verifyButtonIsDisplayed(homePageHeader.getSignUpButton());
 
 		baseTest.verifyElementIsDisplayed(homePageHeader.getThemeToggle());
 	
