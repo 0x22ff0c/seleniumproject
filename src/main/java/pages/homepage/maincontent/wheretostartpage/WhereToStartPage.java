@@ -164,7 +164,12 @@ public class WhereToStartPage extends BasePage{
 	public String getW3SchoolSpacesSubheader(){
 		return getTextOfElementUsingXpathLocator("((//*[@class='textsmallerscreens'])[3]/following-sibling::*)[1]");
 	}
-	
+
+	public WebElement getW3SchoolsSpacesDemoGIF(){
+
+		return getElementByXpath("//*[@alt='Dynamic Spaces']", WhereToStartMainEnum.W3SCHOOLS_SPACES_DEMO_GIF);
+	}
+
 	public WebElement getGetStartedForFreeButton(){
 		String getStartedButtonXpathExpression = "//*[contains(@class, 'button') and text()='%s']";
 		
