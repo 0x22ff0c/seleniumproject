@@ -130,8 +130,10 @@ public class TestWhereToBeginPage {
 		
 		baseTest.verifyTextIsTheSame(whereToStartPage.getW3SchoolsSpacesHeader(), "W3Schools Spaces");
 		
-		baseTest.verifyTextIsTheSame(whereToStartPage.getW3SchoolSpacesSubheader(), "Build your own website with W3Schools Spaces.");
-		
+		baseTest.verifyTextIsTheSame(whereToStartPage.getW3SchoolSpacesSubheader(), "Create your own website with W3Schools Spaces, for free:");
+
+		baseTest.verifyElementIsDisplayed(whereToStartPage.getW3SchoolsSpacesDemoGIF());
+
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getGetStartedForFreeButton());
 		
 		baseTest.verifyElementIsDisplayed(whereToStartPage.getHowItWorksImage());

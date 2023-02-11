@@ -26,7 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A32");
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A34");
 
 	}
 
@@ -333,9 +333,9 @@ public class TestHomePageMainContents {
 
 		baseTest.verifyTextIsTheSame(homePage.getW3SchoolsSpacesSubheader(), getTestData());
 
-		homePage.scrollToW3SchoolsSpacesScreenshotsSection();
+		baseTest.verifyTextIsTheSame(homePage.getW3SchoolsSpaces2ndSubheader(), getTestData());
 
-		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesSampleScreenshot());
+		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesSampleGIF());
 
 		baseTest.verifyElementIsDisplayed(homePage.getW3SchoolsSpacesHowItWorksImage());
 
@@ -409,24 +409,24 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName = "Verify Color Picker section", priority = 12)
-//	private void testColorPickerSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToColorPickerSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getColorPickerHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getColorPickerSubheader(), "W3Schools' famous color picker:");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getColorPickerImage());
-//
-//		baseTest.assertAll();
-//	}
-//
+	@Test(testName = "Verify Color Picker section", priority = 12)
+	private void testColorPickerSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToColorPickerSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getColorPickerHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getColorPickerSubheader(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getColorPickerImage());
+
+		baseTest.assertAll();
+	}
+
 //	@Test(testName = "Verify Code Game section", priority = 13)
 //	private void testCodeGameSection(){
 //
@@ -586,3 +586,11 @@ public class TestHomePageMainContents {
 //		baseTest.assertAll();
 //	}
 }
+/**
+ * Update TestHomePageMainContents
+ *
+ * - Increase range of argument in getTestData
+ *
+ * - Update testBecomeProUserSection test method
+ * 	- Replace hard-coded values and invoke getTestData method instead
+ */
