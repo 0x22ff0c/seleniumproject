@@ -458,21 +458,17 @@ public class HomePageMainContent extends BasePage{
 		
 		return getTextOfElementUsingXpathLocator("//*[text()='W3Schools Spaces']/following-sibling::*[1]");
 	}
-	
-	public WebElement getW3SchoolsSpacesSampleScreenshot(){
-		
-		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='/pro/pic_spaces_ide.png']";
-		
-		control.waitForElementToBeDisplayedInPage(By.xpath(xpathExpression));
-		
-		return getElementByXpath(xpathExpression, MainContentEnum.W3SCHOOLS_SPACES_SCREENSHOT);
+
+	public String getW3SchoolsSpaces2ndSubheader(){
+
+		return getTextOfElementUsingXpathLocator("//*[text()='W3Schools Spaces']/following-sibling::*[2]");
 	}
-	
-	public void scrollToW3SchoolsSpacesScreenshotsSection(){
-		
-		control.scrollToElement(getW3SchoolsSpacesSampleScreenshot());
+
+	public WebElement getW3SchoolsSpacesSampleGIF(){
+
+		return getElementByXpath("//*[text()='W3Schools Spaces']/following-sibling::*[@src='/spaces/dynamicspaces.gif']", MainContentEnum.W3SCHOOLS_DEMO_GIF);
 	}
-	
+
 	public WebElement getW3SchoolsSpacesHowItWorksImage(){
 		
 		String xpathExpression = "//*[text()='W3Schools Spaces']/following-sibling::*[@src='how-spaces-works3.png']";
@@ -483,7 +479,7 @@ public class HomePageMainContent extends BasePage{
 	}
 	
 	public WebElement getW3schoolsSpacesGetStartedNowButton(){
-		return getButtonElementByXpath("//*[contains(@class, 'tut-button') and text()='Get Started Now']", MainContentEnum.W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON);
+		return getButtonElementByXpath("//*[text()='W3Schools Spaces']/following-sibling::*[contains(@class, 'tut-button') and text()='Learn More']", MainContentEnum.W3SCHOOLS_SPACES_GET_STARTED_NOW_BUTTON);
 	}
 	//endregion
 
