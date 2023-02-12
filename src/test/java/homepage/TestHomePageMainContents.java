@@ -26,8 +26,7 @@ public class TestHomePageMainContents {
 
 		driver = Listener.getDriver();
 
-		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A34");
-
+		listOfTestData = GoogleSheets.getTestData("Home Page!A1:A41");
 	}
 
 	private int index = 0;
@@ -427,170 +426,162 @@ public class TestHomePageMainContents {
 		baseTest.assertAll();
 	}
 
-//	@Test(testName = "Verify Code Game section", priority = 13)
-//	private void testCodeGameSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToCodeGameSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeGameHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCodeGameSubheader(), "Help the Lynx collect pine cones!");
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCodeGameImageOfLynx());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getCodeGamePlayGameButton());
-//
-//		baseTest.assertAll();
-//
-//	}
-//
-//	@Test(testName = "Verify Exercises and Quizzes section", priority = 14)
-//	private void testExercisesAndQuizzesSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToExercisesQuizzesSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getExercisesAndQuizzesHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getExercisesAndQuizzesSubheader(), "Test your skills!");
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesExercisesButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesQuizzesButton());
-//
-//		baseTest.assertAll();
-//	}
-//
-//	@Test(testName = "Verify Web Templates section", priority = 15)
-//	private void testWebTemplatesSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToWebTemplatesSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getWebTemplatesSubheader(), "Browse our selection of free responsive HTML Templates");
-//
-//		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getWebTemplatesSubheaderFreeText());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesSampleImage());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getWebTemplatesBrowseTemplatesButton());
-//
-//		baseTest.assertAll();
-//	}
-//
-//	@Test(testName = "Verify Certification section", priority = 16)
-//	private void testCertificationSection(){
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToCertificationSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCertificationHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getCertificationSubheader(), "Get certified by completing a course");
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getCertificationGetStartedButton());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCertificationArrow());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getCertificationBadge());
-//
-//		baseTest.assertAll();
-//	}
-//
-//	@Test(testName = "Verify How To Section", priority = 17)
-//	private void testHowToSection() {
-//
-//		homePage = new HomePageMainContent(driver);
-//
-//		baseTest = new BaseTest(homePage);
-//
-//		homePage.scrollToHowToSection();
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionHeader());
-//
-//		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSubheader(), "Code snippets for HTML, CSS and JavaScript");
-//
-//		baseTest.verifyTextIsTheSame(homePage.getHowToSection2ndSubheader(), "For example, how to create a slideshow:");
-//
-//		for (int buttonNumber = 1; buttonNumber <= 3; buttonNumber++) {
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowDotButton(buttonNumber));
-//
-//		}
-//
-//		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSampleWindowUrlValue(), "www.w3schools.com/howto/");
-//
-//		homePage.scrollToHowToSectionSliderContainer();
-//
-//		homePage.switchToHowToSliderFrame();
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowPreviousButton());
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowNextButton());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
-//
-//		baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
-//
-//		for (int iteration = 1; iteration <= 3; iteration++) {
-//
-//			homePage.clickNextButton();
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
-//
-//		}
-//
-//		for (int iteration = 1; iteration <= 3; iteration++) {
-//
-//			homePage.clickPreviousButton();
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
-//
-//			baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
-//
-//		}
-//
-//		homePage.switchToDefaultContent();
-//
-//		baseTest.verifyButtonIsDisplayed(homePage.getHowToLearnButton());
-//
-//		baseTest.assertAll();
-//	}
+	@Test(testName = "Verify Code Game section", priority = 13)
+	private void testCodeGameSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToCodeGameSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeGameHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getCodeGameSubheader(), getTestData());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCodeGameImageOfLynx());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getCodeGamePlayGameButton());
+
+		baseTest.assertAll();
+
+	}
+
+	@Test(testName = "Verify Exercises and Quizzes section", priority = 14)
+	private void testExercisesAndQuizzesSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToExercisesQuizzesSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getExercisesAndQuizzesHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getExercisesAndQuizzesSubheader(), getTestData());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesExercisesButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getExercisesAndQuizzesQuizzesButton());
+
+		baseTest.assertAll();
+	}
+
+	@Test(testName = "Verify Web Templates section", priority = 15)
+	private void testWebTemplatesSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToWebTemplatesSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getWebTemplatesSubheader(), getTestData());
+
+		baseTest.verifyIfTextIsMarkedAsImportant(homePage.getWebTemplatesSubheaderFreeText());
+
+		baseTest.verifyElementIsDisplayed(homePage.getWebTemplatesSampleImage());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getWebTemplatesBrowseTemplatesButton());
+
+		baseTest.assertAll();
+	}
+
+	@Test(testName = "Verify Certification section", priority = 16)
+	private void testCertificationSection(){
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToCertificationSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getCertificationSubheader(), getTestData());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getCertificationGetStartedButton());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationArrow());
+
+		baseTest.verifyElementIsDisplayed(homePage.getCertificationBadge());
+
+		baseTest.assertAll();
+	}
+
+	@Test(testName = "Verify How To Section", priority = 17)
+	private void testHowToSection() {
+
+		homePage = new HomePageMainContent(driver);
+
+		baseTest = new BaseTest(homePage);
+
+		homePage.scrollToHowToSection();
+
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionHeader());
+
+		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSubheader(), getTestData());
+
+		baseTest.verifyTextIsTheSame(homePage.getHowToSection2ndSubheader(), getTestData());
+
+		for (int buttonNumber = 1; buttonNumber <= 3; buttonNumber++) {
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowDotButton(buttonNumber));
+
+		}
+
+		baseTest.verifyTextIsTheSame(homePage.getHowToSectionSampleWindowUrlValue(), getTestData());
+
+		homePage.scrollToHowToSectionSliderContainer();
+
+		homePage.switchToHowToSliderFrame();
+
+		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowPreviousButton());
+
+		baseTest.verifyButtonIsDisplayed(homePage.getHowToSectionSampleWindowNextButton());
+
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
+
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
+
+		baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
+
+		baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
+
+		for (int iteration = 1; iteration <= 3; iteration++) {
+
+			homePage.clickNextButton();
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
+
+		}
+
+		for (int iteration = 1; iteration <= 3; iteration++) {
+
+			homePage.clickPreviousButton();
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCounter());
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowCaptionText());
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowToSectionSampleWindowImage());
+
+			baseTest.verifyElementIsDisplayed(homePage.getHowtoSectionActiveDot());
+
+		}
+
+		homePage.switchToDefaultContent();
+
+		baseTest.verifyButtonIsDisplayed(homePage.getHowToLearnButton());
+
+		baseTest.assertAll();
+	}
 }
-/**
- * Update TestHomePageMainContents
- *
- * - Increase range of argument in getTestData
- *
- * - Update testBecomeProUserSection test method
- * 	- Replace hard-coded values and invoke getTestData method instead
- */
