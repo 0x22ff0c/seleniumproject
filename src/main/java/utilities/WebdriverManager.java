@@ -56,7 +56,7 @@ public class WebdriverManager {
 
 	private void getChromeDriver(){
 
-		System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", config.getChromedriverPath());
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
