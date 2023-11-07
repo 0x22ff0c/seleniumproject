@@ -40,4 +40,8 @@ public class Config {
     public int getLoadTimeOutInSecondsValue(){
         return Integer.parseInt(properties.getProperty("loadtimeoutinseconds"));
     }
+
+    public String getChromedriverPath(){
+        return properties.getProperty("chromedriverpath");
+    }
 }
