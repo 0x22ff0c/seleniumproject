@@ -1,6 +1,5 @@
 package utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -56,8 +55,9 @@ public class WebdriverManager {
 	}
 
 	private void getChromeDriver(){
-		WebDriverManager.chromedriver().setup();
-		
+
+		System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
 
@@ -72,7 +72,6 @@ public class WebdriverManager {
 		if(executionMode.equals("headless")) {
 
 			FirefoxOptions options = new FirefoxOptions();
-			options.setHeadless(true);
 			options.addArguments("--width=1920");
 			options.addArguments("--height=1080");
 			driver = new FirefoxDriver(options);
@@ -88,7 +87,6 @@ public class WebdriverManager {
 	}
 
 	private void getFirefoxDriver(){
-		WebDriverManager.firefoxdriver().setup();
 
 		driver = getFirefoxDriverInstance();
 	}
