@@ -11,3 +11,4 @@ driver/*
 /reports
 key.json
 /tokens
+/driver/chromedriver
